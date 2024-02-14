@@ -24,7 +24,6 @@ Include "FMod.bb"
 Include "StrictLoads.bb"
 Include "fullscreen_window_fix.bb"
 Include "KeyName.bb"
-Include "SpeedText.bb"
 
 Global OptionFile$ = "options.ini"
 
@@ -110,7 +109,7 @@ Global SFXVolume# = GetINIFloat(OptionFile, "audio", "sound volume")
 
 Global Bit16Mode = GetINIInt(OptionFile, "options", "16bit")
 
-Include "AAText.bb"
+Include "SpeedText.bb"
 Include "Subtitles_Core.bb"
 
 If LauncherEnabled Then 
