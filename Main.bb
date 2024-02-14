@@ -11,7 +11,7 @@
 
 Local InitErrorStr$ = ""
 If FileSize("fmod.dll")=0 Then InitErrorStr=InitErrorStr+ "fmod.dll"+Chr(13)+Chr(10)
-If FileSize("zlibwapi.dll")=0 Then InitErrorStr=InitErrorStr+ "zlibwapi.dll"+Chr(13)+Chr(10)
+If FileSize("d3dim700.dll")=0 Then InitErrorStr=InitErrorStr+ "d3dim700.dll"+Chr(13)+Chr(10)
 If FileSize("SpeedText.dll")=0 Then InitErrorStr=InitErrorStr+ "SpeedText.dll"+Chr(13)+Chr(10)
 
 If Len(InitErrorStr)>0 Then
@@ -24,9 +24,6 @@ Include "KeyName.bb"
 
 Global OptionFile$ = "options.ini"
 
-Include "Blitz_Basic_Bank.bb"
-Include "Blitz_File_FileName.bb"
-Include "Blitz_File_ZipApi.bb"
 Include "Update.bb"
 
 Include "DevilParticleSystem.bb"

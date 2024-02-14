@@ -1138,7 +1138,7 @@ Function UpdateLauncher()
 	Next
 	
 	BlinkMeterIMG% = LoadImage_Strict("GFX\blinkmeter.jpg")
-	CheckForUpdates()
+	;CheckForUpdates()
 	
 	AppTitle "SCP - 收容失效汉化版 启动器"
 	
