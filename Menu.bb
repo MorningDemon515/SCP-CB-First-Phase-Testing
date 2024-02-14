@@ -202,14 +202,7 @@ Function UpdateMainMenu()
 				Case 3
 					txt = "ÍË³ö"
 					If temp Then
-						;DeInitExt
-						;alDestroy()
-						;FMOD_Pause(MusicCHN)
-						;FMOD_CloseStream(CurrMusicStream)
-						;FMOD_Close()
-						;FMOD_StopStream(CurrMusicStream)
-						FSOUND_Stream_Stop(CurrMusicStream)
-						;FSOUND_Close()
+						StopChannel(CurrMusicStream)
 						End
 					EndIf
 			End Select

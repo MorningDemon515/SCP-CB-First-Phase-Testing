@@ -10,7 +10,6 @@
 ;	 注：请不要直接在IDE（例如IDEal和Blitz3D自带IDE）内修改（编码会被改为UTF-8）
 
 Local InitErrorStr$ = ""
-;If FileSize("bb_fmod.dll")=0 Then InitErrorStr=InitErrorStr+ "bb_fmod.dll"+Chr(13)+Chr(10)
 If FileSize("fmod.dll")=0 Then InitErrorStr=InitErrorStr+ "fmod.dll"+Chr(13)+Chr(10)
 If FileSize("zlibwapi.dll")=0 Then InitErrorStr=InitErrorStr+ "zlibwapi.dll"+Chr(13)+Chr(10)
 If FileSize("SpeedText.dll")=0 Then InitErrorStr=InitErrorStr+ "SpeedText.dll"+Chr(13)+Chr(10)
@@ -18,8 +17,6 @@ If FileSize("SpeedText.dll")=0 Then InitErrorStr=InitErrorStr+ "SpeedText.dll"+C
 If Len(InitErrorStr)>0 Then
 	RuntimeError "游戏文件夹内找不到以下DLL文件："+Chr(13)+Chr(10)+Chr(13)+Chr(10)+InitErrorStr
 EndIf
-
-Include "FMod.bb"
 
 Include "StrictLoads.bb"
 Include "fullscreen_window_fix.bb"
