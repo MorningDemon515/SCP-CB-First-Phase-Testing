@@ -11669,49 +11669,10 @@ Function ScaledMouseY%()
 End Function
 
 Function CatchErrors(location$)
-	Local errStr$ = ErrorLog()
-	Local errF%
-	If Len(errStr)>0 Then
-		If FileType(ErrorFile)=0 Then
-			errF = WriteFile(ErrorFile)
-			WriteLine errF,"SCP - 收容失效出现错误！"
-			WriteLine errF,"版本: "+VersionNumber
-			WriteLine errF,"存档兼容版本: "+CompatibleNumber
-			WriteLine errF,"日期及时间: "+CurrentDate()+"，"+CurrentTime()
-			WriteLine errF,"总显示内存 (MB): "+TotalVidMem()/1024/1024
-			WriteLine errF,"可用显示内存 (MB): "+AvailVidMem()/1024/1024
-			GlobalMemoryStatus m.MEMORYSTATUS
-			WriteLine errF,"全局内存状态: "+(m\dwAvailPhys%/1024/1024)+" MB/"+(m\dwTotalPhys%/1024/1024)+" MB ("+(m\dwAvailPhys%/1024)+" KB/"+(m\dwTotalPhys%/1024)+" KB)"
-			WriteLine errF,"渲染的三角形: "+CurrTrisAmount
-			WriteLine errF,"激活的贴图: "+ActiveTextures()
-			WriteLine errF,""
-			WriteLine errF,"错误:"
-		Else
-			Local canwriteError% = True
-			errF = OpenFile(ErrorFile)
-			While (Not Eof(errF))
-				Local l$ = ReadLine(errF)
-				If Left(l,Len(location))=location
-					canwriteError = False
-					Exit
-				EndIf
-			Wend
-			If canwriteError
-				SeekFile errF,FileSize(ErrorFile)
-			EndIf
-		EndIf
-		If canwriteError
-			WriteLine errF,location+" ***************"
-			While Len(errStr)>0
-				WriteLine errF,errStr
-				DebugLog errStr
-				errStr = ErrorLog()
-			Wend
-		EndIf
-		Msg = "Blitz3D出错！ 详见"+Chr(34)+ErrorFile+Chr(34)
-		MsgTimer = 20*70
-		CloseFile errF
-	EndIf
+    Local errStr$ = ErrorLog()
+    If Len(errStr$)>0 Then
+	   RuntimeError "SCP收容失效发生了一个错误! 在 "+location$+",请带着游戏截图联系我们"
+	End If 
 End Function
 
 Function Create3DIcon(width%,height%,modelpath$,modelX#=0,modelY#=0,modelZ#=0,modelPitch#=0,modelYaw#=0,modelRoll#=0,modelscaleX#=1,modelscaleY#=1,modelscaleZ#=1,withfog%=False)
