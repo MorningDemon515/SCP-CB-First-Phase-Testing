@@ -267,8 +267,6 @@ Global KEY_CONSOLE = GetINIInt(OptionFile, "binds", "Console key")
 
 Global MouseSmooth# = GetINIFloat(OptionFile,"options", "mouse smoothing", 1.0)
 
-Const INFINITY# = (999.0) ^ (99999.0), NAN# = (-1.0) ^ (0.5)
-
 Global Mesh_MinX#, Mesh_MinY#, Mesh_MinZ#
 Global Mesh_MaxX#, Mesh_MaxY#, Mesh_MaxZ#
 Global Mesh_MagX#, Mesh_MagY#, Mesh_MagZ#
@@ -11669,10 +11667,7 @@ Function ScaledMouseY%()
 End Function
 
 Function CatchErrors(location$)
-    Local errStr$ = ErrorLog()
-    If Len(errStr$)>0 Then
-	   RuntimeError "SCP收容失效发生了一个错误! 在 "+location$+",请带着游戏截图联系我们"
-	End If 
+    SetErrorMsg(7,"SCP收容失效发生了一个错误! 在 "+location$+",请带着游戏截图联系我们")
 End Function
 
 Function Create3DIcon(width%,height%,modelpath$,modelX#=0,modelY#=0,modelZ#=0,modelPitch#=0,modelYaw#=0,modelRoll#=0,modelscaleX#=1,modelscaleY#=1,modelscaleZ#=1,withfog%=False)

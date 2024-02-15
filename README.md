@@ -8,13 +8,11 @@
 
 ### 需要软件:
 
-- [Blitz3D](https://github.com/blitz-reaserch/blitz3d)
+- [Blitz3D TSS](https://github.com/ZiYueCommentary/Blitz3D)
 
 ### 如何构建:
 
-- 安装Blitz3D后 , 您需要将Blitz3D目录的"bin"文件夹里的文件替换为“mavless_bin.zip”中的文件;
-
-- 之后将源码中所有的.dells和.dll文件复制到Blitz3D目录的"userlibs"文件夹中;
+- 安装Blitz3D TSS后 , 您需要将源码中所有的.dells和.dll文件复制到Blitz3D目录的"userlibs"文件夹中;
 
 - 打开Main,bb文件编辑，然后编译!
 
