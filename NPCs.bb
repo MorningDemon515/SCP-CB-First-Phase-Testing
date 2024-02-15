@@ -831,15 +831,15 @@ Function UpdateNPCs()
 												
 												Select PlayerRoom\RoomTemplate\Name
 													Case "lockroom", "room2closets", "coffin"
-														DeathMSG = "¶ÔÏóD-9341¡£ËÀÍöÔ­Òò£ºÖÂÃüÐÔ¾±×µ¹ÇÕÛ£¬¼à¿ØÂ¼ÏñÖ¤ÊµÊÇ±»SCP-173ËùÉ±¡£"	
+														DeathMSG = "å¯¹è±¡D-9341ã€‚æ­»äº¡åŽŸå› ï¼šè‡´å‘½æ€§é¢ˆæ¤Žéª¨æŠ˜ï¼Œç›‘æŽ§å½•åƒè¯å®žæ˜¯è¢«SCP-173æ‰€æ€ã€‚"	
 													Case "173"
-														DeathMSG = "¶ÔÏóD-9341¡£ËÀÍöÔ­Òò£ºÖÂÃüÐÔ¾±×µ¹ÇÕÛ¡£"
-														DeathMSG = DeathMSG + "¾Ý°²È«Ö÷¹Ü¸»À¼¿ËÁÖ³Æ£¬ÔÚSCP-173ÊÕÈÝÊ§Ð§ÆÚ¼ä£¬¸Ã¶ÔÏóÔÚµçÁ¦ÏµÍ³Ì±»¾³õÆÚ¾Í±»SCP-173ËùÉ±¡£"
+														DeathMSG = "å¯¹è±¡D-9341ã€‚æ­»äº¡åŽŸå› ï¼šè‡´å‘½æ€§é¢ˆæ¤Žéª¨æŠ˜ã€‚"
+														DeathMSG = DeathMSG + "æ®å®‰å…¨ä¸»ç®¡å¯Œå…°å…‹æž—ç§°ï¼Œåœ¨SCP-173æ”¶å®¹å¤±æ•ˆæœŸé—´ï¼Œè¯¥å¯¹è±¡åœ¨ç”µåŠ›ç³»ç»Ÿç˜«ç—ªåˆæœŸå°±è¢«SCP-173æ‰€æ€ã€‚"
 													Case "room2doors"
-														DeathMSG = "¡°Èç¹ûÎÒÃ»¼Ç´íµÄ»°£¬ÕâÐ©·¿¼äµÄÖ÷ÒªÓÃÍ¾¾ÍÊÇ×èÖ¹SCP-173ÊÕÈÝÊ§Ð§ºó½øÒ»²½µÄÒÆ¶¯¡£"
-														DeathMSG = DeathMSG + "ËùÒÔ£¬ÊÇÄÄ¸ö´óÉµ±Æ°ÑÒ»¸öËûÂèÈËÒ»Ñù´óµÄÍ¨·ç¹ÜÅªÔÚÄÇ£¡£¿¡±"
+														DeathMSG = "â€œå¦‚æžœæˆ‘æ²¡è®°é”™çš„è¯ï¼Œè¿™äº›æˆ¿é—´çš„ä¸»è¦ç”¨é€”å°±æ˜¯é˜»æ­¢SCP-173æ”¶å®¹å¤±æ•ˆåŽè¿›ä¸€æ­¥çš„ç§»åŠ¨ã€‚"
+														DeathMSG = DeathMSG + "æ‰€ä»¥ï¼Œæ˜¯å“ªä¸ªå¤§å‚»é€¼æŠŠä¸€ä¸ªä»–å¦ˆäººä¸€æ ·å¤§çš„é€šé£Žç®¡å¼„åœ¨é‚£ï¼ï¼Ÿâ€"
 													Default 
-														DeathMSG = "¶ÔÏóD-9341¡£ËÀÍöÔ­Òò:ÖÂÃüÐÔ¾±×µ¹ÇÕÛ,¿ÉÄÜÊÜµ½ÁËSCP-173µÄ¹¥»÷¡£"
+														DeathMSG = "å¯¹è±¡D-9341ã€‚æ­»äº¡åŽŸå› :è‡´å‘½æ€§é¢ˆæ¤Žéª¨æŠ˜,å¯èƒ½å—åˆ°äº†SCP-173çš„æ”»å‡»ã€‚"
 												End Select
 												
 												If (Not GodMode) Then n\Idle = True
@@ -1140,7 +1140,7 @@ Function UpdateNPCs()
 											PlaySound_Strict(DamageSFX(1))
 											PlaySound_Strict(HorrorSFX(5))											
 											If PlayerRoom\RoomTemplate\Name = "pocketdimension" Then
-												DeathMSG = "¶ÔÏóD-9341¡£ÉíÌå±»SCP-106µÄ¡°¸¯Ê´¡±Ð§Ó¦·Ö½â£¬Ê¬ÌåÒÑ±»·ÙÉÕ´¦Àí¡£"
+												DeathMSG = "å¯¹è±¡D-9341ã€‚èº«ä½“è¢«SCP-106çš„â€œè…èš€â€æ•ˆåº”åˆ†è§£ï¼Œå°¸ä½“å·²è¢«ç„šçƒ§å¤„ç†ã€‚"
 												Kill()
 											Else
 												PlaySound_Strict(OldManSFX(3))
@@ -1382,7 +1382,7 @@ Function UpdateNPCs()
 												pvt = CreatePivot()
 												CameraShake = 30
 												BlurTimer = 2000
-												DeathMSG = "ÔÚ[Êý¾Ý±à¼­]ÖÐ·¢ÏÖ´óÁ¿ÑªÒº£¬¾­¹ýDNA¼ø¶¨Îª¶ÔÏóD-9341£¬¿ÉÄÜÊÇ±»SCP-096¡¾Êý¾Ý±à¼­¡¿¡£"
+												DeathMSG = "åœ¨[æ•°æ®ç¼–è¾‘]ä¸­å‘çŽ°å¤§é‡è¡€æ¶²ï¼Œç»è¿‡DNAé‰´å®šä¸ºå¯¹è±¡D-9341ï¼Œå¯èƒ½æ˜¯è¢«SCP-096ã€æ•°æ®ç¼–è¾‘ã€‘ã€‚"
 												Kill()
 												KillAnim = 1
 												For i = 0 To 6
@@ -1778,12 +1778,12 @@ Function UpdateNPCs()
 											
 											If (Not GodMode) Then
 												If PlayerRoom\RoomTemplate\Name$ = "room049"
-													DeathMSG = "ÔÚSCP-049ÊÕÈÝÊÒÍâµÄËíµÀ·¢ÏÖÁËÈý¸öSCP-049-2»î¶¯ÊµÀý£¬±»¾ÅÎ²ºü»÷±Ð¡£"
+													DeathMSG = "åœ¨SCP-049æ”¶å®¹å®¤å¤–çš„éš§é“å‘çŽ°äº†ä¸‰ä¸ªSCP-049-2æ´»åŠ¨å®žä¾‹ï¼Œè¢«ä¹å°¾ç‹å‡»æ¯™ã€‚"
 													For e.events = Each Events
 														If e\EventName = "room049" Then e\EventState=-1 : Exit
 													Next
 												Else
-													DeathMSG = "ÔÚ[ÒÑ±à¼­]·¢ÏÖÁËÒ»¸öSCP-049-2»î¶¯ÊµÀý£¬±»¾ÅÎ²ºü»÷±Ð¡£"
+													DeathMSG = "åœ¨[å·²ç¼–è¾‘]å‘çŽ°äº†ä¸€ä¸ªSCP-049-2æ´»åŠ¨å®žä¾‹ï¼Œè¢«ä¹å°¾ç‹å‡»æ¯™ã€‚"
 													Kill()
 												EndIf
 												PlaySound_Strict HorrorSFX(13)
@@ -2281,7 +2281,7 @@ Function UpdateNPCs()
 											If (Abs(DeltaYaw(n\Collider,Collider))<=60.0)
 												PlaySound_Strict DamageSFX(Rand(5,8))
 												Injuries = Injuries+Rnd(0.4,1.0)
-												DeathMSG = "¶ÔÏóD-9341¡£ËÀÍöÔ­Òò£ºSCP-049-2µ¼ÖÂ¶à´¦ËºÁÑÉË¼°ÑÏÖØ¶ÛÆ÷ÉË¡£"
+												DeathMSG = "å¯¹è±¡D-9341ã€‚æ­»äº¡åŽŸå› ï¼šSCP-049-2å¯¼è‡´å¤šå¤„æ’•è£‚ä¼¤åŠä¸¥é‡é’å™¨ä¼¤ã€‚"
 											EndIf
 										EndIf
 									ElseIf n\Frame=65 Then
@@ -2295,7 +2295,7 @@ Function UpdateNPCs()
 											If (Abs(DeltaYaw(n\Collider,Collider))<=60.0)
 												PlaySound_Strict DamageSFX(Rand(5,8))
 												Injuries = Injuries+Rnd(0.4,1.0)
-												DeathMSG = "¶ÔÏóD-9341¡£ËÀÍöÔ­Òò£ºSCP-049-2µ¼ÖÂ¶à´¦ËºÁÑÉË¼°ÑÏÖØ¶ÛÆ÷ÉË¡£"
+												DeathMSG = "å¯¹è±¡D-9341ã€‚æ­»äº¡åŽŸå› ï¼šSCP-049-2å¯¼è‡´å¤šå¤„æ’•è£‚ä¼¤åŠä¸¥é‡é’å™¨ä¼¤ã€‚"
 											EndIf
 										EndIf
 									ElseIf n\Frame=132 Then
@@ -2367,10 +2367,10 @@ Function UpdateNPCs()
 										Local instaKillPlayer% = False
 										
 										If PlayerRoom\RoomTemplate\Name = "start" Then 
-											DeathMSG = "¶ÔÏóD-9341¡£ËÀÍöÔ­Òò£ºÍ·²¿Ç¹ÉË¡£¼à¿ØÂ¼ÏñÖ¤Êµ£¬ÔÚÉèÊ©·âËøºó²»¾Ã£¬¶ÔÏó±»UlgrinÌØ¹¤»÷±Ð¡£"
+											DeathMSG = "å¯¹è±¡D-9341ã€‚æ­»äº¡åŽŸå› ï¼šå¤´éƒ¨æžªä¼¤ã€‚ç›‘æŽ§å½•åƒè¯å®žï¼Œåœ¨è®¾æ–½å°é”åŽä¸ä¹…ï¼Œå¯¹è±¡è¢«Ulgrinç‰¹å·¥å‡»æ¯™ã€‚"
 											instaKillPlayer = True
 										ElseIf PlayerRoom\RoomTemplate\Name = "exit1" Then
-											DeathMSG = "¡°ÌØ¹¤GÖÁ¿ØÖÆÖÐÐÄ£¬ÔÚBÃÅÍ¥Ôº»÷±ÐÒ»ÃûÌÓÅÜµÄD¼¶ÈËÔ±¡£¡±"
+											DeathMSG = "â€œç‰¹å·¥Gè‡³æŽ§åˆ¶ä¸­å¿ƒï¼Œåœ¨Bé—¨åº­é™¢å‡»æ¯™ä¸€åé€ƒè·‘çš„Dçº§äººå‘˜ã€‚â€"
 										Else
 											DeathMSG = ""
 										EndIf
@@ -3135,9 +3135,9 @@ Function UpdateNPCs()
 													PlaySound2(Gunshot2SFX, Camera, n\Collider, 20)
 													
 													If PlayerRoom\RoomTemplate\Name = "exit1" Then
-														DeathMSG = "¡°CH-2ÖÁ¿ØÖÆÖÐÐÄ£¬ÔÚBÃÅ»÷±ÐÒ»ÃûÌÓÅÜµÄD¼¶ÈËÔ±¡£¡±"
+														DeathMSG = "â€œCH-2è‡³æŽ§åˆ¶ä¸­å¿ƒï¼Œåœ¨Bé—¨å‡»æ¯™ä¸€åé€ƒè·‘çš„Dçº§äººå‘˜ã€‚â€"
 													Else
-														DeathMSG = "¡°CH-2ÖÁ¿ØÖÆÖÐÐÄ£¬ÔÚBÃÅ»÷±ÐÒ»ÃûÌÓÅÜµÄD¼¶ÈËÔ±¡£¡±"
+														DeathMSG = "â€œCH-2è‡³æŽ§åˆ¶ä¸­å¿ƒï¼Œåœ¨Bé—¨å‡»æ¯™ä¸€åé€ƒè·‘çš„Dçº§äººå‘˜ã€‚â€"
 													EndIf
 													
 													Shoot( EntityX(pvt),EntityY(pvt), EntityZ(pvt),((10/dist)*(1/dist))*(n\State=2),(n\State=2))
@@ -3279,11 +3279,11 @@ Function UpdateNPCs()
 												
 												If Injuries > 3.0 Then
 													If PlayerRoom\RoomTemplate\Name = "room2offices" Then
-														DeathMSG = "¡°Ò»¸ö¾Þ´óµÄ¸ß¶È»îÔ¾µÄ´¥ÊÖ×´¸½ÊôÎïËÆºõÉú³¤ÔÚ°ì¹«ÇøÄÚÒ»Ãû¿ÆÑ§¼ÒµÄÊ¬ÌåÉÏ¡£"
-														DeathMSG = DeathMSG + "ËüµÄÇÖÂÔ³Ì¶ÈÓëÎÒÃÇÒÔÇ°¼û¹ýµÄÈÎºÎ¶«Î÷¶¼²»Ò»Ñù¡ª¡ªËü¿´ÆðÀ´ÏñÔÚÄ³¸öÊ±¿ÌÏ®»÷ÁËÄ³¸ö²»ÐÒµÄD¼¶ÈËÔ±¡£¡±"
+														DeathMSG = "â€œä¸€ä¸ªå·¨å¤§çš„é«˜åº¦æ´»è·ƒçš„è§¦æ‰‹çŠ¶é™„å±žç‰©ä¼¼ä¹Žç”Ÿé•¿åœ¨åŠžå…¬åŒºå†…ä¸€åç§‘å­¦å®¶çš„å°¸ä½“ä¸Šã€‚"
+														DeathMSG = DeathMSG + "å®ƒçš„ä¾µç•¥ç¨‹åº¦ä¸Žæˆ‘ä»¬ä»¥å‰è§è¿‡çš„ä»»ä½•ä¸œè¥¿éƒ½ä¸ä¸€æ ·â€”â€”å®ƒçœ‹èµ·æ¥åƒåœ¨æŸä¸ªæ—¶åˆ»è¢­å‡»äº†æŸä¸ªä¸å¹¸çš„Dçº§äººå‘˜ã€‚â€"
 													Else
-														DeathMSG = "¡°ÎÒÃÇÐèÒªµÄ²»½ö½öÊÇ³£¹æµÄÇå½àÍÅ¶ÓÀ´´¦ÀíÕâ¸öÎÊÌâ¡£Á½¸ö¾Þ´óµÄ¸ß¶È»îÔ¾µÄ´¥ÊÖ×´¸½×ÅÎïËÆºõÒÑ¾­ÔÚ·¿¼äÄÚÐÎ³É¡£"
-														DeathMSG = DeathMSG + "ËûÃÇµÄ¹¥»÷ÐÔ³Ì¶ÈÓëÎÒÃÇÒÔÇ°¼û¹ýµÄÈÎºÎ¶«Î÷¶¼²»Ò»Ñù¡ª¡ª¿´ÆðÀ´ËûÃÇÔÚÊÕÈÝÊ§Ð§ÖÐµÄÄ³¸öÊ±ºòÏ®»÷ÁËÄ³¸ö²»ÐÒµÄD¼¶ÈËÔ±¡£¡±"
+														DeathMSG = "â€œæˆ‘ä»¬éœ€è¦çš„ä¸ä»…ä»…æ˜¯å¸¸è§„çš„æ¸…æ´å›¢é˜Ÿæ¥å¤„ç†è¿™ä¸ªé—®é¢˜ã€‚ä¸¤ä¸ªå·¨å¤§çš„é«˜åº¦æ´»è·ƒçš„è§¦æ‰‹çŠ¶é™„ç€ç‰©ä¼¼ä¹Žå·²ç»åœ¨æˆ¿é—´å†…å½¢æˆã€‚"
+														DeathMSG = DeathMSG + "ä»–ä»¬çš„æ”»å‡»æ€§ç¨‹åº¦ä¸Žæˆ‘ä»¬ä»¥å‰è§è¿‡çš„ä»»ä½•ä¸œè¥¿éƒ½ä¸ä¸€æ ·â€”â€”çœ‹èµ·æ¥ä»–ä»¬åœ¨æ”¶å®¹å¤±æ•ˆä¸­çš„æŸä¸ªæ—¶å€™è¢­å‡»äº†æŸä¸ªä¸å¹¸çš„Dçº§äººå‘˜ã€‚â€"
 													EndIf
 													Kill()
 												EndIf
@@ -3415,7 +3415,7 @@ Function UpdateNPCs()
 										For i = 0 To MaxItemAmount-1
 											If Inventory(i)<>Null
 												Local docname$ = Inventory(i)\itemtemplate\name
-												If docname = "ÈÕÖ¾#1" Or docname = "ÈÕÖ¾#2" Or docname = "ÈÕÖ¾#3"
+												If docname = "æ—¥å¿—#1" Or docname = "æ—¥å¿—#2" Or docname = "æ—¥å¿—#3"
 													;860,850,830,800
 													docamount% = docamount% + 1
 													docchance = docchance + 10*docamount%
@@ -3767,8 +3767,8 @@ Function UpdateNPCs()
 									EndIf
 									
 									If Injuries>4.0 Then 
-										DeathMSG="¡°ËùÓÐÌÓÍÑµÄËÄ¸öSCP-939ÊµÀý¾ùÒÑ±»³É¹¦²¶»ñ²¢ÖØÐÂÊÕÈÝ¡£"
-										DeathMSG=DeathMSG+"ÆäÖÐÈý¸öÔÚ6ºÅ´¢´æÇø¸ãµÃÒ»ÍÅÔã£¬ÒÑ¾­ÅÉ³öÁËÒ»¸öÇå½àÐ¡¶Ó¡£¡±"
+										DeathMSG="â€œæ‰€æœ‰é€ƒè„±çš„å››ä¸ªSCP-939å®žä¾‹å‡å·²è¢«æˆåŠŸæ•èŽ·å¹¶é‡æ–°æ”¶å®¹ã€‚"
+										DeathMSG=DeathMSG+"å…¶ä¸­ä¸‰ä¸ªåœ¨6å·å‚¨å­˜åŒºæžå¾—ä¸€å›¢ç³Ÿï¼Œå·²ç»æ´¾å‡ºäº†ä¸€ä¸ªæ¸…æ´å°é˜Ÿã€‚â€"
 										Kill()
 										If (Not GodMode) Then n\State = 5
 									EndIf								
@@ -4070,17 +4070,17 @@ Function UpdateNPCs()
 						If dist<1 And n\Reload <= 0 And MsgTimer <= 0 Then
 							Select Rand(6)
 								Case 1
-									Msg="Äã¸Ð¾õÄãµÄÉíÅÔÓÐ¶«Î÷ÔÚºôÎü"
+									Msg="ä½ æ„Ÿè§‰ä½ çš„èº«æ—æœ‰ä¸œè¥¿åœ¨å‘¼å¸"
 								Case 2
-									Msg="¡°ºÃÏñÓÐÊ²Ã´¶«Î÷ºÍÎÒÔÚÕâ¸ö·¿¼äÀï¡±"
+									Msg="â€œå¥½åƒæœ‰ä»€ä¹ˆä¸œè¥¿å’Œæˆ‘åœ¨è¿™ä¸ªæˆ¿é—´é‡Œâ€"
 								Case 3
-									Msg="Äã¸Ð¾õÓÐÊ²Ã´¶«Î÷ÔÚÄãÉí±ß£¬µ«ÄãÊ²Ã´Ò²¿´²»µ½"
+									Msg="ä½ æ„Ÿè§‰æœ‰ä»€ä¹ˆä¸œè¥¿åœ¨ä½ èº«è¾¹ï¼Œä½†ä½ ä»€ä¹ˆä¹Ÿçœ‹ä¸åˆ°"
 								Case 4
-									Msg="¡°ÊÇÎÒµÄÒâÊ¶ÔÚË£ÎÒ»¹ÊÇÕâÀïÓÐÆäËûÈË£¿¡±"
+									Msg="â€œæ˜¯æˆ‘çš„æ„è¯†åœ¨è€æˆ‘è¿˜æ˜¯è¿™é‡Œæœ‰å…¶ä»–äººï¼Ÿâ€"
 								Case 5
-									Msg="Äã¾õµÃÓÐÐ©¶«Î÷ÔÚ¸ú×ÅÄã"
+									Msg="ä½ è§‰å¾—æœ‰äº›ä¸œè¥¿åœ¨è·Ÿç€ä½ "
 								Case 6
-									Msg="Äã¸Ð¾õÓÐÊ²Ã´¶«Î÷ÔÚÄãÉí±ß£¬µ«Äã¿´²»µ½Ëü¡£»òÐíÏÖÔÚÊÇÊ±ºòÁË"
+									Msg="ä½ æ„Ÿè§‰æœ‰ä»€ä¹ˆä¸œè¥¿åœ¨ä½ èº«è¾¹ï¼Œä½†ä½ çœ‹ä¸åˆ°å®ƒã€‚æˆ–è®¸çŽ°åœ¨æ˜¯æ—¶å€™äº†"
 							End Select
                             n\Reload = 20*70
 							MsgTimer=8*70
@@ -4180,13 +4180,13 @@ Function UpdateNPCs()
 									If MsgTimer<=0 And StaminaEffect<1.5 Then
 										Select Rand(4)
 											Case 1
-												Msg = "Äã¸Ð¾õºÜÀÛ"
+												Msg = "ä½ æ„Ÿè§‰å¾ˆç´¯"
 											Case 2
-												Msg = "¡°ÏÖÔÚÕæµÄ¿ÉÒÔÐ¡Ë¯Ò»»áÁË...¡±"
+												Msg = "â€œçŽ°åœ¨çœŸçš„å¯ä»¥å°ç¡ä¸€ä¼šäº†...â€"
 											Case 3
-												Msg = "¡°Èç¹ûÎÒ²»ÊÇÔÚÏÖÔÚÕâÖÖÇé¿öÏÂ£¬ÎÒ¾Í»áÕÒ¸öµØ·½Ð¡Ë¯Ò»ÏÂ¡±"
+												Msg = "â€œå¦‚æžœæˆ‘ä¸æ˜¯åœ¨çŽ°åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œæˆ‘å°±ä¼šæ‰¾ä¸ªåœ°æ–¹å°ç¡ä¸€ä¸‹â€"
 											Case 4
-												Msg = "Äã¸Ð¾õ²»°²"
+												Msg = "ä½ æ„Ÿè§‰ä¸å®‰"
 										End Select
 										
 										MsgTimer = 7*70
@@ -4723,11 +4723,11 @@ Function UpdateNPCs()
 										If Injuries > 10.0
 											Kill()
 											If PlayerRoom\RoomTemplate\Name$ = "dimension1499"
-												DeathMSG = "ÓÉÓÚ1499-EÊÂ¼þ£¬ËùÓÐÔÚ±ÜÄÑËùLC-2µÄÈËÔ±¶¼ÊÕµ½ÁËB¼¶¼ÇÒäÇå³ý¡£"
-												DeathMSG = DeathMSG + "ÊÂ¼þÉæ¼°µÄD¼¶ÈËÔ±ÔÚÌØ¹¤[ÒÑ±à¼­]»÷ÖÐ²»¾ÃºóËÀÍö¡£"
+												DeathMSG = "ç”±äºŽ1499-Eäº‹ä»¶ï¼Œæ‰€æœ‰åœ¨é¿éš¾æ‰€LC-2çš„äººå‘˜éƒ½æ”¶åˆ°äº†Bçº§è®°å¿†æ¸…é™¤ã€‚"
+												DeathMSG = DeathMSG + "äº‹ä»¶æ¶‰åŠçš„Dçº§äººå‘˜åœ¨ç‰¹å·¥[å·²ç¼–è¾‘]å‡»ä¸­ä¸ä¹…åŽæ­»äº¡ã€‚"
 											Else
-												DeathMSG = "Ò»ÃûÉí·Ý²»Ã÷µÄÄÐÐÔºÍÒ»ÃûD¼¶ÈËÔ±µÄÊ¬ÌåÔÚ[ÒÑ±à¼­]±»¾ÅÎ²ºü·¢ÏÖ¡£"
-												DeathMSG = DeathMSG + "¸ÃÄÐ×ÓÃèÊöÊ±¼«Æä¼¤¶¯£¬¶øÇÒËÆºõÖ»»áËµ¶íÓï¡£ÔÚµÈ´ý·­Òëµ½À´Ê±£¬Ëû±»´ø½øÁË[ÒÑ±à¼­]µÄÁÙÊ±¾ÐÁôÇø¡£"
+												DeathMSG = "ä¸€åèº«ä»½ä¸æ˜Žçš„ç”·æ€§å’Œä¸€åDçº§äººå‘˜çš„å°¸ä½“åœ¨[å·²ç¼–è¾‘]è¢«ä¹å°¾ç‹å‘çŽ°ã€‚"
+												DeathMSG = DeathMSG + "è¯¥ç”·å­æè¿°æ—¶æžå…¶æ¿€åŠ¨ï¼Œè€Œä¸”ä¼¼ä¹Žåªä¼šè¯´ä¿„è¯­ã€‚åœ¨ç­‰å¾…ç¿»è¯‘åˆ°æ¥æ—¶ï¼Œä»–è¢«å¸¦è¿›äº†[å·²ç¼–è¾‘]çš„ä¸´æ—¶æ‹˜ç•™åŒºã€‚"
 											EndIf
 										EndIf
 									EndIf
@@ -4746,11 +4746,11 @@ Function UpdateNPCs()
 										If Injuries > 10.0
 											Kill()
 											If PlayerRoom\RoomTemplate\Name$ = "dimension1499"
-												DeathMSG = "ÓÉÓÚ1499-EÊÂ¼þ£¬ËùÓÐÔÚ±ÜÄÑËùLC-2µÄÈËÔ±¶¼ÊÕµ½ÁËB¼¶¼ÇÒäÇå³ý¡£"
-												DeathMSG = DeathMSG + "ÊÂ¼þÉæ¼°µÄD¼¶ÈËÔ±ÔÚÌØ¹¤[ÒÑ±à¼­]»÷ÖÐ²»¾ÃºóËÀÍö¡£"
+												DeathMSG = "ç”±äºŽ1499-Eäº‹ä»¶ï¼Œæ‰€æœ‰åœ¨é¿éš¾æ‰€LC-2çš„äººå‘˜éƒ½æ”¶åˆ°äº†Bçº§è®°å¿†æ¸…é™¤ã€‚"
+												DeathMSG = DeathMSG + "äº‹ä»¶æ¶‰åŠçš„Dçº§äººå‘˜åœ¨ç‰¹å·¥[å·²ç¼–è¾‘]å‡»ä¸­ä¸ä¹…åŽæ­»äº¡ã€‚"
 											Else
-												DeathMSG = "Ò»ÃûÉí·Ý²»Ã÷µÄÄÐÐÔºÍÒ»ÃûD¼¶ÈËÔ±µÄÊ¬ÌåÔÚ[ÒÑ±à¼­]±»¾ÅÎ²ºü·¢ÏÖ¡£"
-												DeathMSG = DeathMSG + "¸ÃÄÐ×ÓÃèÊöÊ±¼«Æä¼¤¶¯£¬¶øÇÒËÆºõÖ»»áËµ¶íÓï¡£ÔÚµÈ´ý·­Òëµ½À´Ê±£¬Ëû±»´ø½øÁË[ÒÑ±à¼­]µÄÁÙÊ±¾ÐÁôÇø¡£"
+												DeathMSG = "ä¸€åèº«ä»½ä¸æ˜Žçš„ç”·æ€§å’Œä¸€åDçº§äººå‘˜çš„å°¸ä½“åœ¨[å·²ç¼–è¾‘]è¢«ä¹å°¾ç‹å‘çŽ°ã€‚"
+												DeathMSG = DeathMSG + "è¯¥ç”·å­æè¿°æ—¶æžå…¶æ¿€åŠ¨ï¼Œè€Œä¸”ä¼¼ä¹Žåªä¼šè¯´ä¿„è¯­ã€‚åœ¨ç­‰å¾…ç¿»è¯‘åˆ°æ¥æ—¶ï¼Œä»–è¢«å¸¦è¿›äº†[å·²ç¼–è¾‘]çš„ä¸´æ—¶æ‹˜ç•™åŒºã€‚"
 											EndIf
 										EndIf
 									EndIf
@@ -4918,7 +4918,7 @@ Function UpdateNPCs()
 										PlaySound_Strict DamageSFX(Rand(5,8))
 										Injuries = Injuries+Rnd(0.4,1.0)
 										Infect = Infect + (1+(1*SelectedDifficulty\aggressiveNPCs))
-										DeathMSG = "¶ÔÏóD-9341¡£ËÀÍöÔ­Òò£º¸ÐÈ¾SCP-008µÄ[Êý¾ÝÉ¾³ý]µ¼ÖÂµÄ¶à´¦ËºÁÑÉËºÍÑÏÖØ¶ÛÆ÷ÉË£¬ËùÊö¶ÔÏó±»¾ÅÎ²ºüÕÒµ½²¢»÷±Ð¡£"
+										DeathMSG = "å¯¹è±¡D-9341ã€‚æ­»äº¡åŽŸå› ï¼šæ„ŸæŸ“SCP-008çš„[æ•°æ®åˆ é™¤]å¯¼è‡´çš„å¤šå¤„æ’•è£‚ä¼¤å’Œä¸¥é‡é’å™¨ä¼¤ï¼Œæ‰€è¿°å¯¹è±¡è¢«ä¹å°¾ç‹æ‰¾åˆ°å¹¶å‡»æ¯™ã€‚"
 									EndIf
 								EndIf
 							ElseIf n\Frame => 164
@@ -5727,11 +5727,11 @@ Function UpdateMTFUnit(n.NPCs)
 									
 									FreeEntity(pvt)
 									
-									DeathMSG="¶ÔÏóD-9341¡£±»¾ÅÎ²ºü»÷ÖÐºóÊ§Ñª¹ý¶àËÀÍö¡£"
+									DeathMSG="å¯¹è±¡D-9341ã€‚è¢«ä¹å°¾ç‹å‡»ä¸­åŽå¤±è¡€è¿‡å¤šæ­»äº¡ã€‚"
 									
 									;player killed -> "target terminated"
 									If prev => 0 And KillTimer < 0 Then
-										DeathMSG="¶ÔÏóD-9341¡£±»¾ÅÎ²ºü»÷±Ð¡£"
+										DeathMSG="å¯¹è±¡D-9341ã€‚è¢«ä¹å°¾ç‹å‡»æ¯™ã€‚"
 										PlayMTFSound(LoadTempSound("SFX\Character\MTF\Targetterminated"+Rand(1,4)+".ogg"),n)
 									EndIf
 								EndIf	
@@ -6836,30 +6836,30 @@ Function Shoot(x#, y#, z#, hitProb# = 1.0, particles% = True, instaKill% = False
 						Case 1,2,3,4,5
 							BlurTimer = 500
 							Stamina = 0
-							ShotMessageUpdate = "Ò»¿Å×Óµ¯´©Í¸ÁËÄãµÄ·Àµ¯ÒÂ£¬ÈÃÄã´­²»¹ýÆøÀ´"
+							ShotMessageUpdate = "ä¸€é¢—å­å¼¹ç©¿é€äº†ä½ çš„é˜²å¼¹è¡£ï¼Œè®©ä½ å–˜ä¸è¿‡æ°”æ¥"
 							Injuries = Injuries + Rnd(0.1,0.5)
 						Case 6
 							BlurTimer = 500
-							ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄ×óÍÈ"
+							ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„å·¦è…¿"
 							Injuries = Injuries + Rnd(0.8,1.2)
 						Case 7
 							BlurTimer = 500
-							ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄÓÒÍÈ"
+							ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„å³è…¿"
 							Injuries = Injuries + Rnd(0.8,1.2)
 						Case 8
 							BlurTimer = 500
 							Stamina = 0
-							ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄ²±×Ó£¬ÈÃÄã´­²»¹ýÆøÀ´"
+							ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„è„–å­ï¼Œè®©ä½ å–˜ä¸è¿‡æ°”æ¥"
 							Injuries = Injuries + Rnd(1.2,1.6)
 					End Select	
 				Else
 					If Rand(10)=1 Then
 						BlurTimer = 500
 						Stamina = Stamina - 1
-						ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄÐØ²¿£¬·Àµ¯ÒÂ¼õÉÙÁËÒ»Ð©ÉËº¦"
+						ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„èƒ¸éƒ¨ï¼Œé˜²å¼¹è¡£å‡å°‘äº†ä¸€äº›ä¼¤å®³"
 						Injuries = Injuries + Rnd(0.8,1.1)
 					Else
-						ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄÐØ²¿£¬·Àµ¯ÒÂ¼õÉÙÁË´ó²¿·ÖÉËº¦"
+						ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„èƒ¸éƒ¨ï¼Œé˜²å¼¹è¡£å‡å°‘äº†å¤§éƒ¨åˆ†ä¼¤å®³"
 						Injuries = Injuries + Rnd(0.1,0.5)
 					EndIf
 				EndIf
@@ -6873,23 +6873,23 @@ Function Shoot(x#, y#, z#, hitProb# = 1.0, particles% = True, instaKill% = False
 						Kill()
 					Case 2
 						BlurTimer = 500
-						ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄ×óÍÈ"
+						ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„å·¦è…¿"
 						Injuries = Injuries + Rnd(0.8,1.2)
 					Case 3
 						BlurTimer = 500
-						ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄÓÒÍÈ"
+						ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„å³è…¿"
 						Injuries = Injuries + Rnd(0.8,1.2)
 					Case 4
 						BlurTimer = 500
-						ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄÓÒ¼ç"
+						ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„å³è‚©"
 						Injuries = Injuries + Rnd(0.8,1.2)	
 					Case 5
 						BlurTimer = 500
-						ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄ×ó¼ç"
+						ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„å·¦è‚©"
 						Injuries = Injuries + Rnd(0.8,1.2)	
 					Case 6
 						BlurTimer = 500
-						ShotMessageUpdate = "Ò»¿Å×Óµ¯»÷ÖÐÁËÄãµÄÓÒ¼ç"
+						ShotMessageUpdate = "ä¸€é¢—å­å¼¹å‡»ä¸­äº†ä½ çš„å³è‚©"
 						Injuries = Injuries + Rnd(2.5,4.0)
 				End Select
 			EndIf
@@ -7063,89 +7063,89 @@ Function Console_SpawnNPC(c_input$, c_state$ = "")
 		Case "008", "008zombie"
 			n.NPCs = CreateNPC(NPCtype008, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
 			n\State = 1
-			consoleMSG = "SCP-008¸ÐÈ¾ÊµÀý ÒÑÉú³É"
+			consoleMSG = "SCP-008æ„ŸæŸ“å®žä¾‹ å·²ç”Ÿæˆ"
 			
 		Case "049", "scp049", "scp-049"
 			n.NPCs = CreateNPC(NPCtype049, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
 			n\State = 1
-			consoleMSG = "SCP-049 ÒÑÉú³É"
+			consoleMSG = "SCP-049 å·²ç”Ÿæˆ"
 			
 		Case "049-2", "0492", "scp-049-2", "scp049-2", "049zombie"
 			n.NPCs = CreateNPC(NPCtypeZombie, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
 			n\State = 1
-			consoleMSG = "SCP-049-2 ÒÑÉú³É"
+			consoleMSG = "SCP-049-2 å·²ç”Ÿæˆ"
 			
 		Case "066", "scp066", "scp-066"
 			n.NPCs = CreateNPC(NPCtype066, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "SCP-066 ÒÑÉú³É"
+			consoleMSG = "SCP-066 å·²ç”Ÿæˆ"
 			
 		Case "096", "scp096", "scp-096"
 			n.NPCs = CreateNPC(NPCtype096, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
 			n\State = 5
 			If (Curr096 = Null) Then Curr096 = n
-			consoleMSG = "SCP-096 ÒÑÉú³É"
+			consoleMSG = "SCP-096 å·²ç”Ÿæˆ"
 			
 		Case "106", "scp106", "scp-106", "larry"
 			n.NPCs = CreateNPC(NPCtypeOldMan, EntityX(Collider), EntityY(Collider) - 0.5, EntityZ(Collider))
 			n\State = -1
-			consoleMSG = "SCP-106 ÒÑÉú³É"
+			consoleMSG = "SCP-106 å·²ç”Ÿæˆ"
 			
 		Case "173", "scp173", "scp-173", "statue"
 			n.NPCs = CreateNPC(NPCtype173, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
 			Curr173 = n
 			If (Curr173\Idle = 3) Then Curr173\Idle = False
-			consoleMSG = "SCP-173 ÒÑÉú³É"
+			consoleMSG = "SCP-173 å·²ç”Ÿæˆ"
 		Case "372", "scp372", "scp-372"
 			n.NPCs = CreateNPC(NPCtype372, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "SCP-372 ÒÑÉú³É"
+			consoleMSG = "SCP-372 å·²ç”Ÿæˆ"
 			
 		Case "513-1", "5131", "scp513-1", "scp-513-1"
 			n.NPCs = CreateNPC(NPCtype5131, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "SCP-513-1 ÒÑÉú³É"
+			consoleMSG = "SCP-513-1 å·²ç”Ÿæˆ"
 			
 		Case "860-2", "8602", "scp860-2", "scp-860-2"
-			CreateConsoleMsg("SCP-860-2 ÎÞ·¨Í¨¹ý¿ØÖÆÌ¨Éú³É£¬±§Ç¸£¡", 255, 0, 0)
+			CreateConsoleMsg("SCP-860-2 æ— æ³•é€šè¿‡æŽ§åˆ¶å°ç”Ÿæˆï¼ŒæŠ±æ­‰ï¼", 255, 0, 0)
 			
 		Case "939", "scp939", "scp-939"
-			CreateConsoleMsg("SCP-939 ÎÞ·¨Í¨¹ý¿ØÖÆÌ¨Éú³É£¬±§Ç¸£¡", 255, 0, 0)
+			CreateConsoleMsg("SCP-939 æ— æ³•é€šè¿‡æŽ§åˆ¶å°ç”Ÿæˆï¼ŒæŠ±æ­‰ï¼", 255, 0, 0)
 
 		Case "966", "scp966", "scp-966"
 			n.NPCs = CreateNPC(NPCtype966, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "SCP-966ÊµÀý ÒÑÉú³É"
+			consoleMSG = "SCP-966å®žä¾‹ å·²ç”Ÿæˆ"
 			
 		Case "1048-a", "scp1048-a", "scp-1048-a", "scp1048a", "scp-1048a"
-			CreateConsoleMsg("SCP-1048-A ÎÞ·¨Í¨¹ý¿ØÖÆÌ¨Éú³É£¬±§Ç¸£¡", 255, 0, 0)
+			CreateConsoleMsg("SCP-1048-A æ— æ³•é€šè¿‡æŽ§åˆ¶å°ç”Ÿæˆï¼ŒæŠ±æ­‰ï¼", 255, 0, 0)
 			
 		Case "1499-1", "14991", "scp-1499-1", "scp1499-1"
 			n.NPCs = CreateNPC(NPCtype1499, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "SCP-1499-1ÊµÀý ÒÑÉú³É"
+			consoleMSG = "SCP-1499-1å®žä¾‹ å·²ç”Ÿæˆ"
 			
 		Case "class-d", "classd", "d"
 			n.NPCs = CreateNPC(NPCtypeD, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "D¼¶ÈËÔ± ÒÑÉú³É"
+			consoleMSG = "Dçº§äººå‘˜ å·²ç”Ÿæˆ"
 			
 		Case "guard"
 			n.NPCs = CreateNPC(NPCtypeGuard, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "±£°² ÒÑÉú³É"
+			consoleMSG = "ä¿å®‰ å·²ç”Ÿæˆ"
 			
 		Case "mtf"
 			n.NPCs = CreateNPC(NPCtypeMTF, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "MTFµ¥Î» ÒÑÉú³É"
+			consoleMSG = "MTFå•ä½ å·²ç”Ÿæˆ"
 			
 		Case "apache", "helicopter"
 			n.NPCs = CreateNPC(NPCtypeApache, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "°¢ÅÁÆæ ÒÑÉú³É"
+			consoleMSG = "é˜¿å¸•å¥‡ å·²ç”Ÿæˆ"
 			
 		Case "tentacle"
 			n.NPCs = CreateNPC(NPCtypeTentacle, EntityX(Collider), EntityY(Collider), EntityZ(Collider))
-			consoleMSG = "SCP-035´¥ÊÖ ÒÑÉú³É"
+			consoleMSG = "SCP-035è§¦æ‰‹ å·²ç”Ÿæˆ"
 			
 		Case "clerk"
 			n.NPCs = CreateNPC(NPCtypeClerk, EntityX(Collider), EntityY(Collider) + 0.2, EntityZ(Collider))
-			consoleMSG = "Ö°Ô± ÒÑÉú³É"
+			consoleMSG = "èŒå‘˜ å·²ç”Ÿæˆ"
 			
 		Default 
-			CreateConsoleMsg("NPCÀàÐÍÎ´ÕÒµ½", 255, 0, 0) : Return
+			CreateConsoleMsg("NPCç±»åž‹æœªæ‰¾åˆ°", 255, 0, 0) : Return
 	End Select
 	
 	If n <> Null
@@ -7168,7 +7168,7 @@ Function ManipulateNPCBones()
 			If bonename$<>""
 				pvt% = CreatePivot()
 				bone% = FindChild(n\obj,bonename$)
-				If bone% = 0 Then RuntimeError "´íÎó: NPC¹Ç¼Ü ¡°"+bonename$+"¡± Î´ÕÒµ½"
+				If bone% = 0 Then RuntimeError "é”™è¯¯: NPCéª¨æž¶ â€œ"+bonename$+"â€ æœªæ‰¾åˆ°"
 				PositionEntity pvt%,EntityX(bone%,True),EntityY(bone%,True),EntityZ(bone%,True)
 				Select n\ManipulationType
 					Case 0 ;<--- looking at player
@@ -7416,7 +7416,7 @@ End Function
 
 Function ChangeNPCTextureID(n.NPCs,textureid%)
 	If (n=Null) Then
-		CreateConsoleMsg("³¢ÊÔ¸Ä±äÎÞÐ§NPCµÄÎÆÀí")
+		CreateConsoleMsg("å°è¯•æ”¹å˜æ— æ•ˆNPCçš„çº¹ç†")
 		If ConsoleOpening Then
 			ConsoleOpen = True
 		EndIf

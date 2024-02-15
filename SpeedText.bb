@@ -1,6 +1,6 @@
 ; SpeedText 2
 ; Copyright Christian Klaussner
-; ±äÁ¿
+; å˜é‡
 Const TEXT_ANSI = 0
 Const TEXT_UTF8 = 1
 
@@ -20,9 +20,9 @@ Const TEXT_CLEARTYPE		= 3
 Const TEXT_WORDWRAP	= 1
 Const TEXT_DONTCLIP	= 2
 
-Global encoding = TEXT_ANSI
+Global encoding = TEXT_UTF8
 
-;¿¹¾â³İÎÄ±¾±äÁ¿
+;æŠ—é”¯é½¿æ–‡æœ¬å˜é‡
 
 Global EnableSubtitle% = GetINIInt(OptionFile, "options", "subtitle")
 Global AASelectedFont%
@@ -32,7 +32,7 @@ Global EnableSubtitle_Prev% = EnableSubtitle
 
 Global AACamViewW%,AACamViewH%
 
-;SpeedTextº¯Êı
+;SpeedTextå‡½æ•°
 Function SetEncoding(encoding_st)
 	encoding = encoding_st
 End Function
@@ -83,7 +83,7 @@ Function StringHeight(txt$)
 	Return TextStringHeight(txt, encoding)
 End Function
 
-;¿¹¾â³İÎÄ±¾º¯Êı
+;æŠ—é”¯é½¿æ–‡æœ¬å‡½æ•°
 
 Type AAFont
 	Field texture%

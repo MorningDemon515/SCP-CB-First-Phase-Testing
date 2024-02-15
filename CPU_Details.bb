@@ -8,12 +8,12 @@ SeedRnd MilliSecs()
 TextInitialize BackBuffer()
 
 Color 255,255,255
-Text 0,0,"Õâ¸ö³ÌĞòÓÃÀ´ÏÔÊ¾ÄãµÄCPUĞÅÏ¢£¨ËüÒ»¿ªÊ¼ÔÚµ÷ÊÔ½çÃæÏÔÊ¾£©¡£"
+Text 0,0,"è¿™ä¸ªç¨‹åºç”¨æ¥æ˜¾ç¤ºä½ çš„CPUä¿¡æ¯ï¼ˆå®ƒä¸€å¼€å§‹åœ¨è°ƒè¯•ç•Œé¢æ˜¾ç¤ºï¼‰ã€‚"
 Color 255,0,0
-Text 0,20,"¾¯¸æ£º¸Ã³ÌĞò²»ÄÜÔÚËùÓĞ¼ÆËã»úÉÏÕı³£ÏÔÊ¾£¬"
-Text 0,40,"Òò´Ë¸Ã³ÌĞò´ÓÓÎÏ·±¾ÌåÖĞÉ¾³ı¡£"
+Text 0,20,"è­¦å‘Šï¼šè¯¥ç¨‹åºä¸èƒ½åœ¨æ‰€æœ‰è®¡ç®—æœºä¸Šæ­£å¸¸æ˜¾ç¤ºï¼Œ"
+Text 0,40,"å› æ­¤è¯¥ç¨‹åºä»æ¸¸æˆæœ¬ä½“ä¸­åˆ é™¤ã€‚"
 Color 255,255,255
-Text 0,80,"°´ÈÎÒâ¼ü¼ÌĞø"
+Text 0,80,"æŒ‰ä»»æ„é”®ç»§ç»­"
 
 Flip
 
@@ -32,12 +32,12 @@ Repeat
 	Cls
 	Color 255,255,255
 	Text 0,0,LSet("CPU ID: ",18)+kCPUid
-	Text 0,20,LSet("CPU ÏµÁĞ: ",18)+kCPUfamily
-	Text 0,40,LSet("CPU ²½½øID: ",18)+kCPUsteppingId
-	Text 0,60,LSet("CPU Æ·ÅÆ: ",18)+kCPUbrand
-	Text 0,80,LSet("CPU Ãû³Æ: ",18)+kCPUextendedId
-	Text 0,100,LSet("CPU ÌØÕ÷: ",18)+kCPUfeatures
-	Text 0,140,"°´ÈÎÒâ¼ü¹Ø±Õ³ÌĞò"
+	Text 0,20,LSet("CPU ç³»åˆ—: ",18)+kCPUfamily
+	Text 0,40,LSet("CPU æ­¥è¿›ID: ",18)+kCPUsteppingId
+	Text 0,60,LSet("CPU å“ç‰Œ: ",18)+kCPUbrand
+	Text 0,80,LSet("CPU åç§°: ",18)+kCPUextendedId
+	Text 0,100,LSet("CPU ç‰¹å¾: ",18)+kCPUfeatures
+	Text 0,140,"æŒ‰ä»»æ„é”®å…³é—­ç¨‹åº"
 	Flip
 	Delay 8
 Until WaitKey()

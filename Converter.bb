@@ -1,6 +1,6 @@
 Graphics3D 640,480,0,2
 
-AppTitle "×ª»»B3DÎÄ¼ş£¨3D World StudioÉú³ÉµÄÎÄ¼ş£©ÖÁRMESH"
+AppTitle "è½¬æ¢B3Dæ–‡ä»¶ï¼ˆ3D World Studioç”Ÿæˆçš„æ–‡ä»¶ï¼‰è‡³RMESH"
 
 Const HIT_MAP%=1
 Const HIT_PLAYER%=2
@@ -559,11 +559,11 @@ TextInitialize BackBuffer()
 ClsColor 0,0,0
 Cls
 Color 255,255,255
-Text 5,5,"°´ÏÂÒ»¸ö°´¼ü£º"
-Text 5,25,"1 - ×ª»»B3DÎÄ¼ş£¨3D World StudioÉú³ÉµÄÎÄ¼ş£©ÖÁRMESH"
-Text 5,45,"2 - ×ª»»Ö¸¶¨µÄB3DÎÄ¼ş£¨3D World StudioÉú³ÉµÄÎÄ¼ş£©ÖÁRMESH"
-Text 5,65,"3 - ÖØÖÃrooms.iniÒÔÊ¹ÓÃB3D meshesÎÄ¼ş"
-Text 5,85,"ESC - Ö±½ÓÍË³ö"
+Text 5,5,"æŒ‰ä¸‹ä¸€ä¸ªæŒ‰é”®ï¼š"
+Text 5,25,"1 - è½¬æ¢B3Dæ–‡ä»¶ï¼ˆ3D World Studioç”Ÿæˆçš„æ–‡ä»¶ï¼‰è‡³RMESH"
+Text 5,45,"2 - è½¬æ¢æŒ‡å®šçš„B3Dæ–‡ä»¶ï¼ˆ3D World Studioç”Ÿæˆçš„æ–‡ä»¶ï¼‰è‡³RMESH"
+Text 5,65,"3 - é‡ç½®rooms.iniä»¥ä½¿ç”¨B3D meshesæ–‡ä»¶"
+Text 5,85,"ESC - ç›´æ¥é€€å‡º"
 Flip
 
 While (Not KeyHit(1))
@@ -603,7 +603,7 @@ If state=1 Then ;convert B3D to Rmesh
 				SaveRoomMesh(mesh,Replace(Stri,".b3d",".rmesh"))
 				
 				Cls
-				Text 5,5,"ÒÑ×ª»»£º "+Chr(34)+Stri+Chr(34)
+				Text 5,5,"å·²è½¬æ¢ï¼š "+Chr(34)+Stri+Chr(34)
 				Flip
 				
 				ic.INIConvert=New INIConvert
@@ -622,7 +622,7 @@ If state=1 Then ;convert B3D to Rmesh
 	Next
 	
 	Cls
-	Text 5,5,"×ª»»Íê±Ï"
+	Text 5,5,"è½¬æ¢å®Œæ¯•"
 	Flip
 	Delay 1000
 	
@@ -632,12 +632,12 @@ Else If state=2
 	Cls
 	Flip
 	FlushKeys()
-	Text 0,0,"ĞèÒª×ª»»µÄÎÄ¼şµÄÂ·¾¶£º" ;Õâ¸öÕæµÄºÜÆæ¹Ö£¬FastTextºÍSpeedText¶¼ÕÒ²»µ½¶ÔÓ¦µÄ½â¾ö·½·½°¸
-	Stri=Input("                     ") ;ËùÒÔÕâÀï°ÑÏÔÊ¾ÎÄ×ÖºÍÊäÈëÏµÍ³·Ö¿ª£¬¿ÉÒÔÕı³£ÏÔÊ¾ÖĞÎÄ£¬Ò²¿ÉÒÔÕı³£ÊäÈëÂ·¾¶
+	Text 0,0,"éœ€è¦è½¬æ¢çš„æ–‡ä»¶çš„è·¯å¾„ï¼š" ;è¿™ä¸ªçœŸçš„å¾ˆå¥‡æ€ªï¼ŒFastTextå’ŒSpeedTextéƒ½æ‰¾ä¸åˆ°å¯¹åº”çš„è§£å†³æ–¹æ–¹æ¡ˆ
+	Stri=Input("                     ") ;æ‰€ä»¥è¿™é‡ŒæŠŠæ˜¾ç¤ºæ–‡å­—å’Œè¾“å…¥ç³»ç»Ÿåˆ†å¼€ï¼Œå¯ä»¥æ­£å¸¸æ˜¾ç¤ºä¸­æ–‡ï¼Œä¹Ÿå¯ä»¥æ­£å¸¸è¾“å…¥è·¯å¾„
 	mesh=LoadAnimMesh(Stri)
 	SaveRoomMesh(mesh,Replace(Stri,".b3d",".rmesh"))
 	Cls
-	Text 5,5,Stri+" ×ª»»Íê±Ï"
+	Text 5,5,Stri+" è½¬æ¢å®Œæ¯•"
 	Flip
 	Delay 1000
 	
@@ -668,7 +668,7 @@ Else If state=3
 	Next
 	
 	Cls
-	Text 5,5,"ÖØÖÃÍê±Ï"
+	Text 5,5,"é‡ç½®å®Œæ¯•"
 	Flip
 	Delay 1000
 	

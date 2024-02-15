@@ -1,13 +1,13 @@
-;SCP - ÊÕÈİÊ§Ğ§
+;SCP - æ”¶å®¹å¤±æ•ˆ
 
-;    ÓÎÏ·»ùÓÚSCP»ù½ğ»á±³¾°(http:/scp-wiki-cn.wikidot.com/)
+;    æ¸¸æˆåŸºäºSCPåŸºé‡‘ä¼šèƒŒæ™¯(http:/scp-wiki-cn.wikidot.com/)
 
-;	 ÓÎÏ·×ñÑ­ÖªÊ¶¹²ÏíĞí¿ÉĞ­ÒéBY-SA 3.0£¨¼´±ØĞëÊğÃû¡¢¿ÉÉÌÓÃ¡¢¿É¶ş´´¡¢¿É¶ş´´ÉÌÓÃ£©
+;	 æ¸¸æˆéµå¾ªçŸ¥è¯†å…±äº«è®¸å¯åè®®BY-SA 3.0ï¼ˆå³å¿…é¡»ç½²åã€å¯å•†ç”¨ã€å¯äºŒåˆ›ã€å¯äºŒåˆ›å•†ç”¨ï¼‰
 ;	 https:/creativecommons.org/licenses/by-sa/3.0/deed.zh
 
-;    ´ò¿ª"Credits.txt"ÎÄ¼ş²é¿´ÏêÏ¸ÖÆ×÷ÈËÔ±Ãûµ¥
+;    æ‰“å¼€"Credits.txt"æ–‡ä»¶æŸ¥çœ‹è¯¦ç»†åˆ¶ä½œäººå‘˜åå•
 
-;	 ×¢£ºÇë²»ÒªÖ±½ÓÔÚIDE£¨ÀıÈçIDEalºÍBlitz3D×Ô´øIDE£©ÄÚĞŞ¸Ä£¨±àÂë»á±»¸ÄÎªUTF-8£©
+;	 æ³¨ï¼šè¯·ä¸è¦ç›´æ¥åœ¨IDEï¼ˆä¾‹å¦‚IDEalå’ŒBlitz3Dè‡ªå¸¦IDEï¼‰å†…ä¿®æ”¹ï¼ˆç¼–ç ä¼šè¢«æ”¹ä¸ºANSI å’Œ ASCIIï¼‰
 
 Local InitErrorStr$ = ""
 If FileSize("fmod.dll")=0 Then InitErrorStr=InitErrorStr+ "fmod.dll"+Chr(13)+Chr(10)
@@ -15,7 +15,7 @@ If FileSize("d3dim700.dll")=0 Then InitErrorStr=InitErrorStr+ "d3dim700.dll"+Chr
 If FileSize("SpeedText.dll")=0 Then InitErrorStr=InitErrorStr+ "SpeedText.dll"+Chr(13)+Chr(10)
 
 If Len(InitErrorStr)>0 Then
-	RuntimeError "ÓÎÏ·ÎÄ¼ş¼ĞÄÚÕÒ²»µ½ÒÔÏÂDLLÎÄ¼ş£º"+Chr(13)+Chr(10)+Chr(13)+Chr(10)+InitErrorStr
+	RuntimeError "æ¸¸æˆæ–‡ä»¶å¤¹å†…æ‰¾ä¸åˆ°ä»¥ä¸‹DLLæ–‡ä»¶ï¼š"+Chr(13)+Chr(10)+Chr(13)+Chr(10)+InitErrorStr
 EndIf
 
 Include "StrictLoads.bb"
@@ -40,8 +40,8 @@ Global Font1%, Font2%, Font3%, Font4%, Font5%
 Global ConsoleFont%
 
 Global VersionNumber$ = "1.3.11"
-Global CompatibleNumber$ = "1.3.11-2022.3" ;µ±´æµµÓë¹¹½¨°æ±¾²»¼æÈİÊ±ÔÙ¸ü¸Ä		¡ª¡ª¿ª·¢Õß ENDSHN
-Global SinicizationNumber$ = "2022.4-First Phase Testing" ;ºº»¯°æ±¾
+Global CompatibleNumber$ = "1.3.11-2022.3" ;å½“å­˜æ¡£ä¸æ„å»ºç‰ˆæœ¬ä¸å…¼å®¹æ—¶å†æ›´æ”¹		â€”â€”å¼€å‘è€… ENDSHN
+Global SinicizationNumber$ = "2022.4-First Phase Testing" ;æ±‰åŒ–ç‰ˆæœ¬
 
 Global MenuWhite%, MenuBlack%
 Global ButtonSFX%
@@ -112,7 +112,7 @@ If LauncherEnabled Then
 	
 	;New "fake fullscreen" - ENDSHN Psst, it's called borderless windowed mode --Love Mark,
 	If BorderlessWindowed
-		DebugLog "Ê¹ÓÃÎŞ±ß´°¿ÚÄ£Ê½"
+		DebugLog "ä½¿ç”¨æ— è¾¹çª—å£æ¨¡å¼"
 		Graphics3DExt G_viewport_width, G_viewport_height, 0, 2
 		
 		; -- Change the window style to 'WS_POPUP' and then set the window position to force the style to update.
@@ -155,7 +155,7 @@ Else
 	
 	;New "fake fullscreen" - ENDSHN Psst, it's called borderless windowed mode --Love Mark,
 	If BorderlessWindowed
-		DebugLog "Ê¹ÓÃ¼ÙÈ«ÆÁ"
+		DebugLog "ä½¿ç”¨å‡å…¨å±"
 		Graphics3DExt G_viewport_width, G_viewport_height, 0, 2
 		
 		; -- Change the window style to 'WS_POPUP' and then set the window position to force the style to update.
@@ -207,7 +207,7 @@ Global GameSaved%
 
 Global CanSave% = True
 
-AppTitle "SCP - ÊÕÈİÊ§Ğ§ºº»¯°æ v"+VersionNumber+" - Ò»ÆÚ²âÊÔ"
+AppTitle "SCP - æ”¶å®¹å¤±æ•ˆæ±‰åŒ–ç‰ˆ v"+VersionNumber+" - ä¸€æœŸæµ‹è¯•"
 
 PlayStartupVideos()
 
@@ -222,12 +222,12 @@ Global LoadingBack% = LoadImage_Strict("Loadingscreens\loadingback.jpg")
 InitLoadingScreens("Loadingscreens\loadingscreens.ini")
 
 InitAAFont()
-;ÒòÎªÄ³Ğ©ÎÊÌâ£¬Blitz3D²»»á¶ÁÈ¡ÎÄ¼şÃûÓëÄÚ²¿Ãû²»Í¬µÄ×ÖÌåÎÄ¼ş
-;£¨ÄÚ²¿Ãû¾ÍÊÇÀàËÆÔÚWordÀïÏÔÊ¾µÄ×ÖÌåÃû³Æ£¬µ«ÕâÀïÒ»°ãÍÆ¼öÊ¹ÓÃ×ÖÌåÓ¢ÎÄÃû£©
-;Òò´Ë£¬ÎÒ½«ËûÃÇÖØĞÂÃüÃû£¬ÕâÑùËüÃÇ¾Í²»ĞèÒªÓÃFastText¼ÓÔØÁË			¡ª¡ª¿ª·¢Õß Regalis
+;å› ä¸ºæŸäº›é—®é¢˜ï¼ŒBlitz3Dä¸ä¼šè¯»å–æ–‡ä»¶åä¸å†…éƒ¨åä¸åŒçš„å­—ä½“æ–‡ä»¶
+;ï¼ˆå†…éƒ¨åå°±æ˜¯ç±»ä¼¼åœ¨Wordé‡Œæ˜¾ç¤ºçš„å­—ä½“åç§°ï¼Œä½†è¿™é‡Œä¸€èˆ¬æ¨èä½¿ç”¨å­—ä½“è‹±æ–‡åï¼‰
+;å› æ­¤ï¼Œæˆ‘å°†ä»–ä»¬é‡æ–°å‘½åï¼Œè¿™æ ·å®ƒä»¬å°±ä¸éœ€è¦ç”¨FastTextåŠ è½½äº†			â€”â€”å¼€å‘è€… Regalis
 
-;Õâ¸öÎÊÌâÔÚBlitz3DÔ­°æÈ·ÊµÓĞ
-;µ«ÊÇ²»ÊÇÓÃSpeedTextÒ²ÓĞÕâ¸öÎÊÌâ¾ÍÓĞ´ı¿¼Ö¤ÁË		¡ª¡ª×ÓÔÃ
+;è¿™ä¸ªé—®é¢˜åœ¨Blitz3DåŸç‰ˆç¡®å®æœ‰
+;ä½†æ˜¯ä¸æ˜¯ç”¨SpeedTextä¹Ÿæœ‰è¿™ä¸ªé—®é¢˜å°±æœ‰å¾…è€ƒè¯äº†		â€”â€”å­æ‚¦
 Font1 = TextLoadFont("Containment Breach", Int(19 * (GraphicHeight / 1024.0)), False, False, False, TEXT_DEFAULT, "GFX\font\cour\Containment Breach.ttf")
 Font2 = TextLoadFont("Containment Breach", Int(58 * (GraphicHeight / 1024.0)), False, False, False, TEXT_DEFAULT, "GFX\font\cour\Containment Breach.ttf")
 Font3 = TextLoadFont("DigtalVonwaon", Int(22 * (GraphicHeight / 1024.0)), False, False, False, TEXT_DEFAULT, "GFX\font\DS-DIGI\DigtalVonwaon.ttf")
@@ -364,7 +364,7 @@ Global IsNVGBlinking% = False
 ;[End block]
 
 
-;----------------------------------------------  ¿ØÖÆÌ¨ -----------------------------------------------------
+;----------------------------------------------  æ§åˆ¶å° -----------------------------------------------------
 
 Global ConsoleOpen%, ConsoleInput$
 Global ConsoleScroll#,ConsoleScrollDragging%
@@ -584,7 +584,7 @@ Function UpdateConsole()
 					
 					Select Lower(StrTemp)
 						Case "1",""
-							CreateConsoleMsg("ÃüÁîÁĞ±í - 1/3Ò³")
+							CreateConsoleMsg("å‘½ä»¤åˆ—è¡¨ - 1/3é¡µ")
 							CreateConsoleMsg("******************************")
 							CreateConsoleMsg("- asd")
 							CreateConsoleMsg("- status")
@@ -592,24 +592,24 @@ Function UpdateConsole()
 							CreateConsoleMsg("- ending")
 							CreateConsoleMsg("- noclipspeed")
 							CreateConsoleMsg("- noclip")
-							CreateConsoleMsg("- injure [Öµ]")
-							CreateConsoleMsg("- infect [Öµ]")
+							CreateConsoleMsg("- injure [å€¼]")
+							CreateConsoleMsg("- infect [å€¼]")
 							CreateConsoleMsg("- heal")
-							CreateConsoleMsg("- teleport [·¿¼äID")
-							CreateConsoleMsg("- spawnitem [ÎïÆ·ID]")
+							CreateConsoleMsg("- teleport [æˆ¿é—´ID")
+							CreateConsoleMsg("- spawnitem [ç‰©å“ID]")
 							CreateConsoleMsg("- wireframe")
 							CreateConsoleMsg("- 173speed")
 							CreateConsoleMsg("- 106speed")
 							CreateConsoleMsg("- 173state")
 							CreateConsoleMsg("- 106state")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("Ê¹ÓÃ "+Chr(34)+"help 2"+Chr(34)+"»ò"+Chr(34)+"help 3"+Chr(34)+" ÒÔ²é¿´¸ü¶àÃüÁî")
-							CreateConsoleMsg("Ê¹ÓÃ "+Chr(34)+"help [ÃüÁîÃû]"+Chr(34)+" ÒÔ»ñµÃ¹ØÓÚÃüÁîµÄÏêÏ¸ĞÅÏ¢")
+							CreateConsoleMsg("ä½¿ç”¨ "+Chr(34)+"help 2"+Chr(34)+"æˆ–"+Chr(34)+"help 3"+Chr(34)+" ä»¥æŸ¥çœ‹æ›´å¤šå‘½ä»¤")
+							CreateConsoleMsg("ä½¿ç”¨ "+Chr(34)+"help [å‘½ä»¤å]"+Chr(34)+" ä»¥è·å¾—å…³äºå‘½ä»¤çš„è¯¦ç»†ä¿¡æ¯")
 							CreateConsoleMsg("******************************")
 						Case "2"
-							CreateConsoleMsg("ÃüÁîÁĞ±í - 2/3Ò³")
+							CreateConsoleMsg("å‘½ä»¤åˆ—è¡¨ - 2/3é¡µ")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("- spawn [NPCÀàĞÍ] [×´Ì¬]")
+							CreateConsoleMsg("- spawn [NPCç±»å‹] [çŠ¶æ€]")
 							CreateConsoleMsg("- reset096")
 							CreateConsoleMsg("- disable173")
 							CreateConsoleMsg("- enable173")
@@ -624,112 +624,112 @@ Function UpdateConsole()
 							CreateConsoleMsg("- showfps")
 							CreateConsoleMsg("- 096state")
 							CreateConsoleMsg("- debughud")
-							CreateConsoleMsg("- camerafog [¿ÉÊÓ¾àÀë] [äÖÈ¾¾àÀë]")
-							CreateConsoleMsg("- gamma [Öµ]")
+							CreateConsoleMsg("- camerafog [å¯è§†è·ç¦»] [æ¸²æŸ“è·ç¦»]")
+							CreateConsoleMsg("- gamma [å€¼]")
 							CreateConsoleMsg("- infinitestamina")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("Ê¹ÓÃ "+Chr(34)+"help [ÃüÁîÃû]"+Chr(34)+" ÒÔ»ñµÃ¹ØÓÚÃüÁîµÄÏêÏ¸ĞÅÏ¢")
+							CreateConsoleMsg("ä½¿ç”¨ "+Chr(34)+"help [å‘½ä»¤å]"+Chr(34)+" ä»¥è·å¾—å…³äºå‘½ä»¤çš„è¯¦ç»†ä¿¡æ¯")
 							CreateConsoleMsg("******************************")
 						Case "3"
-							CreateConsoleMsg("- playmusic [ÎÄ¼şÃû + .wav/.ogg]")
+							CreateConsoleMsg("- playmusic [æ–‡ä»¶å + .wav/.ogg]")
 							CreateConsoleMsg("- notarget")
 							CreateConsoleMsg("- unlockexits")
 						Case "asd"
-							CreateConsoleMsg("°ïÖú - asd")
+							CreateConsoleMsg("å¸®åŠ© - asd")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("ÆôÓÃÎŞµĞÄ£Ê½,ÎŞÅö×²,äÖÈ¾Ïß¿ò")
-							CreateConsoleMsg("²¢ÇÒÉèÖÃ¿ÉÊÓ¾àÀëÎª20,äÖÈ¾¾àÀëÎª30")
+							CreateConsoleMsg("å¯ç”¨æ— æ•Œæ¨¡å¼,æ— ç¢°æ’,æ¸²æŸ“çº¿æ¡†")
+							CreateConsoleMsg("å¹¶ä¸”è®¾ç½®å¯è§†è·ç¦»ä¸º20,æ¸²æŸ“è·ç¦»ä¸º30")
 							CreateConsoleMsg("******************************")
 						Case "camerafog"
-							CreateConsoleMsg("°ïÖú - camerafog")
+							CreateConsoleMsg("å¸®åŠ© - camerafog")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("ÉèÖÃÎíµÄ»æÖÆ¾àÀë,ÃÔÎíÔÚ"+Chr(34)+"¿ÉÊÓ¾àÀë"+Chr(34)+"¿ªÊ¼äÖÈ¾,")
-							CreateConsoleMsg("Ö±µ½"+Chr(34)+"äÖÈ¾¾àÀë"+Chr(34)+"´¦±äµÃÍêÈ«²»Í¸Ã÷")
-							CreateConsoleMsg("Ê¾Àı: camerafog 20 40")
+							CreateConsoleMsg("è®¾ç½®é›¾çš„ç»˜åˆ¶è·ç¦»,è¿·é›¾åœ¨"+Chr(34)+"å¯è§†è·ç¦»"+Chr(34)+"å¼€å§‹æ¸²æŸ“,")
+							CreateConsoleMsg("ç›´åˆ°"+Chr(34)+"æ¸²æŸ“è·ç¦»"+Chr(34)+"å¤„å˜å¾—å®Œå…¨ä¸é€æ˜")
+							CreateConsoleMsg("ç¤ºä¾‹: camerafog 20 40")
 							CreateConsoleMsg("******************************")
 						Case "gamma"
-							CreateConsoleMsg("°ïÖú - gamma")
+							CreateConsoleMsg("å¸®åŠ© - gamma")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("ÉèÖÃÓÎÏ·Ù¤ÂíÖµ")
-							CreateConsoleMsg("½¨Òé½«Ù¤ÂíÖµÉèÎª0.0µ½2.0Ö®ÄÚµÄÖµ")
-							CreateConsoleMsg("Ä¬ÈÏÎª1.0")
+							CreateConsoleMsg("è®¾ç½®æ¸¸æˆä¼½é©¬å€¼")
+							CreateConsoleMsg("å»ºè®®å°†ä¼½é©¬å€¼è®¾ä¸º0.0åˆ°2.0ä¹‹å†…çš„å€¼")
+							CreateConsoleMsg("é»˜è®¤ä¸º1.0")
 							CreateConsoleMsg("******************************")
 						Case "noclip","fly"
-							CreateConsoleMsg("°ïÖú - noclip")
+							CreateConsoleMsg("å¸®åŠ© - noclip")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("ÇĞ»»ÎŞÅö×²,³ı·ÇÖ¸¶¨ÊÇ·ñÆôÓÃ(on/off)")
-							CreateConsoleMsg("ÔÊĞíÊÓ½ÇÎŞÊÓÈÎºÎÅö×²ÒÆ¶¯")
+							CreateConsoleMsg("åˆ‡æ¢æ— ç¢°æ’,é™¤éæŒ‡å®šæ˜¯å¦å¯ç”¨(on/off)")
+							CreateConsoleMsg("å…è®¸è§†è§’æ— è§†ä»»ä½•ç¢°æ’ç§»åŠ¨")
 							CreateConsoleMsg("******************************")
 						Case "godmode","god"
-							CreateConsoleMsg("°ïÖú - godmode")
+							CreateConsoleMsg("å¸®åŠ© - godmode")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("ÇĞ»»ÎŞµĞÄ£Ê½,³ı·ÇÖ¸¶¨ÊÇ·ñÆôÓÃ(on/off)")
-							CreateConsoleMsg("·ÀÖ¹Íæ¼ÒÔÚÕı³£Çé¿öÏÂËÀÍö")
+							CreateConsoleMsg("åˆ‡æ¢æ— æ•Œæ¨¡å¼,é™¤éæŒ‡å®šæ˜¯å¦å¯ç”¨(on/off)")
+							CreateConsoleMsg("é˜²æ­¢ç©å®¶åœ¨æ­£å¸¸æƒ…å†µä¸‹æ­»äº¡")
 							CreateConsoleMsg("******************************")
 						Case "wireframe"
-							CreateConsoleMsg("°ïÖú - wireframe")
+							CreateConsoleMsg("å¸®åŠ© - wireframe")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("ÇĞ»»äÖÈ¾Ïß¿ò,³ı·ÇÖ¸¶¨ÊÇ·ñÆôÓÃ(on/off)")
-							CreateConsoleMsg("Ö»äÖÈ¾¼¸ºÎÌåµÄ±ß¿ò£¬Ê¹ÆäËû²¿·Ö²»¿É¼û")
+							CreateConsoleMsg("åˆ‡æ¢æ¸²æŸ“çº¿æ¡†,é™¤éæŒ‡å®šæ˜¯å¦å¯ç”¨(on/off)")
+							CreateConsoleMsg("åªæ¸²æŸ“å‡ ä½•ä½“çš„è¾¹æ¡†ï¼Œä½¿å…¶ä»–éƒ¨åˆ†ä¸å¯è§")
 							CreateConsoleMsg("******************************")
 						Case "spawnitem"
-							CreateConsoleMsg("°ïÖú - spawnitem")
+							CreateConsoleMsg("å¸®åŠ© - spawnitem")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("ÔÚÍæ¼ÒµÄÎ»ÖÃÉú³ÉÎïÆ·")
-							CreateConsoleMsg("¿ÉÉú³ÉÄÜÔÚÎïÆ·À¸Àï³öÏÖµÄÎïÆ·")
-							CreateConsoleMsg("ÔÚºº»¯°æ±¾ÖĞ£¬ÓÉÓÚÎŞ·¨ÊäÈëÖĞÎÄ")
-							CreateConsoleMsg("Òò´ËÔÚºº»¯°æÖĞÖ»ÄÜÊäÈëÎïÆ·IDÉú³ÉÎïÆ·")
-							CreateConsoleMsg("Ê¾Àı: spawnitem key6 (ÍòÄÜÔ¿³×¿¨)")
+							CreateConsoleMsg("åœ¨ç©å®¶çš„ä½ç½®ç”Ÿæˆç‰©å“")
+							CreateConsoleMsg("å¯ç”Ÿæˆèƒ½åœ¨ç‰©å“æ é‡Œå‡ºç°çš„ç‰©å“")
+							CreateConsoleMsg("åœ¨æ±‰åŒ–ç‰ˆæœ¬ä¸­ï¼Œç”±äºæ— æ³•è¾“å…¥ä¸­æ–‡")
+							CreateConsoleMsg("å› æ­¤åœ¨æ±‰åŒ–ç‰ˆä¸­åªèƒ½è¾“å…¥ç‰©å“IDç”Ÿæˆç‰©å“")
+							CreateConsoleMsg("ç¤ºä¾‹: spawnitem key6 (ä¸‡èƒ½é’¥åŒ™å¡)")
 							CreateConsoleMsg("******************************")
 						Case "spawn"
-							CreateConsoleMsg("°ïÖú - spawn")
+							CreateConsoleMsg("å¸®åŠ© - spawn")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("ÔÚÍæ¼ÒµÄÎ»ÖÃÉú³ÉNPC")
-							CreateConsoleMsg("¿ÉÓÃ²ÎÊı:")
+							CreateConsoleMsg("åœ¨ç©å®¶çš„ä½ç½®ç”ŸæˆNPC")
+							CreateConsoleMsg("å¯ç”¨å‚æ•°:")
 							CreateConsoleMsg("008zombie / 049 / 049-2 / 066 / 096 / 106 / 173")
 							CreateConsoleMsg("/ 178-1 / 372 / 513-1 / 966 / 1499-1 / class-d")
 							CreateConsoleMsg("/ guard / mtf / apache / tentacle")
 							CreateConsoleMsg("******************************")
 						Case "revive","undead","resurrect"
-							CreateConsoleMsg("°ïÖú - revive")
+							CreateConsoleMsg("å¸®åŠ© - revive")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("ÔÚËÀÍö¶¯»­´¥·¢ºóÖØÖÃÍæ¼ÒµÄËÀÍö¼ÆÊ±Æ÷")
-							CreateConsoleMsg("²»Ó°ÏìÊÜÉË¡¢Ê§ÑªºÍ008¸ĞÈ¾")
+							CreateConsoleMsg("åœ¨æ­»äº¡åŠ¨ç”»è§¦å‘åé‡ç½®ç©å®¶çš„æ­»äº¡è®¡æ—¶å™¨")
+							CreateConsoleMsg("ä¸å½±å“å—ä¼¤ã€å¤±è¡€å’Œ008æ„ŸæŸ“")
 							CreateConsoleMsg("******************************")
 						Case "teleport"
-							CreateConsoleMsg("°ïÖú - teleport")
+							CreateConsoleMsg("å¸®åŠ© - teleport")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("½«Íæ¼Ò´«ËÍµ½Ö¸¶¨·¿¼ä")
-							CreateConsoleMsg("¿ÉÓÃµÄ·¿¼äID¿ÉÔÚroom.iniÖĞÕÒµ½")
+							CreateConsoleMsg("å°†ç©å®¶ä¼ é€åˆ°æŒ‡å®šæˆ¿é—´")
+							CreateConsoleMsg("å¯ç”¨çš„æˆ¿é—´IDå¯åœ¨room.iniä¸­æ‰¾åˆ°")
 							CreateConsoleMsg("******************************")
 						Case "stopsound", "stfu"
-							CreateConsoleMsg("°ïÖú - stopsound")
+							CreateConsoleMsg("å¸®åŠ© - stopsound")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("Í£Ö¹²¥·ÅËùÓĞÉùÒô")
+							CreateConsoleMsg("åœæ­¢æ’­æ”¾æ‰€æœ‰å£°éŸ³")
 							CreateConsoleMsg("******************************")
 						Case "camerapick"
-							CreateConsoleMsg("°ïÖú - camerapick")
+							CreateConsoleMsg("å¸®åŠ© - camerapick")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("´òÓ¡¾µÍ·Ö¸ÏòµÄÄ£ĞÍµÄÌùÍ¼Ãû³ÆºÍ×ø±ê")
+							CreateConsoleMsg("æ‰“å°é•œå¤´æŒ‡å‘çš„æ¨¡å‹çš„è´´å›¾åç§°å’Œåæ ‡")
 							CreateConsoleMsg("******************************")
 						Case "status"
-							CreateConsoleMsg("°ïÖú - status")
+							CreateConsoleMsg("å¸®åŠ© - status")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("´òÓ¡Íæ¼Ò¡¢ÊÓ½ÇºÍ·¿¼äĞÅÏ¢")
+							CreateConsoleMsg("æ‰“å°ç©å®¶ã€è§†è§’å’Œæˆ¿é—´ä¿¡æ¯")
 							CreateConsoleMsg("******************************")
 						Case "weed","scp-420-j","420"
 							CreateConsoleMsg("HELP - 420")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("Éú³ÉÒÚ¶ÑÅ£¨€µÄSCP-420-J!")
+							CreateConsoleMsg("ç”Ÿæˆäº¿å †ç‰›â–ˆçš„SCP-420-J!")
 							CreateConsoleMsg("******************************")
 						Case "playmusic"
 							CreateConsoleMsg("HELP - playmusic")
 							CreateConsoleMsg("******************************")
-							CreateConsoleMsg("½«²¥·ÅÔÚ"+Chr(34)+"SFX\Music\Custom\"+Chr(34)+"ÎÄ¼ş¼ĞÄÚµÄ.ogg/.wav¸ñÊ½ÎÄ¼ş")
+							CreateConsoleMsg("å°†æ’­æ”¾åœ¨"+Chr(34)+"SFX\Music\Custom\"+Chr(34)+"æ–‡ä»¶å¤¹å†…çš„.ogg/.wavæ ¼å¼æ–‡ä»¶")
 							CreateConsoleMsg("******************************")
 							
 						Default
-							CreateConsoleMsg("¸ÃÃüÁîÃ»ÓĞ¿ÉÓÃµÄ°ïÖú",255,150,0)
+							CreateConsoleMsg("è¯¥å‘½ä»¤æ²¡æœ‰å¯ç”¨çš„å¸®åŠ©",255,150,0)
 					End Select
 					
 					;[End Block]
@@ -746,32 +746,32 @@ Function UpdateConsole()
 					;[Block]
 					ConsoleR = 0 : ConsoleG = 255 : ConsoleB = 0
 					CreateConsoleMsg("******************************")
-					CreateConsoleMsg("×´Ì¬: ")
-					CreateConsoleMsg("×ø±ê: ")
-					CreateConsoleMsg("    - Åö×²: "+EntityX(Collider)+", "+EntityY(Collider)+", "+EntityZ(Collider))
-					CreateConsoleMsg("    - ÊÓ½Ç: "+EntityX(Camera)+", "+EntityY(Camera)+", "+EntityZ(Camera))
+					CreateConsoleMsg("çŠ¶æ€: ")
+					CreateConsoleMsg("åæ ‡: ")
+					CreateConsoleMsg("    - ç¢°æ’: "+EntityX(Collider)+", "+EntityY(Collider)+", "+EntityZ(Collider))
+					CreateConsoleMsg("    - è§†è§’: "+EntityX(Camera)+", "+EntityY(Camera)+", "+EntityZ(Camera))
 					
-					CreateConsoleMsg("Ğı×ª: ")
-					CreateConsoleMsg("    - Åö×²: "+EntityPitch(Collider)+", "+EntityYaw(Collider)+", "+EntityRoll(Collider))
-					CreateConsoleMsg("    - ÊÓ½Ç: "+EntityPitch(Camera)+", "+EntityYaw(Camera)+", "+EntityRoll(Camera))
+					CreateConsoleMsg("æ—‹è½¬: ")
+					CreateConsoleMsg("    - ç¢°æ’: "+EntityPitch(Collider)+", "+EntityYaw(Collider)+", "+EntityRoll(Collider))
+					CreateConsoleMsg("    - è§†è§’: "+EntityPitch(Camera)+", "+EntityYaw(Camera)+", "+EntityRoll(Camera))
 					
-					CreateConsoleMsg("·¿¼ä: "+PlayerRoom\RoomTemplate\Name)
+					CreateConsoleMsg("æˆ¿é—´: "+PlayerRoom\RoomTemplate\Name)
 					For ev.Events = Each Events
 						If ev\room = PlayerRoom Then
-							CreateConsoleMsg("·¿¼äÊÂ¼ş: "+ev\EventName)	
-							CreateConsoleMsg("-    ×´Ì¬: "+ev\EventState)
-							CreateConsoleMsg("-    ×´Ì¬2: "+ev\EventState2)	
-							CreateConsoleMsg("-    ×´Ì¬3: "+ev\EventState3)
+							CreateConsoleMsg("æˆ¿é—´äº‹ä»¶: "+ev\EventName)	
+							CreateConsoleMsg("-    çŠ¶æ€: "+ev\EventState)
+							CreateConsoleMsg("-    çŠ¶æ€2: "+ev\EventState2)	
+							CreateConsoleMsg("-    çŠ¶æ€3: "+ev\EventState3)
 							Exit
 						EndIf
 					Next
 					
-					CreateConsoleMsg("×´Ì¬: "+Floor(EntityX(PlayerRoom\obj) / 8.0 + 0.5)+", "+ Floor(EntityZ(PlayerRoom\obj) / 8.0 + 0.5))
-					CreateConsoleMsg("ÄÍÁ¦: "+Stamina)
-					CreateConsoleMsg("ËÀÍö¼ÆÊ±: "+KillTimer)					
-					CreateConsoleMsg("Õ£ÑÛ¼ÆÊ±: "+BlinkTimer)
-					CreateConsoleMsg("ÊÜÉË: "+Injuries)
-					CreateConsoleMsg("Ê§Ñª: "+Bloodloss)
+					CreateConsoleMsg("çŠ¶æ€: "+Floor(EntityX(PlayerRoom\obj) / 8.0 + 0.5)+", "+ Floor(EntityZ(PlayerRoom\obj) / 8.0 + 0.5))
+					CreateConsoleMsg("è€åŠ›: "+Stamina)
+					CreateConsoleMsg("æ­»äº¡è®¡æ—¶: "+KillTimer)					
+					CreateConsoleMsg("çœ¨çœ¼è®¡æ—¶: "+BlinkTimer)
+					CreateConsoleMsg("å—ä¼¤: "+Injuries)
+					CreateConsoleMsg("å¤±è¡€: "+Bloodloss)
 					CreateConsoleMsg("******************************")
 					;[End Block]
 				Case "camerapick"
@@ -780,24 +780,24 @@ Function UpdateConsole()
 					c = CameraPick(Camera,GraphicWidth/2, GraphicHeight/2)
 					If c = 0 Then
 						CreateConsoleMsg("******************************")
-						CreateConsoleMsg("ÎŞÊµÌå±»¼ñÆğ")
+						CreateConsoleMsg("æ— å®ä½“è¢«æ¡èµ·")
 						CreateConsoleMsg("******************************")								
 					Else
 						CreateConsoleMsg("******************************")
-						CreateConsoleMsg("¼ñÆğµÄÊµÌå:")
+						CreateConsoleMsg("æ¡èµ·çš„å®ä½“:")
 						sf = GetSurface(c,1)
 						b = GetSurfaceBrush( sf )
 						t = GetBrushTexture(b,0)
 						texname$ =  StripPath(TextureName(t))
-						CreateConsoleMsg("²ÄÖÊÃû: "+texname)
-						CreateConsoleMsg("×ø±ê: "+EntityX(c)+", "+EntityY(c)+", "+EntityZ(c))
+						CreateConsoleMsg("æè´¨å: "+texname)
+						CreateConsoleMsg("åæ ‡: "+EntityX(c)+", "+EntityY(c)+", "+EntityZ(c))
 						CreateConsoleMsg("******************************")							
 					EndIf
 					;[End Block]
 				Case "hidedistance"
 					;[Block]
 					HideDistance = Float(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
-					CreateConsoleMsg("Òş²Ø×´Ì¬ÉèÖÃÎª"+HideDistance)
+					CreateConsoleMsg("éšè—çŠ¶æ€è®¾ç½®ä¸º"+HideDistance)
 					;[End Block]
 				Case "ending"
 					;[Block]
@@ -865,20 +865,20 @@ Function UpdateConsole()
 					For itt.Itemtemplates = Each ItemTemplates
 						If (Lower(itt\name) = StrTemp) Then
 							temp = True
-							CreateConsoleMsg(itt\name + " ÒÑÉú³É")
+							CreateConsoleMsg(itt\name + " å·²ç”Ÿæˆ")
 							it.Items = CreateItem(itt\name, itt\tempname, EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
 							EntityType(it\collider, HIT_ITEM)
 							Exit
 						Else If (Lower(itt\tempname) = StrTemp) Then
 							temp = True
-							CreateConsoleMsg(itt\name + " ÒÑÉú³É")
+							CreateConsoleMsg(itt\name + " å·²ç”Ÿæˆ")
 							it.Items = CreateItem(itt\name, itt\tempname, EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
 							EntityType(it\collider, HIT_ITEM)
 							Exit
 						End If
 					Next
 					
-					If temp = False Then CreateConsoleMsg("ÎïÆ·Î´ÕÒµ½",255,150,0)
+					If temp = False Then CreateConsoleMsg("ç‰©å“æœªæ‰¾åˆ°",255,150,0)
 					;[End Block]
 				Case "wireframe"
 					;[Block]
@@ -894,9 +894,9 @@ Function UpdateConsole()
 					End Select
 					
 					If WireframeState Then
-						CreateConsoleMsg("äÖÈ¾Ñ¡¿ò ÆôÓÃ")
+						CreateConsoleMsg("æ¸²æŸ“é€‰æ¡† å¯ç”¨")
 					Else
-						CreateConsoleMsg("äÖÈ¾Ñ¡¿ò ½ûÓÃ")	
+						CreateConsoleMsg("æ¸²æŸ“é€‰æ¡† ç¦ç”¨")	
 					EndIf
 					
 					WireFrame WireframeState
@@ -905,27 +905,27 @@ Function UpdateConsole()
 					;[Block]
 					StrTemp$ = Lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					Curr173\Speed = Float(StrTemp)
-					CreateConsoleMsg("173ËÙ¶ÈÒÑÉèÎª " + StrTemp)
+					CreateConsoleMsg("173é€Ÿåº¦å·²è®¾ä¸º " + StrTemp)
 					;[End Block]
 				Case "106speed"
 					;[Block]
 					StrTemp$ = Lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					Curr106\Speed = Float(StrTemp)
-					CreateConsoleMsg("106ËÙ¶ÈÒÑÉèÎª " + StrTemp)
+					CreateConsoleMsg("106é€Ÿåº¦å·²è®¾ä¸º " + StrTemp)
 					;[End Block]
 				Case "173state"
 					;[Block]
 					CreateConsoleMsg("SCP-173")
-					CreateConsoleMsg("Î»ÖÃ: " + EntityX(Curr173\obj) + ", " + EntityY(Curr173\obj) + ", " + EntityZ(Curr173\obj))
-					CreateConsoleMsg("ÓÎµ´: " + Curr173\Idle)
-					CreateConsoleMsg("×´Ì¬: " + Curr173\State)
+					CreateConsoleMsg("ä½ç½®: " + EntityX(Curr173\obj) + ", " + EntityY(Curr173\obj) + ", " + EntityZ(Curr173\obj))
+					CreateConsoleMsg("æ¸¸è¡: " + Curr173\Idle)
+					CreateConsoleMsg("çŠ¶æ€: " + Curr173\State)
 					;[End Block]
 				Case "106state"
 					;[Block]
 					CreateConsoleMsg("SCP-106")
-					CreateConsoleMsg("Î»ÖÃ: " + EntityX(Curr106\obj) + ", " + EntityY(Curr106\obj) + ", " + EntityZ(Curr106\obj))
-					CreateConsoleMsg("ÓÎµ´: " + Curr106\Idle)
-					CreateConsoleMsg("×´Ì¬: " + Curr106\State)
+					CreateConsoleMsg("ä½ç½®: " + EntityX(Curr106\obj) + ", " + EntityY(Curr106\obj) + ", " + EntityZ(Curr106\obj))
+					CreateConsoleMsg("æ¸¸è¡: " + Curr106\Idle)
+					CreateConsoleMsg("çŠ¶æ€: " + Curr106\State)
 					;[End Block]
 				Case "reset096"
 					;[Block]
@@ -972,12 +972,12 @@ Function UpdateConsole()
 						Local tex = LoadTexture_Strict("GFX\npcs\173h.pt", 1)
 						EntityTexture Curr173\obj, tex, 0, 0
 						FreeTexture tex
-						CreateConsoleMsg("ÄÏ¹Ï173 ÆôÓÃ")
+						CreateConsoleMsg("å—ç“œ173 å¯ç”¨")
 					Else
 						Local tex2 = LoadTexture_Strict("GFX\npcs\173texture.jpg", 1)
 						EntityTexture Curr173\obj, tex2, 0, 0
 						FreeTexture tex2
-						CreateConsoleMsg("ÄÏ¹Ï173 ½ûÓÃ")
+						CreateConsoleMsg("å—ç“œ173 ç¦ç”¨")
 					EndIf
 					;[End Block]
 				Case "sanic"
@@ -993,9 +993,9 @@ Function UpdateConsole()
 					;[Block]
 					For i = 1 To 20
 						If Rand(2)=1 Then
-							it.Items = CreateItem("Ò»Ğ©SCP-420-J","420", EntityX(Collider,True)+Cos((360.0/20.0)*i)*Rnd(0.3,0.5), EntityY(Camera,True), EntityZ(Collider,True)+Sin((360.0/20.0)*i)*Rnd(0.3,0.5))
+							it.Items = CreateItem("ä¸€äº›SCP-420-J","420", EntityX(Collider,True)+Cos((360.0/20.0)*i)*Rnd(0.3,0.5), EntityY(Camera,True), EntityZ(Collider,True)+Sin((360.0/20.0)*i)*Rnd(0.3,0.5))
 						Else
-							it.Items = CreateItem("ÑÌ¾í","420s", EntityX(Collider,True)+Cos((360.0/20.0)*i)*Rnd(0.3,0.5), EntityY(Camera,True), EntityZ(Collider,True)+Sin((360.0/20.0)*i)*Rnd(0.3,0.5))
+							it.Items = CreateItem("çƒŸå·","420s", EntityX(Collider,True)+Cos((360.0/20.0)*i)*Rnd(0.3,0.5), EntityY(Camera,True), EntityZ(Collider,True)+Sin((360.0/20.0)*i)*Rnd(0.3,0.5))
 						EndIf
 						EntityType (it\collider, HIT_ITEM)
 					Next
@@ -1014,9 +1014,9 @@ Function UpdateConsole()
 							GodMode = Not GodMode
 					End Select	
 					If GodMode Then
-						CreateConsoleMsg("ÎŞµĞÄ£Ê½ ÆôÓÃ")
+						CreateConsoleMsg("æ— æ•Œæ¨¡å¼ å¯ç”¨")
 					Else
-						CreateConsoleMsg("ÎŞµĞÄ£Ê½ ½ûÓÃ")	
+						CreateConsoleMsg("æ— æ•Œæ¨¡å¼ ç¦ç”¨")	
 					EndIf
 					;[End Block]
 				Case "revive","undead","resurrect"
@@ -1065,9 +1065,9 @@ Function UpdateConsole()
 					End Select
 					
 					If NoClip Then
-						CreateConsoleMsg("ÎŞÅö×² ÆôÓÃ")
+						CreateConsoleMsg("æ— ç¢°æ’ å¯ç”¨")
 					Else
-						CreateConsoleMsg("ÎŞÅö×² ½ûÓÃ")
+						CreateConsoleMsg("æ— ç¢°æ’ ç¦ç”¨")
 					EndIf
 					
 					DropSpeed = 0
@@ -1075,20 +1075,20 @@ Function UpdateConsole()
 				Case "showfps"
 					;[Block]
 					ShowFPS = Not ShowFPS
-					CreateConsoleMsg("ÏÔÊ¾FPS: "+Str(ShowFPS))
+					CreateConsoleMsg("æ˜¾ç¤ºFPS: "+Str(ShowFPS))
 					;[End Block]
 				Case "096state"
 					;[Block]
 					For n.NPCs = Each NPCs
 						If n\NPCtype = NPCtype096 Then
 							CreateConsoleMsg("SCP-096")
-							CreateConsoleMsg("Î»ÖÃ: " + EntityX(n\obj) + ", " + EntityY(n\obj) + ", " + EntityZ(n\obj))
-							CreateConsoleMsg("ÓÎµ´: " + n\Idle)
-							CreateConsoleMsg("×´Ì¬: " + n\State)
+							CreateConsoleMsg("ä½ç½®: " + EntityX(n\obj) + ", " + EntityY(n\obj) + ", " + EntityZ(n\obj))
+							CreateConsoleMsg("æ¸¸è¡: " + n\Idle)
+							CreateConsoleMsg("çŠ¶æ€: " + n\State)
 							Exit
 						EndIf
 					Next
-					CreateConsoleMsg("SCP-096ÉĞÎ´Éú³É")
+					CreateConsoleMsg("SCP-096å°šæœªç”Ÿæˆ")
 					;[End Block]
 				Case "debughud"
 					;[Block]
@@ -1103,9 +1103,9 @@ Function UpdateConsole()
 					End Select
 					
 					If DebugHUD Then
-						CreateConsoleMsg("µ÷ÊÔÄ£Ê½ ÆôÓÃ")
+						CreateConsoleMsg("è°ƒè¯•æ¨¡å¼ å¯ç”¨")
 					Else
-						CreateConsoleMsg("µ÷ÊÔÄ£Ê½ ½ûÓÃ")
+						CreateConsoleMsg("è°ƒè¯•æ¨¡å¼ ç¦ç”¨")
 					EndIf
 					;[End Block]
 				Case "stopsound", "stfu"
@@ -1133,20 +1133,20 @@ Function UpdateConsole()
 							Exit
 						EndIf
 					Next
-					CreateConsoleMsg("Í£Ö¹²¥·ÅËùÓĞÉùÒô")
+					CreateConsoleMsg("åœæ­¢æ’­æ”¾æ‰€æœ‰å£°éŸ³")
 					;[End Block]
 				Case "camerafog"
 					;[Block]
 					args$ = Lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					CameraFogNear = Float(Left(args, Len(args) - Instr(args, " ")))
 					CameraFogFar = Float(Right(args, Len(args) - Instr(args, " ")))
-					CreateConsoleMsg("¿ÉÊÓ¾àÀëÒÑÉèÎª: " + CameraFogNear + ",äÖÈ¾¾àÀëÒÑÉèÎª: " + CameraFogFar)
+					CreateConsoleMsg("å¯è§†è·ç¦»å·²è®¾ä¸º: " + CameraFogNear + ",æ¸²æŸ“è·ç¦»å·²è®¾ä¸º: " + CameraFogFar)
 					;[End Block]
 				Case "gamma"
 					;[Block]
 					StrTemp$ = Lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					ScreenGamma = Int(StrTemp)
-					CreateConsoleMsg("ÆÁÄ»Ù¤ÂíÒÑÉèÎª " + ScreenGamma)
+					CreateConsoleMsg("å±å¹•ä¼½é©¬å·²è®¾ä¸º " + ScreenGamma)
 					;[End Block]
 				Case "spawn"
 					;[Block]
@@ -1161,7 +1161,7 @@ Function UpdateConsole()
 						Console_SpawnNPC(StrTemp)
 					EndIf
 					;[End Block]
-				;SCP:CB 1.3µÄĞÂÃüÁî ¡ª¡ª¿ª·¢ÕßENDSHN
+				;SCP:CB 1.3çš„æ–°å‘½ä»¤ â€”â€”å¼€å‘è€…ENDSHN
 				Case "infinitestamina","infstam"
 					;[Block]
 					StrTemp$ = Lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
@@ -1176,9 +1176,9 @@ Function UpdateConsole()
 					End Select
 					
 					If InfiniteStamina
-						CreateConsoleMsg("ÎŞÏŞ¼²ÅÜ ÆôÓÃ")
+						CreateConsoleMsg("æ— é™ç–¾è·‘ å¯ç”¨")
 					Else
-						CreateConsoleMsg("ÎŞÏŞ¼²ÅÜ ½ûÓÃ")	
+						CreateConsoleMsg("æ— é™ç–¾è·‘ ç¦ç”¨")	
 					EndIf
 					;[End Block]
 				Case "asd2"
@@ -1212,7 +1212,7 @@ Function UpdateConsole()
 									Exit
 								EndIf
 							Next
-							CreateConsoleMsg("´óÃÅAÒÑ½âËø")	
+							CreateConsoleMsg("å¤§é—¨Aå·²è§£é”")	
 						Case "b"
 							For e.Events = Each Events
 								If e\EventName = "exit1" Then
@@ -1221,7 +1221,7 @@ Function UpdateConsole()
 									Exit
 								EndIf
 							Next	
-							CreateConsoleMsg("´óÃÅBÒÑ½âËø")	
+							CreateConsoleMsg("å¤§é—¨Bå·²è§£é”")	
 						Default
 							For e.Events = Each Events
 								If e\EventName = "gateaentrance" Then
@@ -1232,7 +1232,7 @@ Function UpdateConsole()
 									e\room\RoomDoors[4]\open = True
 								EndIf
 							Next
-							CreateConsoleMsg("´óÃÅA¼°´óÃÅBÒÑ½âËø")	
+							CreateConsoleMsg("å¤§é—¨AåŠå¤§é—¨Bå·²è§£é”")	
 					End Select
 					
 					RemoteDoorOn = True
@@ -1242,17 +1242,17 @@ Function UpdateConsole()
 					KillTimer = -1
 					Select Rand(4)
 						Case 1
-							DeathMSG = "[ÒÑ±à¼­]"
+							DeathMSG = "[å·²ç¼–è¾‘]"
 						Case 2
-							DeathMSG = "¶ÔÏóD-9341Ê¬ÌåÔÚ[ÒÑ±à¼­]ÇøÕÒµ½"
-							DeathMSG = DeathMSG + "¶ÔÏóËÆºõÃ»ÓĞÊÜµ½ÈÎºÎÎïÀíÉËº¦£¬Ò²Ã»ÓĞÃ÷ÏÔ¼£Ïó±íÃ÷ÊÇÊ²Ã´É±ËÀÁËËû¡£"
-							DeathMSG = DeathMSG + "Ê¬ÌåÒÑ±»ËÍÈ¥Ò½¼ì¡£"
+							DeathMSG = "å¯¹è±¡D-9341å°¸ä½“åœ¨[å·²ç¼–è¾‘]åŒºæ‰¾åˆ°"
+							DeathMSG = DeathMSG + "å¯¹è±¡ä¼¼ä¹æ²¡æœ‰å—åˆ°ä»»ä½•ç‰©ç†ä¼¤å®³ï¼Œä¹Ÿæ²¡æœ‰æ˜æ˜¾è¿¹è±¡è¡¨æ˜æ˜¯ä»€ä¹ˆæ€æ­»äº†ä»–ã€‚"
+							DeathMSG = DeathMSG + "å°¸ä½“å·²è¢«é€å»åŒ»æ£€ã€‚"
 						Case 3
-							DeathMSG = "EXCP_ACCESS_VIOLATION ÒâÍâµÄ·ÃÎÊ³åÍ»"
+							DeathMSG = "EXCP_ACCESS_VIOLATION æ„å¤–çš„è®¿é—®å†²çª"
 						Case 4
-							DeathMSG = "¶ÔÏóD-9341Ê¬ÌåÔÚ[ÒÑ±à¼­]ÇøÕÒµ½"
-							DeathMSG = DeathMSG + "¶ÔÏóËÆºõÔÚËûÉí±ßÓÃ×Ô¼ºµÄÑªÒºĞ´ÏÂÁË×ÖÄ¸¡°kys¡±"
-							DeathMSG = DeathMSG + "Ã»ÓĞÆäËûÉíÌå´´ÉË»òÕõÔúµÄ¼£Ïó£¬Ê¬Ìå±»ËÍÈ¥Ê¬¼ì¡£"
+							DeathMSG = "å¯¹è±¡D-9341å°¸ä½“åœ¨[å·²ç¼–è¾‘]åŒºæ‰¾åˆ°"
+							DeathMSG = DeathMSG + "å¯¹è±¡ä¼¼ä¹åœ¨ä»–èº«è¾¹ç”¨è‡ªå·±çš„è¡€æ¶²å†™ä¸‹äº†å­—æ¯â€œkysâ€"
+							DeathMSG = DeathMSG + "æ²¡æœ‰å…¶ä»–èº«ä½“åˆ›ä¼¤æˆ–æŒ£æ‰çš„è¿¹è±¡ï¼Œå°¸ä½“è¢«é€å»å°¸æ£€ã€‚"
 					End Select
 					;[End Block]
 				Case "playmusic"
@@ -1300,7 +1300,7 @@ Function UpdateConsole()
 					PositionEntity Camera,Float(StrTemp$),Float(StrTemp2$),Float(StrTemp3$)
 					ResetEntity Collider
 					ResetEntity Camera
-					CreateConsoleMsg("´«ËÍÖÁ×ø±ê (X|Y|Z): "+EntityX(Collider)+"|"+EntityY(Collider)+"|"+EntityZ(Collider))
+					CreateConsoleMsg("ä¼ é€è‡³åæ ‡ (X|Y|Z): "+EntityX(Collider)+"|"+EntityY(Collider)+"|"+EntityZ(Collider))
 					;[End Block]
 				Case "notarget"
 					;[Block]
@@ -1316,30 +1316,30 @@ Function UpdateConsole()
 					End Select
 					
 					If NoTarget% = False Then
-						CreateConsoleMsg("ÎŞ»¥¶¯ ½ûÓÃ")
+						CreateConsoleMsg("æ— äº’åŠ¨ ç¦ç”¨")
 					Else
-						CreateConsoleMsg("ÎŞÅö×² ÆôÓÃ")	
+						CreateConsoleMsg("æ— ç¢°æ’ å¯ç”¨")	
 					EndIf
 					;[End Block]
 				Case "spawnradio"
 					;[Block]
-					it.Items = CreateItem("¶Ô½²»ú", "fineradio", EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
+					it.Items = CreateItem("å¯¹è®²æœº", "fineradio", EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
 					EntityType(it\collider, HIT_ITEM)
 					it\state = 101
 					;[End Block]
 				Case "spawnnvg"
 					;[Block]
-					it.Items = CreateItem("Ò¹ÊÓÒÇ","nvgoggles", EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
+					it.Items = CreateItem("å¤œè§†ä»ª","nvgoggles", EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
 					EntityType(it\collider, HIT_ITEM)
 					it\state = 1000
 					;[End Block]
 				Case "spawnpumpkin","pumpkin"
 					;[Block]
-					CreateConsoleMsg("Ê²Ã´ÄÏ¹Ï£¿")
+					CreateConsoleMsg("ä»€ä¹ˆå—ç“œï¼Ÿ")
 					;[End Block]
 				Case "spawnnav"
 					;[Block]
-					it.Items = CreateItem("S-NAVÖÕ¼«µ¼º½ÒÇ", "nav", EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
+					it.Items = CreateItem("S-NAVç»ˆæå¯¼èˆªä»ª", "nav", EntityX(Collider), EntityY(Camera,True), EntityZ(Collider))
 					EntityType(it\collider, HIT_ITEM)
 					it\state = 101
 					;[End Block]
@@ -1356,7 +1356,7 @@ Function UpdateConsole()
 					StrTemp3$ = Piece$(args$,3," ")
 					Local pl_room_found% = False
 					If StrTemp="" Or StrTemp2="" Or StrTemp3=""
-						CreateConsoleMsg("²ÎÊı¹ıÉÙ£¬¸ÃÃüÁîĞèÒªÈı¸ö²ÎÊı¡£",255,150,0)
+						CreateConsoleMsg("å‚æ•°è¿‡å°‘ï¼Œè¯¥å‘½ä»¤éœ€è¦ä¸‰ä¸ªå‚æ•°ã€‚",255,150,0)
 					Else
 						For e.Events = Each Events
 							If e\room = PlayerRoom
@@ -1369,13 +1369,13 @@ Function UpdateConsole()
 								If Lower(StrTemp3)<>"keep"
 									e\EventState3 = Float(StrTemp3)
 								EndIf
-								CreateConsoleMsg("½«Íæ¼Òµ±Ç°·¿¼äÊÂ¼ş×´Ì¬¸ü¸ÄÎª: "+e\EventState+"|"+e\EventState2+"|"+e\EventState3)
+								CreateConsoleMsg("å°†ç©å®¶å½“å‰æˆ¿é—´äº‹ä»¶çŠ¶æ€æ›´æ”¹ä¸º: "+e\EventState+"|"+e\EventState2+"|"+e\EventState3)
 								pl_room_found = True
 								Exit
 							EndIf
 						Next
 						If (Not pl_room_found)
-							CreateConsoleMsg("µ±Ç°·¿¼äÎ´Ó¦ÓÃÈÎºÎÊÂ¼ş",255,150,0)
+							CreateConsoleMsg("å½“å‰æˆ¿é—´æœªåº”ç”¨ä»»ä½•äº‹ä»¶",255,150,0)
 						EndIf
 					EndIf
 					;[End Block]
@@ -1389,9 +1389,9 @@ Function UpdateConsole()
 					
 					If Int(StrTemp) > -1 And Int(StrTemp) <= 1 ;<--- This is the maximum ID of particles by Devil Particle system, will be increased after time - ENDSHN
 						SetEmitter(Collider,ParticleEffect[Int(StrTemp)])
-						CreateConsoleMsg("ÔÚÍæ¼ÒÎ»ÖÃÉú³ÉIDÎª "+Int(StrTemp)+" µÄÁ£×ÓĞ§¹û")
+						CreateConsoleMsg("åœ¨ç©å®¶ä½ç½®ç”ŸæˆIDä¸º "+Int(StrTemp)+" çš„ç²’å­æ•ˆæœ")
 					Else
-						CreateConsoleMsg("IDÎª "+Int(StrTemp)+" µÄÁ£×ÓĞ§¹ûÎ´ÕÒµ½",255,150,0)
+						CreateConsoleMsg("IDä¸º "+Int(StrTemp)+" çš„ç²’å­æ•ˆæœæœªæ‰¾åˆ°",255,150,0)
 					EndIf
 					;[End Block]
 				Case "giveachievement"
@@ -1404,9 +1404,9 @@ Function UpdateConsole()
 					
 					If Int(StrTemp)>=0 And Int(StrTemp)<MAXACHIEVEMENTS
 						Achievements(Int(StrTemp))=True
-						CreateConsoleMsg("³É¾Í "+AchievementStrings(Int(StrTemp))+" ÒÑ½âËø")
+						CreateConsoleMsg("æˆå°± "+AchievementStrings(Int(StrTemp))+" å·²è§£é”")
 					Else
-						CreateConsoleMsg("IDÎª "+Int(StrTemp)+" µÄ³É¾Í²»´æÔÚ",255,150,0)
+						CreateConsoleMsg("IDä¸º "+Int(StrTemp)+" çš„æˆå°±ä¸å­˜åœ¨",255,150,0)
 					EndIf
 					;[End Block]
 				Case "427state"
@@ -1425,11 +1425,11 @@ Function UpdateConsole()
 					args$ = Lower(Right(ConsoleInput, Len(ConsoleInput) - Instr(ConsoleInput, " ")))
 					BlinkEffect = Float(Left(args, Len(args) - Instr(args, " ")))
 					BlinkEffectTimer = Float(Right(args, Len(args) - Instr(args, " ")))
-					CreateConsoleMsg("ÉèÖÃÕ£ÑÛĞ§¹ûÎª: " + BlinkEffect + "£¬ÉèÖÃÕ£ÑÛÊ±¼äÎª: " + BlinkEffectTimer)
+					CreateConsoleMsg("è®¾ç½®çœ¨çœ¼æ•ˆæœä¸º: " + BlinkEffect + "ï¼Œè®¾ç½®çœ¨çœ¼æ—¶é—´ä¸º: " + BlinkEffectTimer)
 					;[End Block]
 				Case "jorge"
 					;[Block]	
-					CreateConsoleMsg("ÇÇÖÎÒ»Ö±ÔÚµÈÄã¡£")
+					CreateConsoleMsg("ä¹”æ²»ä¸€ç›´åœ¨ç­‰ä½ ã€‚")
 ;					Return
 ;					ConsoleFlush = True 
 ;					
@@ -1445,7 +1445,7 @@ Function UpdateConsole()
 					;[End Block]
 				Default
 					;[Block]
-					CreateConsoleMsg("ÃüÁîÎ´ÕÒµ½",255,0,0)
+					CreateConsoleMsg("å‘½ä»¤æœªæ‰¾åˆ°",255,0,0)
 					;[End Block]
 			End Select
 			
@@ -1486,25 +1486,25 @@ Function UpdateConsole()
 End Function
 
 ConsoleR = 0 : ConsoleG = 255 : ConsoleB = 255
-CreateConsoleMsg("¿ØÖÆÌ¨ÃüÁî: ")
-CreateConsoleMsg("  - teleport [·¿¼äID]")
+CreateConsoleMsg("æ§åˆ¶å°å‘½ä»¤: ")
+CreateConsoleMsg("  - teleport [æˆ¿é—´ID]")
 CreateConsoleMsg("  - godmode [on/off]")
 CreateConsoleMsg("  - noclip [on/off]")
-CreateConsoleMsg("  - noclipspeed [x] (Ä¬ÈÏÎª2.0)")
+CreateConsoleMsg("  - noclipspeed [x] (é»˜è®¤ä¸º2.0)")
 CreateConsoleMsg("  - wireframe [on/off]")
 CreateConsoleMsg("  - debughud [on/off]")
-CreateConsoleMsg("  - camerafog [¿ÉÊÓ¾àÀë] [äÖÈ¾¾àÀë]")
+CreateConsoleMsg("  - camerafog [å¯è§†è·ç¦»] [æ¸²æŸ“è·ç¦»]")
 CreateConsoleMsg(" ")
 CreateConsoleMsg("  - status")
 CreateConsoleMsg("  - heal")
 CreateConsoleMsg(" ")
-CreateConsoleMsg("  - spawnitem [ÎïÆ·ID]")
+CreateConsoleMsg("  - spawnitem [ç‰©å“ID]")
 CreateConsoleMsg(" ")
-CreateConsoleMsg("  - 173speed [x] (Ä¬ÈÏÎª35)")
+CreateConsoleMsg("  - 173speed [x] (é»˜è®¤ä¸º35)")
 CreateConsoleMsg("  - disable173/enable173")
 CreateConsoleMsg("  - disable106/enable106")
 CreateConsoleMsg("  - 173state/106state/096state")
-CreateConsoleMsg("  - spawn [NPCÀàĞÍ]")
+CreateConsoleMsg("  - spawn [NPCç±»å‹]")
 
 ;---------------------------------------------------------------------------------------------------
 
@@ -2240,8 +2240,8 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 	If d\KeyCard > 0 Then
 		If SelectedItem = Null Then
 			If showmsg = True Then
-				If (Instr(Msg,"Ô¿³×¿¨")=0 And Instr(Msg,"ÄãĞèÒª")=0) Or (MsgTimer<70*3) Then
-					Msg = "ÄãĞèÒªÒ»¸öÔ¿³×¿¨À´²Ù¿ØÕâÉÈÃÅ"
+				If (Instr(Msg,"é’¥åŒ™å¡")=0 And Instr(Msg,"ä½ éœ€è¦")=0) Or (MsgTimer<70*3) Then
+					Msg = "ä½ éœ€è¦ä¸€ä¸ªé’¥åŒ™å¡æ¥æ“æ§è¿™æ‰‡é—¨"
 					MsgTimer = 70 * 7
 				EndIf
 			EndIf
@@ -2266,8 +2266,8 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 			
 			If temp =-1 Then 
 				If showmsg = True Then
-					If (Instr(Msg,"Ô¿³×¿¨")=0 And Instr(Msg,"ÄãĞèÒª")=0) Or (MsgTimer<70*3) Then
-						Msg = "ÄãĞèÒªÒ»¸öÔ¿³×¿¨À´²Ù¿ØÕâÉÈÃÅ"
+					If (Instr(Msg,"é’¥åŒ™å¡")=0 And Instr(Msg,"ä½ éœ€è¦")=0) Or (MsgTimer<70*3) Then
+						Msg = "ä½ éœ€è¦ä¸€ä¸ªé’¥åŒ™å¡æ¥æ“æ§è¿™æ‰‡é—¨"
 						MsgTimer = 70 * 7
 					EndIf
 				EndIf
@@ -2277,12 +2277,12 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 				If showmsg = True Then
 					If d\locked Then
 						PlaySound_Strict KeyCardSFX2
-						Msg = "Äã½«Ô¿³×¿¨²åÈëÁË¿¨²Ûµ«ÎŞÊÂ·¢Éú"
+						Msg = "ä½ å°†é’¥åŒ™å¡æ’å…¥äº†å¡æ§½ä½†æ— äº‹å‘ç”Ÿ"
 						MsgTimer = 70 * 7
 						Return
 					Else
 						PlaySound_Strict KeyCardSFX1
-						Msg = "Äã½«Ô¿³×¿¨²åÈëÁË¿¨²Û"
+						Msg = "ä½ å°†é’¥åŒ™å¡æ’å…¥äº†å¡æ§½"
 						MsgTimer = 70 * 7	
 					EndIf
 				EndIf
@@ -2291,9 +2291,9 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 				If showmsg = True Then 
 					PlaySound_Strict KeyCardSFX2					
 					If d\locked Then
-						Msg = "Äã½«Ô¿³×¿¨²åÈëÁË¿¨²Ûµ«ÎŞÊÂ·¢Éú"
+						Msg = "ä½ å°†é’¥åŒ™å¡æ’å…¥äº†å¡æ§½ä½†æ— äº‹å‘ç”Ÿ"
 					Else
-						Msg = "ÄãĞèÒª"+d\KeyCard+"¼¶»ò¸ü¸ß¼¶±ğµÄÔ¿³×¿¨À´²Ù×÷ÕâÉÈÃÅ"
+						Msg = "ä½ éœ€è¦"+d\KeyCard+"çº§æˆ–æ›´é«˜çº§åˆ«çš„é’¥åŒ™å¡æ¥æ“ä½œè¿™æ‰‡é—¨"
 					EndIf
 					MsgTimer = 70 * 7					
 				EndIf
@@ -2308,14 +2308,14 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 		SelectedItem = Null
 		If temp <> 0 Then
 			PlaySound_Strict ScannerSFX1
-			If (Instr(Msg,"Äã½«ÊÖÕÆ")=0) Or (MsgTimer < 70*3) Then
-				Msg = "Äã½«ÊÖÕÆ·ÅÔÚÁËÉ¨ÃèÒÇÉÏ¡£É¨ÃèÒÇÏÔÊ¾: ¡°DNAÑéÖ¤Í¨¹ı, ÔÊĞí·ÃÎÊ¡±"
+			If (Instr(Msg,"ä½ å°†æ‰‹æŒ")=0) Or (MsgTimer < 70*3) Then
+				Msg = "ä½ å°†æ‰‹æŒæ”¾åœ¨äº†æ‰«æä»ªä¸Šã€‚æ‰«æä»ªæ˜¾ç¤º: â€œDNAéªŒè¯é€šè¿‡, å…è®¸è®¿é—®â€"
 			EndIf
 			MsgTimer = 70 * 10
 		Else
 			If showmsg = True Then 
 				PlaySound_Strict ScannerSFX2
-				Msg = "Äã½«ÊÖÕÆ·ÅÔÚÁËÉ¨ÃèÒÇÉÏ¡£É¨ÃèÒÇÏÔÊ¾: ¡°Î´ÖªDNAĞòÁĞ, ¾Ü¾ø·ÃÎÊ¡±"
+				Msg = "ä½ å°†æ‰‹æŒæ”¾åœ¨äº†æ‰«æä»ªä¸Šã€‚æ‰«æä»ªæ˜¾ç¤º: â€œæœªçŸ¥DNAåºåˆ—, æ‹’ç»è®¿é—®â€"
 				MsgTimer = 70 * 10
 			EndIf
 			Return			
@@ -2327,40 +2327,40 @@ Function UseDoor(d.Doors, showmsg%=True, playsfx%=True)
 					PlaySound_Strict ButtonSFX2
 					If PlayerRoom\RoomTemplate\Name <> "room2elevator" Then
                         If d\open Then
-                            Msg = "Äã°´ÏÂÁË°´Å¥µ«ÎŞÊÂ·¢Éú"
+                            Msg = "ä½ æŒ‰ä¸‹äº†æŒ‰é’®ä½†æ— äº‹å‘ç”Ÿ"
                         Else    
-                            Msg = "ÃÅ¿´ÆğÀ´±»ËøÉÏÁË"
+                            Msg = "é—¨çœ‹èµ·æ¥è¢«é”ä¸Šäº†"
                         EndIf    
                     Else
-                        Msg = "µçÌİ¿´ÆğÀ´»µÁË"
+                        Msg = "ç”µæ¢¯çœ‹èµ·æ¥åäº†"
                     EndIf
 					MsgTimer = 70 * 5
 				Else
 					If d\IsElevatorDoor = 1 Then
-						Msg = "Äãºô½ĞÁËµçÌİ"
+						Msg = "ä½ å‘¼å«äº†ç”µæ¢¯"
 						MsgTimer = 70 * 5
 					ElseIf d\IsElevatorDoor = 3 Then
-						Msg = "µçÌİÒÑ¾­ÔÚÕâ²ãÁË"
+						Msg = "ç”µæ¢¯å·²ç»åœ¨è¿™å±‚äº†"
 						MsgTimer = 70 * 5
-					ElseIf (Msg<>"Äãºô½ĞÁËµçÌİ")
-						If (Msg="ÄãÒÑ¾­ºô½ĞÁËµçÌİ") Or (MsgTimer<70*3)	
+					ElseIf (Msg<>"ä½ å‘¼å«äº†ç”µæ¢¯")
+						If (Msg="ä½ å·²ç»å‘¼å«äº†ç”µæ¢¯") Or (MsgTimer<70*3)	
 							Select Rand(10)
 								Case 1
-									Msg = "²»ÒªÔÙ°´°´Å¥ÁË"
+									Msg = "ä¸è¦å†æŒ‰æŒ‰é’®äº†"
 									MsgTimer = 70 * 7
 								Case 2
-									Msg = "Ò»Ö±°´°´Å¥²»»áÈÃµçÌİÀ´µÄ¸ü¿ì"
+									Msg = "ä¸€ç›´æŒ‰æŒ‰é’®ä¸ä¼šè®©ç”µæ¢¯æ¥çš„æ›´å¿«"
 									MsgTimer = 70 * 7
 								Case 3
-									Msg = "Èç¹ûÄãÔÙ°´°´Å¥ÎÒ¾ÍÈÃÓÎÏ·ÄÚ´æ·ÃÎÊ³åÍ»"
+									Msg = "å¦‚æœä½ å†æŒ‰æŒ‰é’®æˆ‘å°±è®©æ¸¸æˆå†…å­˜è®¿é—®å†²çª"
 									MsgTimer = 70 * 7
 								Default
-									Msg = "ÄãÒÑ¾­ºô½ĞÁËµçÌİ"
+									Msg = "ä½ å·²ç»å‘¼å«äº†ç”µæ¢¯"
 									MsgTimer = 70 * 7
 							End Select
 						EndIf
 					Else
-						Msg = "ÄãÒÑ¾­ºô½ĞÁËµçÌİ"
+						Msg = "ä½ å·²ç»å‘¼å«äº†ç”µæ¢¯"
 						MsgTimer = 70 * 7
 					EndIf
 				EndIf
@@ -2637,7 +2637,7 @@ Function InitEvents()
 	CreateEvent("room2tesla", "room2tesla_lcz", 0, 0.9)
 	CreateEvent("room2tesla", "room2tesla_hcz", 0, 0.9)
 	
-	;SCP:1.3µÄĞÂÊÂ¼ş ¡ª¡ª¿ª·¢ÕßENDSHN
+	;SCP:1.3çš„æ–°äº‹ä»¶ â€”â€”å¼€å‘è€…ENDSHN
 	CreateEvent("room4tunnels","room4tunnels",0)
 	CreateEvent("room_gw","room2gw",0,1.0)
 	CreateEvent("dimension1499","dimension1499",0)
@@ -3026,7 +3026,7 @@ Repeat
 				If EyeStuck < 9000 Then BlurTimer = Max(BlurTimer, (9000-EyeStuck)*0.5)
 				If EyeStuck < 6000 Then darkA = Min(Max(darkA, (6000-EyeStuck)/5000.0),1.0)
 				If EyeStuck < 9000 And EyeStuck+FPSfactor =>9000 Then 
-					Msg = "ÑÛÒ©Ë®ÈÃÄãµÄÑÛ¾¦¿ªÊ¼Á÷Àá"
+					Msg = "çœ¼è¯æ°´è®©ä½ çš„çœ¼ç›å¼€å§‹æµæ³ª"
 					MsgTimer = 70*6
 				EndIf
 			EndIf
@@ -3154,15 +3154,15 @@ Repeat
 			If SelectedDifficulty\saveType = SAVEANYWHERE Then
 				RN$ = PlayerRoom\RoomTemplate\Name$
 				If RN$ = "173" Or (RN$ = "exit1" And EntityY(Collider)>1040.0*RoomScale) Or RN$ = "gatea"
-					Msg = "Äã²»ÄÜÔÚ´Ë´¦±£´æÓÎÏ·"
+					Msg = "ä½ ä¸èƒ½åœ¨æ­¤å¤„ä¿å­˜æ¸¸æˆ"
 					MsgTimer = 70 * 4
 					;SetSaveMSG("You cannot save in this location.")
 				ElseIf (Not CanSave) Or QuickLoadPercent > -1
-					Msg = "Äã²»ÄÜÔÚ´ËÊ±±£´æÓÎÏ·"
+					Msg = "ä½ ä¸èƒ½åœ¨æ­¤æ—¶ä¿å­˜æ¸¸æˆ"
 					MsgTimer = 70 * 4
 					;SetSaveMSG("You cannot save at this moment.")
 					If QuickLoadPercent > -1
-						Msg = Msg + " (ÓÎÏ·ÕıÔÚ¼ÓÔØ)"
+						Msg = Msg + " (æ¸¸æˆæ­£åœ¨åŠ è½½)"
 						;Save_MSG = Save_MSG + " (game is loading)"
 					EndIf
 				Else
@@ -3170,21 +3170,21 @@ Repeat
 				EndIf
 			ElseIf SelectedDifficulty\saveType = SAVEONSCREENS
 				If SelectedScreen=Null And SelectedMonitor=Null Then
-					Msg = "Ö»ÄÜÔÚÉèÊ©ÖĞ¿É»¥¶¯ÏÔÊ¾Æ÷µÄÎ»ÖÃ½øĞĞ±£´æ"
+					Msg = "åªèƒ½åœ¨è®¾æ–½ä¸­å¯äº’åŠ¨æ˜¾ç¤ºå™¨çš„ä½ç½®è¿›è¡Œä¿å­˜"
 					MsgTimer = 70 * 4
 					;SetSaveMSG("Saving is only permitted on clickable monitors scattered throughout the facility.")
 				Else
 					RN$ = PlayerRoom\RoomTemplate\Name$
 					If RN$ = "173" Or (RN$ = "exit1" And EntityY(Collider)>1040.0*RoomScale) Or RN$ = "gatea"
-						Msg = "Äã²»ÄÜÔÚ´Ë´¦±£´æÓÎÏ·"
+						Msg = "ä½ ä¸èƒ½åœ¨æ­¤å¤„ä¿å­˜æ¸¸æˆ"
 						MsgTimer = 70 * 4
 						;SetSaveMSG("You cannot save in this location.")
 					ElseIf (Not CanSave) Or QuickLoadPercent > -1
-						Msg = "Äã²»ÄÜÔÚ´ËÊ±±£´æÓÎÏ·"
+						Msg = "ä½ ä¸èƒ½åœ¨æ­¤æ—¶ä¿å­˜æ¸¸æˆ"
 						MsgTimer = 70 * 4
 						;SetSaveMSG("You cannot save at this moment.")
 						If QuickLoadPercent > -1
-							Msg = Msg + " (ÓÎÏ·ÕıÔÚ¼ÓÔØ)"
+							Msg = Msg + " (æ¸¸æˆæ­£åœ¨åŠ è½½)"
 							;Save_MSG = Save_MSG + " (game is loading)"
 						EndIf
 					Else
@@ -3197,13 +3197,13 @@ Repeat
 					EndIf
 				EndIf
 			Else
-				Msg = "¿ìËÙ±£´æÒÑ½ûÓÃ"
+				Msg = "å¿«é€Ÿä¿å­˜å·²ç¦ç”¨"
 				MsgTimer = 70 * 4
 				;SetSaveMSG("Quick saving is disabled.")
 			EndIf
 		Else If SelectedDifficulty\saveType = SAVEONSCREENS And (SelectedScreen<>Null Or SelectedMonitor<>Null)
-			If (Msg<>"ÓÎÏ·ÒÑ±£´æ" And Msg<>"ÄãÎŞ·¨ÔÚ´Ë´¦±£´æÓÎÏ·"And Msg<>"Äã²»ÄÜÔÚ´ËÊ±±£´æÓÎÏ·") Or MsgTimer<=0 Then
-				Msg = "°´ "+KeyName(KEY_SAVE)+" ±£´æ"
+			If (Msg<>"æ¸¸æˆå·²ä¿å­˜" And Msg<>"ä½ æ— æ³•åœ¨æ­¤å¤„ä¿å­˜æ¸¸æˆ"And Msg<>"ä½ ä¸èƒ½åœ¨æ­¤æ—¶ä¿å­˜æ¸¸æˆ") Or MsgTimer<=0 Then
+				Msg = "æŒ‰ "+KeyName(KEY_SAVE)+" ä¿å­˜"
 				MsgTimer = 70*4
 				;SetSaveMSG("Press "+KeyName(KEY_SAVE)+" to save.")
 			EndIf
@@ -3233,7 +3233,7 @@ Repeat
 			DrawMenu()			
 		EndIf
 		
-		If EnableSubtitle Then UpdateSubtitles() ;×ÖÄ»ÏµÍ³
+		If EnableSubtitle Then UpdateSubtitles() ;å­—å¹•ç³»ç»Ÿ
 		UpdateConsole()
 		
 		If PlayerRoom <> Null Then
@@ -3242,7 +3242,7 @@ Repeat
 					If e\EventName = "173" Then
 						If e\EventState3 => 40 And e\EventState3 < 50 Then
 							If InvOpen Then
-								Msg = "Ë«»÷ÎÄµµÀ´ÔÄ¶Á"
+								Msg = "åŒå‡»æ–‡æ¡£æ¥é˜…è¯»"
 								MsgTimer=70*7
 								e\EventState3 = 50
 							EndIf
@@ -3266,7 +3266,7 @@ Repeat
 				Color 0,0,0
 				AAText((GraphicWidth / 2)+1, (GraphicHeight / 2) + 201, Msg, True, False, Min(MsgTimer / 2, 255)/255.0)
 				Color 255,255,255;Min(MsgTimer / 2, 255), Min(MsgTimer / 2, 255), Min(MsgTimer / 2, 255)
-				If Left(Msg,14)="Blitz3D³ö´í£¡" Then
+				If Left(Msg,14)="Blitz3Då‡ºé”™ï¼" Then
 					Color 255,0,0
 				EndIf
 				AAText((GraphicWidth / 2), (GraphicHeight / 2) + 200, Msg, True, False, Min(MsgTimer / 2, 255)/255.0)
@@ -3274,7 +3274,7 @@ Repeat
 				Color 0,0,0
 				AAText((GraphicWidth / 2)+1, (GraphicHeight * 0.94) + 1, Msg, True, False, Min(MsgTimer / 2, 255)/255.0)
 				Color 255,255,255;Min(MsgTimer / 2, 255), Min(MsgTimer / 2, 255), Min(MsgTimer / 2, 255)
-				If Left(Msg,14)="Blitz3D³ö´í£¡" Then
+				If Left(Msg,14)="Blitz3Då‡ºé”™ï¼" Then
 					Color 255,0,0
 				EndIf
 				AAText((GraphicWidth / 2), (GraphicHeight * 0.94), Msg, True, False, Min(MsgTimer / 2, 255)/255.0)
@@ -3400,7 +3400,7 @@ Function QuickLoadEvents()
 							
 							DebugLog(EntityX(e\room\Objects[7],True)+", "+EntityY(e\room\Objects[7],True)+", "+EntityZ(e\room\Objects[7],True))
 						Else
-							DebugLog "Ìø¹ıÁËroom2slÉú³Éscp-049µÄÊÂ¼ş"
+							DebugLog "è·³è¿‡äº†room2slç”Ÿæˆscp-049çš„äº‹ä»¶"
 						EndIf
 					EndIf
 					QuickLoadPercent = 80
@@ -3764,7 +3764,7 @@ Function DrawEnding()
 				
 				Color(255, 255, 255)
 				AASetFont Font2
-				Text(x + width / 2 + 40*MenuScale, y + 20*MenuScale, "½áÊø", True)
+				Text(x + width / 2 + 40*MenuScale, y + 20*MenuScale, "ç»“æŸ", True)
 				AASetFont Font1
 				
 				If AchievementsMenu=0 Then 
@@ -3795,18 +3795,18 @@ Function DrawEnding()
 						achievementsUnlocked = achievementsUnlocked + Achievements(i)
 					Next
 					
-					Text x, y, "Óöµ½µÄSCP: " +scpsEncountered
-					Text x, y+20*MenuScale, "½âËøµÄ³É¾Í: " + achievementsUnlocked+"/"+(MAXACHIEVEMENTS)
-					Text x, y+40*MenuScale, "ÕÒµ½µÄ·¿¼ä: " + roomsfound+"/"+roomamount
-					Text x, y+60*MenuScale, "·¢ÏÖµÄÎÄµµ: " +docsfound+"/"+docamount
-					Text x, y+80*MenuScale, "Ê¹ÓÃSCP-914×ª»»µÄÎïÆ·ÊıÁ¿: " +RefinedItems			
+					Text x, y, "é‡åˆ°çš„SCP: " +scpsEncountered
+					Text x, y+20*MenuScale, "è§£é”çš„æˆå°±: " + achievementsUnlocked+"/"+(MAXACHIEVEMENTS)
+					Text x, y+40*MenuScale, "æ‰¾åˆ°çš„æˆ¿é—´: " + roomsfound+"/"+roomamount
+					Text x, y+60*MenuScale, "å‘ç°çš„æ–‡æ¡£: " +docsfound+"/"+docamount
+					Text x, y+80*MenuScale, "ä½¿ç”¨SCP-914è½¬æ¢çš„ç‰©å“æ•°é‡: " +RefinedItems			
 					
 					x = GraphicWidth / 2 - width / 2
 					y = GraphicHeight / 2 - height / 2
 					x = x+width/2
 					y = y+height-100*MenuScale
 					
-					If DrawButton(x-145*MenuScale,y-200*MenuScale,390*MenuScale,60*MenuScale,"³É¾Í", True) Then
+					If DrawButton(x-145*MenuScale,y-200*MenuScale,390*MenuScale,60*MenuScale,"æˆå°±", True) Then
 						AchievementsMenu = 1
 					EndIf
 					
@@ -3822,7 +3822,7 @@ Function DrawEnding()
 ;						FlushKeys()
 ;					EndIf
 					
-					If DrawButton(x-145*MenuScale,y-100*MenuScale,390*MenuScale,60*MenuScale,"Ö÷²Ëµ¥", True)
+					If DrawButton(x-145*MenuScale,y-100*MenuScale,390*MenuScale,60*MenuScale,"ä¸»èœå•", True)
 						ShouldPlay = 24
 						NowPlaying = ShouldPlay
 						For i=0 To 9
@@ -4044,8 +4044,8 @@ Function MovePlayer()
 		CameraShake = Sin(SuperManTimer / 5.0) * (SuperManTimer / 1500.0)
 		
 		If SuperManTimer > 70 * 50 Then
-			DeathMSG = "ÔÚ[Êı¾İ±à¼­]ÕÒµ½Ò»Ì×D¼¶ÈËÔ±Á¬ÌåÒÂ¡£¾­¹ı½øÒ»²½µ÷²é£¬·¢ÏÖ¸ÃÁ¬ÌåÒÂÄÚ×°ÓĞ12.5¹«½ïµÄÀ¶»Ò×´ÎïÖÊ¡£"
-			DeathMSG = DeathMSG + "¶Ô¸ÃÎïÖÊµÄ»¯Ñ§·ÖÎöÈÔÃ»ÓĞ¶¨ÂÛ£¬¿ÉÄÜÓëSCP-914ÓĞ¹Ø¡£"
+			DeathMSG = "åœ¨[æ•°æ®ç¼–è¾‘]æ‰¾åˆ°ä¸€å¥—Dçº§äººå‘˜è¿ä½“è¡£ã€‚ç»è¿‡è¿›ä¸€æ­¥è°ƒæŸ¥ï¼Œå‘ç°è¯¥è¿ä½“è¡£å†…è£…æœ‰12.5å…¬æ–¤çš„è“ç°çŠ¶ç‰©è´¨ã€‚"
+			DeathMSG = DeathMSG + "å¯¹è¯¥ç‰©è´¨çš„åŒ–å­¦åˆ†æä»æ²¡æœ‰å®šè®ºï¼Œå¯èƒ½ä¸SCP-914æœ‰å…³ã€‚"
 			Kill()
 			ShowEntity Fog
 		Else
@@ -4295,7 +4295,7 @@ Function MovePlayer()
 		EndIf
 		
 		If temp2 <= 60 And Bloodloss > 60 Then
-			Msg = "ÄãÒòÊ§Ñª¹ı¶à¶ø¸Ğµ½Í·ÔÎ"
+			Msg = "ä½ å› å¤±è¡€è¿‡å¤šè€Œæ„Ÿåˆ°å¤´æ™•"
 			MsgTimer = 70*4
 		EndIf
 	EndIf
@@ -4381,7 +4381,7 @@ Function MouseLook()
 		If Int(EntityX(Collider))=Int(Nan1) Then
 			
 			PositionEntity Collider, EntityX(Camera, True), EntityY(Camera, True) - 0.5, EntityZ(Camera, True), True
-			Msg = "EntityX(Åö×²) = ÎŞ£¬ ÕıÔÚÖØÖÃÎ»ÖÃ    -    ĞÂÎ»ÖÃ: "+EntityX(Collider)
+			Msg = "EntityX(ç¢°æ’) = æ— ï¼Œ æ­£åœ¨é‡ç½®ä½ç½®    -    æ–°ä½ç½®: "+EntityX(Collider)
 			MsgTimer = 300				
 		EndIf
 		;EndIf
@@ -4543,7 +4543,7 @@ Function MouseLook()
 					Stamina = Stamina - FPSfactor * 0.3
 				Case 1 ;chicken pox
 					If Rand(9000)=1 And Msg="" Then
-						Msg="Äã¸Ğ¾õÆ¤·ôºÜÑ÷"
+						Msg="ä½ æ„Ÿè§‰çš®è‚¤å¾ˆç—’"
 						MsgTimer =70*4
 					EndIf
 				Case 2 ;cancer of the lungs
@@ -4563,10 +4563,10 @@ Function MouseLook()
 						SCP1025state[i]=SCP1025state[i]+FPSfactor*0.0005
 					EndIf
 					If SCP1025state[i]>20.0 Then
-						If SCP1025state[i]-FPSfactor<=20.0 Then Msg="ÄãÎ¸Í´µÃÄÑÒÔÈÌÊÜ"
+						If SCP1025state[i]-FPSfactor<=20.0 Then Msg="ä½ èƒƒç—›å¾—éš¾ä»¥å¿å—"
 						Stamina = Stamina - FPSfactor * 0.3
 					ElseIf SCP1025state[i]>10.0
-						If SCP1025state[i]-FPSfactor<=10.0 Then Msg="Äã¿ªÊ¼Î¸Í´"
+						If SCP1025state[i]-FPSfactor<=10.0 Then Msg="ä½ å¼€å§‹èƒƒç—›"
 					EndIf
 				Case 4 ;asthma
 					If Stamina < 35 Then
@@ -4588,8 +4588,8 @@ Function MouseLook()
 						HeartBeatRate=0
 						BlurTimer = Max(BlurTimer, 500)
 						If SCP1025state[i]>140 Then 
-							DeathMSG = "¡°ËûÔÚ¶ÁÁËSCP-1025ºóËÀÓÚĞÄÔàÖèÍ££¬ÕâÊÇ¿Ï¶¨µÄ¡£"
-							DeathMSG = DeathMSG + "ÊÇ·ñ´æÔÚ¡®ĞÄÉñĞÄÔàÖèÍ£¡¯ÕâÖÖ¶«Î÷£¬»òÕßSCP-1025ÊÇ·ñÓĞÒ»Ğ©ÎÒÃÇÃ»ÒâÊ¶µ½µÄÒì³£ÌØĞÔ£¿¡±"
+							DeathMSG = "â€œä»–åœ¨è¯»äº†SCP-1025åæ­»äºå¿ƒè„éª¤åœï¼Œè¿™æ˜¯è‚¯å®šçš„ã€‚"
+							DeathMSG = DeathMSG + "æ˜¯å¦å­˜åœ¨â€˜å¿ƒç¥å¿ƒè„éª¤åœâ€™è¿™ç§ä¸œè¥¿ï¼Œæˆ–è€…SCP-1025æ˜¯å¦æœ‰ä¸€äº›æˆ‘ä»¬æ²¡æ„è¯†åˆ°çš„å¼‚å¸¸ç‰¹æ€§ï¼Ÿâ€"
 							Kill()
 						EndIf
 					Else
@@ -4786,77 +4786,77 @@ Function DrawGUI()
 			AASetFont ConsoleFont
 			
 			;Text x + 250, 50, "Zone: " + (EntityZ(Collider)/8.0)
-			;Text x - 50, 30, "ÎÄ×ÖÑÓ³Ù: " + delay + "ms"
-			Text x - 50, 50, "Íæ¼ÒÎ»ÖÃ: (" + f2s(EntityX(Collider), 3) + ", " + f2s(EntityY(Collider), 3) + ", " + f2s(EntityZ(Collider), 3) + ")"
-			Text x - 50, 70, "ÊÓ½ÇÎ»ÖÃ: (" + f2s(EntityX(Camera), 3)+ ", " + f2s(EntityY(Camera), 3) +", " + f2s(EntityZ(Camera), 3) + ")"
-			Text x - 50, 100, "Íæ¼Ò·½Ïò: (" + f2s(EntityPitch(Collider), 3) + ", " + f2s(EntityYaw(Collider), 3) + ", " + f2s(EntityRoll(Collider), 3) + ")"
-			Text x - 50, 120, "¾µÍ··½Ïò: (" + f2s(EntityPitch(Camera), 3)+ ", " + f2s(EntityYaw(Camera), 3) +", " + f2s(EntityRoll(Camera), 3) + ")"
-			Text x - 50, 150, "·¿¼ä: " + PlayerRoom\RoomTemplate\Name
+			;Text x - 50, 30, "æ–‡å­—å»¶è¿Ÿ: " + delay + "ms"
+			Text x - 50, 50, "ç©å®¶ä½ç½®: (" + f2s(EntityX(Collider), 3) + ", " + f2s(EntityY(Collider), 3) + ", " + f2s(EntityZ(Collider), 3) + ")"
+			Text x - 50, 70, "è§†è§’ä½ç½®: (" + f2s(EntityX(Camera), 3)+ ", " + f2s(EntityY(Camera), 3) +", " + f2s(EntityZ(Camera), 3) + ")"
+			Text x - 50, 100, "ç©å®¶æ–¹å‘: (" + f2s(EntityPitch(Collider), 3) + ", " + f2s(EntityYaw(Collider), 3) + ", " + f2s(EntityRoll(Collider), 3) + ")"
+			Text x - 50, 120, "é•œå¤´æ–¹å‘: (" + f2s(EntityPitch(Camera), 3)+ ", " + f2s(EntityYaw(Camera), 3) +", " + f2s(EntityRoll(Camera), 3) + ")"
+			Text x - 50, 150, "æˆ¿é—´: " + PlayerRoom\RoomTemplate\Name
 			For ev.Events = Each Events
 				If ev\room = PlayerRoom Then
-					Text x - 50, 170, "·¿¼äÊÂ¼ş: " + ev\EventName   
-					Text x - 50, 190, "×´Ì¬: " + ev\EventState
-					Text x - 50, 210, "×´Ì¬2: " + ev\EventState2   
-					Text x - 50, 230, "×´Ì¬3: " + ev\EventState3
+					Text x - 50, 170, "æˆ¿é—´äº‹ä»¶: " + ev\EventName   
+					Text x - 50, 190, "çŠ¶æ€: " + ev\EventState
+					Text x - 50, 210, "çŠ¶æ€2: " + ev\EventState2   
+					Text x - 50, 230, "çŠ¶æ€3: " + ev\EventState3
 					Text x - 50, 250, "str: "+ ev\EventStr
 					Exit
 				EndIf
 			Next
-			Text x - 50, 280, "·¿¼ä×ø±ê: (" + Floor(EntityX(PlayerRoom\obj) / 8.0 + 0.5) + ", " + Floor(EntityZ(PlayerRoom\obj) / 8.0 + 0.5) + ", angle: "+PlayerRoom\angle + ")"
-			Text x - 50, 300, "ÄÍÁ¦: " + f2s(Stamina, 3)
-			Text x - 50, 320, "ËÀÍö¼ÆÊ±: " + f2s(KillTimer, 3)               
-			Text x - 50, 340, "Õ£ÑÛ¼ÆÊ±: " + f2s(BlinkTimer, 3)
-			Text x - 50, 360, "ÊÜÉË: " + Injuries
-			Text x - 50, 380, "Ê§Ñª: " + Bloodloss
+			Text x - 50, 280, "æˆ¿é—´åæ ‡: (" + Floor(EntityX(PlayerRoom\obj) / 8.0 + 0.5) + ", " + Floor(EntityZ(PlayerRoom\obj) / 8.0 + 0.5) + ", angle: "+PlayerRoom\angle + ")"
+			Text x - 50, 300, "è€åŠ›: " + f2s(Stamina, 3)
+			Text x - 50, 320, "æ­»äº¡è®¡æ—¶: " + f2s(KillTimer, 3)               
+			Text x - 50, 340, "çœ¨çœ¼è®¡æ—¶: " + f2s(BlinkTimer, 3)
+			Text x - 50, 360, "å—ä¼¤: " + Injuries
+			Text x - 50, 380, "å¤±è¡€: " + Bloodloss
 			If Curr173 <> Null
-				Text x - 50, 410, "SCP - 173 Î»ÖÃ (Åö×²): (" + f2s(EntityX(Curr173\Collider), 3) + ", " + f2s(EntityY(Curr173\Collider), 3) + ", " + f2s(EntityZ(Curr173\Collider), 3) + ")"
-				Text x - 50, 430, "SCP - 173 Î»ÖÃ (obj): (" + f2s(EntityX(Curr173\obj), 3) + ", " + f2s(EntityY(Curr173\obj), 3) + ", " + f2s(EntityZ(Curr173\obj), 3) + ")"
+				Text x - 50, 410, "SCP - 173 ä½ç½® (ç¢°æ’): (" + f2s(EntityX(Curr173\Collider), 3) + ", " + f2s(EntityY(Curr173\Collider), 3) + ", " + f2s(EntityZ(Curr173\Collider), 3) + ")"
+				Text x - 50, 430, "SCP - 173 ä½ç½® (obj): (" + f2s(EntityX(Curr173\obj), 3) + ", " + f2s(EntityY(Curr173\obj), 3) + ", " + f2s(EntityZ(Curr173\obj), 3) + ")"
 				;Text x - 50, 410, "SCP - 173 Idle: " + Curr173\Idle
-				Text x - 50, 450, "SCP - 173 ×´Ì¬: " + Curr173\State
+				Text x - 50, 450, "SCP - 173 çŠ¶æ€: " + Curr173\State
 			EndIf
 			If Curr106 <> Null
-				Text x - 50, 470, "SCP - 106 Î»ÖÃ: (" + f2s(EntityX(Curr106\obj), 3) + ", " + f2s(EntityY(Curr106\obj), 3) + ", " + f2s(EntityZ(Curr106\obj), 3) + ")"
-				Text x - 50, 490, "SCP - 106 ÓÎµ´: " + Curr106\Idle
-				Text x - 50, 510, "SCP - 106 ×´Ì¬: " + Curr106\State
+				Text x - 50, 470, "SCP - 106 ä½ç½®: (" + f2s(EntityX(Curr106\obj), 3) + ", " + f2s(EntityY(Curr106\obj), 3) + ", " + f2s(EntityZ(Curr106\obj), 3) + ")"
+				Text x - 50, 490, "SCP - 106 æ¸¸è¡: " + Curr106\Idle
+				Text x - 50, 510, "SCP - 106 çŠ¶æ€: " + Curr106\State
 			EndIf
 			offset% = 0
 			For npc.NPCs = Each NPCs
 				If npc\NPCtype = NPCtype096 Then
-					Text x - 50, 530, "SCP - 096 Î»ÖÃ: (" + f2s(EntityX(npc\obj), 3) + ", " + f2s(EntityY(npc\obj), 3) + ", " + f2s(EntityZ(npc\obj), 3) + ")"
-					Text x - 50, 550, "SCP - 096 ÓÎµ´: " + npc\Idle
-					Text x - 50, 570, "SCP - 096 ×´Ì¬: " + npc\State
-					Text x - 50, 590, "SCP - 096 ËÙ¶È: " + f2s(npc\currspeed, 5)
+					Text x - 50, 530, "SCP - 096 ä½ç½®: (" + f2s(EntityX(npc\obj), 3) + ", " + f2s(EntityY(npc\obj), 3) + ", " + f2s(EntityZ(npc\obj), 3) + ")"
+					Text x - 50, 550, "SCP - 096 æ¸¸è¡: " + npc\Idle
+					Text x - 50, 570, "SCP - 096 çŠ¶æ€: " + npc\State
+					Text x - 50, 590, "SCP - 096 é€Ÿåº¦: " + f2s(npc\currspeed, 5)
 				EndIf
 				If npc\NPCtype = NPCtypeMTF Then
-					Text x - 50, 620 + 60 * offset, "MTF " + offset + " Î»ÖÃ: (" + f2s(EntityX(npc\obj), 3) + ", " + f2s(EntityY(npc\obj), 3) + ", " + f2s(EntityZ(npc\obj), 3) + ")"
-					Text x - 50, 640 + 60 * offset, "MTF " + offset + " ×´Ì¬: " + npc\State
-					Text x - 50, 660 + 60 * offset, "MTF " + offset + " ×îºó¼ûµ½: " + npc\lastseen					
+					Text x - 50, 620 + 60 * offset, "MTF " + offset + " ä½ç½®: (" + f2s(EntityX(npc\obj), 3) + ", " + f2s(EntityY(npc\obj), 3) + ", " + f2s(EntityZ(npc\obj), 3) + ")"
+					Text x - 50, 640 + 60 * offset, "MTF " + offset + " çŠ¶æ€: " + npc\State
+					Text x - 50, 660 + 60 * offset, "MTF " + offset + " æœ€åè§åˆ°: " + npc\lastseen					
 					offset = offset + 1
 				EndIf
 			Next
 			If PlayerRoom\RoomTemplate\Name$ = "dimension1499"
-				Text x + 350, 50, "µ±Ç°Çø¿é X/Z: ("+(Int((EntityX(Collider)+20)/40))+", "+(Int((EntityZ(Collider)+20)/40))+")"
+				Text x + 350, 50, "å½“å‰åŒºå— X/Z: ("+(Int((EntityX(Collider)+20)/40))+", "+(Int((EntityZ(Collider)+20)/40))+")"
 				Local CH_Amount% = 0
 				For ch.Chunk = Each Chunk
 					CH_Amount = CH_Amount + 1
 				Next
-				Text x + 350, 70, "µ±Ç°Çø¿éÊıÁ¿: "+CH_Amount
+				Text x + 350, 70, "å½“å‰åŒºå—æ•°é‡: "+CH_Amount
 			Else
-				Text x + 350, 50, "µ±Ç°·¿¼äÎ»ÖÃ: ("+PlayerRoom\x+", "+PlayerRoom\y+", "+PlayerRoom\z+")"
+				Text x + 350, 50, "å½“å‰æˆ¿é—´ä½ç½®: ("+PlayerRoom\x+", "+PlayerRoom\y+", "+PlayerRoom\z+")"
 			EndIf
 			GlobalMemoryStatus m.MEMORYSTATUS
 			Text x + 350, 90, (m\dwAvailPhys%/1024/1024)+" MB/"+(m\dwTotalPhys%/1024/1024)+" MB ("+(m\dwAvailPhys%/1024)+" KB/"+(m\dwTotalPhys%/1024)+" KB)"
-			Text x + 350, 110, "äÖÈ¾µÄÈı½ÇĞÎ: "+CurrTrisAmount
-			Text x + 350, 130, "¼¤»îµÄÌùÍ¼: "+ActiveTextures()
-			Text x + 350, 150, "SCP-427 ×´Ì¬(Ãë): "+Int(I_427\Timer/70.0)
-			Text x + 350, 170, "SCP-008 ¸ĞÈ¾: "+Infect
+			Text x + 350, 110, "æ¸²æŸ“çš„ä¸‰è§’å½¢: "+CurrTrisAmount
+			Text x + 350, 130, "æ¿€æ´»çš„è´´å›¾: "+ActiveTextures()
+			Text x + 350, 150, "SCP-427 çŠ¶æ€(ç§’): "+Int(I_427\Timer/70.0)
+			Text x + 350, 170, "SCP-008 æ„ŸæŸ“: "+Infect
 			For i = 0 To 5
-				Text x + 350, 190+(20*i), "SCP-1025 ×´Ì¬ "+i+": "+SCP1025state[i]
+				Text x + 350, 190+(20*i), "SCP-1025 çŠ¶æ€ "+i+": "+SCP1025state[i]
 			Next
 			If SelectedMonitor <> Null Then
-				Text x + 350, 310, "µ±Ç°ÏÔÊ¾Æ÷: "+SelectedMonitor\ScrObj
+				Text x + 350, 310, "å½“å‰æ˜¾ç¤ºå™¨: "+SelectedMonitor\ScrObj
 			Else
-				Text x + 350, 310, "µ±Ç°ÏÔÊ¾Æ÷: ÎŞ"
+				Text x + 350, 310, "å½“å‰æ˜¾ç¤ºå™¨: æ— "
 			EndIf
 			
 			AASetFont Font1
@@ -4909,7 +4909,7 @@ Function DrawGUI()
 					MouseXSpeed() : MouseYSpeed() : MouseZSpeed() : mouse_x_speed_1#=0.0 : mouse_y_speed_1#=0.0
 				EndIf
 			Else
-				Text GraphicWidth/2, y+70*scale, "·ÃÎÊÃÜÂë: ",True,True	
+				Text GraphicWidth/2, y+70*scale, "è®¿é—®å¯†ç : ",True,True	
 				AASetFont Font4
 				Text GraphicWidth/2, y+124*scale, KeypadInput,True,True	
 			EndIf
@@ -4950,7 +4950,7 @@ Function DrawGUI()
 										MouseXSpeed() : MouseYSpeed() : MouseZSpeed() : mouse_x_speed_1#=0.0 : mouse_y_speed_1#=0.0
 									Else
 										PlaySound_Strict ScannerSFX2
-										KeypadMSG = "¾Ü¾ø·ÃÎÊ"
+										KeypadMSG = "æ‹’ç»è®¿é—®"
 										KeypadTimer = 210
 										KeypadInput = ""	
 									EndIf
@@ -5220,7 +5220,7 @@ Function DrawGUI()
 					ElseIf PrevOtherOpen\SecondInv[MouseSlot] <> SelectedItem
 						Select SelectedItem\itemtemplate\tempname
 							Default
-								Msg = "Äã²»ÄÜºÏ²¢ÕâÁ½ÏîÎïÆ·"
+								Msg = "ä½ ä¸èƒ½åˆå¹¶è¿™ä¸¤é¡¹ç‰©å“"
 								MsgTimer = 70 * 5
 						End Select					
 					EndIf
@@ -5340,7 +5340,7 @@ Function DrawGUI()
 							
 							If DoubleClick Then
 								If WearingHazmat > 0 And Instr(SelectedItem\itemtemplate\tempname,"hazmatsuit")=0 Then
-									Msg = "Äã²»ÄÜÔÚ´©×Å·À»¤·şÊ±Ê¹ÓÃÎïÆ·"
+									Msg = "ä½ ä¸èƒ½åœ¨ç©¿ç€é˜²æŠ¤æœæ—¶ä½¿ç”¨ç‰©å“"
 									MsgTimer = 70*5
 									SelectedItem = Null
 									Return
@@ -5390,11 +5390,11 @@ Function DrawGUI()
 				If MouseSlot = 66 Then
 					Select SelectedItem\itemtemplate\tempname
 						Case "vest","finevest","hazmatsuit","hazmatsuit2","hazmatsuit3"
-							Msg = "Ë«»÷ÎïÆ·¼´¿ÉÈ¡ÏÂ"
+							Msg = "åŒå‡»ç‰©å“å³å¯å–ä¸‹"
 							MsgTimer = 70*5
 						Case "scp1499","super1499"
 							If Wearing1499>0 Then
-								Msg = "Ë«»÷ÎïÆ·¼´¿ÉÈ¡ÏÂ"
+								Msg = "åŒå‡»ç‰©å“å³å¯å–ä¸‹"
 								MsgTimer = 70*5
 							Else
 								DropItem(SelectedItem)
@@ -5424,7 +5424,7 @@ Function DrawGUI()
 									Local added.Items = Null
 									Local b$ = SelectedItem\itemtemplate\tempname
 									Local b2$ = SelectedItem\itemtemplate\name
-									If (b<>"misc" And b<>"25ct" And b<>"coin" And b<>"key" And b<>"scp860" And b<>"scp714") Or (b2="ÆË¿ËÅÆ" Or b2="ÍòÊÂ´ïĞÅÓÃ¿¨") Then
+									If (b<>"misc" And b<>"25ct" And b<>"coin" And b<>"key" And b<>"scp860" And b<>"scp714") Or (b2="æ‰‘å…‹ç‰Œ" Or b2="ä¸‡äº‹è¾¾ä¿¡ç”¨å¡") Then
 										For c% = 0 To Inventory(MouseSlot)\invSlots-1
 											If (Inventory(MouseSlot)\SecondInv[c] = Null)
 												If SelectedItem <> Null Then
@@ -5445,18 +5445,18 @@ Function DrawGUI()
 											EndIf
 										Next
 										If SelectedItem <> Null Then
-											Msg = "ÎÄ¼ş¼ĞÃ»ÓĞ¿Õ¼ä·Å¶«Î÷ÁË"
+											Msg = "æ–‡ä»¶å¤¹æ²¡æœ‰ç©ºé—´æ”¾ä¸œè¥¿äº†"
 										Else
 											If added\itemtemplate\tempname = "paper" Or added\itemtemplate\tempname = "oldpaper" Then
-												Msg = "Äã½«ÎÄµµ·ÅÈëÁËÎÄ¼ş¼Ğ"
+												Msg = "ä½ å°†æ–‡æ¡£æ”¾å…¥äº†æ–‡ä»¶å¤¹"
 											Else
-												Msg = "Äã½« " + added\itemtemplate\name + " ·ÅÈëÁËÎÄ¼ş¼Ğ"
+												Msg = "ä½ å°† " + added\itemtemplate\name + " æ”¾å…¥äº†æ–‡ä»¶å¤¹"
 											EndIf
 											
 										EndIf
 										MsgTimer = 70 * 5
 									Else
-										Msg = "Äã²»ÄÜºÏ²¢ÕâÁ½ÏîÎïÆ·"
+										Msg = "ä½ ä¸èƒ½åˆå¹¶è¿™ä¸¤é¡¹ç‰©å“"
 										MsgTimer = 70 * 5
 									EndIf
 								ElseIf Inventory(MouseSlot)\itemtemplate\tempname = "wallet" Then
@@ -5464,7 +5464,7 @@ Function DrawGUI()
 									added.Items = Null
 									b$ = SelectedItem\itemtemplate\tempname
 									b2$ = SelectedItem\itemtemplate\name
-									If (b<>"misc" And b<>"paper" And b<>"oldpaper") Or (b2="ÆË¿ËÅÆ" Or b2="ÍòÊÂ´ïĞÅÓÃ¿¨") Then
+									If (b<>"misc" And b<>"paper" And b<>"oldpaper") Or (b2="æ‰‘å…‹ç‰Œ" Or b2="ä¸‡äº‹è¾¾ä¿¡ç”¨å¡") Then
 										For c% = 0 To Inventory(MouseSlot)\invSlots-1
 											If (Inventory(MouseSlot)\SecondInv[c] = Null)
 												If SelectedItem <> Null Then
@@ -5487,18 +5487,18 @@ Function DrawGUI()
 											EndIf
 										Next
 										If SelectedItem <> Null Then
-											Msg = "Ç®°üÒÑ¾­ÂúÁË"
+											Msg = "é’±åŒ…å·²ç»æ»¡äº†"
 										Else
-											Msg = "Äã½« "+added\itemtemplate\name+" ·ÅÈëÁËÇ®°ü"
+											Msg = "ä½ å°† "+added\itemtemplate\name+" æ”¾å…¥äº†é’±åŒ…"
 										EndIf
 										
 										MsgTimer = 70 * 5
 									Else
-										Msg = "Äã²»ÄÜºÏ²¢ÕâÁ½ÏîÎïÆ·"
+										Msg = "ä½ ä¸èƒ½åˆå¹¶è¿™ä¸¤é¡¹ç‰©å“"
 										MsgTimer = 70 * 5
 									EndIf
 								Else
-									Msg = "Äã²»ÄÜºÏ²¢ÕâÁ½ÏîÎïÆ·"
+									Msg = "ä½ ä¸èƒ½åˆå¹¶è¿™ä¸¤é¡¹ç‰©å“"
 									MsgTimer = 70 * 5
 								EndIf
 								SelectedItem = Null
@@ -5507,80 +5507,80 @@ Function DrawGUI()
 							Case "battery", "bat"
 								;[Block]
 								Select Inventory(MouseSlot)\itemtemplate\name
-									Case "S-NAV Navigator", "S-NAV 300µ¼º½ÒÇ", "S-NAV 310µ¼º½ÒÇ"
+									Case "S-NAV Navigator", "S-NAV 300å¯¼èˆªä»ª", "S-NAV 310å¯¼èˆªä»ª"
 										If SelectedItem\itemtemplate\sound <> 66 Then PlaySound_Strict(PickSFX(SelectedItem\itemtemplate\sound))	
 										RemoveItem (SelectedItem)
 										SelectedItem = Null
 										Inventory(MouseSlot)\state = 100.0
-										Msg = "Äã¸ü»»ÁËµ¼º½ÒÇµÄµç³Ø"
+										Msg = "ä½ æ›´æ¢äº†å¯¼èˆªä»ªçš„ç”µæ± "
 										MsgTimer = 70 * 5
-									Case "S-NAVÖÕ¼«µ¼º½ÒÇ"
-										Msg = "Õâ¸öµ¼º½ÒÇÀï¿´ÆğÀ´Ã»ÓĞ·Åµç³ØµÄµØ·½"
+									Case "S-NAVç»ˆæå¯¼èˆªä»ª"
+										Msg = "è¿™ä¸ªå¯¼èˆªä»ªé‡Œçœ‹èµ·æ¥æ²¡æœ‰æ”¾ç”µæ± çš„åœ°æ–¹"
 										MsgTimer = 70 * 5
-									Case "¶Ô½²»ú"
+									Case "å¯¹è®²æœº"
 										Select Inventory(MouseSlot)\itemtemplate\tempname 
 											Case "fineradio", "veryfineradio"
-												Msg = "Õâ¸ö¶Ô½²»úÀï¿´ÆğÀ´Ã»ÓĞ·Åµç³ØµÄµØ·½"
+												Msg = "è¿™ä¸ªå¯¹è®²æœºé‡Œçœ‹èµ·æ¥æ²¡æœ‰æ”¾ç”µæ± çš„åœ°æ–¹"
 												MsgTimer = 70 * 5
 											Case "18vradio"
-												Msg = "ÕâÖÖµç³Ø²»ÊÊºÏÕâ¸ö¶Ô½²»ú"
+												Msg = "è¿™ç§ç”µæ± ä¸é€‚åˆè¿™ä¸ªå¯¹è®²æœº"
 												MsgTimer = 70 * 5
 											Case "radio"
 												If SelectedItem\itemtemplate\sound <> 66 Then PlaySound_Strict(PickSFX(SelectedItem\itemtemplate\sound))	
 												RemoveItem (SelectedItem)
 												SelectedItem = Null
 												Inventory(MouseSlot)\state = 100.0
-												Msg = "Äã¸ü»»ÁË¶Ô½²»úµÄµç³Ø"
+												Msg = "ä½ æ›´æ¢äº†å¯¹è®²æœºçš„ç”µæ± "
 												MsgTimer = 70 * 5
 										End Select
-									Case "Ò¹ÊÓÒÇ"
+									Case "å¤œè§†ä»ª"
 										Local nvname$ = Inventory(MouseSlot)\itemtemplate\tempname
 										If nvname$="nvgoggles" Or nvname$="supernv" Then
 											If SelectedItem\itemtemplate\sound <> 66 Then PlaySound_Strict(PickSFX(SelectedItem\itemtemplate\sound))	
 											RemoveItem (SelectedItem)
 											SelectedItem = Null
 											Inventory(MouseSlot)\state = 1000.0
-											Msg = "Äã¸ü»»ÁËÒ¹ÊÓÒÇµÄµç³Ø"
+											Msg = "ä½ æ›´æ¢äº†å¤œè§†ä»ªçš„ç”µæ± "
 											MsgTimer = 70 * 5
 										Else
-											Msg = "Õâ¸öÒ¹ÊÓÒÇÀï¿´ÆğÀ´Ã»ÓĞ·Åµç³ØµÄµØ·½"
+											Msg = "è¿™ä¸ªå¤œè§†ä»ªé‡Œçœ‹èµ·æ¥æ²¡æœ‰æ”¾ç”µæ± çš„åœ°æ–¹"
 											MsgTimer = 70 * 5
 										EndIf
 									Default
-										Msg = "Äã²»ÄÜºÏ²¢ÕâÁ½ÏîÎïÆ·"
+										Msg = "ä½ ä¸èƒ½åˆå¹¶è¿™ä¸¤é¡¹ç‰©å“"
 										MsgTimer = 70 * 5	
 								End Select
 								;[End Block]
 							Case "18vbat"
 								;[Block]
 								Select Inventory(MouseSlot)\itemtemplate\name
-									Case "S-NAV Navigator", "S-NAV 300µ¼º½ÒÇ", "S-NAV 310µ¼º½ÒÇ"
-										Msg = "ÕâÖÖµç³Ø²»ÊÊºÏÕâ¸öµ¼º½ÒÇ"
+									Case "S-NAV Navigator", "S-NAV 300å¯¼èˆªä»ª", "S-NAV 310å¯¼èˆªä»ª"
+										Msg = "è¿™ç§ç”µæ± ä¸é€‚åˆè¿™ä¸ªå¯¼èˆªä»ª"
 										MsgTimer = 70 * 5
-									Case "S-NAVÖÕ¼«µ¼º½ÒÇ"
-										Msg = "Õâ¸öµ¼º½ÒÇÀï¿´ÆğÀ´Ã»ÓĞ·Åµç³ØµÄµØ·½"
+									Case "S-NAVç»ˆæå¯¼èˆªä»ª"
+										Msg = "è¿™ä¸ªå¯¼èˆªä»ªé‡Œçœ‹èµ·æ¥æ²¡æœ‰æ”¾ç”µæ± çš„åœ°æ–¹"
 										MsgTimer = 70 * 5
-									Case "¶Ô½²»ú"
+									Case "å¯¹è®²æœº"
 										Select Inventory(MouseSlot)\itemtemplate\tempname 
 											Case "fineradio", "veryfineradio"
-												Msg = "Õâ¸ö¶Ô½²»úÀï¿´ÆğÀ´Ã»ÓĞ·Åµç³ØµÄµØ·½"
+												Msg = "è¿™ä¸ªå¯¹è®²æœºé‡Œçœ‹èµ·æ¥æ²¡æœ‰æ”¾ç”µæ± çš„åœ°æ–¹"
 												MsgTimer = 70 * 5		
 											Case "18vradio"
 												If SelectedItem\itemtemplate\sound <> 66 Then PlaySound_Strict(PickSFX(SelectedItem\itemtemplate\sound))	
 												RemoveItem (SelectedItem)
 												SelectedItem = Null
 												Inventory(MouseSlot)\state = 100.0
-												Msg = "Äã¸ü»»ÁË¶Ô½²»úµÄµç³Ø"
+												Msg = "ä½ æ›´æ¢äº†å¯¹è®²æœºçš„ç”µæ± "
 												MsgTimer = 70 * 5
 										End Select 
 									Default
-										Msg = "Äã²»ÄÜºÏ²¢ÕâÁ½ÏîÎïÆ·"
+										Msg = "ä½ ä¸èƒ½åˆå¹¶è¿™ä¸¤é¡¹ç‰©å“"
 										MsgTimer = 70 * 5	
 								End Select
 								;[End Block]
 							Default
 								;[Block]
-								Msg = "Äã²»ÄÜºÏ²¢ÕâÁ½ÏîÎïÆ·"
+								Msg = "ä½ ä¸èƒ½åˆå¹¶è¿™ä¸¤é¡¹ç‰©å“"
 								MsgTimer = 70 * 5
 								;[End Block]
 						End Select					
@@ -5605,10 +5605,10 @@ Function DrawGUI()
 					;[Block]
 					If Wearing1499 = 0 And WearingHazmat=0 Then
 						If WearingNightVision = 1 Then
-							Msg = "ÄãÕªÏÂÁËÒ¹ÊÓÒÇ"
+							Msg = "ä½ æ‘˜ä¸‹äº†å¤œè§†ä»ª"
 							CameraFogFar = StoredCameraFogFar
 						Else
-							Msg = "Äã´÷ÉÏÁËÒ¹ÊÓÒÇ"
+							Msg = "ä½ æˆ´ä¸Šäº†å¤œè§†ä»ª"
 							WearingGasMask = 0
 							WearingNightVision = 0
 							StoredCameraFogFar = CameraFogFar
@@ -5617,9 +5617,9 @@ Function DrawGUI()
 						
 						WearingNightVision = (Not WearingNightVision)
 					ElseIf Wearing1499 > 0 Then
-						Msg = "ÄãĞèÒªÕªÏÂSCP-1499²ÅÄÜ´÷ÉÏÒ¹ÊÓÒÇ"
+						Msg = "ä½ éœ€è¦æ‘˜ä¸‹SCP-1499æ‰èƒ½æˆ´ä¸Šå¤œè§†ä»ª"
 					Else
-						Msg = "ÄãĞèÒªÍÑµô·À»¤·ş²ÅÄÜ´÷ÉÏÒ¹ÊÓÒÇ"
+						Msg = "ä½ éœ€è¦è„±æ‰é˜²æŠ¤æœæ‰èƒ½æˆ´ä¸Šå¤œè§†ä»ª"
 					EndIf
 					SelectedItem = Null
 					MsgTimer = 70 * 5
@@ -5628,10 +5628,10 @@ Function DrawGUI()
 					;[Block]
 					If Wearing1499 = 0 And WearingHazmat=0 Then
 						If WearingNightVision = 2 Then
-							Msg = "ÄãÕªÏÂÁËÒ¹ÊÓÒÇ"
+							Msg = "ä½ æ‘˜ä¸‹äº†å¤œè§†ä»ª"
 							CameraFogFar = StoredCameraFogFar
 						Else
-							Msg = "Äã´÷ÉÏÁËÒ¹ÊÓÒÇ"
+							Msg = "ä½ æˆ´ä¸Šäº†å¤œè§†ä»ª"
 							WearingGasMask = 0
 							WearingNightVision = 0
 							StoredCameraFogFar = CameraFogFar
@@ -5640,9 +5640,9 @@ Function DrawGUI()
 						
 						WearingNightVision = (Not WearingNightVision) * 2
 					ElseIf Wearing1499 > 0 Then
-						Msg = "ÄãĞèÒªÕªÏÂSCP-1499²ÅÄÜ´÷ÉÏÒ¹ÊÓÒÇ"
+						Msg = "ä½ éœ€è¦æ‘˜ä¸‹SCP-1499æ‰èƒ½æˆ´ä¸Šå¤œè§†ä»ª"
 					Else
-						Msg = "ÄãĞèÒªÍÑµô·À»¤·ş²ÅÄÜ´÷ÉÏÒ¹ÊÓÒÇ"
+						Msg = "ä½ éœ€è¦è„±æ‰é˜²æŠ¤æœæ‰èƒ½æˆ´ä¸Šå¤œè§†ä»ª"
 					EndIf
 					SelectedItem = Null
 					MsgTimer = 70 * 5
@@ -5651,10 +5651,10 @@ Function DrawGUI()
 					;[Block]
 					If Wearing1499 = 0 And WearingHazmat = 0 Then
 						If WearingNightVision = 3 Then
-							Msg = "ÄãÕªÏÂÁËÒ¹ÊÓÒÇ"
+							Msg = "ä½ æ‘˜ä¸‹äº†å¤œè§†ä»ª"
 							CameraFogFar = StoredCameraFogFar
 						Else
-							Msg = "Äã´÷ÉÏÁËÒ¹ÊÓÒÇ"
+							Msg = "ä½ æˆ´ä¸Šäº†å¤œè§†ä»ª"
 							WearingGasMask = 0
 							WearingNightVision = 0
 							StoredCameraFogFar = CameraFogFar
@@ -5663,9 +5663,9 @@ Function DrawGUI()
 						
 						WearingNightVision = (Not WearingNightVision) * 3
 					ElseIf Wearing1499 > 0 Then
-						Msg = "ÄãĞèÒªÕªÏÂSCP-1499²ÅÄÜ´÷ÉÏÒ¹ÊÓÒÇ"
+						Msg = "ä½ éœ€è¦æ‘˜ä¸‹SCP-1499æ‰èƒ½æˆ´ä¸Šå¤œè§†ä»ª"
 					Else
-						Msg = "ÄãĞèÒªÍÑµô·À»¤·ş²ÅÄÜ´÷ÉÏÒ¹ÊÓÒÇ"
+						Msg = "ä½ éœ€è¦è„±æ‰é˜²æŠ¤æœæ‰èƒ½æˆ´ä¸Šå¤œè§†ä»ª"
 					EndIf
 					SelectedItem = Null
 					MsgTimer = 70 * 5
@@ -5673,11 +5673,11 @@ Function DrawGUI()
 				Case "ring"
 					;[Block]
 					If Wearing714=2 Then
-						Msg = "ÄãÕªÏÂÁË½äÖ¸"
+						Msg = "ä½ æ‘˜ä¸‹äº†æˆ’æŒ‡"
 						Wearing714 = False
 					Else
 						;Achievements(Achv714)=True
-						Msg = "Äã´÷ÉÏÁË½äÖ¸"
+						Msg = "ä½ æˆ´ä¸Šäº†æˆ’æŒ‡"
 						Wearing714 = 2
 					EndIf
 					MsgTimer = 70 * 5
@@ -5690,10 +5690,10 @@ Function DrawGUI()
 							ShowEntity Light
 							LightFlash = 7
 							PlaySound_Strict(LoadTempSound("SFX\SCP\1123\Touch.ogg"))		
-							DeathMSG = "¶ÔÏóD-9341ÔÚÊÔÍ¼Ï®»÷Ò»Ãû¾ÅÎ²ºü³ÉÔ±ºó±»»÷±Ğ¡£"
-							DeathMSG = DeathMSG + "¼à¿ØÂ¼ÏñÏÔÊ¾£¬¶ÔÏóÔÚ´óÔ¼9·ÖÖÓÇ°ÔÚÏÖ³¡ÅÇ»²£¬ÓÃÖĞÎÄ¸ßº°¡°ÏûÃğËÄº¦¡±¡£"
-							DeathMSG = DeathMSG + "SCP-1123ÔÚ[ÒÑ±à¼­]µÄ¸½½üÕÒµ½£¬Ö¤Ã÷¶ÔÏóÓëËü·¢ÉúÁËÖ«Ìå½Ó´¥¡£"
-							DeathMSG = DeathMSG + "Ä¿Ç°ÉĞÎ´ÖªSCP-1123ÊÇÈçºÎ´ÓÊÕÈİÊÒÀë¿ªµÄ¡£"
+							DeathMSG = "å¯¹è±¡D-9341åœ¨è¯•å›¾è¢­å‡»ä¸€åä¹å°¾ç‹æˆå‘˜åè¢«å‡»æ¯™ã€‚"
+							DeathMSG = DeathMSG + "ç›‘æ§å½•åƒæ˜¾ç¤ºï¼Œå¯¹è±¡åœ¨å¤§çº¦9åˆ†é’Ÿå‰åœ¨ç°åœºå¾˜å¾Šï¼Œç”¨ä¸­æ–‡é«˜å–Šâ€œæ¶ˆç­å››å®³â€ã€‚"
+							DeathMSG = DeathMSG + "SCP-1123åœ¨[å·²ç¼–è¾‘]çš„é™„è¿‘æ‰¾åˆ°ï¼Œè¯æ˜å¯¹è±¡ä¸å®ƒå‘ç”Ÿäº†è‚¢ä½“æ¥è§¦ã€‚"
+							DeathMSG = DeathMSG + "ç›®å‰å°šæœªçŸ¥SCP-1123æ˜¯å¦‚ä½•ä»æ”¶å®¹å®¤ç¦»å¼€çš„ã€‚"
 							Kill()
 							Return
 						EndIf
@@ -5733,9 +5733,9 @@ Function DrawGUI()
 						GiveAchievement(Achv500)
 						
 						If Infect > 0 Then
-							Msg = "ÄãÍÌÏÂÁËÒ©Íè£¬ÄãµÄ¶ñĞÄÕıÔÚ»º½â"
+							Msg = "ä½ åä¸‹äº†è¯ä¸¸ï¼Œä½ çš„æ¶å¿ƒæ­£åœ¨ç¼“è§£"
 						Else
-							Msg = "ÄãÍÌÏÂÁËÒ©Íè"
+							Msg = "ä½ åä¸‹äº†è¯ä¸¸"
 						EndIf
 						MsgTimer = 70*7
 						
@@ -5760,29 +5760,29 @@ Function DrawGUI()
 						Select Rand(5)
 							Case 1
 								Injuries = 3.5
-								Msg = "Äã¿ªÊ¼´óÁ¿Á÷Ñª"
+								Msg = "ä½ å¼€å§‹å¤§é‡æµè¡€"
 								MsgTimer = 70*7
 							Case 2
 								Injuries = 0
 								Bloodloss = 0
-								Msg = "ÄãµÄÉË¿ÚÕıÔÚÑ¸ËÙÓúºÏ"
+								Msg = "ä½ çš„ä¼¤å£æ­£åœ¨è¿…é€Ÿæ„ˆåˆ"
 								MsgTimer = 70*7
 							Case 3
 								Injuries = Max(0, Injuries - Rnd(0.5,3.5))
 								Bloodloss = Max(0, Bloodloss - Rnd(10,100))
-								Msg = "Äã¸Ğ¾õºÃ¶àÁË"
+								Msg = "ä½ æ„Ÿè§‰å¥½å¤šäº†"
 								MsgTimer = 70*7
 							Case 4
 								BlurTimer = 10000
 								Bloodloss = 0
-								Msg = "Äã¸Ğµ½¶ñĞÄ"
+								Msg = "ä½ æ„Ÿåˆ°æ¶å¿ƒ"
 								MsgTimer = 70*7
 							Case 5
 								BlinkTimer = -10
 								Local roomname$ = PlayerRoom\RoomTemplate\Name
 								If roomname = "dimension1499" Or roomname = "gatea" Or (roomname="exit1" And EntityY(Collider)>1040.0*RoomScale)
 									Injuries = 2.5
-									Msg = "Äã¿ªÊ¼´óÁ¿Á÷Ñª"
+									Msg = "ä½ å¼€å§‹å¤§é‡æµè¡€"
 									MsgTimer = 70*7
 								Else
 									For r.Rooms = Each Rooms
@@ -5797,7 +5797,7 @@ Function DrawGUI()
 											Exit
 										EndIf
 									Next
-									Msg = "ÓÉÓÚÄ³Ğ©Ææ¹ÖµÄÔ­Òò£¬Äã·¢ÏÖÄãÉí´¦¿Ú´ü¿Õ¼ä"
+									Msg = "ç”±äºæŸäº›å¥‡æ€ªçš„åŸå› ï¼Œä½ å‘ç°ä½ èº«å¤„å£è¢‹ç©ºé—´"
 									MsgTimer = 70*8
 								EndIf
 						End Select
@@ -5808,7 +5808,7 @@ Function DrawGUI()
 				Case "firstaid", "finefirstaid", "firstaid2"
 					;[Block]
 					If Bloodloss = 0 And Injuries = 0 Then
-						Msg = "ÄãÏÖÔÚ²»ĞèÒªÊ¹ÓÃ¼±¾ÈÏä"
+						Msg = "ä½ ç°åœ¨ä¸éœ€è¦ä½¿ç”¨æ€¥æ•‘ç®±"
 						MsgTimer = 70*5
 						SelectedItem = Null
 					Else
@@ -5834,33 +5834,33 @@ Function DrawGUI()
 									Bloodloss = 0
 									Injuries = Max(0, Injuries - 2.0)
 									If Injuries = 0 Then
-										Msg = "Äã°üÔúÁËÉË¿Ú²¢³ÔÁËÖ¹Í´Ò©£¬Äã¸Ğ¾õÁ¼ºÃ"
+										Msg = "ä½ åŒ…æ‰äº†ä¼¤å£å¹¶åƒäº†æ­¢ç—›è¯ï¼Œä½ æ„Ÿè§‰è‰¯å¥½"
 									ElseIf Injuries > 1.0
-										Msg = "Äã°üÔúÁËÉË¿Ú²¢³ÔÁËÖ¹Í´Ò©£¬µ«ÄãÎŞ·¨ÍêÈ«Ö¹Ñª"
+										Msg = "ä½ åŒ…æ‰äº†ä¼¤å£å¹¶åƒäº†æ­¢ç—›è¯ï¼Œä½†ä½ æ— æ³•å®Œå…¨æ­¢è¡€"
 									Else
-										Msg = "Äã°üÔúÁËÉË¿Ú²¢³ÔÁËÖ¹Í´Ò©£¬µ«ÄãÈÔ¸Ğµ½ÌÛÍ´"
+										Msg = "ä½ åŒ…æ‰äº†ä¼¤å£å¹¶åƒäº†æ­¢ç—›è¯ï¼Œä½†ä½ ä»æ„Ÿåˆ°ç–¼ç—›"
 									EndIf
 									MsgTimer = 70*5
 									RemoveItem(SelectedItem)
 								Else
 									Bloodloss = Max(0, Bloodloss - Rand(10,20))
 									If Injuries => 2.5 Then
-										Msg = "ÉË¿ÚÒÑÑÏÖØµ½ÎŞ·¨ÍêÈ«Ö¹ÑªÁË"
+										Msg = "ä¼¤å£å·²ä¸¥é‡åˆ°æ— æ³•å®Œå…¨æ­¢è¡€äº†"
 										Injuries = Max(2.5, Injuries-Rnd(0.3,0.7))
 									ElseIf Injuries > 1.0
 										Injuries = Max(0.5, Injuries-Rnd(0.5,1.0))
 										If Injuries > 1.0 Then
-											Msg = "ÄãÓÃ±Á´ø°üÔúÉË¿Ú£¬µ«ÈÔÎŞ·¨ÍêÈ«Ö¹Ñª"
+											Msg = "ä½ ç”¨ç»·å¸¦åŒ…æ‰ä¼¤å£ï¼Œä½†ä»æ— æ³•å®Œå…¨æ­¢è¡€"
 										Else
-											Msg = "ÄãÉè·¨Ö¹ÁËÑª"
+											Msg = "ä½ è®¾æ³•æ­¢äº†è¡€"
 										EndIf
 									Else
 										If Injuries > 0.5 Then
 											Injuries = 0.5
-											Msg = "Äã³ÔÁËÖ¹Í´Ò©£¬ÉÔÎ¢¼õÇáÁËÌÛÍ´"
+											Msg = "ä½ åƒäº†æ­¢ç—›è¯ï¼Œç¨å¾®å‡è½»äº†ç–¼ç—›"
 										Else
 											Injuries = 0.5
-											Msg = "Äã³ÔÁËÖ¹Í´Ò©£¬µ«×ßÂ·»¹ÊÇºÜÌÛ"
+											Msg = "ä½ åƒäº†æ­¢ç—›è¯ï¼Œä½†èµ°è·¯è¿˜æ˜¯å¾ˆç–¼"
 										EndIf
 									EndIf
 									
@@ -5868,22 +5868,22 @@ Function DrawGUI()
 										Select Rand(6)
 											Case 1
 												SuperMan = True
-												Msg = "ÄãÒÑ¾­ÉöÉÏÏÙËØËùÑ¹µ¹ÁË°¡ÎÔ²ÛÎßºş~£¡"
+												Msg = "ä½ å·²ç»è‚¾ä¸Šè…ºç´ æ‰€å‹å€’äº†å•Šå§æ§½èŠœæ¹–~ï¼"
 											Case 2
 												InvertMouse = (Not InvertMouse)
-												Msg = "ÄãÍ»È»·¢ÏÖÄãºÜÄÑ»ØÍ·"
+												Msg = "ä½ çªç„¶å‘ç°ä½ å¾ˆéš¾å›å¤´"
 											Case 3
 												BlurTimer = 5000
-												Msg = "Äã¸Ğµ½¶ñĞÄ"
+												Msg = "ä½ æ„Ÿåˆ°æ¶å¿ƒ"
 											Case 4
 												BlinkEffect = 0.6
 												BlinkEffectTimer = Rand(20,30)
 											Case 5
 												Bloodloss = 0
 												Injuries = 0
-												Msg = "ÄãÓÃ±Á´ø°üÔúÉË¿Ú£¬³öÑªÍêÈ«Í£Ö¹ÁË¡£Äã¸Ğ¾õºÜºÃ"
+												Msg = "ä½ ç”¨ç»·å¸¦åŒ…æ‰ä¼¤å£ï¼Œå‡ºè¡€å®Œå…¨åœæ­¢äº†ã€‚ä½ æ„Ÿè§‰å¾ˆå¥½"
 											Case 6
-												Msg = "ÄãÓÃ±Á´ø°üÔúÉË¿Ú£¬Ñª´Ó±Á´øÀï´óÁ¿Á÷³ö"
+												Msg = "ä½ ç”¨ç»·å¸¦åŒ…æ‰ä¼¤å£ï¼Œè¡€ä»ç»·å¸¦é‡Œå¤§é‡æµå‡º"
 												Injuries = 3.5
 										End Select
 									EndIf
@@ -5934,14 +5934,14 @@ Function DrawGUI()
 					;[Block]
 					If SelectedItem\itemtemplate\img = 0 Then
 						Select SelectedItem\itemtemplate\name
-							Case "ÉÕ½¹µÄÎÄ¼ş" 
+							Case "çƒ§ç„¦çš„æ–‡ä»¶" 
 								SelectedItem\itemtemplate\img = LoadImage_Strict("GFX\items\bn.jpg")
 								TextSetBuffer ImageBuffer(SelectedItem\itemtemplate\img)
 								TextSetColor 0,0,0
 								Text 277, 469, AccessCode, True, True
 								TextSetColor 255,255,255
 								TextSetBuffer BackBuffer()
-							Case "SCP-372ÎÄµµ"
+							Case "SCP-372æ–‡æ¡£"
 								SelectedItem\itemtemplate\img = LoadImage_Strict(SelectedItem\itemtemplate\imgpath)	
 								SelectedItem\itemtemplate\img = ResizeImage2(SelectedItem\itemtemplate\img, ImageWidth(SelectedItem\itemtemplate\img) * MenuScale, ImageHeight(SelectedItem\itemtemplate\img) * MenuScale)
 								
@@ -5953,12 +5953,12 @@ Function DrawGUI()
 								Text 383*MenuScale, 734*MenuScale, temp, True, True
 								TextSetColor 255,255,255
 								TextSetBuffer BackBuffer()
-							Case "µçÓ°Æ±"
+							Case "ç”µå½±ç¥¨"
 								;don't resize because it messes up the masking
 								SelectedItem\itemtemplate\img=LoadImage_Strict(SelectedItem\itemtemplate\imgpath)	
 								
 								If (SelectedItem\state = 0) Then
-									Msg = "¡°ºÙ£¬ÎÒ¼ÇµÃÕâ¸öµçÓ°£¡¡±"
+									Msg = "â€œå˜¿ï¼Œæˆ‘è®°å¾—è¿™ä¸ªç”µå½±ï¼â€"
 									MsgTimer = 70*10
 									PlaySound_Strict LoadTempSound("SFX\SCP\1162\NostalgiaCancer"+Rand(1,5)+".ogg")
 									SelectedItem\state = 1
@@ -5988,13 +5988,13 @@ Function DrawGUI()
 					
 					DrawImage(SelectedItem\itemtemplate\img, GraphicWidth / 2 - ImageWidth(SelectedItem\itemtemplate\img) / 2, GraphicHeight / 2 - ImageHeight(SelectedItem\itemtemplate\img) / 2)
 					;[End Block]
-				Case "±­×Ó"
+				Case "æ¯å­"
 					;[Block]
 					If CanUseItem(False,False,True)
 						SelectedItem\name = Trim(Lower(SelectedItem\name))
-						If Left(SelectedItem\name, Min(6,Len(SelectedItem\name))) = "Ò»±­" Then
+						If Left(SelectedItem\name, Min(6,Len(SelectedItem\name))) = "ä¸€æ¯" Then
 							SelectedItem\name = Right(SelectedItem\name, Len(SelectedItem\name)-7)
-						ElseIf Left(SelectedItem\name, Min(8,Len(SelectedItem\name))) = "Ò»±­" 
+						ElseIf Left(SelectedItem\name, Min(8,Len(SelectedItem\name))) = "ä¸€æ¯" 
 							SelectedItem\name = Right(SelectedItem\name, Len(SelectedItem\name)-9)
 						EndIf
 						
@@ -6038,7 +6038,7 @@ Function DrawGUI()
 							Msg = strtemp 
 							MsgTimer = 70*6		
 						Else
-							it.Items = CreateItem("¿Õ±­×Ó", "emptycup", 0,0,0)
+							it.Items = CreateItem("ç©ºæ¯å­", "emptycup", 0,0,0)
 							it\Picked = True
 							For i = 0 To MaxItemAmount-1
 								If Inventory(i)=SelectedItem Then Inventory(i) = it : Exit
@@ -6058,7 +6058,7 @@ Function DrawGUI()
 						StaminaEffect = 0.5
 						StaminaEffectTimer = 20
 						
-						Msg = "Äã¸ø×Ô¼º×¢ÉäÁË×¢ÉäÆ÷£¬Äã¸Ğµ½ÇáÎ¢µÄÉöÉÏÏÙËØ·ÖÃÚ"
+						Msg = "ä½ ç»™è‡ªå·±æ³¨å°„äº†æ³¨å°„å™¨ï¼Œä½ æ„Ÿåˆ°è½»å¾®çš„è‚¾ä¸Šè…ºç´ åˆ†æ³Œ"
 						MsgTimer = 70 * 8
 						
 						RemoveItem(SelectedItem)
@@ -6071,7 +6071,7 @@ Function DrawGUI()
 						StaminaEffect = Rnd(0.5, 0.8)
 						StaminaEffectTimer = Rnd(20, 30)
 						
-						Msg = "Äã¸ø×Ô¼º×¢ÉäÁË×¢ÉäÆ÷£¬Äã¸Ğµ½ÉöÉÏÏÙËØ¼¤Ôö"
+						Msg = "ä½ ç»™è‡ªå·±æ³¨å°„äº†æ³¨å°„å™¨ï¼Œä½ æ„Ÿåˆ°è‚¾ä¸Šè…ºç´ æ¿€å¢"
 						MsgTimer = 70 * 8
 						
 						RemoveItem(SelectedItem)
@@ -6085,13 +6085,13 @@ Function DrawGUI()
 								HealTimer = Rnd(40, 60)
 								StaminaEffect = 0.1
 								StaminaEffectTimer = 30
-								Msg = "Äã¸ø×Ô¼º×¢ÉäÁË×¢ÉäÆ÷£¬Äã¸Ğµ½Ò»¹É¾ŞÁ¿ÉöÉÏÏÙËØ³å»÷×ÅÄã"
+								Msg = "ä½ ç»™è‡ªå·±æ³¨å°„äº†æ³¨å°„å™¨ï¼Œä½ æ„Ÿåˆ°ä¸€è‚¡å·¨é‡è‚¾ä¸Šè…ºç´ å†²å‡»ç€ä½ "
 							Case 2
 								SuperMan = True
-								Msg = "Äã¸ø×Ô¼º×¢ÉäÁË×¢ÉäÆ÷£¬Äã¸Ğ¾õÕıÔÚ·ÖÃÚ×Å¾ŞÁ¿µÄÉöÉÏÏÙËØ"
+								Msg = "ä½ ç»™è‡ªå·±æ³¨å°„äº†æ³¨å°„å™¨ï¼Œä½ æ„Ÿè§‰æ­£åœ¨åˆ†æ³Œç€å·¨é‡çš„è‚¾ä¸Šè…ºç´ "
 							Case 3
 								VomitTimer = 30
-								Msg = "Äã¸ø×Ô¼º×¢ÉäÁË×¢ÉäÆ÷£¬Äã¸Ğµ½Î¸Í´"
+								Msg = "ä½ ç»™è‡ªå·±æ³¨å°„äº†æ³¨å°„å™¨ï¼Œä½ æ„Ÿåˆ°èƒƒç—›"
 						End Select
 						
 						MsgTimer = 70 * 8
@@ -6112,7 +6112,7 @@ Function DrawGUI()
 					;RadioState(7) = another timer for the "code channel"
 					
 					If RadioState(5) = 0 Then 
-						Msg = "Ê¹ÓÃÊı×Ö1-5ÔÚÆµµÀÖ®¼äÇĞ»»"
+						Msg = "ä½¿ç”¨æ•°å­—1-5åœ¨é¢‘é“ä¹‹é—´åˆ‡æ¢"
 						MsgTimer = 70 * 5
 						RadioState(5) = 1
 						RadioState(0) = -1
@@ -6133,13 +6133,13 @@ Function DrawGUI()
 							Select Int(SelectedItem\state2)
 								Case 0 ;randomkanava
 									ResumeChannel(RadioCHN(0))
-									strtemp = "        ×Ô¶¨ÆµµÀÒôÆµ - "
+									strtemp = "        è‡ªå®šé¢‘é“éŸ³é¢‘ - "
 									If (Not EnableUserTracks)
 										If ChannelPlaying(RadioCHN(0)) = False Then RadioCHN(0) = PlaySound_Strict(RadioStatic)
-										strtemp = strtemp + "×Ô¶¨ÆµµÀÎ´ÆôÓÃ     "
+										strtemp = strtemp + "è‡ªå®šé¢‘é“æœªå¯ç”¨     "
 									ElseIf UserTrackMusicAmount<1
 										If ChannelPlaying(RadioCHN(0)) = False Then RadioCHN(0) = PlaySound_Strict(RadioStatic)
-										strtemp = strtemp + "ÕÒ²»µ½ÒôÆµÎÄ¼ş     "
+										strtemp = strtemp + "æ‰¾ä¸åˆ°éŸ³é¢‘æ–‡ä»¶     "
 									Else
 										If (Not ChannelPlaying(RadioCHN(0)))
 											If (Not UserTrackFlag%)
@@ -6189,7 +6189,7 @@ Function DrawGUI()
 									DebugLog RadioState(1) 
 									
 									ResumeChannel(RadioCHN(1))
-									strtemp = "        ¾¯¸æ - ÊÕÈİÊ§Ğ§          "
+									strtemp = "        è­¦å‘Š - æ”¶å®¹å¤±æ•ˆ          "
 									If ChannelPlaying(RadioCHN(1)) = False Then
 										
 										If RadioState(1) => 5 Then
@@ -6204,7 +6204,7 @@ Function DrawGUI()
 									
 								Case 2 ;scp-radio
 									ResumeChannel(RadioCHN(2))
-									strtemp = "        SCP»ù½ğ»áÉèÊ©¹ã²¥          "
+									strtemp = "        SCPåŸºé‡‘ä¼šè®¾æ–½å¹¿æ’­          "
 									If ChannelPlaying(RadioCHN(2)) = False Then
 										RadioState(2)=RadioState(2)+1
 										If RadioState(2) = 17 Then RadioState(2) = 1
@@ -6216,7 +6216,7 @@ Function DrawGUI()
 									EndIf 
 								Case 3
 									ResumeChannel(RadioCHN(3))
-									strtemp = "             Ó¦¼±ÆµµÀ - ÎªÊÕÈİÊ§Ğ§ÊÂ¼ş¶øÔ¤ÉèµÄ½»Á÷ÆµµÀ         "
+									strtemp = "             åº”æ€¥é¢‘é“ - ä¸ºæ”¶å®¹å¤±æ•ˆäº‹ä»¶è€Œé¢„è®¾çš„äº¤æµé¢‘é“         "
 									If ChannelPlaying(RadioCHN(3)) = False Then RadioCHN(3) = PlaySound_Strict(RadioStatic)
 									
 									If MTFtimer > 0 Then 
@@ -6428,23 +6428,23 @@ Function DrawGUI()
 						If SelectedItem\state = 0 Then
 							Select Rand(6)
 								Case 1
-									Msg = "¡°ÎÒÃ»ÓĞ¶«Î÷À´µãÈ¼Ëü£¬àÅ...Õâ¸öÔõÃ´Ñù¡£ËãÁË¡±"
+									Msg = "â€œæˆ‘æ²¡æœ‰ä¸œè¥¿æ¥ç‚¹ç‡ƒå®ƒï¼Œå—¯...è¿™ä¸ªæ€ä¹ˆæ ·ã€‚ç®—äº†â€"
 								Case 2
-									Msg = "ÄãÎŞ·¨µãÈ¼Ëü"
+									Msg = "ä½ æ— æ³•ç‚¹ç‡ƒå®ƒ"
 								Case 3
-									Msg = "¡°ÎÒÒÑ¾­½äÁËºÜ³¤Ê±¼äÁË¡±"
+									Msg = "â€œæˆ‘å·²ç»æˆ’äº†å¾ˆé•¿æ—¶é—´äº†â€"
 									RemoveItem(SelectedItem)
 								Case 4
-									Msg = "¡°¼´Ê¹ÎÒÏëÀ´Ò»¸ù£¬ÎÒÒ²²»ÖªµÀÄÃÊ²Ã´À´µãÈ¼Ëü¡±"
+									Msg = "â€œå³ä½¿æˆ‘æƒ³æ¥ä¸€æ ¹ï¼Œæˆ‘ä¹Ÿä¸çŸ¥é“æ‹¿ä»€ä¹ˆæ¥ç‚¹ç‡ƒå®ƒâ€"
 								Case 5
-									Msg = "¡°ÏÖÔÚÎÒÕæµÄ¿ÉÒÔÀ´Ò»¸ùÁË...µ«Ô¸ÎÒÓĞÒ»¸ö´ò»ğ»ú¡±"
+									Msg = "â€œç°åœ¨æˆ‘çœŸçš„å¯ä»¥æ¥ä¸€æ ¹äº†...ä½†æ„¿æˆ‘æœ‰ä¸€ä¸ªæ‰“ç«æœºâ€"
 								Case 6
-									Msg = "¡°±ğÏë×ÅÀ´Ò»¸ùÁË£¬ÓÈÆäÊÇÏÖÔÚÕâÊ±ºò¡±"
+									Msg = "â€œåˆ«æƒ³ç€æ¥ä¸€æ ¹äº†ï¼Œå°¤å…¶æ˜¯ç°åœ¨è¿™æ—¶å€™â€"
 									RemoveItem(SelectedItem)
 							End Select
 							SelectedItem\state = 1 
 						Else
-							Msg = "ÄãÎŞ·¨µãÈ¼Ëü"
+							Msg = "ä½ æ— æ³•ç‚¹ç‡ƒå®ƒ"
 						EndIf
 						
 						MsgTimer = 70 * 5
@@ -6454,9 +6454,9 @@ Function DrawGUI()
 					;[Block]
 					If CanUseItem(False,False,True)
 						If Wearing714=1 Then
-							Msg = "¡°ÎÒ²ÙÕâÍæÒâ¸ù±¾Ã»ÓÃ¡±"
+							Msg = "â€œæˆ‘æ“è¿™ç©æ„æ ¹æœ¬æ²¡ç”¨â€"
 						Else
-							Msg = "¡°»ï¼ÆÕâ¶«Î÷ÕæËûÂè²»´í¡±"
+							Msg = "â€œä¼™è®¡è¿™ä¸œè¥¿çœŸä»–å¦ˆä¸é”™â€"
 							Injuries = Max(Injuries-0.5, 0)
 							BlurTimer = 500
 							GiveAchievement(Achv420)
@@ -6470,11 +6470,11 @@ Function DrawGUI()
 					;[Block]
 					If CanUseItem(False,False,True)
 						If Wearing714=1 Then
-							Msg = "¡°ÎÒ²ÙÕâÍæÒâ¸ù±¾Ã»ÓÃ¡±"
+							Msg = "â€œæˆ‘æ“è¿™ç©æ„æ ¹æœ¬æ²¡ç”¨â€"
 						Else
-							DeathMSG = "´¦ÓÚ»èÃÔ×´Ì¬µÄ¶ÔÏóD-9341ÔÚ[Êı¾İ±à¼­]·¢ÏÖ¡£¶ÔÏóÃæ´øÎ¢Ğ¦£¬ÄÃ×ÅÒ»¸ù¿´ÆğÀ´ÏñÏãÑÌµÄ¶«Î÷¡£"
-							DeathMSG = DeathMSG+"¾¡¹ÜÏãÑÌÖĞËÆºõº¬ÓĞ¸ßÅ¨¶ÈµÄÒ»ÖÖÎ´Öª»¯Ñ§ÎïÖÊ£¬Æä·Ö×Ó½á¹¹ÓëËÄÇâ´óÂé·Ó·Ç³£ÏàËÆ£¬µ«»¯Ñ§·ÖÎöÉĞÎ´µÃ³ö½áÂÛ¡£"
-							Msg = Chr(34) + "¡°ÎÒ²ÙÎÒÔÚÄÄ...ÎÒÔÚ¸ÉÊ²Ã´...ÎÒĞèÒªĞ¡Ë¯Ò»»á...¡±"
+							DeathMSG = "å¤„äºæ˜è¿·çŠ¶æ€çš„å¯¹è±¡D-9341åœ¨[æ•°æ®ç¼–è¾‘]å‘ç°ã€‚å¯¹è±¡é¢å¸¦å¾®ç¬‘ï¼Œæ‹¿ç€ä¸€æ ¹çœ‹èµ·æ¥åƒé¦™çƒŸçš„ä¸œè¥¿ã€‚"
+							DeathMSG = DeathMSG+"å°½ç®¡é¦™çƒŸä¸­ä¼¼ä¹å«æœ‰é«˜æµ“åº¦çš„ä¸€ç§æœªçŸ¥åŒ–å­¦ç‰©è´¨ï¼Œå…¶åˆ†å­ç»“æ„ä¸å››æ°¢å¤§éº»é…šéå¸¸ç›¸ä¼¼ï¼Œä½†åŒ–å­¦åˆ†æå°šæœªå¾—å‡ºç»“è®ºã€‚"
+							Msg = Chr(34) + "â€œæˆ‘æ“æˆ‘åœ¨å“ª...æˆ‘åœ¨å¹²ä»€ä¹ˆ...æˆ‘éœ€è¦å°ç¡ä¸€ä¼š...â€"
 							KillTimer = -1						
 						EndIf
 						MsgTimer = 70 * 6
@@ -6484,11 +6484,11 @@ Function DrawGUI()
 				Case "scp714"
 					;[Block]
 					If Wearing714=1 Then
-						Msg = "ÄãÕªÏÂÁË½äÖ¸"
+						Msg = "ä½ æ‘˜ä¸‹äº†æˆ’æŒ‡"
 						Wearing714 = False
 					Else
 						GiveAchievement(Achv714)
-						Msg = "Äã´÷ÉÏÁË½äÖ¸"
+						Msg = "ä½ æˆ´ä¸Šäº†æˆ’æŒ‡"
 						Wearing714 = True
 					EndIf
 					MsgTimer = 70 * 5
@@ -6514,7 +6514,7 @@ Function DrawGUI()
 						
 						If SelectedItem\state=100 Then
 							If WearingHazmat>0 Then
-								Msg = "ÄãÍÑÏÂÁË·À»¤·ş"
+								Msg = "ä½ è„±ä¸‹äº†é˜²æŠ¤æœ"
 								WearingHazmat = False
 								DropItem(SelectedItem)
 							Else
@@ -6529,7 +6529,7 @@ Function DrawGUI()
 									WearingHazmat = 3
 								EndIf
 								If SelectedItem\itemtemplate\sound <> 66 Then PlaySound_Strict(PickSFX(SelectedItem\itemtemplate\sound))
-								Msg = "Äã´©ÉÏÁË·À»¤·ş"
+								Msg = "ä½ ç©¿ä¸Šäº†é˜²æŠ¤æœ"
 								If WearingNightVision Then CameraFogFar = StoredCameraFogFar
 								WearingGasMask = 0
 								WearingNightVision = 0
@@ -6559,15 +6559,15 @@ Function DrawGUI()
 					
 					If SelectedItem\state=100 Then
 						If WearingVest>0 Then
-							Msg = "ÄãÍÑÏÂÁË·Àµ¯ÒÂ"
+							Msg = "ä½ è„±ä¸‹äº†é˜²å¼¹è¡£"
 							WearingVest = False
 							DropItem(SelectedItem)
 						Else
 							If SelectedItem\itemtemplate\tempname="vest" Then
-								Msg = "Äã´©ÉÏÁË·Àµ¯ÒÂ£¬Äã¸Ğµ½ÓĞĞ©ÀÛ"
+								Msg = "ä½ ç©¿ä¸Šäº†é˜²å¼¹è¡£ï¼Œä½ æ„Ÿåˆ°æœ‰äº›ç´¯"
 								WearingVest = 1
 							Else
-								Msg = "Äã´©ÉÏÁË·Àµ¯ÒÂ£¬¸Ğµ½ÌØ±ğÖØ"
+								Msg = "ä½ ç©¿ä¸Šäº†é˜²å¼¹è¡£ï¼Œæ„Ÿåˆ°ç‰¹åˆ«é‡"
 								WearingVest = 2
 							EndIf
 							If SelectedItem\itemtemplate\sound <> 66 Then PlaySound_Strict(PickSFX(SelectedItem\itemtemplate\sound))
@@ -6581,12 +6581,12 @@ Function DrawGUI()
 					;[Block]
 					If Wearing1499 = 0 And WearingHazmat = 0 Then
 						If WearingGasMask Then
-							Msg = "ÄãÕªÏÂÁË·À¶¾Ãæ¾ß"
+							Msg = "ä½ æ‘˜ä¸‹äº†é˜²æ¯’é¢å…·"
 						Else
 							If SelectedItem\itemtemplate\tempname = "supergasmask"
-								Msg = "Äã´÷ÉÏÁË·À¶¾Ãæ¾ß£¬Äã¸Ğ¾õºôÎüÈİÒ×¶àÁË"
+								Msg = "ä½ æˆ´ä¸Šäº†é˜²æ¯’é¢å…·ï¼Œä½ æ„Ÿè§‰å‘¼å¸å®¹æ˜“å¤šäº†"
 							Else
-								Msg = "Äã´÷ÉÏÁË·À¶¾Ãæ¾ß"
+								Msg = "ä½ æˆ´ä¸Šäº†é˜²æ¯’é¢å…·"
 							EndIf
 							If WearingNightVision Then CameraFogFar = StoredCameraFogFar
 							WearingNightVision = 0
@@ -6600,9 +6600,9 @@ Function DrawGUI()
 							WearingGasMask = (Not WearingGasMask)
 						EndIf
 					ElseIf Wearing1499 > 0 Then
-						Msg = "ÄãĞèÒªÕªÏÂSCP-1499²ÅÄÜ´÷ÉÏ·À¶¾Ãæ¾ß"
+						Msg = "ä½ éœ€è¦æ‘˜ä¸‹SCP-1499æ‰èƒ½æˆ´ä¸Šé˜²æ¯’é¢å…·"
 					Else
-						Msg = "ÄãĞèÒªÍÑµô·À»¤·ş²ÅÄÜ´÷ÉÏ·À¶¾Ãæ¾ß"
+						Msg = "ä½ éœ€è¦è„±æ‰é˜²æŠ¤æœæ‰èƒ½æˆ´ä¸Šé˜²æ¯’é¢å…·"
 					EndIf
 					SelectedItem = Null
 					MsgTimer = 70 * 5
@@ -6645,8 +6645,8 @@ Function DrawGUI()
 					If (Not NavWorks) Then
 						If (MilliSecs2() Mod 1000) > 300 Then
 							Color(200, 0, 0)
-							Text(x, y + height / 2 - 80, "´íÎó 06", True)
-							Text(x, y + height / 2 - 60, "Î´ÖªÎ»ÖÃ", True)						
+							Text(x, y + height / 2 - 80, "é”™è¯¯ 06", True)
+							Text(x, y + height / 2 - 60, "æœªçŸ¥ä½ç½®", True)						
 						EndIf
 					Else
 						
@@ -6666,7 +6666,7 @@ Function DrawGUI()
 								For z2 = Max(0, PlayerZ - 6) To Min(MapHeight, PlayerZ + 6)
 									
 									If CoffinDistance > 16.0 Or Rnd(16.0)<CoffinDistance Then 
-										If MapTemp(x2, z2)>0 And (MapFound(x2, z2) > 0 Or SelectedItem\itemtemplate\name = "S-NAV 310µ¼º½ÒÇ" Or SelectedItem\itemtemplate\name = "S-NAVÖÕ¼«µ¼º½ÒÇ") Then
+										If MapTemp(x2, z2)>0 And (MapFound(x2, z2) > 0 Or SelectedItem\itemtemplate\name = "S-NAV 310å¯¼èˆªä»ª" Or SelectedItem\itemtemplate\name = "S-NAVç»ˆæå¯¼èˆªä»ª") Then
 											Local drawx% = x + (PlayerX - 1 - x2) * 24 , drawy% = y - (PlayerZ - 1 - z2) * 24
 											
 											If x2+1<=MapWidth Then
@@ -6718,8 +6718,8 @@ Function DrawGUI()
 								Color (30,30,30)
 							EndIf
 							If (MilliSecs2() Mod 1000) > 300 Then
-								If SelectedItem\itemtemplate\name <> "S-NAV 310µ¼º½ÒÇ" And SelectedItem\itemtemplate\name <> "S-NAVÖÕ¼«µ¼º½ÒÇ" Then
-									Text(x - width/2 + 10, y - height/2 + 10, "µØÍ¼Êı¾İ¿âÀëÏß")
+								If SelectedItem\itemtemplate\name <> "S-NAV 310å¯¼èˆªä»ª" And SelectedItem\itemtemplate\name <> "S-NAVç»ˆæå¯¼èˆªä»ª" Then
+									Text(x - width/2 + 10, y - height/2 + 10, "åœ°å›¾æ•°æ®åº“ç¦»çº¿")
 								EndIf
 								
 								yawvalue = EntityYaw(Collider)-90
@@ -6733,7 +6733,7 @@ Function DrawGUI()
 							EndIf
 							
 							Local SCPs_found% = 0
-							If SelectedItem\itemtemplate\name = "S-NAVÖÕ¼«µ¼º½ÒÇ" And (MilliSecs2() Mod 600) < 400 Then
+							If SelectedItem\itemtemplate\name = "S-NAVç»ˆæå¯¼èˆªä»ª" And (MilliSecs2() Mod 600) < 400 Then
 								If Curr173<>Null Then
 									Local dist# = EntityDistance(Camera, Curr173\obj)
 									dist = Ceil(dist / 8.0) * 8.0
@@ -6822,7 +6822,7 @@ Function DrawGUI()
 				Case "scp1499","super1499"
 					;[Block]
 					If WearingHazmat>0
-						Msg = "Äã²»ÄÜÔÚ´©×Å·À»¤·şÊ±´÷ÉÏSCP-1499"
+						Msg = "ä½ ä¸èƒ½åœ¨ç©¿ç€é˜²æŠ¤æœæ—¶æˆ´ä¸ŠSCP-1499"
 						MsgTimer = 70 * 5
 						SelectedItem=Null
 						Return
@@ -6925,8 +6925,8 @@ Function DrawGUI()
 					If SelectedItem\state = 0 Then
 						PlaySound_Strict LoadTempSound("SFX\SCP\1162\NostalgiaCancer"+Rand(6,10)+".ogg")
 						Select SelectedItem\itemtemplate\name
-							Case "ÆÆ¾ÉµÄÉí·İÖ¤"
-								Msg = "¡°àÅ£¿Õâ¼Ò»ï³¤µÃºÍÎÒÒ»Ä£Ò»Ñù£¡¡±"
+							Case "ç ´æ—§çš„èº«ä»½è¯"
+								Msg = "â€œå—¯ï¼Ÿè¿™å®¶ä¼™é•¿å¾—å’Œæˆ‘ä¸€æ¨¡ä¸€æ ·ï¼â€"
 								MsgTimer = 70*10
 						End Select
 						
@@ -6938,7 +6938,7 @@ Function DrawGUI()
 					If SelectedItem\state = 0 Then
 						PlaySound_Strict LoadTempSound("SFX\SCP\1162\NostalgiaCancer"+Rand(6,10)+".ogg")
 						
-						Msg = "¡°Õâ²»ÊÇÄÇ¸ö¾ÉÅïÎİµÄÔ¿³×Âğ£¿ÄÇ¸ö...ÎÒ...²»£¬²»¿ÉÄÜ¡±"
+						Msg = "â€œè¿™ä¸æ˜¯é‚£ä¸ªæ—§æ£šå±‹çš„é’¥åŒ™å—ï¼Ÿé‚£ä¸ª...æˆ‘...ä¸ï¼Œä¸å¯èƒ½â€"
 						MsgTimer = 70*10						
 					EndIf
 					
@@ -6958,10 +6958,10 @@ Function DrawGUI()
 					
 					If SelectedItem\state = 0
 						Select SelectedItem\itemtemplate\name
-							Case "´¦·£ÌıÖ¤»á¼ÇÂ¼DH-S-4137-17092"
+							Case "å¤„ç½šå¬è¯ä¼šè®°å½•DH-S-4137-17092"
 								BlurTimer = 1000
 								
-								Msg = "¡°ÎªÊ²Ã´ÕâÎÄµµÕâÃ´ÊìÏ¤£¿¡±"
+								Msg = "â€œä¸ºä»€ä¹ˆè¿™æ–‡æ¡£è¿™ä¹ˆç†Ÿæ‚‰ï¼Ÿâ€"
 								MsgTimer = 70*10
 								PlaySound_Strict LoadTempSound("SFX\SCP\1162\NostalgiaCancer"+Rand(6,10)+".ogg")
 								SelectedItem\state = 1
@@ -6982,11 +6982,11 @@ Function DrawGUI()
 				Case "scp427"
 					;[Block]
 					If I_427\Using=1 Then
-						Msg = "Äã¹ØÉÏÁËĞ¡ºĞ"
+						Msg = "ä½ å…³ä¸Šäº†å°ç›’"
 						I_427\Using = False
 					Else
 						GiveAchievement(Achv427)
-						Msg = "Äã´ò¿ªÁËĞ¡ºĞ"
+						Msg = "ä½ æ‰“å¼€äº†å°ç›’"
 						I_427\Using = True
 					EndIf
 					MsgTimer = 70 * 5
@@ -6995,7 +6995,7 @@ Function DrawGUI()
 				Case "pill"
 					;[Block]
 					If CanUseItem(False, False, True)
-						Msg = "ÄãÍÌÏÂÁËÒ©Íè"
+						Msg = "ä½ åä¸‹äº†è¯ä¸¸"
 						MsgTimer = 70*7
 						
 						RemoveItem(SelectedItem)
@@ -7005,7 +7005,7 @@ Function DrawGUI()
 				Case "scp500death"
 					;[Block]
 					If CanUseItem(False, False, True)
-						Msg = "ÄãÍÌÏÂÁËÒ©Íè"
+						Msg = "ä½ åä¸‹äº†è¯ä¸¸"
 						MsgTimer = 70*7
 						
 						If I_427\Timer < 70*360 Then
@@ -7110,7 +7110,7 @@ Function DrawMenu()
 	CatchErrors("Uncaught (DrawMenu)")
 	
 	Local x%, y%, width%, height%
-	If api_GetFocus() = 0 Then ;ÓÎÏ·Ê§È¥½¹µã -> ÔİÍ£ÓÎÏ·
+	If api_GetFocus() = 0 Then ;æ¸¸æˆå¤±å»ç„¦ç‚¹ -> æš‚åœæ¸¸æˆ
 		If (Not Using294) Then
 			MenuOpen = True
 			PauseSounds()
@@ -7132,7 +7132,7 @@ Function DrawMenu()
 					
 					If StopHidingTimer => 40 Then
 						PlaySound_Strict(HorrorSFX(15))
-						Msg = "±ğÔÙ¶ãÁË¡£"
+						Msg = "åˆ«å†èº²äº†ã€‚"
 						MsgTimer = 6*70
 						MenuOpen = False
 						Return
@@ -7161,23 +7161,23 @@ Function DrawMenu()
 		
 		If AchievementsMenu > 0 Then
 			AASetFont Font2
-			Text(x, y-(122-45)*MenuScale, "³É¾Í",False,True)
+			Text(x, y-(122-45)*MenuScale, "æˆå°±",False,True)
 			AASetFont Font1
 		ElseIf OptionsMenu > 0 Then
 			AASetFont Font2
-			Text(x, y-(122-45)*MenuScale, "ÉèÖÃ",False,True)
+			Text(x, y-(122-45)*MenuScale, "è®¾ç½®",False,True)
 			AASetFont Font1
 		ElseIf QuitMSG > 0 Then
 			AASetFont Font2
-			Text(x, y-(122-45)*MenuScale, "ÍË³ö£¿",False,True)
+			Text(x, y-(122-45)*MenuScale, "é€€å‡ºï¼Ÿ",False,True)
 			AASetFont Font1
 		ElseIf KillTimer >= 0 Then
 			AASetFont Font2
-			Text(x, y-(122-45)*MenuScale, "ÒÑÔİÍ£",False,True)
+			Text(x, y-(122-45)*MenuScale, "å·²æš‚åœ",False,True)
 			AASetFont Font1
 		Else
 			AASetFont Font2
-			Text(x, y-(122-45)*MenuScale, "ÄãËÀÁË",False,True)
+			Text(x, y-(122-45)*MenuScale, "ä½ æ­»äº†",False,True)
 			AASetFont Font1
 		End If		
 		
@@ -7188,11 +7188,11 @@ Function DrawMenu()
 		
 		If AchievementsMenu <= 0 And OptionsMenu <= 0 And QuitMSG <= 0
 			AASetFont Font1
-			Text x, y, "ÄÑ¶È: "+SelectedDifficulty\name
-			Text x, y+20*MenuScale, "´æµµÃû³Æ: "+CurrSave
-			Text x, y+40*MenuScale, "µØÍ¼ÖÖ×Ó: "+RandomSeed
+			Text x, y, "éš¾åº¦: "+SelectedDifficulty\name
+			Text x, y+20*MenuScale, "å­˜æ¡£åç§°: "+CurrSave
+			Text x, y+40*MenuScale, "åœ°å›¾ç§å­: "+RandomSeed
 		ElseIf AchievementsMenu <= 0 And OptionsMenu > 0 And QuitMSG <= 0 And KillTimer >= 0
-			If DrawButton(x + 101 * MenuScale, y + 390 * MenuScale, 230 * MenuScale, 60 * MenuScale, "·µ»Ø") Then
+			If DrawButton(x + 101 * MenuScale, y + 390 * MenuScale, 230 * MenuScale, 60 * MenuScale, "è¿”å›") Then
 				AchievementsMenu = 0
 				OptionsMenu = 0
 				QuitMSG = 0
@@ -7214,10 +7214,10 @@ Function DrawMenu()
 				Rect(x+320*MenuScale,y-5*MenuScale,110*MenuScale,40*MenuScale,True)
 			EndIf
 			
-			If DrawButton(x-5*MenuScale,y,100*MenuScale,30*MenuScale,"»­Ãæ",False) Then OptionsMenu = 1
-			If DrawButton(x+105*MenuScale,y,100*MenuScale,30*MenuScale,"ÒôÆµ",False) Then OptionsMenu = 2
-			If DrawButton(x+215*MenuScale,y,100*MenuScale,30*MenuScale,"¿ØÖÆ",False) Then OptionsMenu = 3
-			If DrawButton(x+325*MenuScale,y,100*MenuScale,30*MenuScale,"¸ß¼¶",False) Then OptionsMenu = 4
+			If DrawButton(x-5*MenuScale,y,100*MenuScale,30*MenuScale,"ç”»é¢",False) Then OptionsMenu = 1
+			If DrawButton(x+105*MenuScale,y,100*MenuScale,30*MenuScale,"éŸ³é¢‘",False) Then OptionsMenu = 2
+			If DrawButton(x+215*MenuScale,y,100*MenuScale,30*MenuScale,"æ§åˆ¶",False) Then OptionsMenu = 3
+			If DrawButton(x+325*MenuScale,y,100*MenuScale,30*MenuScale,"é«˜çº§",False) Then OptionsMenu = 4
 			
 			Local tx# = (GraphicWidth/2)+(width/2)
 			Local ty# = y
@@ -7232,7 +7232,7 @@ Function DrawMenu()
 					y=y+50*MenuScale
 					
 					Color 100,100,100
-					Text(x, y, "ÆôÓÃ°¼Í¹ÌùÍ¼:")	
+					Text(x, y, "å¯ç”¨å‡¹å‡¸è´´å›¾:")	
 					BumpEnabled = DrawTick(x + 270 * MenuScale, y + MenuScale, BumpEnabled, True)
 					If MouseOn(x + 270 * MenuScale, y + MenuScale, 20*MenuScale,20*MenuScale) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"bump")
@@ -7241,7 +7241,7 @@ Function DrawMenu()
 					y=y+30*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "´¹Ö±Í¬²½:")
+					Text(x, y, "å‚ç›´åŒæ­¥:")
 					Vsync% = DrawTick(x + 270 * MenuScale, y + MenuScale, Vsync%)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"vsync")
@@ -7250,7 +7250,7 @@ Function DrawMenu()
 					y=y+30*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "¿¹¾â³İ:")
+					Text(x, y, "æŠ—é”¯é½¿:")
 					Opt_AntiAlias = DrawTick(x + 270 * MenuScale, y + MenuScale, Opt_AntiAlias%)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"antialias")
@@ -7259,7 +7259,7 @@ Function DrawMenu()
 					y=y+30*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "ÆôÓÃ·¿¼ä¹âÁÁ:")
+					Text(x, y, "å¯ç”¨æˆ¿é—´å…‰äº®:")
 					EnableRoomLights = DrawTick(x + 270 * MenuScale, y + MenuScale, EnableRoomLights)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"roomlights")
@@ -7269,7 +7269,7 @@ Function DrawMenu()
 					
 					ScreenGamma = (SlideBar(x + 270*MenuScale, y+6*MenuScale, 100*MenuScale, ScreenGamma*50.0)/50.0)
 					Color 255,255,255
-					Text(x, y, "ÆÁÄ»Ù¤ÂíÖµ")
+					Text(x, y, "å±å¹•ä¼½é©¬å€¼")
 					If MouseOn(x+270*MenuScale,y+6*MenuScale,100*MenuScale+14,20) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"gamma",ScreenGamma)
 					EndIf
@@ -7279,7 +7279,7 @@ Function DrawMenu()
 					y=y+50*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "Á£×ÓÊıÁ¿:")
+					Text(x, y, "ç²’å­æ•°é‡:")
 					ParticleAmount = Slider3(x+270*MenuScale,y+6*MenuScale,100*MenuScale,ParticleAmount,2,"MINIMAL","REDUCED","FULL")
 					If (MouseOn(x + 270 * MenuScale, y-6*MenuScale, 100*MenuScale+14, 20) And OnSliderID=0) Or OnSliderID=2
 						DrawOptionsTooltip(tx,ty,tw,th,"particleamount",ParticleAmount)
@@ -7288,7 +7288,7 @@ Function DrawMenu()
 					y=y+50*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "ÎÆÀíÏ¸½Ú²ã´Î:")
+					Text(x, y, "çº¹ç†ç»†èŠ‚å±‚æ¬¡:")
 					TextureDetails = Slider5(x+270*MenuScale,y+6*MenuScale,100*MenuScale,TextureDetails,3,"0.8","0.4","0.0","-0.4","-0.8")
 					Select TextureDetails%
 						Case 0
@@ -7309,7 +7309,7 @@ Function DrawMenu()
 					
 					y=y+50*MenuScale
 					Color 100,100,100
-					Text(x, y, "ÔÚVRAMÖĞ´æ´¢ÌùÍ¼:")	
+					Text(x, y, "åœ¨VRAMä¸­å­˜å‚¨è´´å›¾:")	
 					EnableVRam = DrawTick(x + 270 * MenuScale, y + MenuScale, EnableVRam, True)
 					If MouseOn(x + 270 * MenuScale, y + MenuScale, 20*MenuScale,20*MenuScale) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"vram")
@@ -7323,7 +7323,7 @@ Function DrawMenu()
 					
 					MusicVolume = (SlideBar(x + 250*MenuScale, y-4*MenuScale, 100*MenuScale, MusicVolume*100.0)/100.0)
 					Color 255,255,255
-					Text(x, y, "ÒôÀÖ´óĞ¡:")
+					Text(x, y, "éŸ³ä¹å¤§å°:")
 					If MouseOn(x+250*MenuScale,y-4*MenuScale,100*MenuScale+14,20)
 						DrawOptionsTooltip(tx,ty,tw,th,"musicvol",MusicVolume)
 					EndIf
@@ -7333,7 +7333,7 @@ Function DrawMenu()
 					PrevSFXVolume = (SlideBar(x + 250*MenuScale, y-4*MenuScale, 100*MenuScale, SFXVolume*100.0)/100.0)
 					If (Not DeafPlayer) Then SFXVolume# = PrevSFXVolume#
 					Color 255,255,255
-					Text(x, y, "ÒôĞ§´óĞ¡:")
+					Text(x, y, "éŸ³æ•ˆå¤§å°:")
 					If MouseOn(x+250*MenuScale,y-4*MenuScale,100*MenuScale+14,20)
 						DrawOptionsTooltip(tx,ty,tw,th,"soundvol",PrevSFXVolume)
 					EndIf
@@ -7341,7 +7341,7 @@ Function DrawMenu()
 					y = y + 30*MenuScale
 					
 					Color 100,100,100
-					Text x, y, "×Ô¶¯ÊÍ·ÅÒôÆµ:"
+					Text x, y, "è‡ªåŠ¨é‡Šæ”¾éŸ³é¢‘:"
 					EnableSFXRelease = DrawTick(x + 270 * MenuScale, y + MenuScale, EnableSFXRelease,True)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th+220*MenuScale,"sfxautorelease")
@@ -7350,7 +7350,7 @@ Function DrawMenu()
 					y = y + 30*MenuScale
 					
 					Color 100,100,100
-					Text x, y, "ÆôÓÃ×Ô¶¨ÆµµÀ:"
+					Text x, y, "å¯ç”¨è‡ªå®šé¢‘é“:"
 					EnableUserTracks = DrawTick(x + 270 * MenuScale, y + MenuScale, EnableUserTracks,True)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"usertrack")
@@ -7359,12 +7359,12 @@ Function DrawMenu()
 					If EnableUserTracks
 						y = y + 30 * MenuScale
 						Color 255,255,255
-						Text x, y, "×Ô¶¨ÆµµÀÄ£Ê½:"
+						Text x, y, "è‡ªå®šé¢‘é“æ¨¡å¼:"
 						UserTrackMode = DrawTick(x + 270 * MenuScale, y + MenuScale, UserTrackMode)
 						If UserTrackMode
-							Text x, y + 20 * MenuScale, "Ñ­»·"
+							Text x, y + 20 * MenuScale, "å¾ªç¯"
 						Else
-							Text x, y + 20 * MenuScale, "Ëæ»ú"
+							Text x, y + 20 * MenuScale, "éšæœº"
 						EndIf
 						If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 							DrawOptionsTooltip(tx,ty,tw,th,"usertrackmode")
@@ -7382,7 +7382,7 @@ Function DrawMenu()
 					
 					MouseSens = (SlideBar(x + 270*MenuScale, y-4*MenuScale, 100*MenuScale, (MouseSens+0.5)*100.0)/100.0)-0.5
 					Color(255, 255, 255)
-					Text(x, y, "Êó±êÁéÃô¶È:")
+					Text(x, y, "é¼ æ ‡çµæ•åº¦:")
 					If MouseOn(x+270*MenuScale,y-4*MenuScale,100*MenuScale+14,20)
 						DrawOptionsTooltip(tx,ty,tw,th,"mousesensitivity",MouseSens)
 					EndIf
@@ -7390,7 +7390,7 @@ Function DrawMenu()
 					y = y + 30*MenuScale
 					
 					Color(255, 255, 255)
-					Text(x, y, "·´×ªÊó±êYÖá:")
+					Text(x, y, "åè½¬é¼ æ ‡Yè½´:")
 					InvertMouse = DrawTick(x + 270 * MenuScale, y + MenuScale, InvertMouse)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"mouseinvert")
@@ -7400,7 +7400,7 @@ Function DrawMenu()
 					
 					MouseSmooth = (SlideBar(x + 270*MenuScale, y-4*MenuScale, 100*MenuScale, (MouseSmooth)*50.0)/50.0)
 					Color(255, 255, 255)
-					Text(x, y, "Êó±êÆ½»¬¶È:")
+					Text(x, y, "é¼ æ ‡å¹³æ»‘åº¦:")
 					If MouseOn(x+270*MenuScale,y-4*MenuScale,100*MenuScale+14,20)
 						DrawOptionsTooltip(tx,ty,tw,th,"mousesmoothing",MouseSmooth)
 					EndIf
@@ -7408,29 +7408,29 @@ Function DrawMenu()
 					Color(255, 255, 255)
 					
 					y = y + 30*MenuScale
-					Text(x, y, "¼üÎ»ÉèÖÃ:")
+					Text(x, y, "é”®ä½è®¾ç½®:")
 					y = y + 10*MenuScale
 					
-					Text(x, y + 20 * MenuScale, "ÏòÇ°")
+					Text(x, y + 20 * MenuScale, "å‘å‰")
 					InputBox(x + 200 * MenuScale, y + 20 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_UP,210)),5)		
-					Text(x, y + 40 * MenuScale, "Ïò×ó")
+					Text(x, y + 40 * MenuScale, "å‘å·¦")
 					InputBox(x + 200 * MenuScale, y + 40 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_LEFT,210)),3)	
-					Text(x, y + 60 * MenuScale, "ºóÍË")
+					Text(x, y + 60 * MenuScale, "åé€€")
 					InputBox(x + 200 * MenuScale, y + 60 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_DOWN,210)),6)				
-					Text(x, y + 80 * MenuScale, "ÏòÓÒ")
+					Text(x, y + 80 * MenuScale, "å‘å³")
 					InputBox(x + 200 * MenuScale, y + 80 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_RIGHT,210)),4)
 					
-					Text(x, y + 100 * MenuScale, "ÊÖ¶¯Õ£ÑÛ")
+					Text(x, y + 100 * MenuScale, "æ‰‹åŠ¨çœ¨çœ¼")
 					InputBox(x + 200 * MenuScale, y + 100 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_BLINK,210)),7)				
-					Text(x, y + 120 * MenuScale, "¼²ÅÜ")
+					Text(x, y + 120 * MenuScale, "ç–¾è·‘")
 					InputBox(x + 200 * MenuScale, y + 120 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_SPRINT,210)),8)
-					Text(x, y + 140 * MenuScale, "´ò¿ª/¹Ø±ÕÎïÆ·À¸")
+					Text(x, y + 140 * MenuScale, "æ‰“å¼€/å…³é—­ç‰©å“æ ")
 					InputBox(x + 200 * MenuScale, y + 140 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_INV,210)),9)
-					Text(x, y + 160 * MenuScale, "¶×ÏÂ")
+					Text(x, y + 160 * MenuScale, "è¹²ä¸‹")
 					InputBox(x + 200 * MenuScale, y + 160 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_CROUCH,210)),10)
-					Text(x, y + 180 * MenuScale, "¿ìËÙ±£´æ")
+					Text(x, y + 180 * MenuScale, "å¿«é€Ÿä¿å­˜")
 					InputBox(x + 200 * MenuScale, y + 180 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_SAVE,210)),11)	
-					Text(x, y + 200 * MenuScale, "´ò¿ª/¹Ø±Õ¿ØÖÆÌ¨")
+					Text(x, y + 200 * MenuScale, "æ‰“å¼€/å…³é—­æ§åˆ¶å°")
 					InputBox(x + 200 * MenuScale, y + 200 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_CONSOLE,210)),12)
 					
 					If MouseOn(x,y,300*MenuScale,220*MenuScale)
@@ -7472,7 +7472,7 @@ Function DrawMenu()
 					y = y + 50*MenuScale
 					
 					Color 255,255,255				
-					Text(x, y, "ÏÔÊ¾HUD:")	
+					Text(x, y, "æ˜¾ç¤ºHUD:")	
 					HUDenabled = DrawTick(x + 270 * MenuScale, y + MenuScale, HUDenabled)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"hud")
@@ -7481,7 +7481,7 @@ Function DrawMenu()
 					y = y + 30*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "ÆôÓÃ¿ØÖÆÌ¨:")
+					Text(x, y, "å¯ç”¨æ§åˆ¶å°:")
 					CanOpenConsole = DrawTick(x +270 * MenuScale, y + MenuScale, CanOpenConsole)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"consoleenable")
@@ -7490,7 +7490,7 @@ Function DrawMenu()
 					y = y + 30*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "³öÏÖ´íÎóÊ±´ò¿ª¿ØÖÆÌ¨:")
+					Text(x, y, "å‡ºç°é”™è¯¯æ—¶æ‰“å¼€æ§åˆ¶å°:")
 					ConsoleOpening = DrawTick(x + 270 * MenuScale, y + MenuScale, ConsoleOpening)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"consoleerror")
@@ -7499,7 +7499,7 @@ Function DrawMenu()
 					y = y + 50*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "³É¾ÍÌáÊ¾:")
+					Text(x, y, "æˆå°±æç¤º:")
 					AchvMSGenabled% = DrawTick(x + 270 * MenuScale, y, AchvMSGenabled%)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"achpopup")
@@ -7508,7 +7508,7 @@ Function DrawMenu()
 					y = y + 50*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "ÏÔÊ¾FPS:")
+					Text(x, y, "æ˜¾ç¤ºFPS:")
 					ShowFPS% = DrawTick(x + 270 * MenuScale, y, ShowFPS%)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"showfps")
@@ -7517,7 +7517,7 @@ Function DrawMenu()
 					y = y + 30*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "Ö¡ÊıÏŞÖÆ:")
+					Text(x, y, "å¸§æ•°é™åˆ¶:")
 					
 					Color 255,255,255
 					If DrawTick(x + 270 * MenuScale, y, CurrFrameLimit > 0.0) Then
@@ -7543,7 +7543,7 @@ Function DrawMenu()
 					y = y + 80*MenuScale
 					
 					Color 255,255,255
-					Text(x, y, "ÏÔÊ¾×ÖÄ»:")
+					Text(x, y, "æ˜¾ç¤ºå­—å¹•:")
 					EnableSubtitle% = DrawTick(x + 270 * MenuScale, y + MenuScale, EnableSubtitle%)
 					If MouseOn(x+270*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"subtitle")
@@ -7559,7 +7559,7 @@ Function DrawMenu()
 				If (Not CanSave) Then AbleToSave = False
 				If AbleToSave
 					QuitButton = 140
-					If DrawButton(x, y + 60*MenuScale, 390*MenuScale, 60*MenuScale, "±£´æ²¢ÍË³ö") Then
+					If DrawButton(x, y + 60*MenuScale, 390*MenuScale, 60*MenuScale, "ä¿å­˜å¹¶é€€å‡º") Then
 						DropSpeed = 0
 						SaveGame(SavePath + CurrSave + "\")
 						NullGame()
@@ -7572,7 +7572,7 @@ Function DrawMenu()
 				EndIf
 			EndIf
 			
-			If DrawButton(x, y + QuitButton*MenuScale, 390*MenuScale, 60*MenuScale, "ÍË³ö") Then
+			If DrawButton(x, y + QuitButton*MenuScale, 390*MenuScale, 60*MenuScale, "é€€å‡º") Then
 				NullGame()
 				MenuOpen = False
 				MainMenuOpen = True
@@ -7581,14 +7581,14 @@ Function DrawMenu()
 				FlushKeys()
 			EndIf
 			
-			If DrawButton(x+101*MenuScale, y + 344*MenuScale, 230*MenuScale, 60*MenuScale, "·µ»Ø") Then
+			If DrawButton(x+101*MenuScale, y + 344*MenuScale, 230*MenuScale, 60*MenuScale, "è¿”å›") Then
 				AchievementsMenu = 0
 				OptionsMenu = 0
 				QuitMSG = 0
 				MouseHit1 = False
 			EndIf
 		Else
-			If DrawButton(x+101*MenuScale, y + 344*MenuScale, 230*MenuScale, 60*MenuScale, "·µ»Ø") Then
+			If DrawButton(x+101*MenuScale, y + 344*MenuScale, 230*MenuScale, 60*MenuScale, "è¿”å›") Then
 				AchievementsMenu = 0
 				OptionsMenu = 0
 				QuitMSG = 0
@@ -7637,7 +7637,7 @@ Function DrawMenu()
 				
 				y = y+ 72*MenuScale
 				
-				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "¼ÌĞø", True, True) Then
+				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "ç»§ç»­", True, True) Then
 					MenuOpen = False
 					ResumeSounds()
 					MouseXSpeed() : MouseYSpeed() : MouseZSpeed() : mouse_x_speed_1#=0.0 : mouse_y_speed_1#=0.0
@@ -7646,7 +7646,7 @@ Function DrawMenu()
 				y = y + 75*MenuScale
 				If (Not SelectedDifficulty\permaDeath) Then
 					If GameSaved Then
-						If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "¼ÓÔØÓÎÏ·") Then
+						If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "åŠ è½½æ¸¸æˆ") Then
 							DrawLoading(0)
 							
 							MenuOpen = False
@@ -7690,19 +7690,19 @@ Function DrawMenu()
 						DrawFrame(x,y,390*MenuScale, 60*MenuScale)
 						Color (100, 100, 100)
 						AASetFont Font2
-						Text(x + (390*MenuScale) / 2, y + (60*MenuScale) / 2, "¼ÓÔØÓÎÏ·", True, True)
+						Text(x + (390*MenuScale) / 2, y + (60*MenuScale) / 2, "åŠ è½½æ¸¸æˆ", True, True)
 					EndIf
 					y = y + 75*MenuScale
 			EndIf
 				
-				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "³É¾Í") Then AchievementsMenu = 1
+				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "æˆå°±") Then AchievementsMenu = 1
 				y = y + 75*MenuScale
-				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "ÉèÖÃ") Then OptionsMenu = 1
+				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "è®¾ç½®") Then OptionsMenu = 1
 				y = y + 75*MenuScale
 			Else
 				y = y+104*MenuScale
 				If GameSaved And (Not SelectedDifficulty\permaDeath) Then
-					If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "¼ÓÔØÓÎÏ·") Then
+					If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "åŠ è½½æ¸¸æˆ") Then
 						DrawLoading(0)
 						
 						MenuOpen = False
@@ -7745,9 +7745,9 @@ Function DrawMenu()
 				Else
 					DrawButton(x, y, 390*MenuScale, 60*MenuScale, "")
 					Color 50,50,50
-					Text(x + 185*MenuScale, y + 30*MenuScale, "¼ÓÔØÓÎÏ·", True, True)
+					Text(x + 185*MenuScale, y + 30*MenuScale, "åŠ è½½æ¸¸æˆ", True, True)
 				EndIf
-				If DrawButton(x, y + 80*MenuScale, 390*MenuScale, 60*MenuScale, "ÍË»ØÖ÷²Ëµ¥") Then
+				If DrawButton(x, y + 80*MenuScale, 390*MenuScale, 60*MenuScale, "é€€å›ä¸»èœå•") Then
 					NullGame()
 					MenuOpen = False
 					MainMenuOpen = True
@@ -7759,7 +7759,7 @@ Function DrawMenu()
 			EndIf
 			
 			If KillTimer >= 0 And (Not MainMenuOpen)
-				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "ÍË³ö") Then
+				If DrawButton(x, y, 390*MenuScale, 60*MenuScale, "é€€å‡º") Then
 					QuitMSG = 1
 				EndIf
 			EndIf
@@ -7941,7 +7941,7 @@ Function LoadEntities()
 	EntityType Head, HIT_PLAYER
 	
 	
-	LiquidObj = LoadMesh_Strict("GFX\items\cupliquid.x") ;optimized the ±­×Ós dispensed by 294
+	LiquidObj = LoadMesh_Strict("GFX\items\cupliquid.x") ;optimized the æ¯å­s dispensed by 294
 	HideEntity LiquidObj
 	
 	MTFObj = LoadAnimMesh_Strict("GFX\npcs\MTF2.b3d") ;optimized MTFs
@@ -8186,7 +8186,7 @@ Function LoadEntities()
 		Forever
 		CloseDir Dir
 	EndIf
-	If EnableUserTracks Then DebugLog "×Ô¶¨ÆµµÀÕÒµ½: "+UserTrackMusicAmount
+	If EnableUserTracks Then DebugLog "è‡ªå®šé¢‘é“æ‰¾åˆ°: "+UserTrackMusicAmount
 	
 	InitItemTemplates()
 	
@@ -8419,7 +8419,7 @@ Function InitNewGame()
 		If (r\RoomTemplate\Name = "start" And IntroEnabled = False) Then 
 			PositionEntity (Collider, EntityX(r\obj)+3584*RoomScale, 704*RoomScale, EntityZ(r\obj)+1024*RoomScale)
 			PlayerRoom = r
-			it = CreateItem("D¼¶ÈËÔ±ÅàÑµ´«µ¥", "paper", 1, 1, 1)
+			it = CreateItem("Dçº§äººå‘˜åŸ¹è®­ä¼ å•", "paper", 1, 1, 1)
 			it\Picked = True
 			it\Dropped = -1
 			it\itemtemplate\found=True
@@ -8428,7 +8428,7 @@ Function InitNewGame()
 			EntityType (it\collider, HIT_ITEM)
 			EntityParent(it\collider, 0)
 			ItemAmount = ItemAmount + 1
-			it = CreateItem("SCP-173ÎÄµµ", "paper", 1, 1, 1)
+			it = CreateItem("SCP-173æ–‡æ¡£", "paper", 1, 1, 1)
 			it\Picked = True
 			it\Dropped = -1
 			it\itemtemplate\found=True
@@ -8585,7 +8585,7 @@ Function InitLoadGame()
 				;MoveEntity Collider,0,10,0
 				;ResetEntity Collider
 				
-				DebugLog "³É¹¦¼ÓÔØÎ¬¶È1499"
+				DebugLog "æˆåŠŸåŠ è½½ç»´åº¦1499"
 				
 				Exit
 				;[End Block]
@@ -8609,7 +8609,7 @@ Function NullGame(playbuttonsfx%=True)
 	Local i%, x%, y%, lvl
 	Local itt.ItemTemplates, s.Screens, lt.LightTemplates, d.Doors, m.Materials
 	Local wp.WayPoints, twp.TempWayPoints, r.Rooms, it.Items
-	Local sub.Subtitles ;×ÖÄ»
+	Local sub.Subtitles ;å­—å¹•
 	
 	KillSounds()
 	If playbuttonsfx Then PlaySound_Strict ButtonSFX
@@ -9401,7 +9401,7 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 	
 	Local it2.Items
 	Select item\itemtemplate\name
-		Case "·À¶¾Ãæ¾ß", "ÖØĞÍ·À¶¾Ãæ¾ß"
+		Case "é˜²æ¯’é¢å…·", "é‡å‹é˜²æ¯’é¢å…·"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
@@ -9411,7 +9411,7 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 					PositionEntity(item\collider, x, y, z)
 					ResetEntity(item\collider)
 				Case "fine", "very fine"
-					it2 = CreateItem("·À¶¾Ãæ¾ß", "supergasmask", x, y, z)
+					it2 = CreateItem("é˜²æ¯’é¢å…·", "supergasmask", x, y, z)
 					RemoveItem(item)
 			End Select
 		Case "SCP-1499"
@@ -9421,7 +9421,7 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 					d\Size = 0.12 : ScaleSprite(d\obj, d\Size, d\Size)
 					RemoveItem(item)
 				Case "1:1"
-					it2 = CreateItem("·À¶¾Ãæ¾ß", "gasmask", x, y, z)
+					it2 = CreateItem("é˜²æ¯’é¢å…·", "gasmask", x, y, z)
 					RemoveItem(item)
 				Case "fine"
 					it2 = CreateItem("SCP-1499", "super1499", x, y, z)
@@ -9434,7 +9434,7 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 					n\State3 = 1
 					RemoveItem(item)
 			End Select
-		Case "·Àµ¯±³ĞÄ"
+		Case "é˜²å¼¹èƒŒå¿ƒ"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
@@ -9444,13 +9444,13 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 					PositionEntity(item\collider, x, y, z)
 					ResetEntity(item\collider)
 				Case "fine"
-					it2 = CreateItem("ÖØĞÍ·Àµ¯±³ĞÄ", "finevest", x, y, z)
+					it2 = CreateItem("é‡å‹é˜²å¼¹èƒŒå¿ƒ", "finevest", x, y, z)
 					RemoveItem(item)
 				Case "very fine"
-					it2 = CreateItem("±¿ÖØµÄ·Àµ¯±³ĞÄ", "veryfinevest", x, y, z)
+					it2 = CreateItem("ç¬¨é‡çš„é˜²å¼¹èƒŒå¿ƒ", "veryfinevest", x, y, z)
 					RemoveItem(item)
 			End Select
-		Case "ÎÄ¼ş¼Ğ"
+		Case "æ–‡ä»¶å¤¹"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(7, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
@@ -9482,7 +9482,7 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 					PositionEntity(item\collider, x, y, z)
 					ResetEntity(item\collider)
 			End Select
-		Case "Ò¹ÊÓÒÇ"
+		Case "å¤œè§†ä»ª"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
@@ -9492,17 +9492,17 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 					PositionEntity(item\collider, x, y, z)
 					ResetEntity(item\collider)
 				Case "fine"
-					it2 = CreateItem("Ò¹ÊÓÒÇ", "finenvgoggles", x, y, z)
+					it2 = CreateItem("å¤œè§†ä»ª", "finenvgoggles", x, y, z)
 					RemoveItem(item)
 				Case "very fine"
-					it2 = CreateItem("Ò¹ÊÓÒÇ", "supernv", x, y, z)
+					it2 = CreateItem("å¤œè§†ä»ª", "supernv", x, y, z)
 					it2\state = 1000
 					RemoveItem(item)
 			End Select
-		Case "½ğÊô°å", "ĞÄÁéÕÚ¶ÏºÏ½ğ¶§"
+		Case "é‡‘å±æ¿", "å¿ƒçµé®æ–­åˆé‡‘é”­"
 			Select setting
 				Case "rough", "coarse"
-					it2 = CreateItem("ĞÄÁéÕÚ¶ÏºÏ½ğ¶§", "scp148ingot", x, y, z)
+					it2 = CreateItem("å¿ƒçµé®æ–­åˆé‡‘é”­", "scp148ingot", x, y, z)
 					RemoveItem(item)
 				Case "1:1", "fine", "very fine"
 					it2 = Null
@@ -9524,19 +9524,19 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 								RemoveItem (it2)
 								RemoveItem (item)
 								
-								it2 = CreateItem("ÖØĞÍ·À¶¾Ãæ¾ß", "gasmask3", x, y, z)
+								it2 = CreateItem("é‡å‹é˜²æ¯’é¢å…·", "gasmask3", x, y, z)
 							Case "vest"
 								RemoveItem (it2)
 								RemoveItem(item)
-								it2 = CreateItem("ÖØĞÍ·Àµ¯±³ĞÄ", "finevest", x, y, z)
+								it2 = CreateItem("é‡å‹é˜²å¼¹èƒŒå¿ƒ", "finevest", x, y, z)
 							Case "hazmatsuit","hazmatsuit2"
 								RemoveItem (it2)
 								RemoveItem(item)
-								it2 = CreateItem("ÖØĞÍ·À»¤·ş", "hazmatsuit3", x, y, z)
+								it2 = CreateItem("é‡å‹é˜²æŠ¤æœ", "hazmatsuit3", x, y, z)
 						End Select
 					Else 
-						If item\itemtemplate\name="ĞÄÁéÕÚ¶ÏºÏ½ğ¶§" Then
-							it2 = CreateItem("½ğÊô°å", "scp148", x, y, z)
+						If item\itemtemplate\name="å¿ƒçµé®æ–­åˆé‡‘é”­" Then
+							it2 = CreateItem("é‡‘å±æ¿", "scp148", x, y, z)
 							RemoveItem(item)
 						Else
 							PositionEntity(item\collider, x, y, z)
@@ -9544,118 +9544,118 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 						EndIf
 					EndIf					
 			End Select
-		Case "¶ÏÊÖ", "ºÚÉ«¶ÏÊÖ"
+		Case "æ–­æ‰‹", "é»‘è‰²æ–­æ‰‹"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(3, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
 					d\Size = 0.12 : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1", "fine", "very fine"
-					If (item\itemtemplate\name = "¶ÏÊÖ")
-						it2 = CreateItem("ºÚÉ«¶ÏÊÖ", "hand2", x, y, z)
+					If (item\itemtemplate\name = "æ–­æ‰‹")
+						it2 = CreateItem("é»‘è‰²æ–­æ‰‹", "hand2", x, y, z)
 					Else
-						it2 = CreateItem("¶ÏÊÖ", "hand", x, y, z)
+						it2 = CreateItem("æ–­æ‰‹", "hand", x, y, z)
 					EndIf
 			End Select
 			RemoveItem(item)
-		Case "¼±¾ÈÏä", "À¶É«¼±¾ÈÏä"
+		Case "æ€¥æ•‘ç®±", "è“è‰²æ€¥æ•‘ç®±"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
 					d\Size = 0.12 : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1"
 				If Rand(2)=1 Then
-					it2 = CreateItem("À¶É«¼±¾ÈÏä", "firstaid2", x, y, z)
+					it2 = CreateItem("è“è‰²æ€¥æ•‘ç®±", "firstaid2", x, y, z)
 				Else
-				    it2 = CreateItem("¼±¾ÈÏä", "firstaid", x, y, z)
+				    it2 = CreateItem("æ€¥æ•‘ç®±", "firstaid", x, y, z)
 				EndIf
 				Case "fine"
-					it2 = CreateItem("Ğ¡ĞÍ¼±¾ÈÏä", "finefirstaid", x, y, z)
+					it2 = CreateItem("å°å‹æ€¥æ•‘ç®±", "finefirstaid", x, y, z)
 				Case "very fine"
-					it2 = CreateItem("Ææ¹ÖµÄÆ¿×Ó", "veryfinefirstaid", x, y, z)
+					it2 = CreateItem("å¥‡æ€ªçš„ç“¶å­", "veryfinefirstaid", x, y, z)
 			End Select
 			RemoveItem(item)
-		Case "Ò»¼¶Ô¿³×¿¨", "¶ş¼¶Ô¿³×¿¨", "Èı¼¶Ô¿³×¿¨", "ËÄ¼¶Ô¿³×¿¨", "Îå¼¶Ô¿³×¿¨", "Ô¿³×¿¨"
+		Case "ä¸€çº§é’¥åŒ™å¡", "äºŒçº§é’¥åŒ™å¡", "ä¸‰çº§é’¥åŒ™å¡", "å››çº§é’¥åŒ™å¡", "äº”çº§é’¥åŒ™å¡", "é’¥åŒ™å¡"
 			Select setting
 				Case "rough", "coarse" 
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
 					d\Size = 0.07 : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1"
-					it2 = CreateItem("ÆË¿ËÅÆ", "misc", x, y, z)
+					it2 = CreateItem("æ‰‘å…‹ç‰Œ", "misc", x, y, z)
 				Case "fine"
 					Select item\itemtemplate\name
-						Case "Ò»¼¶Ô¿³×¿¨"
+						Case "ä¸€çº§é’¥åŒ™å¡"
 							Select SelectedDifficulty\otherFactors
 								Case EASY
-									it2 = CreateItem("¶ş¼¶Ô¿³×¿¨", "key2", x, y, z)
+									it2 = CreateItem("äºŒçº§é’¥åŒ™å¡", "key2", x, y, z)
 								Case NORMAL
 									If Rand(5)=1 Then
-										it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+										it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 									Else
-										it2 = CreateItem("¶ş¼¶Ô¿³×¿¨", "key2", x, y, z)
+										it2 = CreateItem("äºŒçº§é’¥åŒ™å¡", "key2", x, y, z)
 									EndIf
 								Case HARD
 									If Rand(4)=1 Then
-										it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+										it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 									Else
-										it2 = CreateItem("¶ş¼¶Ô¿³×¿¨", "key2", x, y, z)
+										it2 = CreateItem("äºŒçº§é’¥åŒ™å¡", "key2", x, y, z)
 									EndIf
 							End Select
-						Case "¶ş¼¶Ô¿³×¿¨"
+						Case "äºŒçº§é’¥åŒ™å¡"
 							Select SelectedDifficulty\otherFactors
 								Case EASY
-									it2 = CreateItem("Èı¼¶Ô¿³×¿¨", "key3", x, y, z)
+									it2 = CreateItem("ä¸‰çº§é’¥åŒ™å¡", "key3", x, y, z)
 								Case NORMAL
 									If Rand(4)=1 Then
-										it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+										it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 									Else
-										it2 = CreateItem("Èı¼¶Ô¿³×¿¨", "key3", x, y, z)
+										it2 = CreateItem("ä¸‰çº§é’¥åŒ™å¡", "key3", x, y, z)
 									EndIf
 								Case HARD
 									If Rand(3)=1 Then
-										it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+										it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 									Else
-										it2 = CreateItem("Èı¼¶Ô¿³×¿¨", "key3", x, y, z)
+										it2 = CreateItem("ä¸‰çº§é’¥åŒ™å¡", "key3", x, y, z)
 									EndIf
 							End Select
-						Case "Èı¼¶Ô¿³×¿¨"
+						Case "ä¸‰çº§é’¥åŒ™å¡"
 							Select SelectedDifficulty\otherFactors
 								Case EASY
 									If Rand(10)=1 Then
-										it2 = CreateItem("ËÄ¼¶Ô¿³×¿¨", "key4", x, y, z)
+										it2 = CreateItem("å››çº§é’¥åŒ™å¡", "key4", x, y, z)
 									Else
-										it2 = CreateItem("ÆË¿ËÅÆ", "misc", x, y, z)	
+										it2 = CreateItem("æ‰‘å…‹ç‰Œ", "misc", x, y, z)	
 									EndIf
 								Case NORMAL
 									If Rand(15)=1 Then
-										it2 = CreateItem("ËÄ¼¶Ô¿³×¿¨", "key4", x, y, z)
+										it2 = CreateItem("å››çº§é’¥åŒ™å¡", "key4", x, y, z)
 									Else
-										it2 = CreateItem("ÆË¿ËÅÆ", "misc", x, y, z)	
+										it2 = CreateItem("æ‰‘å…‹ç‰Œ", "misc", x, y, z)	
 									EndIf
 								Case HARD
 									If Rand(20)=1 Then
-										it2 = CreateItem("ËÄ¼¶Ô¿³×¿¨", "key4", x, y, z)
+										it2 = CreateItem("å››çº§é’¥åŒ™å¡", "key4", x, y, z)
 									Else
-										it2 = CreateItem("ÆË¿ËÅÆ", "misc", x, y, z)	
+										it2 = CreateItem("æ‰‘å…‹ç‰Œ", "misc", x, y, z)	
 									EndIf
 							End Select
-						Case "ËÄ¼¶Ô¿³×¿¨"
+						Case "å››çº§é’¥åŒ™å¡"
 							Select SelectedDifficulty\otherFactors
 								Case EASY
-									it2 = CreateItem("Îå¼¶Ô¿³×¿¨", "key5", x, y, z)
+									it2 = CreateItem("äº”çº§é’¥åŒ™å¡", "key5", x, y, z)
 								Case NORMAL
 									If Rand(4)=1 Then
-										it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+										it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 									Else
-										it2 = CreateItem("Îå¼¶Ô¿³×¿¨", "key5", x, y, z)
+										it2 = CreateItem("äº”çº§é’¥åŒ™å¡", "key5", x, y, z)
 									EndIf
 								Case HARD
 									If Rand(3)=1 Then
-										it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+										it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 									Else
-										it2 = CreateItem("Îå¼¶Ô¿³×¿¨", "key5", x, y, z)
+										it2 = CreateItem("äº”çº§é’¥åŒ™å¡", "key5", x, y, z)
 									EndIf
 							End Select
-						Case "Îå¼¶Ô¿³×¿¨"	
+						Case "äº”çº§é’¥åŒ™å¡"	
 							Local CurrAchvAmount%=0
 							For i = 0 To MAXACHIEVEMENTS-1
 								If Achievements(i)=True
@@ -9668,21 +9668,21 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 							Select SelectedDifficulty\otherFactors
 								Case EASY
 									If Rand(0,((MAXACHIEVEMENTS-1)*3)-((CurrAchvAmount-1)*3))=0
-										it2 = CreateItem("ÍòÄÜÔ¿³×¿¨", "key6", x, y, z)
+										it2 = CreateItem("ä¸‡èƒ½é’¥åŒ™å¡", "key6", x, y, z)
 									Else
-										it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+										it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 									EndIf
 								Case NORMAL
 									If Rand(0,((MAXACHIEVEMENTS-1)*4)-((CurrAchvAmount-1)*3))=0
-										it2 = CreateItem("ÍòÄÜÔ¿³×¿¨", "key6", x, y, z)
+										it2 = CreateItem("ä¸‡èƒ½é’¥åŒ™å¡", "key6", x, y, z)
 									Else
-										it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+										it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 									EndIf
 								Case HARD
 									If Rand(0,((MAXACHIEVEMENTS-1)*5)-((CurrAchvAmount-1)*3))=0
-										it2 = CreateItem("ÍòÄÜÔ¿³×¿¨", "key6", x, y, z)
+										it2 = CreateItem("ä¸‡èƒ½é’¥åŒ™å¡", "key6", x, y, z)
 									Else
-										it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+										it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 									EndIf
 							End Select		
 					End Select
@@ -9699,101 +9699,101 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 					Select SelectedDifficulty\otherFactors
 						Case EASY
 							If Rand(0,((MAXACHIEVEMENTS-1)*3)-((CurrAchvAmount-1)*3))=0
-								it2 = CreateItem("ÍòÄÜÔ¿³×¿¨", "key6", x, y, z)
+								it2 = CreateItem("ä¸‡èƒ½é’¥åŒ™å¡", "key6", x, y, z)
 							Else
-								it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+								it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 							EndIf
 						Case NORMAL
 							If Rand(0,((MAXACHIEVEMENTS-1)*4)-((CurrAchvAmount-1)*3))=0
-								it2 = CreateItem("ÍòÄÜÔ¿³×¿¨", "key6", x, y, z)
+								it2 = CreateItem("ä¸‡èƒ½é’¥åŒ™å¡", "key6", x, y, z)
 							Else
-								it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+								it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 							EndIf
 						Case HARD
 							If Rand(0,((MAXACHIEVEMENTS-1)*5)-((CurrAchvAmount-1)*3))=0
-								it2 = CreateItem("ÍòÄÜÔ¿³×¿¨", "key6", x, y, z)
+								it2 = CreateItem("ä¸‡èƒ½é’¥åŒ™å¡", "key6", x, y, z)
 							Else
-								it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+								it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 							EndIf
 					End Select
 			End Select
 			
 			RemoveItem(item)
-		Case "ÍòÄÜÔ¿³×¿¨"
+		Case "ä¸‡èƒ½é’¥åŒ™å¡"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
 					d\Size = 0.07 : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1"
 					If Rand(2)=1 Then
-						it2 = CreateItem("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", x, y, z)
+						it2 = CreateItem("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", x, y, z)
 					Else
-						it2 = CreateItem("ÆË¿ËÅÆ", "misc", x, y, z)			
+						it2 = CreateItem("æ‰‘å…‹ç‰Œ", "misc", x, y, z)			
 					EndIf	
 				Case "fine", "very fine"
-					it2 = CreateItem("ÍòÄÜÔ¿³×¿¨", "key6", x, y, z)
+					it2 = CreateItem("ä¸‡èƒ½é’¥åŒ™å¡", "key6", x, y, z)
 			End Select			
 			
 			RemoveItem(item)
-		Case "ÆË¿ËÅÆ", "Ó²±Ò", "Ó²±Ò"
+		Case "æ‰‘å…‹ç‰Œ", "ç¡¬å¸", "ç¡¬å¸"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
 					d\Size = 0.07 : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1"
-					it2 = CreateItem("Ò»¼¶Ô¿³×¿¨", "key1", x, y, z)	
+					it2 = CreateItem("ä¸€çº§é’¥åŒ™å¡", "key1", x, y, z)	
 			    Case "fine", "very fine"
-					it2 = CreateItem("¶ş¼¶Ô¿³×¿¨", "key2", x, y, z)
+					it2 = CreateItem("äºŒçº§é’¥åŒ™å¡", "key2", x, y, z)
 			End Select
 			RemoveItem(item)
-		Case "ÍòÊÂ´ïĞÅÓÃ¿¨"
+		Case "ä¸‡äº‹è¾¾ä¿¡ç”¨å¡"
 			Select setting
 				Case "rough"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
 					d\Size = 0.07 : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "coarse"
-					it2 = CreateItem("Ó²±Ò", "25ct", x, y, z)
+					it2 = CreateItem("ç¡¬å¸", "25ct", x, y, z)
 					Local it3.Items,it4.Items,it5.Items
-					it3 = CreateItem("Ó²±Ò", "25ct", x, y, z)
-					it4 = CreateItem("Ó²±Ò", "25ct", x, y, z)
-					it5 = CreateItem("Ó²±Ò", "25ct", x, y, z)
+					it3 = CreateItem("ç¡¬å¸", "25ct", x, y, z)
+					it4 = CreateItem("ç¡¬å¸", "25ct", x, y, z)
+					it5 = CreateItem("ç¡¬å¸", "25ct", x, y, z)
 					EntityType (it3\collider, HIT_ITEM)
 					EntityType (it4\collider, HIT_ITEM)
 					EntityType (it5\collider, HIT_ITEM)
 				Case "1:1"
-					it2 = CreateItem("Ò»¼¶Ô¿³×¿¨", "key1", x, y, z)	
+					it2 = CreateItem("ä¸€çº§é’¥åŒ™å¡", "key1", x, y, z)	
 			    Case "fine", "very fine"
-					it2 = CreateItem("¶ş¼¶Ô¿³×¿¨", "key2", x, y, z)
+					it2 = CreateItem("äºŒçº§é’¥åŒ™å¡", "key2", x, y, z)
 			End Select
 			RemoveItem(item)
-		Case "S-NAV 300µ¼º½ÒÇ", "S-NAV 310µ¼º½ÒÇ", "S-NAV Navigator", "S-NAVÖÕ¼«µ¼º½ÒÇ"
+		Case "S-NAV 300å¯¼èˆªä»ª", "S-NAV 310å¯¼èˆªä»ª", "S-NAV Navigator", "S-NAVç»ˆæå¯¼èˆªä»ª"
 			Select setting
 				Case "rough", "coarse"
-					it2 = CreateItem("µç×ÓÔª¼ş", "misc", x, y, z)
+					it2 = CreateItem("ç”µå­å…ƒä»¶", "misc", x, y, z)
 				Case "1:1"
 					it2 = CreateItem("S-NAV Navigator", "nav", x, y, z)
 					it2\state = 100
 				Case "fine"
-					it2 = CreateItem("S-NAV 310µ¼º½ÒÇ", "nav", x, y, z)
+					it2 = CreateItem("S-NAV 310å¯¼èˆªä»ª", "nav", x, y, z)
 					it2\state = 100
 				Case "very fine"
-					it2 = CreateItem("S-NAVÖÕ¼«µ¼º½ÒÇ", "nav", x, y, z)
+					it2 = CreateItem("S-NAVç»ˆæå¯¼èˆªä»ª", "nav", x, y, z)
 					it2\state = 101
 			End Select
 			
 			RemoveItem(item)
-		Case "¶Ô½²»ú"
+		Case "å¯¹è®²æœº"
 			Select setting
 				Case "rough", "coarse"
-					it2 = CreateItem("µç×ÓÔª¼ş", "misc", x, y, z)
+					it2 = CreateItem("ç”µå­å…ƒä»¶", "misc", x, y, z)
 				Case "1:1"
-					it2 = CreateItem("¶Ô½²»ú", "18vradio", x, y, z)
+					it2 = CreateItem("å¯¹è®²æœº", "18vradio", x, y, z)
 					it2\state = 100
 				Case "fine"
-					it2 = CreateItem("¶Ô½²»ú", "fineradio", x, y, z)
+					it2 = CreateItem("å¯¹è®²æœº", "fineradio", x, y, z)
 					it2\state = 101
 				Case "very fine"
-					it2 = CreateItem("¶Ô½²»ú", "veryfineradio", x, y, z)
+					it2 = CreateItem("å¯¹è®²æœº", "veryfineradio", x, y, z)
 					it2\state = 101
 			End Select
 			
@@ -9813,64 +9813,64 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 			End Select
 			
 			RemoveItem(item)
-		Case "Ò»Ğ©SCP-420-J", "ÏãÑÌ"
+		Case "ä¸€äº›SCP-420-J", "é¦™çƒŸ"
 			Select setting
 				Case "rough", "coarse"			
 					d.Decals = CreateDecal(0, x, 8*RoomScale+0.010, z, 90, Rand(360), 0)
 					d\Size = 0.2 : EntityAlpha(d\obj, 0.8) : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1"
-					it2 = CreateItem("ÏãÑÌ", "cigarette", x + 1.5, y + 0.5, z + 1.0)
+					it2 = CreateItem("é¦™çƒŸ", "cigarette", x + 1.5, y + 0.5, z + 1.0)
 				Case "fine"
-					it2 = CreateItem("ÑÌ¾í", "420s", x + 1.5, y + 0.5, z + 1.0)
+					it2 = CreateItem("çƒŸå·", "420s", x + 1.5, y + 0.5, z + 1.0)
 				Case "very fine"
-					it2 = CreateItem("ÄÑÎÅµÄÑÌ¾í", "420s", x + 1.5, y + 0.5, z + 1.0)
+					it2 = CreateItem("éš¾é—»çš„çƒŸå·", "420s", x + 1.5, y + 0.5, z + 1.0)
 			End Select
 			
 			RemoveItem(item)
-		Case "9Vµç³Ø", "18Vµç³Ø", "Ææ¹ÖµÄµç³Ø"
+		Case "9Vç”µæ± ", "18Vç”µæ± ", "å¥‡æ€ªçš„ç”µæ± "
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.010, z, 90, Rand(360), 0)
 					d\Size = 0.2 : EntityAlpha(d\obj, 0.8) : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1"
-					it2 = CreateItem("18Vµç³Ø", "18vbat", x, y, z)
+					it2 = CreateItem("18Vç”µæ± ", "18vbat", x, y, z)
 				Case "fine"
-					it2 = CreateItem("Ææ¹ÖµÄµç³Ø", "killbat", x, y, z)
+					it2 = CreateItem("å¥‡æ€ªçš„ç”µæ± ", "killbat", x, y, z)
 				Case "very fine"
-					it2 = CreateItem("Ææ¹ÖµÄµç³Ø", "killbat", x, y, z)
+					it2 = CreateItem("å¥‡æ€ªçš„ç”µæ± ", "killbat", x, y, z)
 			End Select
 			
 			RemoveItem(item)
-		Case "ReVisionÑÛÒ©Ë®", "RedVisionÑÛÒ©Ë®", "ÑÛÒ©Ë®"
+		Case "ReVisionçœ¼è¯æ°´", "RedVisionçœ¼è¯æ°´", "çœ¼è¯æ°´"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.010, z, 90, Rand(360), 0)
 					d\Size = 0.2 : EntityAlpha(d\obj, 0.8) : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1"
-					it2 = CreateItem("RedVisionÑÛÒ©Ë®", "eyedrops", x,y,z)
+					it2 = CreateItem("RedVisionçœ¼è¯æ°´", "eyedrops", x,y,z)
 				Case "fine"
-					it2 = CreateItem("ÑÛÒ©Ë®", "fineeyedrops", x,y,z)
+					it2 = CreateItem("çœ¼è¯æ°´", "fineeyedrops", x,y,z)
 				Case "very fine"
-					it2 = CreateItem("ÑÛÒ©Ë®", "supereyedrops", x,y,z)
+					it2 = CreateItem("çœ¼è¯æ°´", "supereyedrops", x,y,z)
 			End Select
 			
 			RemoveItem(item)		
-		Case "·À»¤·ş"
+		Case "é˜²æŠ¤æœ"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.010, z, 90, Rand(360), 0)
 					d\Size = 0.2 : EntityAlpha(d\obj, 0.8) : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1"
-					it2 = CreateItem("·À»¤·ş", "hazmatsuit", x,y,z)
+					it2 = CreateItem("é˜²æŠ¤æœ", "hazmatsuit", x,y,z)
 				Case "fine"
-					it2 = CreateItem("·À»¤·ş", "hazmatsuit2", x,y,z)
+					it2 = CreateItem("é˜²æŠ¤æœ", "hazmatsuit2", x,y,z)
 				Case "very fine"
-					it2 = CreateItem("·À»¤·ş", "hazmatsuit2", x,y,z)
+					it2 = CreateItem("é˜²æŠ¤æœ", "hazmatsuit2", x,y,z)
 			End Select
 			
 			RemoveItem(item)
 			
-		Case "ÕëÍ²"
+		Case "é’ˆç­’"
 			Select item\itemtemplate\tempname
 				Case "syringe"
 					Select setting
@@ -9878,11 +9878,11 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 							d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
 							d\Size = 0.07 : ScaleSprite(d\obj, d\Size, d\Size)
 						Case "1:1"
-							it2 = CreateItem("Ğ¡ĞÍ¼±¾ÈÏä", "finefirstaid", x, y, z)	
+							it2 = CreateItem("å°å‹æ€¥æ•‘ç®±", "finefirstaid", x, y, z)	
 						Case "fine"
-							it2 = CreateItem("ÕëÍ²", "finesyringe", x, y, z)
+							it2 = CreateItem("é’ˆç­’", "finesyringe", x, y, z)
 						Case "very fine"
-							it2 = CreateItem("ÕëÍ²", "veryfinesyringe", x, y, z)
+							it2 = CreateItem("é’ˆç­’", "veryfinesyringe", x, y, z)
 					End Select
 					
 				Case "finesyringe"
@@ -9891,17 +9891,17 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 							d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.005, z, 90, Rand(360), 0)
 							d\Size = 0.07 : ScaleSprite(d\obj, d\Size, d\Size)
 						Case "coarse"
-							it2 = CreateItem("¼±¾ÈÏä", "firstaid", x, y, z)
+							it2 = CreateItem("æ€¥æ•‘ç®±", "firstaid", x, y, z)
 						Case "1:1"
-							it2 = CreateItem("À¶É«¼±¾ÈÏä", "firstaid2", x, y, z)	
+							it2 = CreateItem("è“è‰²æ€¥æ•‘ç®±", "firstaid2", x, y, z)	
 						Case "fine", "very fine"
-							it2 = CreateItem("ÕëÍ²", "veryfinesyringe", x, y, z)
+							it2 = CreateItem("é’ˆç­’", "veryfinesyringe", x, y, z)
 					End Select
 					
 				Case "veryfinesyringe"
 					Select setting
 						Case "rough", "coarse", "1:1", "fine"
-							it2 = CreateItem("µç×ÓÔª¼ş", "misc", x, y, z)	
+							it2 = CreateItem("ç”µå­å…ƒä»¶", "misc", x, y, z)	
 						Case "very fine"
 							n.NPCs = CreateNPC(NPCtype008,x,y,z)
 							n\State = 2
@@ -9910,13 +9910,13 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 			
 			RemoveItem(item)
 			
-		Case "SCP-500-01", "Éı¼¶Ò©Íè", "Ò©Íè"
+		Case "SCP-500-01", "å‡çº§è¯ä¸¸", "è¯ä¸¸"
 			Select setting
 				Case "rough", "coarse"
 					d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.010, z, 90, Rand(360), 0)
 					d\Size = 0.2 : EntityAlpha(d\obj, 0.8) : ScaleSprite(d\obj, d\Size, d\Size)
 				Case "1:1"
-					it2 = CreateItem("Ò©Íè", "pill", x, y, z)
+					it2 = CreateItem("è¯ä¸¸", "pill", x, y, z)
 					RemoveItem(item)
 				Case "fine"
 					Local no427Spawn% = False
@@ -9929,37 +9929,37 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 					If (Not no427Spawn) Then
 						it2 = CreateItem("SCP-427", "scp427", x, y, z)
 					Else
-						it2 = CreateItem("Éı¼¶Ò©Íè", "scp500death", x, y, z)
+						it2 = CreateItem("å‡çº§è¯ä¸¸", "scp500death", x, y, z)
 					EndIf
 					RemoveItem(item)
 				Case "very fine"
-					it2 = CreateItem("Éı¼¶Ò©Íè", "scp500death", x, y, z)
+					it2 = CreateItem("å‡çº§è¯ä¸¸", "scp500death", x, y, z)
 					RemoveItem(item)
 			End Select
 			
 		Default
 			
 			Select item\itemtemplate\tempname
-				Case "±­×Ó"
+				Case "æ¯å­"
 					Select setting
 						Case "rough", "coarse"
 							d.Decals = CreateDecal(0, x, 8 * RoomScale + 0.010, z, 90, Rand(360), 0)
 							d\Size = 0.2 : EntityAlpha(d\obj, 0.8) : ScaleSprite(d\obj, d\Size, d\Size)
 						Case "1:1"
-							it2 = CreateItem("±­×Ó", "±­×Ó", x,y,z)
+							it2 = CreateItem("æ¯å­", "æ¯å­", x,y,z)
 							it2\name = item\name
 							it2\r = 255-item\r
 							it2\g = 255-item\g
 							it2\b = 255-item\b
 						Case "fine"
-							it2 = CreateItem("±­×Ó", "±­×Ó", x,y,z)
+							it2 = CreateItem("æ¯å­", "æ¯å­", x,y,z)
 							it2\name = item\name
 							it2\state = 1.0
 							it2\r = Min(item\r*Rnd(0.9,1.1),255)
 							it2\g = Min(item\g*Rnd(0.9,1.1),255)
 							it2\b = Min(item\b*Rnd(0.9,1.1),255)
 						Case "very fine"
-							it2 = CreateItem("±­×Ó", "±­×Ó", x,y,z)
+							it2 = CreateItem("æ¯å­", "æ¯å­", x,y,z)
 							it2\name = item\name
 							it2\state = Max(it2\state*2.0,2.0)	
 							it2\r = Min(item\r*Rnd(0.5,1.5),255)
@@ -9979,20 +9979,20 @@ Function Use914(item.Items, setting$, x#, y#, z#)
 						Case "1:1"
 							Select Rand(6)
 								Case 1
-									it2 = CreateItem("SCP-106ÎÄµµ", "paper", x, y, z)
+									it2 = CreateItem("SCP-106æ–‡æ¡£", "paper", x, y, z)
 								Case 2
-									it2 = CreateItem("SCP-079ÎÄµµ", "paper", x, y, z)
+									it2 = CreateItem("SCP-079æ–‡æ¡£", "paper", x, y, z)
 								Case 3
-									it2 = CreateItem("SCP-173ÎÄµµ", "paper", x, y, z)
+									it2 = CreateItem("SCP-173æ–‡æ¡£", "paper", x, y, z)
 								Case 4
-									it2 = CreateItem("SCP-895ÎÄµµ", "paper", x, y, z)
+									it2 = CreateItem("SCP-895æ–‡æ¡£", "paper", x, y, z)
 								Case 5
-									it2 = CreateItem("SCP-682ÎÄµµ", "paper", x, y, z)
+									it2 = CreateItem("SCP-682æ–‡æ¡£", "paper", x, y, z)
 								Case 6
-									it2 = CreateItem("SCP-860ÎÄµµ", "paper", x, y, z)
+									it2 = CreateItem("SCP-860æ–‡æ¡£", "paper", x, y, z)
 							End Select
 						Case "fine", "very fine"
-							it2 = CreateItem("Ç§Ö½º×", "misc", x, y, z)
+							it2 = CreateItem("åƒçº¸é¹¤", "misc", x, y, z)
 					End Select
 					
 					RemoveItem(item)
@@ -10116,9 +10116,9 @@ Function Use294()
 			
 			If temp And Input294<>"" Then ;dispense
 				Input294 = Trim(Lower(Input294))
-				If Left(Input294, Min(7,Len(Input294))) = "Ò»±­" Then
+				If Left(Input294, Min(7,Len(Input294))) = "ä¸€æ¯" Then
 					Input294 = Right(Input294, Len(Input294)-7)
-				ElseIf Left(Input294, Min(9,Len(Input294))) = "Ò»±­" 
+				ElseIf Left(Input294, Min(9,Len(Input294))) = "ä¸€æ¯" 
 					Input294 = Right(Input294, Len(Input294)-9)
 				EndIf
 				
@@ -10152,13 +10152,13 @@ Function Use294()
 					;If alpha = 0 Then alpha = 1.0
 					If glow Then alpha = -alpha
 					
-					it.items = CreateItem("±­×Ó", "±­×Ó", EntityX(PlayerRoom\Objects[1],True),EntityY(PlayerRoom\Objects[1],True),EntityZ(PlayerRoom\Objects[1],True), r,g,b,alpha)
-					it\name = "Ò»±­"+Input294
+					it.items = CreateItem("æ¯å­", "æ¯å­", EntityX(PlayerRoom\Objects[1],True),EntityY(PlayerRoom\Objects[1],True),EntityZ(PlayerRoom\Objects[1],True), r,g,b,alpha)
+					it\name = "ä¸€æ¯"+Input294
 					EntityType (it\collider, HIT_ITEM)
 					
 				Else
 					;out of range
-					Input294 = "³¬³ö·¶Î§"
+					Input294 = "è¶…å‡ºèŒƒå›´"
 					PlayerRoom\SoundCHN = PlaySound_Strict (LoadTempSound("SFX\SCP\294\outofrange.ogg"))
 				EndIf
 				
@@ -10174,10 +10174,10 @@ Function Use294()
 		EndIf
 		
 	Else ;playing a dispensing sound
-		If Input294 <> "³¬³ö·¶Î§" Then Input294 = "ÖÆ×÷ÖĞ..."
+		If Input294 <> "è¶…å‡ºèŒƒå›´" Then Input294 = "åˆ¶ä½œä¸­..."
 		
 		If Not ChannelPlaying(PlayerRoom\SoundCHN) Then
-			If Input294 <> "³¬³ö·¶Î§" Then
+			If Input294 <> "è¶…å‡ºèŒƒå›´" Then
 				HidePointer()
 				Using294 = False
 				MouseXSpeed() : MouseYSpeed() : MouseZSpeed() : mouse_x_speed_1#=0.0 : mouse_y_speed_1#=0.0
@@ -10232,10 +10232,10 @@ Function Use427()
 				EndIf
 			EndIf
 			If prevI427Timer < 70*60 And I_427\Timer => 70*60 Then
-				Msg = "Äã¸Ğµ½¾«Á¦³äÅæ"
+				Msg = "ä½ æ„Ÿåˆ°ç²¾åŠ›å……æ²›"
 				MsgTimer = 70*5
 			ElseIf prevI427Timer < 70*180 And I_427\Timer => 70*180 Then
-				Msg = "Äã¸Ğ¾õÈ«Éí¼¡ÈâÇáÎ¢¾·ÂÎ"
+				Msg = "ä½ æ„Ÿè§‰å…¨èº«è‚Œè‚‰è½»å¾®ç—‰æŒ›"
 				MsgTimer = 70*5
 			EndIf
 		Else
@@ -10249,10 +10249,10 @@ Function Use427()
 		EndIf
 	Else
 		If prevI427Timer-FPSfactor < 70*360 And I_427\Timer => 70*360 Then
-			Msg = "ÄãµÄ¼¡ÈâÔÚÖ×ÕÍ£¬Äã¸Ğ¾õ±ÈÒÔÍù¸üÇ¿´ó"
+			Msg = "ä½ çš„è‚Œè‚‰åœ¨è‚¿èƒ€ï¼Œä½ æ„Ÿè§‰æ¯”ä»¥å¾€æ›´å¼ºå¤§"
 			MsgTimer = 70*5
 		ElseIf prevI427Timer-FPSfactor < 70*390 And I_427\Timer => 70*390 Then
-			Msg = "Äã¸Ğ¾õ²»µ½ÄãµÄÍÈ£¬µ«ÄãÒ²²»ĞèÒªÍÈÁË"
+			Msg = "ä½ æ„Ÿè§‰ä¸åˆ°ä½ çš„è…¿ï¼Œä½†ä½ ä¹Ÿä¸éœ€è¦è…¿äº†"
 			MsgTimer = 70*5
 		EndIf
 		I_427\Timer = I_427\Timer + FPSfactor
@@ -10282,7 +10282,7 @@ Function Use427()
 		EndIf
 		If I_427\Timer >= 70*420 Then
 			Kill()
-			DeathMSG = "¡°ÇëÇóMTF Nu-7Ìá¹©Ö§³Ö£¬ÎÒÃÇĞèÒª¸ü¶àµÄ»ğÁ¦À´»÷ÂäÕâ¶«Î÷¡£¡±"
+			DeathMSG = "â€œè¯·æ±‚MTF Nu-7æä¾›æ”¯æŒï¼Œæˆ‘ä»¬éœ€è¦æ›´å¤šçš„ç«åŠ›æ¥å‡»è½è¿™ä¸œè¥¿ã€‚â€"
 		ElseIf I_427\Timer >= 70*390 Then
 			Crouch = True
 		EndIf
@@ -10422,16 +10422,16 @@ Function UpdateInfect()
 			Next
 			
 			If Infect > 20 And temp =< 20.0 Then
-				Msg = "Äã¸Ğ¾õÓĞµã·¢ÉÕ"
+				Msg = "ä½ æ„Ÿè§‰æœ‰ç‚¹å‘çƒ§"
 				MsgTimer = 70*6
 			ElseIf Infect > 40 And temp =< 40.0
-				Msg = "Äã¸Ğ¾õ¶ñĞÄ"
+				Msg = "ä½ æ„Ÿè§‰æ¶å¿ƒ"
 				MsgTimer = 70*6
 			ElseIf Infect > 60 And temp =< 60.0
-				Msg = "¶ñĞÄÔ½À´Ô½ÑÏÖØÁË"
+				Msg = "æ¶å¿ƒè¶Šæ¥è¶Šä¸¥é‡äº†"
 				MsgTimer = 70*6
 			ElseIf Infect > 80 And temp =< 80.0
-				Msg = "Äã¸Ğ¾õºÜĞéÈõ"
+				Msg = "ä½ æ„Ÿè§‰å¾ˆè™šå¼±"
 				MsgTimer = 70*6
 			ElseIf Infect =>91.5
 				BlinkTimer = Max(Min(-10*(Infect-91.5),BlinkTimer),-10)
@@ -10491,8 +10491,8 @@ Function UpdateInfect()
 						PlayerRoom\NPC[0]\Sound = LoadSound_Strict("SFX\SCP\008\KillScientist2.ogg")
 						PlayerRoom\NPC[0]\SoundChn = PlaySound_Strict(PlayerRoom\NPC[0]\Sound)
 						
-						DeathMSG = "¶ÔÏóD-9341ÔÚ[ÒÑ±à¼­]Çø½øÊ³[ÒÑ±à¼­]²©Ê¿£¬¶ÔÏóÁ¢¼´±»¾ÅÎ²ºü»÷±Ğ²¢ËÍÈ¥Ê¬¼ì¡£"
-						DeathMSG = DeathMSG + "ÒÑÈ·ÈÏÎªSCP-008¸ĞÈ¾£¬Ê¬ÌåÒÑ±»»ğ»¯¡£"
+						DeathMSG = "å¯¹è±¡D-9341åœ¨[å·²ç¼–è¾‘]åŒºè¿›é£Ÿ[å·²ç¼–è¾‘]åšå£«ï¼Œå¯¹è±¡ç«‹å³è¢«ä¹å°¾ç‹å‡»æ¯™å¹¶é€å»å°¸æ£€ã€‚"
+						DeathMSG = DeathMSG + "å·²ç¡®è®¤ä¸ºSCP-008æ„ŸæŸ“ï¼Œå°¸ä½“å·²è¢«ç«åŒ–ã€‚"
 						
 						Kill()
 						de.Decals = CreateDecal(3, EntityX(PlayerRoom\NPC[0]\Collider), 544*RoomScale + 0.01, EntityZ(PlayerRoom\NPC[0]\Collider),90,Rnd(360),0)
@@ -10532,16 +10532,16 @@ Function UpdateInfect()
 				Kill()
 				BlinkTimer = Max(Min(-10*(Infect-96),BlinkTimer),-10)
 				If PlayerRoom\RoomTemplate\Name = "dimension1499" Then
-					DeathMSG = "SCP-1499µÄÏÂÂäÈÔ¾É²»Ã÷£¬Ò»¸öÕì²ìĞ¡×éÒÑ±»ÅÉÈ¥µ÷²é¶íÂŞË¹[ÒÑ±à¼­]ÕòÒ»×ù½ÌÌÃÔâÊÜ±©Á¦Ï®»÷µÄÊÂ¼ş¡£"
+					DeathMSG = "SCP-1499çš„ä¸‹è½ä»æ—§ä¸æ˜ï¼Œä¸€ä¸ªä¾¦å¯Ÿå°ç»„å·²è¢«æ´¾å»è°ƒæŸ¥ä¿„ç½—æ–¯[å·²ç¼–è¾‘]é•‡ä¸€åº§æ•™å ‚é­å—æš´åŠ›è¢­å‡»çš„äº‹ä»¶ã€‚"
 				ElseIf PlayerRoom\RoomTemplate\Name = "gatea" Or PlayerRoom\RoomTemplate\Name = "exit1" Then
-					DeathMSG = "¶ÔÏóD-9341±»·¢ÏÖÔÚ"
+					DeathMSG = "å¯¹è±¡D-9341è¢«å‘ç°åœ¨"
 					If PlayerRoom\RoomTemplate\Name = "gatea" Then
 						DeathMSG = DeathMSG + "A"
 					Else
 						DeathMSG = DeathMSG + "B"
 					EndIf
-					DeathMSG = DeathMSG + "ÃÅÅÇ»²£¬¶ÔÏóÁ¢¼´±»¾ÅÎ²ºü»÷±Ğ²¢ËÍÈ¥Ê¬¼ì¡£"
-					DeathMSG = DeathMSG + "ÒÑÈ·ÈÏÎªSCP-008¸ĞÈ¾£¬Ê¬ÌåÒÑ±»»ğ»¯¡£"
+					DeathMSG = DeathMSG + "é—¨å¾˜å¾Šï¼Œå¯¹è±¡ç«‹å³è¢«ä¹å°¾ç‹å‡»æ¯™å¹¶é€å»å°¸æ£€ã€‚"
+					DeathMSG = DeathMSG + "å·²ç¡®è®¤ä¸ºSCP-008æ„ŸæŸ“ï¼Œå°¸ä½“å·²è¢«ç«åŒ–ã€‚"
 				Else
 					DeathMSG = ""
 				EndIf
@@ -10883,7 +10883,7 @@ Function GetINIString$(file$, section$, parameter$, defaultvalue$="")
 	Next
 	
 	If lfile = Null Then
-		DebugLog "´´½¨¿â£º "+file
+		DebugLog "åˆ›å»ºåº“ï¼š "+file
 		lfile = New INIFile
 		lfile\name = Lower(file)
 		lfile\bank = 0
@@ -11575,7 +11575,7 @@ Function IsItemGoodFor1162(itt.ItemTemplates)
 		Default
 			If itt\tempname <> "paper" Then
 				Return False
-			Else If Instr(itt\name, "´«µ¥")
+			Else If Instr(itt\name, "ä¼ å•")
 				Return False
 			Else
 				;if the item is a paper, only allow spawning it if the name contains the word "note" or "log"
@@ -11667,7 +11667,7 @@ Function ScaledMouseY%()
 End Function
 
 Function CatchErrors(location$)
-    SetErrorMsg(7,"SCPÊÕÈİÊ§Ğ§·¢ÉúÁËÒ»¸ö´íÎó! ÔÚ "+location$+",Çë´ø×ÅÓÎÏ·½ØÍ¼ÁªÏµÎÒÃÇ")
+    SetErrorMsg(7,"SCPæ”¶å®¹å¤±æ•ˆå‘ç”Ÿäº†ä¸€ä¸ªé”™è¯¯! åœ¨ "+location$+",è¯·å¸¦ç€æ¸¸æˆæˆªå›¾è”ç³»æˆ‘ä»¬")
 End Function
 
 Function Create3DIcon(width%,height%,modelpath$,modelX#=0,modelY#=0,modelZ#=0,modelPitch#=0,modelYaw#=0,modelRoll#=0,modelscaleX#=1,modelscaleY#=1,modelscaleZ#=1,withfog%=False)
@@ -11840,15 +11840,15 @@ End Function
 
 Function CanUseItem(canUseWithHazmat%, canUseWithGasMask%, canUseWithEyewear%)
 	If (canUseWithHazmat = False And WearingHazmat) Then
-		Msg = "Äã²»ÄÜÔÚ´©×Å·À»¤·şÊ±Ê¹ÓÃÎïÆ·"
+		Msg = "ä½ ä¸èƒ½åœ¨ç©¿ç€é˜²æŠ¤æœæ—¶ä½¿ç”¨ç‰©å“"
 		MsgTimer = 70*5
 		Return False
 	Else If (canUseWithGasMask = False And (WearingGasMask Or Wearing1499))
-		Msg = "Äã²»ÄÜÔÚ´÷×Å·À¶¾Ãæ¾ßÊ±Ê¹ÓÃÎïÆ·"
+		Msg = "ä½ ä¸èƒ½åœ¨æˆ´ç€é˜²æ¯’é¢å…·æ—¶ä½¿ç”¨ç‰©å“"
 		MsgTimer = 70*5
 		Return False
 	Else If (canUseWithEyewear = False And (WearingNightVision))
-		Msg = "Äã²»ÄÜÔÚ´÷×ÅÒ¹ÊÓÒÇÊ±Ê¹ÓÃÎïÆ·"
+		Msg = "ä½ ä¸èƒ½åœ¨æˆ´ç€å¤œè§†ä»ªæ—¶ä½¿ç”¨ç‰©å“"
 	EndIf
 	
 	Return True

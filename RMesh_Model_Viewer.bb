@@ -715,14 +715,14 @@ Include "SpeedText.bb"
 SetBuffer BackBuffer()
 SeedRnd MilliSecs()
 TextInitialize BackBuffer()
-Text 0,0,"ºÙMark£¬"
-Text 0,15,"ÕâÊÇ¸öºÜÖØÒªµÄ¶«Î÷"
-Text 0,30,"¸ĞĞ»ÄãÎª´Ë»¨·ÑÊ±¼ä¡£"
+Text 0,0,"å˜¿Markï¼Œ"
+Text 0,15,"è¿™æ˜¯ä¸ªå¾ˆé‡è¦çš„ä¸œè¥¿"
+Text 0,30,"æ„Ÿè°¢ä½ ä¸ºæ­¤èŠ±è´¹æ—¶é—´ã€‚"
 Print ""
 Print ""
 Print ""
 Print ""
-Text 0,52,"RMeshÎÄ¼şÂ·¾¶£º"
+Text 0,52,"RMeshæ–‡ä»¶è·¯å¾„ï¼š"
 Local fname$ = Input("               ")
 
 Graphics3D 1280,720,32,2
@@ -799,13 +799,13 @@ While Not KeyHit(1)
 	RenderWorld
 	
 	Color 0,0,0
-	Text 6,6,"Ä¿±êX = "+Str(PickedX()*10.0)
-	Text 6,26,"Ä¿±êY = "+Str(PickedY()*10.0)
-	Text 6,46,"Ä¿±êZ = "+Str(PickedZ()*10.0)
+	Text 6,6,"ç›®æ ‡X = "+Str(PickedX()*10.0)
+	Text 6,26,"ç›®æ ‡Y = "+Str(PickedY()*10.0)
+	Text 6,46,"ç›®æ ‡Z = "+Str(PickedZ()*10.0)
 	Color 0,255,0
-	Text 5,5,"Ä¿±êX = "+Str(PickedX()*10.0)
-	Text 5,25,"Ä¿±êY = "+Str(PickedY()*10.0)
-	Text 5,45,"Ä¿±êZ = "+Str(PickedZ()*10.0)
+	Text 5,5,"ç›®æ ‡X = "+Str(PickedX()*10.0)
+	Text 5,25,"ç›®æ ‡Y = "+Str(PickedY()*10.0)
+	Text 5,45,"ç›®æ ‡Z = "+Str(PickedZ()*10.0)
 	
 	If KeyHit(44) Then
 		BumpEnvMat = -BumpEnvMat

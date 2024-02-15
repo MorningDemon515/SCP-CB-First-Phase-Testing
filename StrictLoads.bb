@@ -29,7 +29,7 @@ Type Sound
 	Field name$
 	Field channels%[32]
 	Field releaseTime%
-	Field HasSubtitles% ;字幕系统
+	Field HasSubtitles% ;????
 End Type
 
 Function AutoReleaseSounds()
@@ -129,7 +129,7 @@ Function LoadSound_Strict(file$)
 	snd\internalHandle = 0
 	snd\releaseTime = 0
 	If EnableSubtitle Then
-		; ~ 检查声音是否有字幕
+		; ~ ?????????
 		If GetINISectionLocation(SubtitlesFile, File) <> 0 Then
 			snd\HasSubtitles = True
 		EndIf

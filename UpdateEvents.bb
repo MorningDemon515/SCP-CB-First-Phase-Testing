@@ -231,7 +231,7 @@ Function UpdateEvents()
                                                 PositionEntity Curr173\Collider, 0,0,0
                                             EndIf
 											ResetEntity Curr173\Collider
-											Msg = "³¤°´ "+KeyName(KEY_SPRINT)+" ±¼ÅÜ"
+											Msg = "é•¿æŒ‰ "+KeyName(KEY_SPRINT)+" å¥”è·‘"
 											MsgTimer = 70*8
 										EndIf
 									EndIf
@@ -854,7 +854,7 @@ Function UpdateEvents()
 											DrawHandIcon = True
 											
 											If MouseHit1 Then
-												SelectedItem = CreateItem("SCP-173ÎÄµµ", "paper", 0.0, 0.0, 0.0)
+												SelectedItem = CreateItem("SCP-173æ–‡æ¡£", "paper", 0.0, 0.0, 0.0)
 												EntityType SelectedItem\collider,HIT_ITEM
 												
 												PickItem(SelectedItem)
@@ -1014,7 +1014,7 @@ Function UpdateEvents()
 							If IntroSFX(17)<>0 Then
 								If EntityVisible(Curr173\Collider, Collider) Then
 									If EntityInView(Curr173\obj, Camera) Then
-										Msg = "°´ "+KeyName(KEY_BLINK)+" Õ£ÑÛ"
+										Msg = "æŒ‰ "+KeyName(KEY_BLINK)+" çœ¨çœ¼"
 										MsgTimer = 70*4
 										PlaySound_Strict IntroSFX(17)
 										IntroSFX(17)=0
@@ -2555,11 +2555,11 @@ Function UpdateEvents()
 										If Using294 Then MouseHit1=False
 									ElseIf e\EventState2 = 1 And (Not inserted) Then
 										Using294=False
-										Msg = "You need to insert another Ó²±Ò in order to use this machine."
+										Msg = "You need to insert another ç¡¬å¸ in order to use this machine."
 										MsgTimer = 70*5
 									ElseIf (Not inserted) Then
 										Using294=False
-										Msg = "You need to insert two Ó²±Òs in order to use this machine."
+										Msg = "You need to insert two ç¡¬å¸s in order to use this machine."
 										MsgTimer = 70*5
 									EndIf
 								EndIf
@@ -2649,14 +2649,14 @@ Function UpdateEvents()
 						If BlinkTimer =-10 Then
 							If e\EventState > 70*7.5 And e\EventState-FPSfactor =< 70*7.5 Then
 								PlaySound2(NeckSnapSFX(0),Camera,e\room\NPC[0]\Collider,8.0)
-								;Ç®°ü spawning (with 3 coins)
-								it.Items = CreateItem("Ç®°ü","wallet",EntityX(e\room\NPC[0]\Collider,True),EntityY(e\room\NPC[0]\Collider,True),EntityZ(e\room\NPC[0]\Collider,True))
+								;é’±åŒ… spawning (with 3 coins)
+								it.Items = CreateItem("é’±åŒ…","wallet",EntityX(e\room\NPC[0]\Collider,True),EntityY(e\room\NPC[0]\Collider,True),EntityZ(e\room\NPC[0]\Collider,True))
 								EntityType(it\collider, HIT_ITEM)
 								PointEntity it\collider,e\room\NPC[1]\Collider
 								MoveEntity it\collider,-0.4,0,-0.2
 								TeleportEntity(it\collider,EntityX(it\collider),EntityY(it\collider),EntityZ(it\collider),-0.02,True,10)
 								For i = 0 To 1
-									it2.Items = CreateItem("Ó²±Ò","25ct",1,1,1)
+									it2.Items = CreateItem("ç¡¬å¸","25ct",1,1,1)
 									it2\Picked = True
 									it2\Dropped = -1
 									it2\itemtemplate\found=True
@@ -3439,7 +3439,7 @@ Function UpdateEvents()
 											it = CreateItem("SCP-500-01","scp500",e\room\x+ix*2.0+(Cos(EntityYaw(tempInt,True))*(-208.0)*RoomScale)-(Sin(EntityYaw(tempInt,True))*1226.0*RoomScale),8.0+(80.0*RoomScale),e\room\z+iy*2.0+(Sin(EntityYaw(tempInt,True))*(-208.0)*RoomScale)+(Cos(EntityYaw(tempInt,True))*1226.0*RoomScale))
 											EntityType (it\collider, HIT_ITEM)
 											
-											it = CreateItem("Ò¹ÊÓÒÇ", "nvgoggles",e\room\x+ix*2.0-(Sin(EntityYaw(tempInt,True))*504.0*RoomScale)+(Cos(EntityYaw(tempInt,True))*16.0*RoomScale), 8.0+(80.0*RoomScale), e\room\z+iy*2.0+(Cos(EntityYaw(tempInt,True))*504.0*RoomScale)+(Sin(EntityYaw(tempInt,True))*16.0*RoomScale))
+											it = CreateItem("å¤œè§†ä»ª", "nvgoggles",e\room\x+ix*2.0-(Sin(EntityYaw(tempInt,True))*504.0*RoomScale)+(Cos(EntityYaw(tempInt,True))*16.0*RoomScale), 8.0+(80.0*RoomScale), e\room\z+iy*2.0+(Cos(EntityYaw(tempInt,True))*504.0*RoomScale)+(Sin(EntityYaw(tempInt,True))*16.0*RoomScale))
 											EntityType (it\collider, HIT_ITEM)
 									End Select
 									
@@ -4065,7 +4065,7 @@ Function UpdateEvents()
 						
 						Local itt.ItemTemplates
 						For itt.ItemTemplates = Each ItemTemplates
-							If itt\name = "»æ»­" Then
+							If itt\name = "ç»˜ç”»" Then
 								If itt\img<>0 Then FreeImage itt\img	
 								itt\img = LoadImage_Strict(imgPath)
 								MaskImage(itt\img, 255,0,255)
@@ -4122,7 +4122,7 @@ Function UpdateEvents()
 										Msg = "You cannot carry any more items."
 										MsgTimer = 70 * 5
 									Else
-										SelectedItem = CreateItem("»æ»­", "paper", 0.0, 0.0, 0.0)
+										SelectedItem = CreateItem("ç»˜ç”»", "paper", 0.0, 0.0, 0.0)
 										EntityType SelectedItem\collider,HIT_ITEM
 										
 										PickItem(SelectedItem)
@@ -4610,7 +4610,7 @@ Function UpdateEvents()
 								Next
 							Case 18
 								TFormPoint -344,176, 272, e\room\obj,0
-								it.Items = CreateItem("Ææ¹ÖµÄ±Ê¼Ç", "paper", TFormedX(), TFormedY(), TFormedZ())
+								it.Items = CreateItem("å¥‡æ€ªçš„ç¬”è®°", "paper", TFormedX(), TFormedY(), TFormedZ())
 								EntityType(it\collider, HIT_ITEM)
 							Case 25
 								e\room\NPC[0]=CreateNPC(NPCtypeD, EntityX(e\room\obj)+Cos(e\room\angle-90)*760*RoomScale, 0.35, EntityZ(e\room\obj)+Sin(e\room\angle-90)*760*RoomScale)
@@ -4624,7 +4624,7 @@ Function UpdateEvents()
 							Case 30
 								i = Rand(0,MaxItemAmount-1)
 								If Inventory(i)<>Null Then RemoveItem(Inventory(i))
-								Inventory(i) = CreateItem("Ææ¹ÖµÄ±Ê¼Ç", "paper", 1,1,1)
+								Inventory(i) = CreateItem("å¥‡æ€ªçš„ç¬”è®°", "paper", 1,1,1)
 								HideEntity Inventory(i)\collider
 								Inventory(i)\Picked = True
 							Case 35
@@ -5664,10 +5664,10 @@ Function UpdateEvents()
 							EndIf
 							PlaySound_Strict LoadTempSound("SFX\Room\Blackout.ogg")
 							If EntityDistance(e\room\Objects[11],Collider)<EntityDistance(e\room\Objects[12],Collider) Then
-								it = CreateItem("ÑĞ¾¿²¿ÃÅ-02Éè¼Æ·½°¸", "paper", EntityX(e\room\Objects[11],True),EntityY(e\room\Objects[11],True),EntityZ(e\room\Objects[11],True))
+								it = CreateItem("ç ”ç©¶éƒ¨é—¨-02è®¾è®¡æ–¹æ¡ˆ", "paper", EntityX(e\room\Objects[11],True),EntityY(e\room\Objects[11],True),EntityZ(e\room\Objects[11],True))
 								EntityType it\collider,HIT_ITEM
 							Else
-								it = CreateItem("ÑĞ¾¿²¿ÃÅ-02Éè¼Æ·½°¸", "paper", EntityX(e\room\Objects[12],True),EntityY(e\room\Objects[12],True),EntityZ(e\room\Objects[12],True))
+								it = CreateItem("ç ”ç©¶éƒ¨é—¨-02è®¾è®¡æ–¹æ¡ˆ", "paper", EntityX(e\room\Objects[12],True),EntityY(e\room\Objects[12],True),EntityZ(e\room\Objects[12],True))
 								EntityType it\collider,HIT_ITEM
 							EndIf
 						ElseIf e\EventState > 0
@@ -6821,7 +6821,7 @@ Function UpdateEvents()
 						CanSave = True
 						For i = 0 To MaxItemAmount-1
 							If Inventory(i) <> Null Then
-								If Inventory(i)\itemtemplate\name = "´«µ¥"
+								If Inventory(i)\itemtemplate\name = "ä¼ å•"
 									RemoveItem(Inventory(i))
 									Exit
 								EndIf
@@ -7754,10 +7754,10 @@ Function UpdateEvents()
 				;e\EventState = A variable to determine the "nostalgia" items
 				;- 0.0 = No nostalgia item
 				;- 1.0 = Lost key
-				;- 2.0 = ´¦·£ÌıÖ¤»á¼ÇÂ¼DH-S-4137-17092
-				;- 3.0 = Ó²±Ò
-				;- 4.0 = µçÓ°Æ±
-				;- 5.0 = ÆÆ¾ÉµÄÉí·İÖ¤
+				;- 2.0 = å¤„ç½šå¬è¯ä¼šè®°å½•DH-S-4137-17092
+				;- 3.0 = ç¡¬å¸
+				;- 4.0 = ç”µå½±ç¥¨
+				;- 5.0 = ç ´æ—§çš„èº«ä»½è¯
 				;e\EventState2 = Defining which slot from the Inventory should be picked
 				;e\EventState3 = A check for if a item should be removed
 				;- 0.0 = no item "trade" will happen
@@ -7817,15 +7817,15 @@ Function UpdateEvents()
 									Local itemName$ = ""
 									Select (e\EventState)
 										Case 1
-											itemName = "¶ªÊ§µÄÔ¿³×"
+											itemName = "ä¸¢å¤±çš„é’¥åŒ™"
 										Case 2
-											itemName = "´¦·£ÌıÖ¤»á¼ÇÂ¼DH-S-4137-17092"
+											itemName = "å¤„ç½šå¬è¯ä¼šè®°å½•DH-S-4137-17092"
 										Case 3
-											itemName = "Ó²±Ò"
+											itemName = "ç¡¬å¸"
 										Case 4
-											itemName = "µçÓ°Æ±"
+											itemName = "ç”µå½±ç¥¨"
 										Case 5
-											itemName = "ÆÆ¾ÉµÄÉí·İÖ¤"
+											itemName = "ç ´æ—§çš„èº«ä»½è¯"
 									End Select
 									
 									Local itemExists% = False
@@ -7969,15 +7969,15 @@ Function UpdateEvents()
 						EndIf
 						Select e\EventState
 							Case 1
-								it = CreateItem("¶ªÊ§µÄÔ¿³×","key",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
+								it = CreateItem("ä¸¢å¤±çš„é’¥åŒ™","key",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
 							Case 2
-								it = CreateItem("´¦·£ÌıÖ¤»á¼ÇÂ¼DH-S-4137-17092","oldpaper",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
+								it = CreateItem("å¤„ç½šå¬è¯ä¼šè®°å½•DH-S-4137-17092","oldpaper",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
 							Case 3
-								it = CreateItem("Ó²±Ò","coin",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
+								it = CreateItem("ç¡¬å¸","coin",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
 							Case 4
-								it = CreateItem("µçÓ°Æ±","ticket",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
+								it = CreateItem("ç”µå½±ç¥¨","ticket",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
 							Case 5
-								it = CreateItem("ÆÆ¾ÉµÄÉí·İÖ¤","badge",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
+								it = CreateItem("ç ´æ—§çš„èº«ä»½è¯","badge",EntityX(pp,True),EntityY(pp,True),EntityZ(pp,True))
 						End Select
 						EntityType(it\collider, HIT_ITEM)
 						GiveAchievement(Achv1162)

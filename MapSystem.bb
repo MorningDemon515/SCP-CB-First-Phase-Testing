@@ -378,7 +378,7 @@ Function LoadRMesh(file$,rt.RoomTemplates)
 	ElseIf isRMesh$="RoomMesh.HasTriggerBox"
 		hasTriggerBox% = True
 	Else
-		RuntimeError "°∞"+file+"°±≤ª «RMESHŒƒº˛("+isRMesh+")"
+		RuntimeError "‚Äú"+file+"‚Äù‰∏çÊòØRMESHÊñá‰ª∂("+isRMesh+")"
 	EndIf
 	
 	file=StripFilename(file)
@@ -1190,7 +1190,7 @@ Function PlaceForest(fr.Forest,x#,y#,z#,r.Rooms)
 					Local it.Items = Null
 					If (ty Mod 3)=2 And itemPlaced[Floor(ty/3)]=False Then
 						itemPlaced[Floor(ty/3)]=True
-						it.Items = CreateItem("»’÷æ#"+Int(Floor(ty/3)+1), "paper", 0,0.5,0)
+						it.Items = CreateItem("Êó•Âøó#"+Int(Floor(ty/3)+1), "paper", 0,0.5,0)
 						EntityType(it\collider, HIT_ITEM)
 						EntityParent(it\collider, tile_entity)
 					EndIf
@@ -1411,7 +1411,7 @@ Function PlaceForest_MapCreator(fr.Forest,x#,y#,z#,r.Rooms)
 					Local it.Items = Null
 					If (ty Mod 3)=2 And itemPlaced[Floor(ty/3)]=False Then
 						itemPlaced[Floor(ty/3)]=True
-						it.Items = CreateItem("»’÷æ#"+Int(Floor(ty/3)+1), "paper", 0,0.5,0)
+						it.Items = CreateItem("Êó•Âøó#"+Int(Floor(ty/3)+1), "paper", 0,0.5,0)
 						EntityType(it\collider, HIT_ITEM)
 						EntityParent(it\collider, tile_entity)
 					EndIf
@@ -1910,7 +1910,7 @@ Function PlaceGrid_MapCreator(r.Rooms)
 						it = CreateItem("SCP-500-01","scp500",r\x+x*2.0+(Cos(EntityYaw(tile_entity,True))*(-208.0)*RoomScale)-(Sin(EntityYaw(tile_entity,True))*1226.0*RoomScale),8.0+(80.0*RoomScale),r\z+y*2.0+(Sin(EntityYaw(tile_entity,True))*(-208.0)*RoomScale)+(Cos(EntityYaw(tile_entity,True))*1226.0*RoomScale))
 						EntityType (it\collider, HIT_ITEM)
 						
-						it = CreateItem("“π ”“«", "nvgoggles",r\x+x*2.0-(Sin(EntityYaw(tile_entity,True))*504.0*RoomScale)+(Cos(EntityYaw(tile_entity,True))*16.0*RoomScale), 8.0+(80.0*RoomScale), r\z+y*2.0+(Cos(EntityYaw(tile_entity,True))*504.0*RoomScale)+(Sin(EntityYaw(tile_entity,True))*16.0*RoomScale))
+						it = CreateItem("Â§úËßÜ‰ª™", "nvgoggles",r\x+x*2.0-(Sin(EntityYaw(tile_entity,True))*504.0*RoomScale)+(Cos(EntityYaw(tile_entity,True))*16.0*RoomScale), 8.0+(80.0*RoomScale), r\z+y*2.0+(Cos(EntityYaw(tile_entity,True))*504.0*RoomScale)+(Sin(EntityYaw(tile_entity,True))*16.0*RoomScale))
 						EntityType (it\collider, HIT_ITEM)
 				End Select
 				
@@ -2183,11 +2183,11 @@ Function FillRoom(r.Rooms)
 ;			
 ;			EntityParent dp\cam,fr\Forest_Pivot
 			
-			it = CreateItem("SCP-860-1Œƒµµ", "paper", r\x + 672.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 335.0 * RoomScale)
+			it = CreateItem("SCP-860-1ÊñáÊ°£", "paper", r\x + 672.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 335.0 * RoomScale)
 			RotateEntity it\collider, 0, r\angle+10, 0
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("SCP-860Œƒµµ", "paper", r\x + 1152.0 * RoomScale, r\y + 176.0 * RoomScale, r\z - 384.0 * RoomScale)
+			it = CreateItem("SCP-860ÊñáÊ°£", "paper", r\x + 1152.0 * RoomScale, r\y + 176.0 * RoomScale, r\z - 384.0 * RoomScale)
 			RotateEntity it\collider, 0, r\angle+170, 0
 			EntityParent(it\collider, r\obj)
 			;[End Block]
@@ -2526,11 +2526,11 @@ Function FillRoom(r.Rooms)
 			;[End Block]
 		Case "roompj"
 			;[Block]
-			it = CreateItem("SCP-372Œƒµµ", "paper", r\x + 800.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 1108.0 * RoomScale)
+			it = CreateItem("SCP-372ÊñáÊ°£", "paper", r\x + 800.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 1108.0 * RoomScale)
 			RotateEntity it\collider, 0, r\angle, 0
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("∂‘Ω≤ª˙", "radio", r\x + 800.0 * RoomScale, r\y + 112.0 * RoomScale, r\z + 944.0 * RoomScale)
+			it = CreateItem("ÂØπËÆ≤Êú∫", "radio", r\x + 800.0 * RoomScale, r\y + 112.0 * RoomScale, r\z + 944.0 * RoomScale)
 			it\state = 80.0
 			EntityParent(it\collider, r\obj)
 			
@@ -2724,10 +2724,10 @@ Function FillRoom(r.Rooms)
 			;FreeEntity(d\buttons[0]) : d\buttons[0]=0
 			;FreeEntity(d\buttons[1]) : d\buttons[1]=0
 			
-			it = CreateItem("∂˛º∂‘ø≥◊ø®", "key2", r\x - 914.0 * RoomScale, r\y + 137.0 * RoomScale, r\z + 61.0 * RoomScale)
+			it = CreateItem("‰∫åÁ∫ßÈí•ÂåôÂç°", "key2", r\x - 914.0 * RoomScale, r\y + 137.0 * RoomScale, r\z + 61.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("S-NAV 300µº∫Ω“«", "nav", r\x - 312.0 * RoomScale, r\y + 264.0 * RoomScale, r\z + 176.0 * RoomScale)
+			it = CreateItem("S-NAV 300ÂØºËà™‰ª™", "nav", r\x - 312.0 * RoomScale, r\y + 264.0 * RoomScale, r\z + 176.0 * RoomScale)
 			it\state = 20 : EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "room3tunnel"
@@ -2767,17 +2767,17 @@ Function FillRoom(r.Rooms)
 				r\RoomDoors[i]\AutoClose = False : r\RoomDoors[i]\open = False				
 			Next
 			
-			it = CreateItem("SCP-939Œƒµµ", "paper", r\x + 352.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 256.0 * RoomScale)
+			it = CreateItem("SCP-939ÊñáÊ°£", "paper", r\x + 352.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 256.0 * RoomScale)
 			RotateEntity it\collider, 0, r\angle+4, 0
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("9VµÁ≥ÿ", "bat", r\x + 352.0 * RoomScale, r\y + 112.0 * RoomScale, r\z + 448.0 * RoomScale)
+			it = CreateItem("9VÁîµÊ±†", "bat", r\x + 352.0 * RoomScale, r\y + 112.0 * RoomScale, r\z + 448.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("ø’±≠◊”", "emptycup", r\x-672*RoomScale, 240*RoomScale, r\z+288.0*RoomScale)
+			it = CreateItem("Á©∫ÊùØÂ≠ê", "emptycup", r\x-672*RoomScale, 240*RoomScale, r\z+288.0*RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("“ªº∂‘ø≥◊ø®", "key1", r\x - 672.0 * RoomScale, r\y + 240.0 * RoomScale, r\z + 224.0 * RoomScale)
+			it = CreateItem("‰∏ÄÁ∫ßÈí•ÂåôÂç°", "key1", r\x - 672.0 * RoomScale, r\y + 240.0 * RoomScale, r\z + 224.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "room2sroom"
@@ -2785,20 +2785,20 @@ Function FillRoom(r.Rooms)
 			d = CreateDoor(r\zone, r\x + 1440.0 * RoomScale, 224.0 * RoomScale, r\z + 32.0 * RoomScale, 90, r, False, False, 4)
 			d\AutoClose = False : d\open = False
 			
-			it = CreateItem("“ª–©SCP-420-J", "420", r\x + 1776.0 * RoomScale, r\y + 400.0 * RoomScale, r\z + 427.0 * RoomScale)
+			it = CreateItem("‰∏Ä‰∫õSCP-420-J", "420", r\x + 1776.0 * RoomScale, r\y + 400.0 * RoomScale, r\z + 427.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("“ª–©SCP-420-J", "420", r\x + 1808.0 * RoomScale, r\y + 400.0 * RoomScale, r\z + 435.0 * RoomScale)
+			it = CreateItem("‰∏Ä‰∫õSCP-420-J", "420", r\x + 1808.0 * RoomScale, r\y + 400.0 * RoomScale, r\z + 435.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("ŒÂº∂‘ø≥◊ø®", "key5", r\x + 2232.0 * RoomScale, r\y + 392.0 * RoomScale, r\z + 387.0 * RoomScale)
+			it = CreateItem("‰∫îÁ∫ßÈí•ÂåôÂç°", "key5", r\x + 2232.0 * RoomScale, r\y + 392.0 * RoomScale, r\z + 387.0 * RoomScale)
 			RotateEntity it\collider, 0, r\angle, 0, True
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("∫À…Ë±∏Œƒµµ", "paper", r\x + 2248.0 * RoomScale, r\y + 440.0 * RoomScale, r\z + 372.0 * RoomScale)
+			it = CreateItem("Ê†∏ËÆæÂ§áÊñáÊ°£", "paper", r\x + 2248.0 * RoomScale, r\y + 440.0 * RoomScale, r\z + 372.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("∂‘Ω≤ª˙", "radio", r\x + 2240.0 * RoomScale, r\y + 320.0 * RoomScale, r\z + 128.0 * RoomScale)
+			it = CreateItem("ÂØπËÆ≤Êú∫", "radio", r\x + 2240.0 * RoomScale, r\y + 320.0 * RoomScale, r\z + 128.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "room2shaft"
@@ -2811,18 +2811,18 @@ Function FillRoom(r.Rooms)
 			d = CreateDoor(r\zone, r\x + 256.0 * RoomScale, r\y, r\z + 744.0 * RoomScale, 90, r, False, False, 2)
 			d\AutoClose = False : d\open = False
 			
-			it = CreateItem("»˝º∂‘ø≥◊ø®", "key3", r\x + 1119.0 * RoomScale, r\y + 233.0 * RoomScale, r\z + 494.0 * RoomScale)
+			it = CreateItem("‰∏âÁ∫ßÈí•ÂåôÂç°", "key3", r\x + 1119.0 * RoomScale, r\y + 233.0 * RoomScale, r\z + 494.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("º±æ»œ‰", "firstaid", r\x + 1035.0 * RoomScale, r\y + 145.0 * RoomScale, r\z + 56.0 * RoomScale)
+			it = CreateItem("ÊÄ•ÊïëÁÆ±", "firstaid", r\x + 1035.0 * RoomScale, r\y + 145.0 * RoomScale, r\z + 56.0 * RoomScale)
 			EntityParent(it\collider, r\obj) : RotateEntity(it\collider, 0, 90, 0)
 			
-			it = CreateItem("9VµÁ≥ÿ", "bat", r\x + 1930.0 * RoomScale, r\y + 97.0 * RoomScale, r\z + 256.0 * RoomScale)
+			it = CreateItem("9VÁîµÊ±†", "bat", r\x + 1930.0 * RoomScale, r\y + 97.0 * RoomScale, r\z + 256.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
-			it = CreateItem("9VµÁ≥ÿ", "bat", r\x + 1061.0 * RoomScale, r\y + 161.0 * RoomScale, r\z + 494.0 * RoomScale)
+			it = CreateItem("9VÁîµÊ±†", "bat", r\x + 1061.0 * RoomScale, r\y + 161.0 * RoomScale, r\z + 494.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("ReVision—€“©ÀÆ", "eyedrops", r\x + 1930.0*RoomScale, r\y + 225.0 * RoomScale, r\z + 128.0*RoomScale)
+			it = CreateItem("ReVisionÁúºËçØÊ∞¥", "eyedrops", r\x + 1930.0*RoomScale, r\y + 225.0 * RoomScale, r\z + 128.0*RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			;Player's position after leaving the pocket dimension
@@ -2857,16 +2857,16 @@ Function FillRoom(r.Rooms)
 			PositionEntity(d\buttons[1], r\x + 232.0 * RoomScale, EntityY(d\buttons[1],True), EntityZ(d\buttons[1],True),True)		
 			d\AutoClose = False : d\open = False	
 			
-			it = CreateItem("ƒ—“‘¿ÌΩ‚µƒ± º«", "paper", r\x + 736.0 * RoomScale, r\y + 224.0 * RoomScale, r\z + 544.0 * RoomScale)
+			it = CreateItem("Èöæ‰ª•ÁêÜËß£ÁöÑÁ¨îËÆ∞", "paper", r\x + 736.0 * RoomScale, r\y + 224.0 * RoomScale, r\z + 544.0 * RoomScale)
 			EntityParent(it\collider, r\obj)	
-			it = CreateItem("∑¿µØ±≥–ƒ", "vest", r\x + 608.0 * RoomScale, r\y + 112.0 * RoomScale, r\z + 32.0 * RoomScale)
+			it = CreateItem("Èò≤ÂºπËÉåÂøÉ", "vest", r\x + 608.0 * RoomScale, r\y + 112.0 * RoomScale, r\z + 32.0 * RoomScale)
 			EntityParent(it\collider, r\obj) : RotateEntity(it\collider, 0, 90, 0)
 			
-			it = CreateItem(" ¬π ±®∏ÊSCP-106-0204", "paper", r\x + 704.0 * RoomScale, r\y + 183.0 * RoomScale, r\z - 576.0 * RoomScale)
+			it = CreateItem("‰∫ãÊïÖÊä•ÂëäSCP-106-0204", "paper", r\x + 704.0 * RoomScale, r\y + 183.0 * RoomScale, r\z - 576.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
-			it = CreateItem("“ª“≥»’º«", "paper", r\x + 912 * RoomScale, r\y + 176.0 * RoomScale, r\z - 160.0 * RoomScale)
+			it = CreateItem("‰∏ÄÈ°µÊó•ËÆ∞", "paper", r\x + 912 * RoomScale, r\y + 176.0 * RoomScale, r\z - 160.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
-			it = CreateItem("º±æ»œ‰", "firstaid", r\x + 912.0 * RoomScale, r\y + 112.0 * RoomScale, r\z - 336.0 * RoomScale)
+			it = CreateItem("ÊÄ•ÊïëÁÆ±", "firstaid", r\x + 912.0 * RoomScale, r\y + 112.0 * RoomScale, r\z - 336.0 * RoomScale)
 			EntityParent(it\collider, r\obj) : RotateEntity(it\collider, 0, 90, 0)
 			;[End Block]
 		Case "room2poffices2"
@@ -2892,13 +2892,13 @@ Function FillRoom(r.Rooms)
 			r\Objects[0] = CreatePivot(r\obj)
 			PositionEntity(r\Objects[0], r\x - 808.0 * RoomScale, 1.0, r\z - 72.0 * RoomScale, True)
 			
-			it = CreateItem("…’ΩπµƒL≤© øµƒ± º«", "paper", r\x - 688.0 * RoomScale, 1.0, r\z - 16.0 * RoomScale)
+			it = CreateItem("ÁÉßÁÑ¶ÁöÑLÂçöÂ£´ÁöÑÁ¨îËÆ∞", "paper", r\x - 688.0 * RoomScale, 1.0, r\z - 16.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("…’ΩπµƒL≤© ø µƒ± º«", "paper", r\x - 808.0 * RoomScale, 1.0, r\z - 72.0 * RoomScale)
+			it = CreateItem("ÁÉßÁÑ¶ÁöÑLÂçöÂ£´ ÁöÑÁ¨îËÆ∞", "paper", r\x - 808.0 * RoomScale, 1.0, r\z - 72.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("ƒ£øÈªØ…Ë ©œÓƒøŒƒµµ", "paper", r\x + 622.0*RoomScale, r\y + 125.0*RoomScale, r\z - 73.0*RoomScale)
+			it = CreateItem("Ê®°ÂùóÂåñËÆæÊñΩÈ°πÁõÆÊñáÊ°£", "paper", r\x + 622.0*RoomScale, r\y + 125.0*RoomScale, r\z - 73.0*RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "room2elevator"
@@ -2919,22 +2919,22 @@ Function FillRoom(r.Rooms)
 			;scp-294
 			r\Objects[0] = CreatePivot(r\obj)
 			PositionEntity(r\Objects[0], r\x+1847.0*RoomScale, -240.0*RoomScale, r\z-321*RoomScale, True)
-			;"spawnpoint" for the ±≠◊”s
+			;"spawnpoint" for the ÊùØÂ≠ês
 			r\Objects[1] = CreatePivot(r\obj)
 			PositionEntity(r\Objects[1], r\x+1780.0*RoomScale, -248.0*RoomScale, r\z-276*RoomScale, True)
 			
-			it = CreateItem("±≠◊”", "±≠◊”", r\x-508.0*RoomScale, -187*RoomScale, r\z+284.0*RoomScale, 240,175,70)
+			it = CreateItem("ÊùØÂ≠ê", "ÊùØÂ≠ê", r\x-508.0*RoomScale, -187*RoomScale, r\z+284.0*RoomScale, 240,175,70)
 			EntityParent(it\collider, r\obj) : it\name = "Cup of Orange Juice"
 			
-			it = CreateItem("±≠◊”", "±≠◊”", r\x+1412 * RoomScale, -187*RoomScale, r\z-716.0 * RoomScale, 87,62,45)
+			it = CreateItem("ÊùØÂ≠ê", "ÊùØÂ≠ê", r\x+1412 * RoomScale, -187*RoomScale, r\z-716.0 * RoomScale, 87,62,45)
 			EntityParent(it\collider, r\obj) : it\name = "Cup of Coffee"
 			
-			it = CreateItem("ø’±≠◊”", "emptycup", r\x-540*RoomScale, -187*RoomScale, r\z+124.0*RoomScale)
+			it = CreateItem("Á©∫ÊùØÂ≠ê", "emptycup", r\x-540*RoomScale, -187*RoomScale, r\z+124.0*RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("”≤±“", "25ct", r\x-447.0*RoomScale, r\y-334.0*RoomScale, r\z+36.0*RoomScale)
+			it = CreateItem("Á°¨Â∏Å", "25ct", r\x-447.0*RoomScale, r\y-334.0*RoomScale, r\z+36.0*RoomScale)
 			EntityParent(it\collider, r\obj)
-			it = CreateItem("”≤±“", "25ct", r\x+1409.0*RoomScale, r\y-334.0*RoomScale, r\z-732.0*RoomScale)
+			it = CreateItem("Á°¨Â∏Å", "25ct", r\x+1409.0*RoomScale, r\y-334.0*RoomScale, r\z-732.0*RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "room2nuke"
@@ -2986,10 +2986,10 @@ Function FillRoom(r.Rooms)
 				;makecollbox(r\Objects[n * 2 + 1])
 			Next
 			
-			it = CreateItem("∫À…Ë±∏Œƒµµ", "paper", r\x - 768.0 * RoomScale, r\y + 1684.0 * RoomScale, r\z - 768.0 * RoomScale)
+			it = CreateItem("Ê†∏ËÆæÂ§áÊñáÊ°£", "paper", r\x - 768.0 * RoomScale, r\y + 1684.0 * RoomScale, r\z - 768.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("∑¿µØ±≥–ƒ", "vest", r\x - 944.0 * RoomScale, r\y + 1652.0 * RoomScale, r\z - 656.0 * RoomScale)
+			it = CreateItem("Èò≤ÂºπËÉåÂøÉ", "vest", r\x - 944.0 * RoomScale, r\y + 1652.0 * RoomScale, r\z - 656.0 * RoomScale)
 			EntityParent(it\collider, r\obj) : RotateEntity(it\collider, 0, -90, 0)
 			
 			sc.SecurityCams = CreateSecurityCam(r\x+624.0*RoomScale, r\y+1888.0*RoomScale, r\z-312.0*RoomScale, r)
@@ -3040,7 +3040,7 @@ Function FillRoom(r.Rooms)
 			
 			de.Decals = CreateDecal(0, r\x + 64.0 * RoomScale, 0.005, r\z + 144.0 * RoomScale, 90, Rand(360), 0)
 			EntityParent(de\obj, r\obj)
-			it = CreateItem("…’Ωπµƒ± º«", "paper", r\x + 64.0 * RoomScale, r\y +144.0 * RoomScale, r\z - 384.0 * RoomScale)
+			it = CreateItem("ÁÉßÁÑ¶ÁöÑÁ¨îËÆ∞", "paper", r\x + 64.0 * RoomScale, r\y +144.0 * RoomScale, r\z - 384.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "008"
@@ -3108,10 +3108,10 @@ Function FillRoom(r.Rooms)
 			d\AutoClose = False : d\locked = True : r\RoomDoors[2]=d
 			
 			
-			it = CreateItem("∑¿ª§∑˛", "hazmatsuit", r\x - 76.0 * RoomScale, 0.5, r\z - 396.0 * RoomScale)
+			it = CreateItem("Èò≤Êä§Êúç", "hazmatsuit", r\x - 76.0 * RoomScale, 0.5, r\z - 396.0 * RoomScale)
 			EntityParent(it\collider, r\obj) : RotateEntity(it\collider, 0, 90, 0)
 			
-			it = CreateItem("SCP-008Œƒµµ", "paper", r\x - 245.0 * RoomScale, r\y + 192.0 * RoomScale, r\z + 368.0 * RoomScale)
+			it = CreateItem("SCP-008ÊñáÊ°£", "paper", r\x - 245.0 * RoomScale, r\y + 192.0 * RoomScale, r\z + 368.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			;spawnpoint for the scientist used in the "008 zombie scene"
@@ -3197,19 +3197,19 @@ Function FillRoom(r.Rooms)
 			r\Objects[8] = CreatePivot(r\obj)
 			PositionEntity(r\Objects[8], r\x + 176 * RoomScale, 0.5, r\z - 144.0 * RoomScale, True)			
 			
-			it = CreateItem("SCP-035∏Ωº˛", "paper", r\x + 248.0 * RoomScale, r\y + 220.0 * RoomScale, r\z + 576.0 * RoomScale)
+			it = CreateItem("SCP-035ÈôÑ‰ª∂", "paper", r\x + 248.0 * RoomScale, r\y + 220.0 * RoomScale, r\z + 576.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("∂‘Ω≤ª˙", "radio", r\x - 544.0 * RoomScale, 0.5, r\z + 704.0 * RoomScale)
+			it = CreateItem("ÂØπËÆ≤Êú∫", "radio", r\x - 544.0 * RoomScale, 0.5, r\z + 704.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			it = CreateItem("SCP-500-01", "scp500", r\x + 1168*RoomScale, 224*RoomScale, r\z+576*RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("Ω Ù∞Â", "scp148", r\x - 360 * RoomScale, 0.5, r\z + 644 * RoomScale)
+			it = CreateItem("ÈáëÂ±ûÊùø", "scp148", r\x - 360 * RoomScale, 0.5, r\z + 644 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("SCP-035Œƒµµ", "paper", r\x + 1168.0 * RoomScale, 104.0 * RoomScale, r\z + 608.0 * RoomScale)
+			it = CreateItem("SCP-035ÊñáÊ°£", "paper", r\x + 1168.0 * RoomScale, 104.0 * RoomScale, r\z + 608.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "room513"
@@ -3225,10 +3225,10 @@ Function FillRoom(r.Rooms)
 			it = CreateItem("SCP-513", "scp513", r\x - 32.0 * RoomScale, r\y + 196.0 * RoomScale, r\z + 688.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("’¥—™µƒ± º«", "paper", r\x + 736.0 * RoomScale,1.0, r\z + 48.0 * RoomScale)
+			it = CreateItem("Ê≤æË°ÄÁöÑÁ¨îËÆ∞", "paper", r\x + 736.0 * RoomScale,1.0, r\z + 48.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("SCP-513Œƒµµ", "paper", r\x - 480.0 * RoomScale, 104.0*RoomScale, r\z - 176.0 * RoomScale)
+			it = CreateItem("SCP-513ÊñáÊ°£", "paper", r\x - 480.0 * RoomScale, 104.0*RoomScale, r\z - 176.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "room966"
@@ -3257,7 +3257,7 @@ Function FillRoom(r.Rooms)
 			r\Objects[3] = CreatePivot(r\obj)
 			PositionEntity(r\Objects[3], r\x + 320.0 * RoomScale, 0.5, r\z + 704.0 * RoomScale, True)
 			
-			it = CreateItem("“π ”“«", "nvgoggles", r\x + 320.0 * RoomScale, 0.5, r\z + 704.0 * RoomScale)
+			it = CreateItem("Â§úËßÜ‰ª™", "nvgoggles", r\x + 320.0 * RoomScale, 0.5, r\z + 704.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			it\state = 300
 			
@@ -3369,10 +3369,10 @@ Function FillRoom(r.Rooms)
 					z#=2808
 			End Select
 			
-			it.Items = CreateItem("∫⁄…´∂œ ÷", "hand2", r\x + x*RoomScale, -5596.0*RoomScale+1.0, r\z+z*RoomScale)
+			it.Items = CreateItem("ÈªëËâ≤Êñ≠Êâã", "hand2", r\x + x*RoomScale, -5596.0*RoomScale+1.0, r\z+z*RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("“π ”“«", "nvgoggles", r\x + 1936.0 * RoomScale, r\y - 5496.0 * RoomScale, r\z - 944.0 * RoomScale)
+			it = CreateItem("Â§úËßÜ‰ª™", "nvgoggles", r\x + 1936.0 * RoomScale, r\y - 5496.0 * RoomScale, r\z - 944.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			it\state = 450
 			
@@ -3519,13 +3519,13 @@ Function FillRoom(r.Rooms)
 			
 			d.Doors = CreateDoor(0, r\x,0,r\z, 0, r, False, 2, -2)
 			
-			it = CreateItem("SCP-049Œƒµµ", "paper", r\x - 608.0 * RoomScale, r\y - 3332.0 * RoomScale, r\z + 876.0 * RoomScale)
+			it = CreateItem("SCP-049ÊñáÊ°£", "paper", r\x - 608.0 * RoomScale, r\y - 3332.0 * RoomScale, r\z + 876.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("Àƒº∂‘ø≥◊ø®", "key4", r\x - 512.0 * RoomScale, r\y - 3412.0 * RoomScale, r\z + 864.0 * RoomScale)
+			it = CreateItem("ÂõõÁ∫ßÈí•ÂåôÂç°", "key4", r\x - 512.0 * RoomScale, r\y - 3412.0 * RoomScale, r\z + 864.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("º±æ»œ‰", "firstaid", r\x +385.0 * RoomScale, r\y - 3412.0 * RoomScale, r\z + 271.0 * RoomScale)
+			it = CreateItem("ÊÄ•ÊïëÁÆ±", "firstaid", r\x +385.0 * RoomScale, r\y - 3412.0 * RoomScale, r\z + 271.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			d = CreateDoor(r\zone,r\x-272.0*RoomScale,r\y-3552.0*RoomScale,r\z+98.0*RoomScale,90,r,True,True)
@@ -3612,10 +3612,10 @@ Function FillRoom(r.Rooms)
 			PositionEntity(r\Objects[4], r\x - 360 * RoomScale, - 130 * RoomScale, r\z + 456.0 * RoomScale, 0)
 			EntityParent(r\Objects[4], r\Objects[2])
 			
-			it = CreateItem("SCP-012Œƒµµ", "paper", r\x - 56.0 * RoomScale, r\y - 576.0 * RoomScale, r\z - 408.0 * RoomScale)
+			it = CreateItem("SCP-012ÊñáÊ°£", "paper", r\x - 56.0 * RoomScale, r\y - 576.0 * RoomScale, r\z - 408.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it.Items = CreateItem("∂œ ÷", "hand", r\x - 784*RoomScale, -576*RoomScale+0.3, r\z+640*RoomScale)
+			it.Items = CreateItem("Êñ≠Êâã", "hand", r\x - 784*RoomScale, -576*RoomScale+0.3, r\z+640*RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			de.Decals = CreateDecal(3,  r\x - 784*RoomScale, -768*RoomScale+0.01, r\z+640*RoomScale,90,Rnd(360),0)
@@ -3730,18 +3730,18 @@ Function FillRoom(r.Rooms)
 			;[End Block]
 		Case "room3servers"
 			;[Block]
-			it = CreateItem("9VµÁ≥ÿ", "bat", r\x - 132.0 * RoomScale, r\y - 368.0 * RoomScale, r\z - 648.0 * RoomScale)
+			it = CreateItem("9VÁîµÊ±†", "bat", r\x - 132.0 * RoomScale, r\y - 368.0 * RoomScale, r\z - 648.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			If Rand(2) = 1 Then
-				it = CreateItem("9VµÁ≥ÿ", "bat", r\x - 76.0 * RoomScale, r\y - 368.0 * RoomScale, r\z - 648.0 * RoomScale)
+				it = CreateItem("9VÁîµÊ±†", "bat", r\x - 76.0 * RoomScale, r\y - 368.0 * RoomScale, r\z - 648.0 * RoomScale)
 				EntityParent(it\collider, r\obj)
 			EndIf
 			If Rand(2) = 1 Then
-				it = CreateItem("9VµÁ≥ÿ", "bat", r\x - 196.0 * RoomScale, r\y - 368.0 * RoomScale, r\z - 648.0 * RoomScale)
+				it = CreateItem("9VÁîµÊ±†", "bat", r\x - 196.0 * RoomScale, r\y - 368.0 * RoomScale, r\z - 648.0 * RoomScale)
 				EntityParent(it\collider, r\obj)
 			EndIf
 			
-			it = CreateItem("S-NAV 300µº∫Ω“«", "nav", r\x + 124.0 * RoomScale, r\y - 368.0 * RoomScale, r\z - 648.0 * RoomScale)
+			it = CreateItem("S-NAV 300ÂØºËà™‰ª™", "nav", r\x + 124.0 * RoomScale, r\y - 368.0 * RoomScale, r\z - 648.0 * RoomScale)
 			it\state = 20 : EntityParent(it\collider, r\obj)
 			
 			r\Objects[0] = CreatePivot(r\obj)
@@ -3768,11 +3768,11 @@ Function FillRoom(r.Rooms)
 			r\Objects[2] = CreatePivot(r\obj)
 			PositionEntity(r\Objects[2], r\x - 532.0 * RoomScale, -512.0 * RoomScale, r\z - 877.0 * RoomScale, True)	
 			
-			it = CreateItem("SCP-970Œƒµµ", "paper", r\x + 960.0 * RoomScale, r\y - 448.0 * RoomScale, r\z + 251.0 * RoomScale)
+			it = CreateItem("SCP-970ÊñáÊ°£", "paper", r\x + 960.0 * RoomScale, r\y - 448.0 * RoomScale, r\z + 251.0 * RoomScale)
 			RotateEntity it\collider, 0, r\angle, 0
 			EntityParent(it\collider, r\obj)		
 			
-			it = CreateItem("∑¿∂æ√Êæﬂ", "gasmask", r\x + 954.0 * RoomScale, r\y - 504.0 * RoomScale, r\z + 235.0 * RoomScale)
+			it = CreateItem("Èò≤ÊØíÈù¢ÂÖ∑", "gasmask", r\x + 954.0 * RoomScale, r\y - 504.0 * RoomScale, r\z + 235.0 * RoomScale)
 			EntityParent(it\collider, r\obj)		
 			;[End Block]
 		Case "testroom"
@@ -3796,35 +3796,35 @@ Function FillRoom(r.Rooms)
 			
 			CreateDoor(0, r\x - 624.0 * RoomScale, -1280.0 * RoomScale, r\z, 90, r, True)			
 			
-			it = CreateItem("SCP-682Œƒµµ", "paper", r\x + 656.0 * RoomScale, r\y - 1200.0 * RoomScale, r\z - 16.0 * RoomScale)
+			it = CreateItem("SCP-682ÊñáÊ°£", "paper", r\x + 656.0 * RoomScale, r\y - 1200.0 * RoomScale, r\z - 16.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "room2closets"
 			;[Block]
-			it = CreateItem("SCP-1048Œƒµµ", "paper", r\x + 736.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 736.0 * RoomScale)
+			it = CreateItem("SCP-1048ÊñáÊ°£", "paper", r\x + 736.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 736.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("∑¿∂æ√Êæﬂ", "gasmask", r\x + 736.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 544.0 * RoomScale)
+			it = CreateItem("Èò≤ÊØíÈù¢ÂÖ∑", "gasmask", r\x + 736.0 * RoomScale, r\y + 176.0 * RoomScale, r\z + 544.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("9VµÁ≥ÿ", "bat", r\x + 736.0 * RoomScale, r\y + 176.0 * RoomScale, r\z - 448.0 * RoomScale)
+			it = CreateItem("9VÁîµÊ±†", "bat", r\x + 736.0 * RoomScale, r\y + 176.0 * RoomScale, r\z - 448.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			If Rand(2) = 1 Then
-				it = CreateItem("9VµÁ≥ÿ", "bat", r\x + 730.0 * RoomScale, r\y + 176.0 * RoomScale, r\z - 496.0 * RoomScale)
+				it = CreateItem("9VÁîµÊ±†", "bat", r\x + 730.0 * RoomScale, r\y + 176.0 * RoomScale, r\z - 496.0 * RoomScale)
 				EntityParent(it\collider, r\obj)
 			EndIf
 			If Rand(2) = 1 Then
-				it = CreateItem("9VµÁ≥ÿ", "bat", r\x + 740.0 * RoomScale, r\y + 176.0 * RoomScale, r\z - 560.0 * RoomScale)
+				it = CreateItem("9VÁîµÊ±†", "bat", r\x + 740.0 * RoomScale, r\y + 176.0 * RoomScale, r\z - 560.0 * RoomScale)
 				EntityParent(it\collider, r\obj)
 			EndIf
 			
-			it = CreateItem("“ªº∂‘ø≥◊ø®", "key1", r\x + 736.0 * RoomScale, r\y + 240.0 * RoomScale, r\z + 752.0 * RoomScale)
+			it = CreateItem("‰∏ÄÁ∫ßÈí•ÂåôÂç°", "key1", r\x + 736.0 * RoomScale, r\y + 240.0 * RoomScale, r\z + 752.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			Local clipboard.Items = CreateItem("Œƒº˛º–","clipboard",r\x + 736.0 * RoomScale, r\y + 224.0 * RoomScale, r\z -480.0 * RoomScale)
+			Local clipboard.Items = CreateItem("Êñá‰ª∂Â§π","clipboard",r\x + 736.0 * RoomScale, r\y + 224.0 * RoomScale, r\z -480.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem(" ¬π ±®∏ÊSCP-1048-A", "paper",r\x + 736.0 * RoomScale, r\y + 224.0 * RoomScale, r\z -480.0 * RoomScale)
+			it = CreateItem("‰∫ãÊïÖÊä•ÂëäSCP-1048-A", "paper",r\x + 736.0 * RoomScale, r\y + 224.0 * RoomScale, r\z -480.0 * RoomScale)
 			;clipboard\SecondInv[0] = it
 			HideEntity(it\collider)
 			
@@ -3846,16 +3846,16 @@ Function FillRoom(r.Rooms)
 			;[End Block]
 		Case "room2offices"
 			;[Block]
-			it = CreateItem("SCP-106Œƒµµ", "paper", r\x + 404.0 * RoomScale, r\y + 145.0 * RoomScale, r\z + 559.0 * RoomScale)
+			it = CreateItem("SCP-106ÊñáÊ°£", "paper", r\x + 404.0 * RoomScale, r\y + 145.0 * RoomScale, r\z + 559.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("∂˛º∂‘ø≥◊ø®", "key2", r\x - 156.0 * RoomScale, r\y + 151.0 * RoomScale, r\z + 72.0 * RoomScale)
+			it = CreateItem("‰∫åÁ∫ßÈí•ÂåôÂç°", "key2", r\x - 156.0 * RoomScale, r\y + 151.0 * RoomScale, r\z + 72.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("S-NAV 300µº∫Ω“«", "nav", r\x + 305.0 * RoomScale, r\y + 153.0 * RoomScale, r\z + 944.0 * RoomScale)
+			it = CreateItem("S-NAV 300ÂØºËà™‰ª™", "nav", r\x + 305.0 * RoomScale, r\y + 153.0 * RoomScale, r\z + 944.0 * RoomScale)
 			it\state = 20 : EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("Õ®÷™", "paper", r\x -137.0 * RoomScale, r\y + 153.0 * RoomScale, r\z + 464.0 * RoomScale)
+			it = CreateItem("ÈÄöÁü•", "paper", r\x -137.0 * RoomScale, r\y + 153.0 * RoomScale, r\z + 464.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			w.waypoints = CreateWaypoint(r\x - 32.0 * RoomScale, r\y + 66.0 * RoomScale, r\z + 288.0 * RoomScale, Null, r)
@@ -3865,19 +3865,19 @@ Function FillRoom(r.Rooms)
 			;[End Block]
 		Case "room2offices2"
 			;[Block]
-			it = CreateItem("“ªº∂‘ø≥◊ø®", "key1", r\x - 368.0 * RoomScale, r\y - 48.0 * RoomScale, r\z + 80.0 * RoomScale)
+			it = CreateItem("‰∏ÄÁ∫ßÈí•ÂåôÂç°", "key1", r\x - 368.0 * RoomScale, r\y - 48.0 * RoomScale, r\z + 80.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("SCP-895Œƒµµ", "paper", r\x - 800.0 * RoomScale, r\y - 48.0 * RoomScale, r\z + 368.0 * RoomScale)
+			it = CreateItem("SCP-895ÊñáÊ°£", "paper", r\x - 800.0 * RoomScale, r\y - 48.0 * RoomScale, r\z + 368.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			If Rand(2) = 1 Then
-				it = CreateItem("SCP-860Œƒµµ", "paper", r\x - 800.0 * RoomScale, r\y - 48.0 * RoomScale, r\z - 464.0 * RoomScale)
+				it = CreateItem("SCP-860ÊñáÊ°£", "paper", r\x - 800.0 * RoomScale, r\y - 48.0 * RoomScale, r\z - 464.0 * RoomScale)
 			Else
-				it = CreateItem("SCP-093ªÿ ’◊ ¡œ", "paper", r\x - 800.0 * RoomScale, r\y - 48.0 * RoomScale, r\z - 464.0 * RoomScale)
+				it = CreateItem("SCP-093ÂõûÊî∂ËµÑÊñô", "paper", r\x - 800.0 * RoomScale, r\y - 48.0 * RoomScale, r\z - 464.0 * RoomScale)
 			EndIf
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("S-NAV 300µº∫Ω“«", "nav", r\x - 336.0 * RoomScale, r\y - 48.0 * RoomScale, r\z - 480.0 * RoomScale)
+			it = CreateItem("S-NAV 300ÂØºËà™‰ª™", "nav", r\x - 336.0 * RoomScale, r\y - 48.0 * RoomScale, r\z - 480.0 * RoomScale)
 			it\state = 28 : EntityParent(it\collider, r\obj)		
 			
 			r\Objects[0] = LoadMesh_Strict("GFX\npcs\duck_low_res.b3d")
@@ -3900,35 +3900,35 @@ Function FillRoom(r.Rooms)
 		Case "room2offices3"
 			;[Block]
 			If Rand(2)=1 Then 
-				it = CreateItem("ª˙∂ØÃÿ«≤∂”Œƒµµ", "paper", r\x + 744.0 * RoomScale, r\y +240.0 * RoomScale, r\z + 944.0 * RoomScale)
+				it = CreateItem("Êú∫Âä®ÁâπÈÅ£ÈòüÊñáÊ°£", "paper", r\x + 744.0 * RoomScale, r\y +240.0 * RoomScale, r\z + 944.0 * RoomScale)
 				EntityParent(it\collider, r\obj)	
 			Else
-				it = CreateItem("∞≤±£µ»º∂Œƒµµ", "paper", r\x + 680.0 * RoomScale, r\y +240.0 * RoomScale, r\z + 944.0 * RoomScale)
+				it = CreateItem("ÂÆâ‰øùÁ≠âÁ∫ßÊñáÊ°£", "paper", r\x + 680.0 * RoomScale, r\y +240.0 * RoomScale, r\z + 944.0 * RoomScale)
 				EntityParent(it\collider, r\obj)			
 			EndIf
 			
-			it = CreateItem("œÓƒøµ»º∂Œƒµµ", "paper", r\x + 160.0 * RoomScale, r\y +240.0 * RoomScale, r\z + 568.0 * RoomScale)
+			it = CreateItem("È°πÁõÆÁ≠âÁ∫ßÊñáÊ°£", "paper", r\x + 160.0 * RoomScale, r\y +240.0 * RoomScale, r\z + 568.0 * RoomScale)
 			EntityParent(it\collider, r\obj)	
 			
-			it = CreateItem("Œƒµµ", "paper", r\x -1440.0 * RoomScale, r\y +624.0 * RoomScale, r\z + 152.0 * RoomScale)
+			it = CreateItem("ÊñáÊ°£", "paper", r\x -1440.0 * RoomScale, r\y +624.0 * RoomScale, r\z + 152.0 * RoomScale)
 			EntityParent(it\collider, r\obj)	
 			
-			it = CreateItem("∂‘Ω≤ª˙", "radio", r\x - 1184.0 * RoomScale, r\y + 480.0 * RoomScale, r\z - 800.0 * RoomScale)
+			it = CreateItem("ÂØπËÆ≤Êú∫", "radio", r\x - 1184.0 * RoomScale, r\y + 480.0 * RoomScale, r\z - 800.0 * RoomScale)
 			EntityParent(it\collider, r\obj)				
 			
 			For i = 0 To Rand(0,1)
-				it = CreateItem("ReVision—€“©ÀÆ", "eyedrops", r\x - 1529.0*RoomScale, r\y + 563.0 * RoomScale, r\z - 572.0*RoomScale + i*0.05)
+				it = CreateItem("ReVisionÁúºËçØÊ∞¥", "eyedrops", r\x - 1529.0*RoomScale, r\y + 563.0 * RoomScale, r\z - 572.0*RoomScale + i*0.05)
 				EntityParent(it\collider, r\obj)				
 			Next
 			
-			it = CreateItem("9VµÁ≥ÿ", "bat", r\x - 1545.0 * RoomScale, r\y + 603.0 * RoomScale, r\z - 372.0 * RoomScale)
+			it = CreateItem("9VÁîµÊ±†", "bat", r\x - 1545.0 * RoomScale, r\y + 603.0 * RoomScale, r\z - 372.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			If Rand(2) = 1 Then
-				it = CreateItem("9VµÁ≥ÿ", "bat", r\x - 1540.0 * RoomScale, r\y + 603.0 * RoomScale, r\z - 340.0 * RoomScale)
+				it = CreateItem("9VÁîµÊ±†", "bat", r\x - 1540.0 * RoomScale, r\y + 603.0 * RoomScale, r\z - 340.0 * RoomScale)
 				EntityParent(it\collider, r\obj)
 			EndIf
 			If Rand(2) = 1 Then
-				it = CreateItem("9VµÁ≥ÿ", "bat", r\x - 1529.0 * RoomScale, r\y + 603.0 * RoomScale, r\z - 308.0 * RoomScale)
+				it = CreateItem("9VÁîµÊ±†", "bat", r\x - 1529.0 * RoomScale, r\y + 603.0 * RoomScale, r\z - 308.0 * RoomScale)
 				EntityParent(it\collider, r\obj)
 			EndIf
 			
@@ -4073,10 +4073,10 @@ Function FillRoom(r.Rooms)
             TurnEntity(sc\CameraObj, 30, 0, 0)
             EntityParent(sc\obj, r\obj)
 			
-			it = CreateItem("SCP-714Œƒµµ", "paper", r\x - 728.0 * RoomScale, r\y + 288.0 * RoomScale, r\z - 360.0 * RoomScale)
+			it = CreateItem("SCP-714ÊñáÊ°£", "paper", r\x - 728.0 * RoomScale, r\y + 288.0 * RoomScale, r\z - 360.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("SCP-427Œƒµµ", "paper", r\x - 608.0 * RoomScale, r\y + 66.0 * RoomScale, r\z + 636.0 * RoomScale)
+			it = CreateItem("SCP-427ÊñáÊ°£", "paper", r\x - 608.0 * RoomScale, r\y + 66.0 * RoomScale, r\z + 636.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			Local dx#,dy#
@@ -4231,13 +4231,13 @@ Function FillRoom(r.Rooms)
 			PositionEntity(r\Objects[0], r\x, -1320.0 * RoomScale, r\z + 2304.0 * RoomScale)
 			EntityParent(r\Objects[0], r\obj)
 			
-			it = CreateItem("SCP-895Œƒµµ", "paper", r\x - 688.0 * RoomScale, r\y + 133.0 * RoomScale, r\z - 304.0 * RoomScale)
+			it = CreateItem("SCP-895ÊñáÊ°£", "paper", r\x - 688.0 * RoomScale, r\y + 133.0 * RoomScale, r\z - 304.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("»˝º∂‘ø≥◊ø®", "key3", r\x + 240.0 * RoomScale, r\y -1456.0 * RoomScale, r\z + 2064.0 * RoomScale)
+			it = CreateItem("‰∏âÁ∫ßÈí•ÂåôÂç°", "key3", r\x + 240.0 * RoomScale, r\y -1456.0 * RoomScale, r\z + 2064.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("“π ”“«", "nvgoggles", r\x + 280.0 * RoomScale, r\y -1456.0 * RoomScale, r\z + 2164.0 * RoomScale)
+			it = CreateItem("Â§úËßÜ‰ª™", "nvgoggles", r\x + 280.0 * RoomScale, r\y -1456.0 * RoomScale, r\z + 2164.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			it\state = 400
 			
@@ -4370,13 +4370,13 @@ Function FillRoom(r.Rooms)
 			EntityParent(r\Objects[2], r\obj)
 			EntityParent(r\Objects[3], r\obj)
 			
-			it = CreateItem("∏Ωº˛£∫ 5/14≤‚ ‘»’÷æ", "paper", r\x +954.0 * RoomScale, r\y +228.0 * RoomScale, r\z + 127.0 * RoomScale)
+			it = CreateItem("ÈôÑ‰ª∂Ôºö 5/14ÊµãËØïÊó•Âøó", "paper", r\x +954.0 * RoomScale, r\y +228.0 * RoomScale, r\z + 127.0 * RoomScale)
 			EntityParent(it\collider, r\obj)	
 			
-			it = CreateItem("º±æ»œ‰", "firstaid", r\x + 960.0 * RoomScale, r\y + 112.0 * RoomScale, r\z - 40.0 * RoomScale)
+			it = CreateItem("ÊÄ•ÊïëÁÆ±", "firstaid", r\x + 960.0 * RoomScale, r\y + 112.0 * RoomScale, r\z - 40.0 * RoomScale)
 			EntityParent(it\collider, r\obj) : RotateEntity(it\collider, 0, 90, 0)
 			
-			it = CreateItem("L≤© øµƒ± º«", "paper", r\x - 928.0 * RoomScale, 160.0 * RoomScale, r\z - 160.0 * RoomScale)
+			it = CreateItem("LÂçöÂ£´ÁöÑÁ¨îËÆ∞", "paper", r\x - 928.0 * RoomScale, 160.0 * RoomScale, r\z - 160.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "173"
@@ -4488,7 +4488,7 @@ Function FillRoom(r.Rooms)
 				Next	
 			Next
 			
-			CreateItem("Dº∂»À‘±≈‡—µ¥´µ•", "paper", r\x-(2914+1024)*RoomScale, 170.0*RoomScale, r\z+40*RoomScale)
+			CreateItem("DÁ∫ß‰∫∫ÂëòÂüπËÆ≠‰º†Âçï", "paper", r\x-(2914+1024)*RoomScale, 170.0*RoomScale, r\z+40*RoomScale)
 			
 			sc.SecurityCams = CreateSecurityCam(r\x - 4048.0 * RoomScale, r\y - 32.0 * RoomScale, r\z - 1232.0 * RoomScale, r, True)
 			sc\angle = 270
@@ -4512,7 +4512,7 @@ Function FillRoom(r.Rooms)
 			d = CreateDoor(r\zone, r\x + 64.0 * RoomScale, 0.0, r\z + 368.0 * RoomScale, 180, r, False, False, 2)
 			d\AutoClose = False : d\open = False
 			
-			it = CreateItem("Danielµƒ±„Ãı", "paper", r\x-400.0*RoomScale,1040.0*RoomScale,r\z+115.0*RoomScale)
+			it = CreateItem("DanielÁöÑ‰æøÊù°", "paper", r\x-400.0*RoomScale,1040.0*RoomScale,r\z+115.0*RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			For n% = 0 To 2
@@ -4541,13 +4541,13 @@ Function FillRoom(r.Rooms)
 			;[End Block]
 		Case "room106"
 			;[Block]
-			it = CreateItem("ŒÂº∂‘ø≥◊ø®", "key5", r\x - 752.0 * RoomScale, r\y - 592 * RoomScale, r\z + 3026.0 * RoomScale)
+			it = CreateItem("‰∫îÁ∫ßÈí•ÂåôÂç°", "key5", r\x - 752.0 * RoomScale, r\y - 592 * RoomScale, r\z + 3026.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("Allok≤© øµƒ±„Ãı", "paper", r\x - 416.0 * RoomScale, r\y - 576 * RoomScale, r\z + 2492.0 * RoomScale)
+			it = CreateItem("AllokÂçöÂ£´ÁöÑ‰æøÊù°", "paper", r\x - 416.0 * RoomScale, r\y - 576 * RoomScale, r\z + 2492.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("’Ÿªÿ–≠“ÈRP-106-N", "paper", r\x + 268.0 * RoomScale, r\y - 576 * RoomScale, r\z + 2593.0 * RoomScale)
+			it = CreateItem("Âè¨ÂõûÂçèËÆÆRP-106-N", "paper", r\x + 268.0 * RoomScale, r\y - 576 * RoomScale, r\z + 2593.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			d = CreateDoor(r\zone, r\x - 968.0 * RoomScale, -764.0 * RoomScale, r\z + 1392.0 * RoomScale, 0, r, False, False, 4)
@@ -4657,7 +4657,7 @@ Function FillRoom(r.Rooms)
 				For ytemp = 0 To 2
 					For ztemp = 0 To 2
 						
-						tempstr$ = "9VµÁ≥ÿ" : tempstr2$ = "bat"
+						tempstr$ = "9VÁîµÊ±†" : tempstr2$ = "bat"
 						chance% = Rand(-10,100)
 						Select True
 							Case (chance<0)
@@ -4665,55 +4665,55 @@ Function FillRoom(r.Rooms)
 							Case (chance<40) ;40% chance for a document
 								Select Rand(1,6)
 									Case 1
-										tempstr="SCP-1123Œƒµµ"
+										tempstr="SCP-1123ÊñáÊ°£"
 									Case 2
-										tempstr="SCP-1048Œƒµµ"
+										tempstr="SCP-1048ÊñáÊ°£"
 									Case 3
-										tempstr="SCP-939Œƒµµ"
+										tempstr="SCP-939ÊñáÊ°£"
 									Case 4
-										tempstr="SCP-682Œƒµµ"
+										tempstr="SCP-682ÊñáÊ°£"
 									Case 5
-										tempstr="SCP-079Œƒµµ"
+										tempstr="SCP-079ÊñáÊ°£"
 									Case 6
-										tempstr="SCP-096Œƒµµ"
+										tempstr="SCP-096ÊñáÊ°£"
 									Case 6
-										tempstr="SCP-966Œƒµµ"
+										tempstr="SCP-966ÊñáÊ°£"
 								End Select
 								tempstr2="paper"
 							Case (chance>=40) And (chance<45) ;5% chance for a key card
 								temp3%=Rand(1,2)
 								Select Rand(1,2)
 									Case 1
-										tempstr="“ªº∂‘ø≥◊ø®"
+										tempstr="‰∏ÄÁ∫ßÈí•ÂåôÂç°"
 										tempstr2="key1"
 									Case 2
-										tempstr="∂˛º∂‘ø≥◊ø®"
+										tempstr="‰∫åÁ∫ßÈí•ÂåôÂç°"
 										tempstr2="key2"
 								End Select
 							Case (chance>=45) And (chance<50) ;5% chance for a medkit
-								tempstr="º±æ»œ‰"
+								tempstr="ÊÄ•ÊïëÁÆ±"
 								tempstr2="firstaid"
 							Case (chance>=50) And (chance<60) ;10% chance for a battery
-								tempstr="9VµÁ≥ÿ"
+								tempstr="9VÁîµÊ±†"
 								tempstr2="bat"
 							Case (chance>=60) And (chance<70) ;10% chance for an SNAV
-								tempstr="S-NAV 300µº∫Ω“«"
+								tempstr="S-NAV 300ÂØºËà™‰ª™"
 								tempstr2="nav"
 							Case (chance>=70) And (chance<85) ;15% chance for a radio
-								tempstr="∂‘Ω≤ª˙"
+								tempstr="ÂØπËÆ≤Êú∫"
 								tempstr2="radio"
 							Case (chance>=85) And (chance<95) ;10% chance for a clipboard
-								tempstr="Œƒº˛º–"
+								tempstr="Êñá‰ª∂Â§π"
 								tempstr2="clipboard"
 							Case (chance>=95) And (chance=<100) ;5% chance for misc
 								temp3%=Rand(1,3)
 								Select temp3
-									Case 1 ;∆ÀøÀ≈∆
-										tempstr="∆ÀøÀ≈∆"
-									Case 2 ;ÕÚ ¬¥Ô–≈”√ø®
-										tempstr="ÕÚ ¬¥Ô–≈”√ø®"
+									Case 1 ;ÊâëÂÖãÁâå
+										tempstr="ÊâëÂÖãÁâå"
+									Case 2 ;‰∏á‰∫ãËææ‰ø°Áî®Âç°
+										tempstr="‰∏á‰∫ãËææ‰ø°Áî®Âç°"
 									Case 3 ;origami
-										tempstr="«ß÷Ω∫◊"
+										tempstr="ÂçÉÁ∫∏Èπ§"
 								End Select
 								tempstr2="misc"
 						End Select
@@ -4750,7 +4750,7 @@ Function FillRoom(r.Rooms)
 			TextureBlend r\Textures[0], 5 ;texture
 			TextureBlend r\Textures[1], 5 ;blends
 			
-			it = CreateItem("SCP-1074Œƒµµ","paper",r\x + 300.0 * RoomScale,r\y+20.0*RoomScale,r\z + 671.0*RoomScale)
+			it = CreateItem("SCP-1074ÊñáÊ°£","paper",r\x + 300.0 * RoomScale,r\y+20.0*RoomScale,r\z + 671.0*RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			r\Objects[0] = CreatePivot() ;painting pivot: the player will be attracted when it sees this.
@@ -4780,16 +4780,16 @@ Function FillRoom(r.Rooms)
 			;[End Block]
 		Case "room1123"
 			;[Block]
-			it = CreateItem("SCP-1123Œƒµµ", "paper", r\x + 511.0 * RoomScale, r\y + 125.0 * RoomScale, r\z - 936.0 * RoomScale)
+			it = CreateItem("SCP-1123ÊñáÊ°£", "paper", r\x + 511.0 * RoomScale, r\y + 125.0 * RoomScale, r\z - 936.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			it = CreateItem("SCP-1123", "1123", r\x + 832.0 * RoomScale, r\y + 166.0 * RoomScale, r\z + 784.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("¥´µ•", "paper", r\x - 816.0 * RoomScale, r\y + 704.0 * RoomScale, r\z+ 888.0 * RoomScale)
+			it = CreateItem("‰º†Âçï", "paper", r\x - 816.0 * RoomScale, r\y + 704.0 * RoomScale, r\z+ 888.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("∑¿∂æ√Êæﬂ", "gasmask", r\x + 457.0 * RoomScale, r\y + 150.0 * RoomScale, r\z + 960.0 * RoomScale)
+			it = CreateItem("Èò≤ÊØíÈù¢ÂÖ∑", "gasmask", r\x + 457.0 * RoomScale, r\y + 150.0 * RoomScale, r\z + 960.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			d.Doors = CreateDoor(r\zone, r\x + 832.0 * RoomScale, 0.0, r\z + 367.0 * RoomScale, 0, r, False, False, 3)
@@ -4879,7 +4879,7 @@ Function FillRoom(r.Rooms)
 			
 			
 			
-			CreateItem("…’ΩπµƒŒƒº˛", "paper", EntityX(r\obj),0.5,EntityZ(r\obj)+3.5)
+			CreateItem("ÁÉßÁÑ¶ÁöÑÊñá‰ª∂", "paper", EntityX(r\obj),0.5,EntityZ(r\obj)+3.5)
 			
 			For n = 0 To -1;4
 				
@@ -5056,7 +5056,7 @@ Function FillRoom(r.Rooms)
 			d.Doors = CreateDoor(r\zone, r\x -509.0 * RoomScale, -768.0*RoomScale, r\z -1037.0 * RoomScale, 0, r, False, False, 3)
 			d.Doors\locked = True
 			d.Doors\DisableWaypoint = True
-			it = CreateItem("“π ”“«", "nvgoggles", r\x + 56.0154 * RoomScale, r\y - 648.0 * RoomScale, r\z + 749.638 * RoomScale)
+			it = CreateItem("Â§úËßÜ‰ª™", "nvgoggles", r\x + 56.0154 * RoomScale, r\y - 648.0 * RoomScale, r\z + 749.638 * RoomScale)
 			it\state = 200
 			RotateEntity it\collider, 0, r\angle+Rand(245), 0
 			EntityParent(it\collider, r\obj)
@@ -5175,7 +5175,7 @@ Function FillRoom(r.Rooms)
 			PositionEntity r\Objects[0],r\x+1012.0*RoomScale,r\y+128.0*RoomScale,r\z-640.0*RoomScale
 			EntityParent r\Objects[0],r\obj
 			EntityPickMode r\Objects[0],1
-			it = CreateItem("SCP-1162Œƒµµ", "paper", r\x + 863.227 * RoomScale, r\y + 152.0 * RoomScale, r\z - 953.231 * RoomScale)
+			it = CreateItem("SCP-1162ÊñáÊ°£", "paper", r\x + 863.227 * RoomScale, r\y + 152.0 * RoomScale, r\z - 953.231 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			sc.SecurityCams = CreateSecurityCam(r\x-192.0*RoomScale, r\y+704.0*RoomScale, r\z+192.0*RoomScale, r)
@@ -5197,13 +5197,13 @@ Function FillRoom(r.Rooms)
 			RotateEntity it\collider, 0, r\angle, 0
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("SCP-1499Œƒµµ", "paper", r\x + 840.0 * RoomScale, r\y + 260.0 * RoomScale, r\z + 224.0 * RoomScale)
+			it = CreateItem("SCP-1499ÊñáÊ°£", "paper", r\x + 840.0 * RoomScale, r\y + 260.0 * RoomScale, r\z + 224.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("SCP-500Œƒµµ", "paper", r\x + 1152.0 * RoomScale, r\y + 224.0 * RoomScale, r\z + 336.0 * RoomScale)
+			it = CreateItem("SCP-500ÊñáÊ°£", "paper", r\x + 1152.0 * RoomScale, r\y + 224.0 * RoomScale, r\z + 336.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
-			it = CreateItem("∞¨√◊¿ˆ¬ﬁÀπµƒ…Ì∑›÷§", "badge", r\x + 364.0 * RoomScale, r\y + 5.0 * RoomScale, r\z + 716.0 * RoomScale)
+			it = CreateItem("ËâæÁ±≥‰∏ΩÁΩóÊñØÁöÑË∫´‰ªΩËØÅ", "badge", r\x + 364.0 * RoomScale, r\y + 5.0 * RoomScale, r\z + 716.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			
 			sc.SecurityCams = CreateSecurityCam(r\x + 850.0 * RoomScale, r\y + 350.0 * RoomScale, r\z + 876.0 * RoomScale, r)
@@ -5235,7 +5235,7 @@ Function FillRoom(r.Rooms)
 			PositionEntity(d\buttons[1], r\x - 250.0 * RoomScale, EntityY(d\buttons[1],True), EntityZ(d\buttons[1],True), True)
 			d\open = False : d\AutoClose = False
 			
-			it = CreateItem("±„¿˚Ã˘", "paper", r\x - 991.0*RoomScale, r\y - 242.0*RoomScale, r\z + 904.0*RoomScale)
+			it = CreateItem("‰æøÂà©Ë¥¥", "paper", r\x - 991.0*RoomScale, r\y - 242.0*RoomScale, r\z + 904.0*RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "room2sl"
@@ -5467,11 +5467,11 @@ Function FillRoom(r.Rooms)
 			PositionEntity(r\Objects[1], r\x - 762.0 * RoomScale, r\y + 0.0 * RoomScale, r\z - 346.0 * RoomScale, True)
 			r\Objects[2] = CreatePivot(r\obj)
 			PositionEntity(r\Objects[2], (EntityX(r\Objects[1],True)+(126.0 * RoomScale)), EntityY(r\Objects[1],True), EntityZ(r\Objects[1],True), True)
-			it = CreateItem("º±æ»œ‰", "firstaid", r\x - 506.0 * RoomScale, r\y + 192.0 * RoomScale, r\z - 322.0 * RoomScale)
+			it = CreateItem("ÊÄ•ÊïëÁÆ±", "firstaid", r\x - 506.0 * RoomScale, r\y + 192.0 * RoomScale, r\z - 322.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
-			it = CreateItem("’ÎÕ≤", "syringe", r\x - 333.0 * RoomScale, r\y + 100.0 * RoomScale, r\z + 97.3 * RoomScale)
+			it = CreateItem("ÈíàÁ≠í", "syringe", r\x - 333.0 * RoomScale, r\y + 100.0 * RoomScale, r\z + 97.3 * RoomScale)
 			EntityParent(it\collider, r\obj)
-			it = CreateItem("’ÎÕ≤", "syringe", r\x - 340.0 * RoomScale, r\y + 100.0 * RoomScale, r\z + 52.3 * RoomScale)
+			it = CreateItem("ÈíàÁ≠í", "syringe", r\x - 340.0 * RoomScale, r\y + 100.0 * RoomScale, r\z + 52.3 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			r\RoomDoors[0] = CreateDoor(r\zone, r\x - 264.0 * RoomScale, r\y - 0.0 * RoomScale, r\z + 640.0 * RoomScale, 90, r, False, False, 3)
 			
@@ -5493,7 +5493,7 @@ Function FillRoom(r.Rooms)
             d\locked = True : d\open = False : d\AutoClose = False : d\MTFClose = False : d\DisableWaypoint = True
 			PositionEntity d\buttons[0],r\x-240.0*RoomScale,EntityY(d\buttons[0],True),EntityZ(d\buttons[0],True),True
 			
-			it = CreateItem("L≤© ø µƒ± º«", "paper", r\x - 160.0 * RoomScale, 32.0 * RoomScale, r\z - 353.0 * RoomScale)
+			it = CreateItem("LÂçöÂ£´ ÁöÑÁ¨îËÆ∞", "paper", r\x - 160.0 * RoomScale, 32.0 * RoomScale, r\z - 353.0 * RoomScale)
 			EntityParent(it\collider, r\obj)
 			;[End Block]
 		Case "dimension1499"

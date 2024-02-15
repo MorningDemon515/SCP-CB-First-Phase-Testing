@@ -1,4 +1,4 @@
-; ÊÕÈÝÊ§Ð§ÖÕ¼«°æ ÖØÉú°æÔ´Âë
+; æ”¶å®¹å¤±æ•ˆç»ˆæžç‰ˆ é‡ç”Ÿç‰ˆæºç 
 ;[Block]
 Const ANNOUNCEMENT% = 0
 Const FIRST_PERSON% = 1

@@ -25,7 +25,7 @@ Const EASY = 0, NORMAL = 1, HARD = 2
 
 difficulties(SAFE) = New Difficulty
 difficulties(SAFE)\name = "Safe"
-difficulties(SAFE)\description ="ÓÎÏ·¿ÉÒÔËæÊ±±£´æ¡£È»¶ø,SafeÄÑ¶ÈÓëSCPµÈ¼¶Ò»Ñù,²¢²»´ú±íÓÎÏ·ÖĞÃ»ÓĞÍşĞ²¡£"
+difficulties(SAFE)\description ="æ¸¸æˆå¯ä»¥éšæ—¶ä¿å­˜ã€‚ç„¶è€Œ,Safeéš¾åº¦ä¸SCPç­‰çº§ä¸€æ ·,å¹¶ä¸ä»£è¡¨æ¸¸æˆä¸­æ²¡æœ‰å¨èƒã€‚"
 difficulties(SAFE)\permaDeath = False
 difficulties(SAFE)\aggressiveNPCs = False
 difficulties(SAFE)\saveType = SAVEANYWHERE
@@ -36,8 +36,8 @@ difficulties(SAFE)\b = 50
 
 difficulties(EUCLID) = New Difficulty
 difficulties(EUCLID)\name = "Euclid"
-difficulties(EUCLID)\description = "EuclidÄÑ¶ÈÖĞ,ÄãÖ»ÄÜÔÚ¿É»¥¶¯µÄÏÔÊ¾ÆÁ´¦½øĞĞ±£´æ¡£"
-difficulties(EUCLID)\description = difficulties(EUCLID)\description +"EuclidÄÑ¶ÈÖĞµÄSCPĞĞÎªÊÇ²»¿ÉÔ¤²âµÄ,ËùÒÔÊÕÈİ´ëÊ©²¢·Ç×ÜÊÇÓĞĞ§¡£"
+difficulties(EUCLID)\description = "Euclidéš¾åº¦ä¸­,ä½ åªèƒ½åœ¨å¯äº’åŠ¨çš„æ˜¾ç¤ºå±å¤„è¿›è¡Œä¿å­˜ã€‚"
+difficulties(EUCLID)\description = difficulties(EUCLID)\description +"Euclidéš¾åº¦ä¸­çš„SCPè¡Œä¸ºæ˜¯ä¸å¯é¢„æµ‹çš„,æ‰€ä»¥æ”¶å®¹æªæ–½å¹¶éæ€»æ˜¯æœ‰æ•ˆã€‚"
 difficulties(EUCLID)\permaDeath = False
 difficulties(EUCLID)\aggressiveNPCs = False
 difficulties(EUCLID)\saveType = SAVEONSCREENS
@@ -48,8 +48,8 @@ difficulties(EUCLID)\b = 0
 
 difficulties(KETER) = New Difficulty
 difficulties(KETER)\name = "Keter"
-difficulties(KETER)\description = "KeterÄÑ¶ÈÖĞµÄSCPÊÇÊÕÈİÊ§Ğ§ÖĞ×îÎ£ÏÕµÄ¡£"
-difficulties(KETER)\description = difficulties(KETER)\description +"ÔÚKeterÄÑ¶ÈÖĞÄã¿ÉÒÔÕâÃ´Àí½â£ºSCP¸ü¼ÓÎ£ÏÕ,ÇÒÄãÖ»ÓĞÒ»ÌõÉúÃü¡ª¡ªµ±ÄãËÀÍö,ÓÎÏ·¾Í½áÊøÁË¡£"
+difficulties(KETER)\description = "Keteréš¾åº¦ä¸­çš„SCPæ˜¯æ”¶å®¹å¤±æ•ˆä¸­æœ€å±é™©çš„ã€‚"
+difficulties(KETER)\description = difficulties(KETER)\description +"åœ¨Keteréš¾åº¦ä¸­ä½ å¯ä»¥è¿™ä¹ˆç†è§£ï¼šSCPæ›´åŠ å±é™©,ä¸”ä½ åªæœ‰ä¸€æ¡ç”Ÿå‘½â€”â€”å½“ä½ æ­»äº¡,æ¸¸æˆå°±ç»“æŸäº†ã€‚"
 difficulties(KETER)\permaDeath = True
 difficulties(KETER)\aggressiveNPCs = True
 difficulties(KETER)\saveType = SAVEONQUIT
@@ -59,7 +59,7 @@ difficulties(KETER)\g = 0
 difficulties(KETER)\b = 0
 
 difficulties(CUSTOM) = New Difficulty
-difficulties(CUSTOM)\name = "×Ô¶¨Òå"
+difficulties(CUSTOM)\name = "è‡ªå®šä¹‰"
 difficulties(CUSTOM)\permaDeath = False
 difficulties(CUSTOM)\aggressiveNPCs = True
 difficulties(CUSTOM)\saveType = SAVEANYWHERE

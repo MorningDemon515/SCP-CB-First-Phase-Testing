@@ -1,7 +1,7 @@
 Graphics3D 640,480,0,2
 
 Include "SpeedText.bb"
-AppTitle "ÓÅ»¯¹âÕÕÌùÍ¼£¨½«bmpÎÄ¼ş×ª»»Îªpng£©"
+AppTitle "ä¼˜åŒ–å…‰ç…§è´´å›¾ï¼ˆå°†bmpæ–‡ä»¶è½¬æ¢ä¸ºpngï¼‰"
 
 TextInitialize BackBuffer()
 
@@ -735,11 +735,11 @@ SetBuffer BackBuffer()
 ClsColor 0,0,0
 Cls
 Color 255,255,255
-Text 5,5,"°´ÏÂÒ»¸ö°´¼ü£º"
-Text 5,25,"1 - ½«BMP×ª»»ÎªPNGÎÄ¼ş£¬²¢ĞŞ¸ÄRMESHÒÔÊ¹ÓÃËüÃÇ"
-Text 5,45,"2 - ½«ÌØ¶¨·¿¼äµÄBMP×ª»»ÎªPNGÎÄ¼ş£¬²¢¶ÔÆä½øĞĞĞŞ¸ÄÒÔÊ¹ÓÃËüÃÇ"
-Text 5,65,"3 - ÖØÖÃoptions.iniÒÔÊ¹ÓÃ¾ÉµÄRMESH"
-Text 5,85,"ESC - Ö±½ÓÍË³ö"
+Text 5,5,"æŒ‰ä¸‹ä¸€ä¸ªæŒ‰é”®ï¼š"
+Text 5,25,"1 - å°†BMPè½¬æ¢ä¸ºPNGæ–‡ä»¶ï¼Œå¹¶ä¿®æ”¹RMESHä»¥ä½¿ç”¨å®ƒä»¬"
+Text 5,45,"2 - å°†ç‰¹å®šæˆ¿é—´çš„BMPè½¬æ¢ä¸ºPNGæ–‡ä»¶ï¼Œå¹¶å¯¹å…¶è¿›è¡Œä¿®æ”¹ä»¥ä½¿ç”¨å®ƒä»¬"
+Text 5,65,"3 - é‡ç½®options.iniä»¥ä½¿ç”¨æ—§çš„RMESH"
+Text 5,85,"ESC - ç›´æ¥é€€å‡º"
 Flip
 
 While (Not KeyHit(1))
@@ -779,7 +779,7 @@ If state=1 Then
 				;SaveRoomMesh(mesh,"new\"+StripPath(Replace(Stri,".b3d",".rmesh")))
 				
 				Cls
-				Text 5,5,Chr(34)+Stri+Chr(34)+" ÒÑ×ª»»"
+				Text 5,5,Chr(34)+Stri+Chr(34)+" å·²è½¬æ¢"
 				Flip
 				
 				ic.INIConvert=New INIConvert
@@ -798,7 +798,7 @@ If state=1 Then
 	Next
 	
 	Cls
-	Text 5,5,"×ª»»Íê±Ï"
+	Text 5,5,"è½¬æ¢å®Œæ¯•"
 	Flip
 	Delay 1000
 	
@@ -808,11 +808,11 @@ ElseIf state=2
 	Cls
 	Flip
 	FlushKeys()
-	Text 0,0,"ĞèÒª×ª»»µÄ·¿¼äÎÄ¼şÂ·¾¶£º "
+	Text 0,0,"éœ€è¦è½¬æ¢çš„æˆ¿é—´æ–‡ä»¶è·¯å¾„ï¼š "
 	Stri=Input("                        ")
 	LoadRMesh(Stri)
 	Cls
-	Text 5,5,"ÎÄ¼ş "+Stri+" ×ª»»Íê±Ï"
+	Text 5,5,"æ–‡ä»¶ "+Stri+" è½¬æ¢å®Œæ¯•"
 	Flip
 	Delay 1000
 	
@@ -843,7 +843,7 @@ ElseIf state=3
 	Next
 	
 	Cls
-	Text 5,5,"ÖØÖÃÍê±Ï£¬ÄãĞèÒªÊÖ¶¯»Ö¸´bmp¹âÕÕÌùÍ¼"
+	Text 5,5,"é‡ç½®å®Œæ¯•ï¼Œä½ éœ€è¦æ‰‹åŠ¨æ¢å¤bmpå…‰ç…§è´´å›¾"
 	Flip
 	Delay 1000
 	

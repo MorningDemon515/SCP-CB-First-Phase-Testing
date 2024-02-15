@@ -87,33 +87,33 @@ Function UpdateMainMenu()
 			
 			Select Rand(0, 22)
 				Case 0, 2, 3
-					MenuStr = "²»ÒªÕ£ÑÛ¡£"
+					MenuStr = "ä¸è¦çœ¨çœ¼ã€‚"
 				Case 4, 5
-					MenuStr = "¿ØÖÆ ÊÕÈİ ±£»¤"
+					MenuStr = "æ§åˆ¶ æ”¶å®¹ ä¿æŠ¤"
 				Case 6, 7, 8
-					MenuStr = "ÄãÏëÒªºÃ½á¾Ö£¿²ÙÄãÂè"
+					MenuStr = "ä½ æƒ³è¦å¥½ç»“å±€ï¼Ÿæ“ä½ å¦ˆ"
 				Case 9, 10, 11
-					MenuStr = "ÓĞÊ±ÎÒÃÇ²»µÃ²»¼â½Ğ"
+					MenuStr = "æœ‰æ—¶æˆ‘ä»¬ä¸å¾—ä¸å°–å«"
 				Case 12, 19
-					MenuStr = "ÎŞ¡£"
+					MenuStr = "æ— ã€‚"
 				Case 13
-					MenuStr = "²»¡£"
+					MenuStr = "ä¸ã€‚"
 				Case 14
-					MenuStr = "ºÚ°×ºÚ°×ºÚ°×»Ò"
+					MenuStr = "é»‘ç™½é»‘ç™½é»‘ç™½ç°"
 				Case 15
-					MenuStr = "µñÏñ²»ÔÚºõ"
+					MenuStr = "é›•åƒä¸åœ¨ä¹"
 				Case 16
 					MenuStr = "9341"
 				Case 17
-					MenuStr = "Ëü¿ØÖÆ×ÅÃÅ"
+					MenuStr = "å®ƒæ§åˆ¶ç€é—¨"
 				Case 18
 					MenuStr = "e8m106]af173o+079m895w914"
 				Case 20
-					MenuStr = "ËüÒÑ½Ó¹ÜÁËÒ»ÇĞ"
+					MenuStr = "å®ƒå·²æ¥ç®¡äº†ä¸€åˆ‡"
 				Case 21
-					MenuStr = "ÂİĞıÊ½Ôö³¤"
+					MenuStr = "èºæ—‹å¼å¢é•¿"
 				Case 22
-					MenuStr = "¡°ÓÉÓÚ¾Ş´óµÄÏÖÊµÉËº¦¶ø²úÉúµÄÄ³ÖÖ¸ñÊ½ËşĞ§Ó¦¡£¡±"
+					MenuStr = "â€œç”±äºå·¨å¤§çš„ç°å®ä¼¤å®³è€Œäº§ç”Ÿçš„æŸç§æ ¼å¼å¡”æ•ˆåº”ã€‚â€"
 			End Select
 		EndIf
 	EndIf
@@ -144,7 +144,7 @@ Function UpdateMainMenu()
 			Local txt$
 			Select i
 				Case 0
-					txt = "ĞÂÓÎÏ·"
+					txt = "æ–°æ¸¸æˆ"
 					RandomSeed = ""
 					If temp Then 
 						If Rand(15)=1 Then 
@@ -191,16 +191,16 @@ Function UpdateMainMenu()
 						MainMenuTab = 1
 					EndIf
 				Case 1
-					txt = "¼ÓÔØÓÎÏ·"
+					txt = "åŠ è½½æ¸¸æˆ"
 					If temp Then
 						LoadSaveGames()
 						MainMenuTab = 2
 					EndIf
 				Case 2
-					txt = "ÉèÖÃ"
+					txt = "è®¾ç½®"
 					If temp Then MainMenuTab = 3
 				Case 3
-					txt = "ÍË³ö"
+					txt = "é€€å‡º"
 					If temp Then
 						StopChannel(CurrMusicStream)
 						End
@@ -261,7 +261,7 @@ Function UpdateMainMenu()
 				
 				Color(255, 255, 255)
 				AASetFont Font2
-				AAText(x + width / 2, y + height / 2, "ĞÂÓÎÏ·", True, True)
+				AAText(x + width / 2, y + height / 2, "æ–°æ¸¸æˆ", True, True)
 				
 				x = 160 * MenuScale
 				y = y + height + 20 * MenuScale
@@ -272,7 +272,7 @@ Function UpdateMainMenu()
 				
 				AASetFont Font1
 				
-				AAText (x + 20 * MenuScale, y + 20 * MenuScale, "Ãû³Æ:")
+				AAText (x + 20 * MenuScale, y + 20 * MenuScale, "åç§°:")
 				CurrSave = InputBox(x + 150 * MenuScale, y + 15 * MenuScale, 200 * MenuScale, 30 * MenuScale, CurrSave, 1)
 				CurrSave = Left(CurrSave, 15)
 				CurrSave = Replace(CurrSave,":","")
@@ -288,10 +288,10 @@ Function UpdateMainMenu()
 				
 				Color 255,255,255
 				If SelectedMap = "" Then
-					AAText (x + 20 * MenuScale, y + 60 * MenuScale, "µØÍ¼ÖÖ×Ó:")
+					AAText (x + 20 * MenuScale, y + 60 * MenuScale, "åœ°å›¾ç§å­:")
 					RandomSeed = Left(InputBox(x+150*MenuScale, y+55*MenuScale, 200*MenuScale, 30*MenuScale, RandomSeed, 3),15)	
 				Else
-					AAText (x + 20 * MenuScale, y + 60 * MenuScale, "ÒÑÑ¡µØÍ¼:")
+					AAText (x + 20 * MenuScale, y + 60 * MenuScale, "å·²é€‰åœ°å›¾:")
 					Color (255, 255, 255)
 					Rect(x+150*MenuScale, y+55*MenuScale, 200*MenuScale, 30*MenuScale)
 					Color (0, 0, 0)
@@ -304,16 +304,16 @@ Function UpdateMainMenu()
 						AAText(x+150*MenuScale + 100*MenuScale, y+55*MenuScale + 15*MenuScale, SelectedMap, True, True)
 					EndIf
 					
-					If DrawButton(x+370*MenuScale, y+55*MenuScale, 120*MenuScale, 30*MenuScale, "È¡ÏûÑ¡Ôñ", False) Then
+					If DrawButton(x+370*MenuScale, y+55*MenuScale, 120*MenuScale, 30*MenuScale, "å–æ¶ˆé€‰æ‹©", False) Then
 						SelectedMap=""
 					EndIf
 				EndIf	
 				
-				AAText(x + 20 * MenuScale, y + 110 * MenuScale, "ÆôÓÃĞòÕÂ:")
+				AAText(x + 20 * MenuScale, y + 110 * MenuScale, "å¯ç”¨åºç« :")
 				IntroEnabled = DrawTick(x + 280 * MenuScale, y + 110 * MenuScale, IntroEnabled)	
 				
 				;Local modeName$, modeDescription$, selectedDescription$
-				AAText (x + 20 * MenuScale, y + 150 * MenuScale, "ÄÑ¶È:")				
+				AAText (x + 20 * MenuScale, y + 150 * MenuScale, "éš¾åº¦:")				
 				For i = SAFE To CUSTOM
 					If DrawTick(x + 20 * MenuScale, y + (180+30*i) * MenuScale, (SelectedDifficulty = difficulties(i))) Then SelectedDifficulty = difficulties(i)
 					Color(difficulties(i)\r,difficulties(i)\g,difficulties(i)\b)
@@ -325,7 +325,7 @@ Function UpdateMainMenu()
 				
 				If SelectedDifficulty\customizable Then
 					SelectedDifficulty\permaDeath =  DrawTick(x + 160 * MenuScale, y + 165 * MenuScale, (SelectedDifficulty\permaDeath))
-					AAText(x + 200 * MenuScale, y + 165 * MenuScale, "ÓÀ¾ÃËÀÍö")
+					AAText(x + 200 * MenuScale, y + 165 * MenuScale, "æ°¸ä¹…æ­»äº¡")
 					
 					If DrawTick(x + 160 * MenuScale, y + 195 * MenuScale, SelectedDifficulty\saveType = SAVEANYWHERE And (Not SelectedDifficulty\permaDeath), SelectedDifficulty\permaDeath) Then 
 						SelectedDifficulty\saveType = SAVEANYWHERE
@@ -333,10 +333,10 @@ Function UpdateMainMenu()
 						SelectedDifficulty\saveType = SAVEONSCREENS
 					EndIf
 					
-					AAText(x + 200 * MenuScale, y + 195 * MenuScale, "ËæÊ±±£´æ")	
+					AAText(x + 200 * MenuScale, y + 195 * MenuScale, "éšæ—¶ä¿å­˜")	
 					
 					SelectedDifficulty\aggressiveNPCs =  DrawTick(x + 160 * MenuScale, y + 225 * MenuScale, SelectedDifficulty\aggressiveNPCs)
-					AAText(x + 200 * MenuScale, y + 225 * MenuScale, "¸üÎ£ÏÕµÄNPC")
+					AAText(x + 200 * MenuScale, y + 225 * MenuScale, "æ›´å±é™©çš„NPC")
 					
 					;Other factor's difficulty
 					Color 255,255,255
@@ -354,25 +354,25 @@ Function UpdateMainMenu()
 					Color 255,255,255
 					Select SelectedDifficulty\otherFactors
 						Case EASY
-							AAText(x + 200 * MenuScale, y + 255 * MenuScale, "ÆäËüÄÑ¶ÈÔ¤Éè: ¼òµ¥")
+							AAText(x + 200 * MenuScale, y + 255 * MenuScale, "å…¶å®ƒéš¾åº¦é¢„è®¾: ç®€å•")
 						Case NORMAL
-							AAText(x + 200 * MenuScale, y + 255 * MenuScale, "ÆäËüÄÑ¶ÈÔ¤Éè: ÆÕÍ¨")
+							AAText(x + 200 * MenuScale, y + 255 * MenuScale, "å…¶å®ƒéš¾åº¦é¢„è®¾: æ™®é€š")
 						Case HARD
-							AAText(x + 200 * MenuScale, y + 255 * MenuScale, "ÆäËüÄÑ¶ÈÔ¤Éè: À§ÄÑ")
+							AAText(x + 200 * MenuScale, y + 255 * MenuScale, "å…¶å®ƒéš¾åº¦é¢„è®¾: å›°éš¾")
 					End Select
 				Else
 					RowText(SelectedDifficulty\description, x+160*MenuScale, y+160*MenuScale, (410-20)*MenuScale, 200)					
 				EndIf
 				
-				If DrawButton(x, y + height + 20 * MenuScale, 160 * MenuScale, 70 * MenuScale, "¼ÓÔØµØÍ¼", False) Then
+				If DrawButton(x, y + height + 20 * MenuScale, 160 * MenuScale, 70 * MenuScale, "åŠ è½½åœ°å›¾", False) Then
 					MainMenuTab = 4
 					LoadSavedMaps()
 				EndIf
 				
 				AASetFont Font2
 				
-				If DrawButton(x + 420 * MenuScale, y + height + 20 * MenuScale, 160 * MenuScale, 70 * MenuScale, "¿ªÊ¼", False) Then
-					If CurrSave = "" Then CurrSave = "Î´ÃüÃû"
+				If DrawButton(x + 420 * MenuScale, y + height + 20 * MenuScale, 160 * MenuScale, 70 * MenuScale, "å¼€å§‹", False) Then
+					If CurrSave = "" Then CurrSave = "æœªå‘½å"
 					
 					If RandomSeed = "" Then
 						RandomSeed = Abs(MilliSecs())
@@ -418,7 +418,7 @@ Function UpdateMainMenu()
 				
 				Color(255, 255, 255)
 				AASetFont Font2
-				AAText(x + width / 2, y + height / 2, "¼ÓÔØÓÎÏ·", True, True)
+				AAText(x + width / 2, y + height / 2, "åŠ è½½æ¸¸æˆ", True, True)
 				
 				x = 160 * MenuScale
 				y = y + height + 20 * MenuScale
@@ -450,7 +450,7 @@ Function UpdateMainMenu()
 				
 				DrawFrame(x+50*MenuScale,y+510*MenuScale,width-100*MenuScale,55*MenuScale)
 				
-				AAText(x+(width/2.0),y+536*MenuScale,"µÚ "+Int(Max((CurrLoadGamePage+1),1))+"/"+Int(Max((Int(Ceil(Float(SaveGameAmount)/6.0))),1))+" Ò³",True,True)
+				AAText(x+(width/2.0),y+536*MenuScale,"ç¬¬ "+Int(Max((CurrLoadGamePage+1),1))+"/"+Int(Max((Int(Ceil(Float(SaveGameAmount)/6.0))),1))+" é¡µ",True,True)
 				
 				AASetFont Font1
 				
@@ -459,7 +459,7 @@ Function UpdateMainMenu()
 				EndIf
 				
 				If SaveGameAmount = 0 Then
-					AAText (x + 20 * MenuScale, y + 20 * MenuScale, "Ã»ÓĞ±£´æµÄ´æµµ¡£")
+					AAText (x + 20 * MenuScale, y + 20 * MenuScale, "æ²¡æœ‰ä¿å­˜çš„å­˜æ¡£ã€‚")
 				Else
 					x = x + 20 * MenuScale
 					y = y + 20 * MenuScale
@@ -483,9 +483,9 @@ Function UpdateMainMenu()
 								If SaveGameVersion(i - 1) <> CompatibleNumber Then
 									DrawFrame(x + 280 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale)
 									Color(255, 0, 0)
-									AAText(x + 330 * MenuScale, y + 34 * MenuScale, "¼ÓÔØ", True, True)
+									AAText(x + 330 * MenuScale, y + 34 * MenuScale, "åŠ è½½", True, True)
 								Else
-									If DrawButton(x + 280 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "¼ÓÔØ", False) Then
+									If DrawButton(x + 280 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "åŠ è½½", False) Then
 										LoadEntities()
 										LoadAllSounds()
 										LoadGame(SavePath + SaveGames(i - 1) + "\")
@@ -495,7 +495,7 @@ Function UpdateMainMenu()
 									EndIf
 								EndIf
 								
-								If DrawButton(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "É¾³ı", False) Then
+								If DrawButton(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "åˆ é™¤", False) Then
 									SaveMSG = SaveGames(i - 1)
 									DebugLog SaveMSG
 									Exit
@@ -507,11 +507,11 @@ Function UpdateMainMenu()
 								Else
 									Color(100, 100, 100)
 								EndIf
-								AAText(x + 330 * MenuScale, y + 34 * MenuScale, "¼ÓÔØ", True, True)
+								AAText(x + 330 * MenuScale, y + 34 * MenuScale, "åŠ è½½", True, True)
 								
 								DrawFrame(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale)
 								Color(100, 100, 100)
-								AAText(x + 450 * MenuScale, y + 34 * MenuScale, "É¾³ı", True, True)
+								AAText(x + 450 * MenuScale, y + 34 * MenuScale, "åˆ é™¤", True, True)
 							EndIf
 							
 							y = y + 80 * MenuScale
@@ -524,15 +524,15 @@ Function UpdateMainMenu()
 						x = 740 * MenuScale
 						y = 376 * MenuScale
 						DrawFrame(x, y, 420 * MenuScale, 200 * MenuScale)
-						RowText("ÄãÈ·¶¨ÒªÉ¾³ıÕâ¸ö´æµµÂğ£¿", x + 20 * MenuScale, y + 15 * MenuScale, 400 * MenuScale, 200 * MenuScale)
+						RowText("ä½ ç¡®å®šè¦åˆ é™¤è¿™ä¸ªå­˜æ¡£å—ï¼Ÿ", x + 20 * MenuScale, y + 15 * MenuScale, 400 * MenuScale, 200 * MenuScale)
 						;AAText(x + 20 * MenuScale, y + 15 * MenuScale, "Are you sure you want to delete this save?")
-						If DrawButton(x + 50 * MenuScale, y + 150 * MenuScale, 100 * MenuScale, 30 * MenuScale, "ÊÇ", False) Then
+						If DrawButton(x + 50 * MenuScale, y + 150 * MenuScale, 100 * MenuScale, 30 * MenuScale, "æ˜¯", False) Then
 							DeleteFile(CurrentDir() + SavePath + SaveMSG + "\save.txt")
 							DeleteDir(CurrentDir() + SavePath + SaveMSG)
 							SaveMSG = ""
 							LoadSaveGames()
 						EndIf
-						If DrawButton(x + 250 * MenuScale, y + 150 * MenuScale, 100 * MenuScale, 30 * MenuScale, "·ñ", False) Then
+						If DrawButton(x + 250 * MenuScale, y + 150 * MenuScale, 100 * MenuScale, 30 * MenuScale, "å¦", False) Then
 							SaveMSG = ""
 						EndIf
 					EndIf
@@ -552,7 +552,7 @@ Function UpdateMainMenu()
 				
 				Color(255, 255, 255)
 				AASetFont Font2
-				AAText(x + width / 2, y + height / 2, "ÉèÖÃ", True, True)
+				AAText(x + width / 2, y + height / 2, "è®¾ç½®", True, True)
 				
 				x = 160 * MenuScale
 				y = y + height + 20 * MenuScale
@@ -572,10 +572,10 @@ Function UpdateMainMenu()
 				EndIf
 				
 				Color 255,255,255
-				If DrawButton(x+20*MenuScale,y+15*MenuScale,width/5,height/2, "»­Ãæ", False) Then MainMenuTab = 3
-				If DrawButton(x+160*MenuScale,y+15*MenuScale,width/5,height/2, "ÒôÆµ", False) Then MainMenuTab = 5
-				If DrawButton(x+300*MenuScale,y+15*MenuScale,width/5,height/2, "¿ØÖÆ", False) Then MainMenuTab = 6
-				If DrawButton(x+440*MenuScale,y+15*MenuScale,width/5,height/2, "¸ß¼¶", False) Then MainMenuTab = 7
+				If DrawButton(x+20*MenuScale,y+15*MenuScale,width/5,height/2, "ç”»é¢", False) Then MainMenuTab = 3
+				If DrawButton(x+160*MenuScale,y+15*MenuScale,width/5,height/2, "éŸ³é¢‘", False) Then MainMenuTab = 5
+				If DrawButton(x+300*MenuScale,y+15*MenuScale,width/5,height/2, "æ§åˆ¶", False) Then MainMenuTab = 6
+				If DrawButton(x+440*MenuScale,y+15*MenuScale,width/5,height/2, "é«˜çº§", False) Then MainMenuTab = 7
 				
 				AASetFont Font1
 				y = y + 70 * MenuScale
@@ -601,7 +601,7 @@ Function UpdateMainMenu()
 					y=y+20*MenuScale
 					
 					Color 255,255,255				
-					AAText(x + 20 * MenuScale, y, "ÆôÓÃ°¼Í¹ÌùÍ¼:")	
+					AAText(x + 20 * MenuScale, y, "å¯ç”¨å‡¹å‡¸è´´å›¾:")	
 					BumpEnabled = DrawTick(x + 310 * MenuScale, y + MenuScale, BumpEnabled)
 					If MouseOn(x + 310 * MenuScale, y + MenuScale, 20*MenuScale,20*MenuScale) And OnSliderID=0
 						;DrawTooltip("Not available in this version")
@@ -611,7 +611,7 @@ Function UpdateMainMenu()
 					y=y+30*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "´¹Ö±Í¬²½:")
+					AAText(x + 20 * MenuScale, y, "å‚ç›´åŒæ­¥:")
 					Vsync% = DrawTick(x + 310 * MenuScale, y + MenuScale, Vsync%)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"vsync")
@@ -620,7 +620,7 @@ Function UpdateMainMenu()
 					y=y+30*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "¿¹¾â³İ:")
+					AAText(x + 20 * MenuScale, y, "æŠ—é”¯é½¿:")
 					Opt_AntiAlias = DrawTick(x + 310 * MenuScale, y + MenuScale, Opt_AntiAlias%)
 					;AAText(x + 20 * MenuScale, y + 15 * MenuScale, "(fullscreen mode only)")
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale) And OnSliderID=0
@@ -630,7 +630,7 @@ Function UpdateMainMenu()
 					y=y+30*MenuScale ;40
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "ÆôÓÃ·¿¼ä¹âÁÁ:")
+					AAText(x + 20 * MenuScale, y, "å¯ç”¨æˆ¿é—´å…‰äº®:")
 					EnableRoomLights = DrawTick(x + 310 * MenuScale, y + MenuScale, EnableRoomLights)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"roomlights")
@@ -641,7 +641,7 @@ Function UpdateMainMenu()
 					;Local prevGamma# = ScreenGamma
 					ScreenGamma = (SlideBar(x + 310*MenuScale, y+6*MenuScale, 150*MenuScale, ScreenGamma*50.0)/50.0)
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "ÆÁÄ»Ù¤ÂíÖµ")
+					AAText(x + 20 * MenuScale, y, "å±å¹•ä¼½é©¬å€¼")
 					If MouseOn(x+310*MenuScale,y+6*MenuScale,150*MenuScale+14,20) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"gamma",ScreenGamma)
 					EndIf
@@ -649,7 +649,7 @@ Function UpdateMainMenu()
 					y=y+50*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "Á£×ÓÊıÁ¿:")
+					AAText(x + 20 * MenuScale, y, "ç²’å­æ•°é‡:")
 					ParticleAmount = Slider3(x+310*MenuScale,y+6*MenuScale,150*MenuScale,ParticleAmount,2,"MINIMAL","REDUCED","FULL")
 					If (MouseOn(x + 310 * MenuScale, y-6*MenuScale, 150*MenuScale+14, 20) And OnSliderID=0) Or OnSliderID=2
 						DrawOptionsTooltip(tx,ty,tw,th,"particleamount",ParticleAmount)
@@ -658,7 +658,7 @@ Function UpdateMainMenu()
 					y=y+50*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "ÎÆÀíÏ¸½Ú²ã´Î:")
+					AAText(x + 20 * MenuScale, y, "çº¹ç†ç»†èŠ‚å±‚æ¬¡:")
 					TextureDetails = Slider5(x+310*MenuScale,y+6*MenuScale,150*MenuScale,TextureDetails,3,"0.8","0.4","0.0","-0.4","-0.8")
 					Select TextureDetails%
 						Case 0
@@ -680,7 +680,7 @@ Function UpdateMainMenu()
 					y=y+50*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "ÔÚVRAMÖĞ´æ´¢ÌùÍ¼:")
+					AAText(x + 20 * MenuScale, y, "åœ¨VRAMä¸­å­˜å‚¨è´´å›¾:")
 					EnableVRam = DrawTick(x + 310 * MenuScale, y + MenuScale, EnableVRam)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale) And OnSliderID=0
 						DrawOptionsTooltip(tx,ty,tw,th,"vram")
@@ -696,7 +696,7 @@ Function UpdateMainMenu()
 					
 					MusicVolume = (SlideBar(x + 310*MenuScale, y-4*MenuScale, 150*MenuScale, MusicVolume*100.0)/100.0)
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "ÒôÀÖ´óĞ¡:")
+					AAText(x + 20 * MenuScale, y, "éŸ³ä¹å¤§å°:")
 					If MouseOn(x+310*MenuScale,y-4*MenuScale,150*MenuScale+14,20)
 						DrawOptionsTooltip(tx,ty,tw,th,"musicvol",MusicVolume)
 					EndIf
@@ -707,7 +707,7 @@ Function UpdateMainMenu()
 					PrevSFXVolume = (SlideBar(x + 310*MenuScale, y-4*MenuScale, 150*MenuScale, SFXVolume*100.0)/100.0)
 					SFXVolume = PrevSFXVolume
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "ÒôĞ§´óĞ¡:")
+					AAText(x + 20 * MenuScale, y, "éŸ³æ•ˆå¤§å°:")
 					If MouseOn(x+310*MenuScale,y-4*MenuScale,150*MenuScale+14,20)
 						DrawOptionsTooltip(tx,ty,tw,th,"soundvol",PrevSFXVolume)
 					EndIf
@@ -724,7 +724,7 @@ Function UpdateMainMenu()
 					y = y + 30*MenuScale
 					
 					Color 255,255,255
-					AAText x + 20 * MenuScale, y, "×Ô¶¯ÊÍ·ÅÒôÆµ:"
+					AAText x + 20 * MenuScale, y, "è‡ªåŠ¨é‡Šæ”¾éŸ³é¢‘:"
 					EnableSFXRelease = DrawTick(x + 310 * MenuScale, y + MenuScale, EnableSFXRelease)
 					If EnableSFXRelease_Prev% <> EnableSFXRelease
 						If EnableSFXRelease%
@@ -755,7 +755,7 @@ Function UpdateMainMenu()
 					y = y + 30*MenuScale
 					
 					Color 255,255,255
-					AAText x + 20 * MenuScale, y, "ÆôÓÃ×Ô¶¨ÆµµÀ:"
+					AAText x + 20 * MenuScale, y, "å¯ç”¨è‡ªå®šé¢‘é“:"
 					EnableUserTracks = DrawTick(x + 310 * MenuScale, y + MenuScale, EnableUserTracks)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"usertrack")
@@ -764,18 +764,18 @@ Function UpdateMainMenu()
 					If EnableUserTracks
 						y = y + 30 * MenuScale
 						Color 255,255,255
-						AAText x + 20 * MenuScale, y, "×Ô¶¨ÆµµÀÄ£Ê½:"
+						AAText x + 20 * MenuScale, y, "è‡ªå®šé¢‘é“æ¨¡å¼:"
 						UserTrackMode = DrawTick(x + 310 * MenuScale, y + MenuScale, UserTrackMode)
 						If UserTrackMode
-							AAText x + 350 * MenuScale, y + MenuScale, "Ñ­»·"
+							AAText x + 350 * MenuScale, y + MenuScale, "å¾ªç¯"
 						Else
-							AAText x + 350 * MenuScale, y + MenuScale, "Ëæ»ú"
+							AAText x + 350 * MenuScale, y + MenuScale, "éšæœº"
 						EndIf
 						If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 							DrawOptionsTooltip(tx,ty,tw,th,"usertrackmode")
 						EndIf
-						If DrawButton(x + 20 * MenuScale, y + 30 * MenuScale, 190 * MenuScale, 25 * MenuScale, "É¨Ãè×Ô¶¨ÆµµÀ",False)
-							DebugLog "ÒÑ¿ªÆô×Ô¶¨ÆµµÀ¼ì²é"
+						If DrawButton(x + 20 * MenuScale, y + 30 * MenuScale, 190 * MenuScale, 25 * MenuScale, "æ‰«æè‡ªå®šé¢‘é“",False)
+							DebugLog "å·²å¼€å¯è‡ªå®šé¢‘é“æ£€æŸ¥"
 							
 							UserTrackCheck% = 0
 							UserTrackCheck2% = 0
@@ -795,13 +795,13 @@ Function UpdateMainMenu()
 							Forever
 							CloseDir Dir
 							
-							DebugLog "ÒÑÆôÓÃ×Ô¶¨ÆµµÀ¼ì²é"
+							DebugLog "å·²å¯ç”¨è‡ªå®šé¢‘é“æ£€æŸ¥"
 						EndIf
 						If MouseOn(x+20*MenuScale,y+30*MenuScale,190*MenuScale,25*MenuScale)
 							DrawOptionsTooltip(tx,ty,tw,th,"usertrackscan")
 						EndIf
 						If UserTrackCheck%>0
-							AAText x + 20 * MenuScale, y + 100 * MenuScale, "×Ô¶¨ÆµµÀÒÑ´´½¨ ("+UserTrackCheck2+"/"+UserTrackCheck+" ¸öÎÄ¼şÒÑ¼ÓÔØ)"
+							AAText x + 20 * MenuScale, y + 100 * MenuScale, "è‡ªå®šé¢‘é“å·²åˆ›å»º ("+UserTrackCheck2+"/"+UserTrackCheck+" ä¸ªæ–‡ä»¶å·²åŠ è½½)"
 						EndIf
 					Else
 						UserTrackCheck%=0
@@ -816,7 +816,7 @@ Function UpdateMainMenu()
 					
 					MouseSens = (SlideBar(x + 310*MenuScale, y-4*MenuScale, 150*MenuScale, (MouseSens+0.5)*100.0)/100.0)-0.5
 					Color(255, 255, 255)
-					AAText(x + 20 * MenuScale, y + 2, "Êó±êÁéÃô¶È£º")
+					AAText(x + 20 * MenuScale, y + 2, "é¼ æ ‡çµæ•åº¦ï¼š")
 					If MouseOn(x+310*MenuScale,y-4*MenuScale,150*MenuScale+14,20)
 						DrawOptionsTooltip(tx,ty,tw,th,"mousesensitivity",MouseSens)
 					EndIf
@@ -824,7 +824,7 @@ Function UpdateMainMenu()
 					y = y + 40*MenuScale
 					
 					Color(255, 255, 255)
-					AAText(x + 20 * MenuScale, y, "·´×ªÊó±êYÖá:")
+					AAText(x + 20 * MenuScale, y, "åè½¬é¼ æ ‡Yè½´:")
 					InvertMouse = DrawTick(x + 310 * MenuScale, y + MenuScale, InvertMouse)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"mouseinvert")
@@ -834,7 +834,7 @@ Function UpdateMainMenu()
 					
 					MouseSmooth = (SlideBar(x + 310*MenuScale, y-4*MenuScale, 150*MenuScale, (MouseSmooth)*50.0)/50.0)
 					Color(255, 255, 255)
-					AAText(x + 20 * MenuScale, y, "Êó±êÆ½»¬¶È:")
+					AAText(x + 20 * MenuScale, y, "é¼ æ ‡å¹³æ»‘åº¦:")
 					If MouseOn(x+310*MenuScale,y-4*MenuScale,150*MenuScale+14,20)
 						DrawOptionsTooltip(tx,ty,tw,th,"mousesmoothing",MouseSmooth)
 					EndIf
@@ -842,29 +842,29 @@ Function UpdateMainMenu()
 					Color(255, 255, 255)
 					
 					y = y + 30*MenuScale
-					AAText(x + 20 * MenuScale, y, "¼üÎ»ÉèÖÃ:")
+					AAText(x + 20 * MenuScale, y, "é”®ä½è®¾ç½®:")
 					y = y + 10*MenuScale
 					
-					AAText(x + 20 * MenuScale, y + 20 * MenuScale, "ÏòÇ°")
+					AAText(x + 20 * MenuScale, y + 20 * MenuScale, "å‘å‰")
 					InputBox(x + 160 * MenuScale, y + 20 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_UP,210)),5)		
-					AAText(x + 20 * MenuScale, y + 40 * MenuScale, "Ïò×ó")
+					AAText(x + 20 * MenuScale, y + 40 * MenuScale, "å‘å·¦")
 					InputBox(x + 160 * MenuScale, y + 40 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_LEFT,210)),3)	
-					AAText(x + 20 * MenuScale, y + 60 * MenuScale, "ºóÍË")
+					AAText(x + 20 * MenuScale, y + 60 * MenuScale, "åé€€")
 					InputBox(x + 160 * MenuScale, y + 60 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_DOWN,210)),6)				
-					AAText(x + 20 * MenuScale, y + 80 * MenuScale, "ÏòÓÒ")
+					AAText(x + 20 * MenuScale, y + 80 * MenuScale, "å‘å³")
 					InputBox(x + 160 * MenuScale, y + 80 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_RIGHT,210)),4)	
-					AAText(x + 20 * MenuScale, y + 100 * MenuScale, "¿ìËÙ±£´æ")
+					AAText(x + 20 * MenuScale, y + 100 * MenuScale, "å¿«é€Ÿä¿å­˜")
 					InputBox(x + 160 * MenuScale, y + 100 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_SAVE,210)),11)
 					
-					AAText(x + 280 * MenuScale, y + 20 * MenuScale, "ÊÖ¶¯Õ£ÑÛ")
+					AAText(x + 280 * MenuScale, y + 20 * MenuScale, "æ‰‹åŠ¨çœ¨çœ¼")
 					InputBox(x + 470 * MenuScale, y + 20 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_BLINK,210)),7)				
-					AAText(x + 280 * MenuScale, y + 40 * MenuScale, "¼²ÅÜ")
+					AAText(x + 280 * MenuScale, y + 40 * MenuScale, "ç–¾è·‘")
 					InputBox(x + 470 * MenuScale, y + 40 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_SPRINT,210)),8)
-					AAText(x + 280 * MenuScale, y + 60 * MenuScale, "´ò¿ª/¹Ø±ÕÎïÆ·À¸")
+					AAText(x + 280 * MenuScale, y + 60 * MenuScale, "æ‰“å¼€/å…³é—­ç‰©å“æ ")
 					InputBox(x + 470 * MenuScale, y + 60 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_INV,210)),9)
-					AAText(x + 280 * MenuScale, y + 80 * MenuScale, "¶×ÏÂ")
+					AAText(x + 280 * MenuScale, y + 80 * MenuScale, "è¹²ä¸‹")
 					InputBox(x + 470 * MenuScale, y + 80 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_CROUCH,210)),10)	
-					AAText(x + 280 * MenuScale, y + 100 * MenuScale, "´ò¿ª/¹Ø±Õ¿ØÖÆÌ¨")
+					AAText(x + 280 * MenuScale, y + 100 * MenuScale, "æ‰“å¼€/å…³é—­æ§åˆ¶å°")
 					InputBox(x + 470 * MenuScale, y + 100 * MenuScale,100*MenuScale,20*MenuScale,KeyName(Min(KEY_CONSOLE,210)),12)
 					
 					If MouseOn(x+20*MenuScale,y,width-40*MenuScale,120*MenuScale)
@@ -908,7 +908,7 @@ Function UpdateMainMenu()
 					y = y + 20*MenuScale
 					
 					Color 255,255,255				
-					AAText(x + 20 * MenuScale, y, "ÏÔÊ¾HUD:")	
+					AAText(x + 20 * MenuScale, y, "æ˜¾ç¤ºHUD:")	
 					HUDenabled = DrawTick(x + 310 * MenuScale, y + MenuScale, HUDenabled)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"hud")
@@ -917,7 +917,7 @@ Function UpdateMainMenu()
 					y=y+30*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "ÆôÓÃ¿ØÖÆÌ¨:")
+					AAText(x + 20 * MenuScale, y, "å¯ç”¨æ§åˆ¶å°:")
 					CanOpenConsole = DrawTick(x + 310 * MenuScale, y + MenuScale, CanOpenConsole)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"consoleenable")
@@ -926,7 +926,7 @@ Function UpdateMainMenu()
 					y = y + 30*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "³öÏÖ´íÎóÊ±´ò¿ª¿ØÖÆÌ¨:")
+					AAText(x + 20 * MenuScale, y, "å‡ºç°é”™è¯¯æ—¶æ‰“å¼€æ§åˆ¶å°:")
 					ConsoleOpening = DrawTick(x + 310 * MenuScale, y + MenuScale, ConsoleOpening)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"consoleerror")
@@ -935,7 +935,7 @@ Function UpdateMainMenu()
 					y = y + 50*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "³É¾ÍÌáÊ¾:")
+					AAText(x + 20 * MenuScale, y, "æˆå°±æç¤º:")
 					AchvMSGenabled% = DrawTick(x + 310 * MenuScale, y + MenuScale, AchvMSGenabled%)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"achpopup")
@@ -944,7 +944,7 @@ Function UpdateMainMenu()
 					y = y + 50*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "ÏÔÊ¾FPS:")
+					AAText(x + 20 * MenuScale, y, "æ˜¾ç¤ºFPS:")
 					ShowFPS% = DrawTick(x + 310 * MenuScale, y + MenuScale, ShowFPS%)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"showfps")
@@ -953,7 +953,7 @@ Function UpdateMainMenu()
 					y = y + 30*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "Ö¡ÊıÏŞÖÆ:")
+					AAText(x + 20 * MenuScale, y, "å¸§æ•°é™åˆ¶:")
 					Color 255,255,255
 					If DrawTick(x + 310 * MenuScale, y, CurrFrameLimit > 0.0) Then
 						;CurrFrameLimit# = (SlideBar(x + 150*MenuScale, y+30*MenuScale, 100*MenuScale, CurrFrameLimit#*50.0)/50.0)
@@ -978,7 +978,7 @@ Function UpdateMainMenu()
 					y = y + 80*MenuScale
 					
 					Color 255,255,255
-					AAText(x + 20 * MenuScale, y, "ÏÔÊ¾×ÖÄ»:")
+					AAText(x + 20 * MenuScale, y, "æ˜¾ç¤ºå­—å¹•:")
 					EnableSubtitle% = DrawTick(x + 310 * MenuScale, y + MenuScale, EnableSubtitle%)
 					If MouseOn(x+310*MenuScale,y+MenuScale,20*MenuScale,20*MenuScale)
 						DrawOptionsTooltip(tx,ty,tw,th,"subtitle")
@@ -1004,7 +1004,7 @@ Function UpdateMainMenu()
 				
 				Color(255, 255, 255)
 				AASetFont Font2
-				AAText(x + width / 2, y + height / 2, "¼ÓÔØµØÍ¼", True, True)
+				AAText(x + width / 2, y + height / 2, "åŠ è½½åœ°å›¾", True, True)
 				
 				x = 160 * MenuScale
 				y = y + height + 20 * MenuScale
@@ -1039,7 +1039,7 @@ Function UpdateMainMenu()
 				
 				DrawFrame(x+50*MenuScale,y+510*MenuScale,width-100*MenuScale,55*MenuScale)
 				
-				AAText(x+(width/2.0),y+536*MenuScale,"µÚ "+Int(Max((CurrLoadGamePage+1),1))+"/"+Int(Max((Int(Ceil(Float(SavedMapsAmount)/6.0))),1))+" Ò³",True,True)
+				AAText(x+(width/2.0),y+536*MenuScale,"ç¬¬ "+Int(Max((CurrLoadGamePage+1),1))+"/"+Int(Max((Int(Ceil(Float(SavedMapsAmount)/6.0))),1))+" é¡µ",True,True)
 				
 				AASetFont Font1
 				
@@ -1050,7 +1050,7 @@ Function UpdateMainMenu()
 				AASetFont Font1
 				
 				If SavedMaps(0)="" Then 
-					AAText (x + 20 * MenuScale, y + 20 * MenuScale, "Ã»ÓĞ±£´æµÄµØÍ¼¡£Ê¹ÓÃµØÍ¼ÖÆ×÷Æ÷´´½¨µØÍ¼¡£")
+					AAText (x + 20 * MenuScale, y + 20 * MenuScale, "æ²¡æœ‰ä¿å­˜çš„åœ°å›¾ã€‚ä½¿ç”¨åœ°å›¾åˆ¶ä½œå™¨åˆ›å»ºåœ°å›¾ã€‚")
 				Else
 					x = x + 20 * MenuScale
 					y = y + 20 * MenuScale
@@ -1061,7 +1061,7 @@ Function UpdateMainMenu()
 							AAText(x + 20 * MenuScale, y + 10 * MenuScale, SavedMaps(i - 1))
 							AAText(x + 20 * MenuScale, y + (10+27) * MenuScale, SavedMapsAuthor(i - 1))
 							
-							If DrawButton(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "¼ÓÔØ", False) Then
+							If DrawButton(x + 400 * MenuScale, y + 20 * MenuScale, 100 * MenuScale, 30 * MenuScale, "åŠ è½½", False) Then
 								SelectedMap=SavedMaps(i - 1)
 								MainMenuTab = 1
 							EndIf
@@ -1087,8 +1087,8 @@ Function UpdateMainMenu()
 	
 	TextSetColor 255,255,0
 	AASetFont Font1
-	TextDraw GraphicWidth-20,10,"ºº»¯ÖÆ×÷:×ÓÔÃºº»¯×é",TEXT_RIGHT,50,encoding
-	TextDraw GraphicWidth-20,TextFontWidth()+11,"¶ÔÍâ½»Á÷Èº1006841985",TEXT_RIGHT,TEXT_BOTTOM,encoding
+	TextDraw GraphicWidth-20,10,"æ±‰åŒ–åˆ¶ä½œ:å­æ‚¦æ±‰åŒ–ç»„",TEXT_RIGHT,50,encoding
+	TextDraw GraphicWidth-20,TextFontWidth()+11,"å¯¹å¤–äº¤æµç¾¤1006841985",TEXT_RIGHT,TEXT_BOTTOM,encoding
 	
 	;DrawTiledImageRect(MenuBack, 985 * MenuScale, 860 * MenuScale, 200 * MenuScale, 20 * MenuScale, 1200 * MenuScale, 866 * MenuScale, 300, 20 * MenuScale)
 	
@@ -1140,7 +1140,7 @@ Function UpdateLauncher()
 	BlinkMeterIMG% = LoadImage_Strict("GFX\blinkmeter.jpg")
 	;CheckForUpdates()
 	
-	AppTitle "SCP - ÊÕÈİÊ§Ğ§ºº»¯°æ Æô¶¯Æ÷"
+	AppTitle "SCP - æ”¶å®¹å¤±æ•ˆæ±‰åŒ–ç‰ˆ å¯åŠ¨å™¨"
 	
 	Repeat
 		InitAAFont()
@@ -1155,7 +1155,7 @@ Function UpdateLauncher()
 		Color 255, 255, 255
 		DrawImage(LauncherIMG, 0, 0)
 		
-		Text(20, 240 - 68, "·Ö±æÂÊ: ")
+		Text(20, 240 - 68, "åˆ†è¾¨ç‡: ")
 		
 		Local x% = 40
 		Local y% = 270 - 65
@@ -1179,14 +1179,14 @@ Function UpdateLauncher()
 		x = 30
 		y = 369
 		Rect(x - 10, y, 340, 95)
-		Text(x - 10, y - 28, "ÏÔÊ¾Éè±¸:")
+		Text(x - 10, y - 28, "æ˜¾ç¤ºè®¾å¤‡:")
 		
 		y=y+10
 		For i = 1 To CountGfxDrivers()
 			Color 0, 0, 0
 			If SelectedGFXDriver = i Then Rect(x - 1, y - 1, 290, 20, False)
 			;text(x, y, bbGfxDriverName(i))
-			LimitText(GfxDriverName(i), x, y - 3, 290, False)
+			LimitText(ConvertToUTF8(GfxDriverName(i)), x, y - 3, 290, False)
 			If MouseOn(x - 1, y - 1, 290, 20) Then
 				Color 100, 100, 100
 				Rect(x - 1, y - 1, 290, 20, False)
@@ -1211,9 +1211,9 @@ Function UpdateLauncher()
   		  Color 255, 255, 255
 		EndIf
 
-		Text(40 + 430 + 15, 262 - 55 + 5 - 12, "È«ÆÁ")
+		Text(40 + 430 + 15, 262 - 55 + 5 - 12, "å…¨å±")
 		Color 255, 255, 255
-		Text(40 + 430 + 15, 262 - 55 + 43 - 11, "ÎŞ±ß´°¿Ú")
+		Text(40 + 430 + 15, 262 - 55 + 43 - 11, "æ— è¾¹çª—å£")
 
 		If BorderlessWindowed Or (Not Fullscreen)
  		   Color 255, 0, 0
@@ -1224,21 +1224,21 @@ Function UpdateLauncher()
 
 		Text(40 + 430 + 15, 262 - 55 + 65 + 3, "16 Bit")
 		Color 255, 255, 255
-		Text(40 + 430 + 15, 262 - 55 + 95 + 4, "Ê¹ÓÃÆô¶¯Æ÷")
+		Text(40 + 430 + 15, 262 - 55 + 95 + 4, "ä½¿ç”¨å¯åŠ¨å™¨")
 		
 		If (Not BorderlessWindowed)
 			If Fullscreen
-				Text(40+ 260 + 15, 262 - 55 + 140 - 6, "µ±Ç°·Ö±æÂÊ: "+(GfxModeWidths(SelectedGFXMode) + "x" + GfxModeHeights(SelectedGFXMode) + "," + (16+(16*(Not Bit16Mode)))))
+				Text(40+ 260 + 15, 262 - 55 + 140 - 6, "å½“å‰åˆ†è¾¨ç‡: "+(GfxModeWidths(SelectedGFXMode) + "x" + GfxModeHeights(SelectedGFXMode) + "," + (16+(16*(Not Bit16Mode)))))
 			Else
-				Text(40+ 260 + 15, 262 - 55 + 140 - 6, "µ±Ç°·Ö±æÂÊ: "+(GfxModeWidths(SelectedGFXMode) + "x" + GfxModeHeights(SelectedGFXMode) + ",32"))
+				Text(40+ 260 + 15, 262 - 55 + 140 - 6, "å½“å‰åˆ†è¾¨ç‡: "+(GfxModeWidths(SelectedGFXMode) + "x" + GfxModeHeights(SelectedGFXMode) + ",32"))
 			EndIf
 		Else
-			Text(40+ 260 + 15, 262 - 55 + 140 - 6, "µ±Ç°·Ö±æÂÊ: "+GfxModeWidths(SelectedGFXMode) + "x" + GfxModeHeights(SelectedGFXMode) + ",32")
+			Text(40+ 260 + 15, 262 - 55 + 140 - 6, "å½“å‰åˆ†è¾¨ç‡: "+GfxModeWidths(SelectedGFXMode) + "x" + GfxModeHeights(SelectedGFXMode) + ",32")
 			If GfxModeWidths(SelectedGFXMode)<G_viewport_width Then
-				Text(40+ 260 + 65, 262 - 55 + 160, "(·Ö±æÂÊÓ¦ÉıÖÁ")
+				Text(40+ 260 + 65, 262 - 55 + 160, "(åˆ†è¾¨ç‡åº”å‡è‡³")
 				Text(40+ 260 + 65, 262 - 55 + 180, G_viewport_width + "x" + G_viewport_height + ",32)")
 			ElseIf GfxModeWidths(SelectedGFXMode)>G_viewport_width Then
-				Text(40+ 260 + 65, 262 - 55 + 160, "(·Ö±æÂÊÓ¦½µÖÁ")
+				Text(40+ 260 + 65, 262 - 55 + 160, "(åˆ†è¾¨ç‡åº”é™è‡³")
 				Text(40+ 260 + 65, 262 - 55 + 180, G_viewport_width + "x" + G_viewport_height + ",32)")
 			EndIf
 		EndIf
@@ -1249,7 +1249,7 @@ Function UpdateLauncher()
 		;Text LauncherWidth-250,LauncherHeight-50,"updates on"
 		;Text LauncherWidth-250,LauncherHeight-30,"launch"
 		
-		If DrawButton(LauncherWidth - 30 - 90, LauncherHeight - 50 - 55, 100, 30, "Æô¶¯", False, False, False) Then
+		If DrawButton(LauncherWidth - 30 - 90, LauncherHeight - 50 - 55, 100, 30, "å¯åŠ¨", False, False, False) Then
 			GraphicWidth = GfxModeWidths(SelectedGFXMode)
 			GraphicHeight = GfxModeHeights(SelectedGFXMode)
 			RealGraphicWidth = GraphicWidth
@@ -1257,7 +1257,7 @@ Function UpdateLauncher()
 			Exit
 		EndIf
 		
-		If DrawButton(LauncherWidth - 30 - 90, LauncherHeight - 50, 100, 30, "ÍË³ö", False, False, False) Then End
+		If DrawButton(LauncherWidth - 30 - 90, LauncherHeight - 50, 100, 30, "é€€å‡º", False, False, False) Then End
 		Flip
 	Forever
 	
@@ -1289,7 +1289,7 @@ Function UpdateLauncher()
 	;Else
 	;	PutINIValue(OptionFile, "options", "check for updates", "false")
 	;EndIf
-	TextDeinitialize() ;È¡Ïû³õÊ¼»¯²¢É¾³ıÆäËùÓĞ×ÊÔ´
+	TextDeinitialize() ;å–æ¶ˆåˆå§‹åŒ–å¹¶åˆ é™¤å…¶æ‰€æœ‰èµ„æº
 End Function
 
 
@@ -1465,36 +1465,36 @@ Function DrawLoading(percent%, shortloading=False)
 				If Rand(5)=1 Then
 					Select Rand(2)
 						Case 1
-							SelectedLoadingScreen\txt[0] = "Ëü½«»áÔÚ " + CurrentDate() + "·¢Éú"
+							SelectedLoadingScreen\txt[0] = "å®ƒå°†ä¼šåœ¨ " + CurrentDate() + "å‘ç”Ÿ"
 						Case 2
 							SelectedLoadingScreen\txt[0] = CurrentTime()
 					End Select
 				Else
 					Select Rand(13)
 						Case 1
-							SelectedLoadingScreen\txt[0] = "Ò»¸ö³¬¾«µÄ¶Ô½²»ú¿ÉÄÜ»áÓĞÓÃ"
+							SelectedLoadingScreen\txt[0] = "ä¸€ä¸ªè¶…ç²¾çš„å¯¹è®²æœºå¯èƒ½ä¼šæœ‰ç”¨"
 						Case 2
-							SelectedLoadingScreen\txt[0] = "ÕâµØ¸ö·½½«È¼»áÉÕ"
+							SelectedLoadingScreen\txt[0] = "è¿™åœ°ä¸ªæ–¹å°†ç‡ƒä¼šçƒ§"
 						Case 3
-							SelectedLoadingScreen\txt[0] = "ÄãÎŞ·¨¿ØÖÆËü"
+							SelectedLoadingScreen\txt[0] = "ä½ æ— æ³•æ§åˆ¶å®ƒ"
 						Case 4
 							SelectedLoadingScreen\txt[0] = "eof9nsd3jue4iwe1fgj"
 						Case 5
-							SelectedLoadingScreen\txt[0] = "ÄãĞèÒªÏàĞÅËü¡£"
+							SelectedLoadingScreen\txt[0] = "ä½ éœ€è¦ç›¸ä¿¡å®ƒã€‚"
 						Case 6 
-							SelectedLoadingScreen\txt[0] = "µ±Äã½ĞÎÒµÄÅóÓÑÊ±¿´×ÅËûµÄÑÛ¾¦,Õâ²»ÊÇÉğÊ¿µÄ·½Ê½Âğ£¿"
+							SelectedLoadingScreen\txt[0] = "å½“ä½ å«æˆ‘çš„æœ‹å‹æ—¶çœ‹ç€ä»–çš„çœ¼ç›,è¿™ä¸æ˜¯ç»…å£«çš„æ–¹å¼å—ï¼Ÿ"
 						Case 7
 							SelectedLoadingScreen\txt[0] = "???____??_???__????n?"
 						Case 8, 9
-							SelectedLoadingScreen\txt[0] = "ÇÇÖÎÒ»Ö±ÔÚµÈÄã¡£"
+							SelectedLoadingScreen\txt[0] = "ä¹”æ²»ä¸€ç›´åœ¨ç­‰ä½ ã€‚"
 						Case 10
 							SelectedLoadingScreen\txt[0] = "???????????"
 						Case 11
-							SelectedLoadingScreen\txt[0] = "ÈÃËı³ÉÎªÎçÒ¹¾ç×éµÄÒ»Ô±"
+							SelectedLoadingScreen\txt[0] = "è®©å¥¹æˆä¸ºåˆå¤œå‰§ç»„çš„ä¸€å‘˜"
 						Case 12
-							SelectedLoadingScreen\txt[0] = "ÎÒ¶Ï¶¨À´ÕâÀïÊÇ¸ö´íÎó, ÎÒÃÇ±ØĞë»ØÈ¥¡£"
+							SelectedLoadingScreen\txt[0] = "æˆ‘æ–­å®šæ¥è¿™é‡Œæ˜¯ä¸ªé”™è¯¯, æˆ‘ä»¬å¿…é¡»å›å»ã€‚"
 						Case 13
-							SelectedLoadingScreen\txt[0] = "ËûµÄºÏ½ğ°üº¬ÁËÎÒÉúÃüµÄ¾«»ª¡£"
+							SelectedLoadingScreen\txt[0] = "ä»–çš„åˆé‡‘åŒ…å«äº†æˆ‘ç”Ÿå‘½çš„ç²¾åã€‚"
 					End Select
 				EndIf
 			EndIf
@@ -1523,13 +1523,13 @@ Function DrawLoading(percent%, shortloading=False)
 		EndIf
 		
 		Color 0,0,0
-		AAText(GraphicWidth / 2 + 1, GraphicHeight / 2 - 100 + 1, "¼ÓÔØÖĞ - " + percent + " %", True, True)
+		AAText(GraphicWidth / 2 + 1, GraphicHeight / 2 - 100 + 1, "åŠ è½½ä¸­ - " + percent + " %", True, True)
 		Color 255,255,255
-		AAText(GraphicWidth / 2, GraphicHeight / 2 - 100, "¼ÓÔØÖĞ - " + percent + " %", True, True)
+		AAText(GraphicWidth / 2, GraphicHeight / 2 - 100, "åŠ è½½ä¸­ - " + percent + " %", True, True)
 		
 		If percent = 100 Then 
 			If firstloop And SelectedLoadingScreen\title <> "CWM" Then PlaySound_Strict LoadTempSound(("SFX\Horror\Horror8.ogg"))
-			AAText(GraphicWidth / 2, GraphicHeight - 50, "°´ÈÎÒâ¼ü¼ÌĞø", True, True)
+			AAText(GraphicWidth / 2, GraphicHeight - 50, "æŒ‰ä»»æ„é”®ç»§ç»­", True, True)
 		Else
 			FlushKeys()
 			FlushMouse()
@@ -1740,8 +1740,8 @@ Function SlideBar#(x%, y%, width%, value#)
 	DrawImage(BlinkMeterIMG, x + width * value / 100.0 +3, y+3)
 	
 	Color 170,170,170 
-	AAText (x - 50 * MenuScale, y + 4*MenuScale, "µÍ")					
-	AAText (x + width + 38 * MenuScale, y+4*MenuScale, "¸ß")	
+	AAText (x - 50 * MenuScale, y + 4*MenuScale, "ä½")					
+	AAText (x + width + 38 * MenuScale, y+4*MenuScale, "é«˜")	
 	
 	Return value
 	
@@ -1914,120 +1914,120 @@ Function DrawOptionsTooltip(x%,y%,width%,height%,option$,value#=0,ingame%=False)
 	AASetFont Font1
 	Color 255,255,255
 	Select Lower(option$)
-		;»­ÃæÉèÖÃ
+		;ç”»é¢è®¾ç½®
 			;[Block]
 		Case "bump"
-			txt = "¡°°¼Í¹ÌùÍ¼¡±ÒâÎªÍ¨¹ı¸ß¶ÈÍ¼ÎªÌùÍ¼Ä£Äâ°¼Í¹Ğ§¹û¡£"
-			txt2 = "¸ÃÑ¡ÏîÎŞ·¨ÔÚÓÎÏ·ÖĞĞŞ¸Ä¡£"
+			txt = "â€œå‡¹å‡¸è´´å›¾â€æ„ä¸ºé€šè¿‡é«˜åº¦å›¾ä¸ºè´´å›¾æ¨¡æ‹Ÿå‡¹å‡¸æ•ˆæœã€‚"
+			txt2 = "è¯¥é€‰é¡¹æ— æ³•åœ¨æ¸¸æˆä¸­ä¿®æ”¹ã€‚"
 			R = 255
 		Case "vsync"
-			txt = "¡°´¹Ö±Í¬²½¡±ÒâÎªÔÚ¼ÆËãÏÂÒ»Ö¡Ç°£¬µÈ´ıÏÔÊ¾Æ÷Íê³Éµ±Ç°Ë¢ĞÂÖÜÆÚ£¬·ÀÖ¹³öÏÖ»­ÃæËºÁÑµÈÎÊÌâ¡£"
-			txt2 = "Õâ»áÇ¿ÖÆ½«ÓÎÏ·µÄFPSÏŞÖÆÔÚÏÔÊ¾Æ÷Ë¢ĞÂÂÊÖ®ÄÚ,¿ÉÄÜ»áµ¼ÖÂ»­ÃæÑÓ³Ù¡£"
+			txt = "â€œå‚ç›´åŒæ­¥â€æ„ä¸ºåœ¨è®¡ç®—ä¸‹ä¸€å¸§å‰ï¼Œç­‰å¾…æ˜¾ç¤ºå™¨å®Œæˆå½“å‰åˆ·æ–°å‘¨æœŸï¼Œé˜²æ­¢å‡ºç°ç”»é¢æ’•è£‚ç­‰é—®é¢˜ã€‚"
+			txt2 = "è¿™ä¼šå¼ºåˆ¶å°†æ¸¸æˆçš„FPSé™åˆ¶åœ¨æ˜¾ç¤ºå™¨åˆ·æ–°ç‡ä¹‹å†…,å¯èƒ½ä¼šå¯¼è‡´ç”»é¢å»¶è¿Ÿã€‚"
 		Case "antialias"
-			txt = "¡°¿¹¾â³İ¡±ÒâÎªÔÚÏÔÊ¾Ö®Ç°Æ½»¬äÖÈ¾Í¼Ïñ,ÒÔ¼õÉÙÄ£ĞÍ±ßÔµÖÜÎ§µÄ¾â³İ¡£"
-			txt2 = "¸ÃÑ¡ÏîÖ»ÊÊÓÃÓÚÈ«ÆÁÄ£Ê½ÖĞ¡£"
+			txt = "â€œæŠ—é”¯é½¿â€æ„ä¸ºåœ¨æ˜¾ç¤ºä¹‹å‰å¹³æ»‘æ¸²æŸ“å›¾åƒ,ä»¥å‡å°‘æ¨¡å‹è¾¹ç¼˜å‘¨å›´çš„é”¯é½¿ã€‚"
+			txt2 = "è¯¥é€‰é¡¹åªé€‚ç”¨äºå…¨å±æ¨¡å¼ä¸­ã€‚"
 			R = 255
 		Case "roomlights"
-			txt = "ÔÚÌØ¶¨¹âÔ´ÉÏÉú³ÉÈËÔìµÄ¹â°ßĞ§¹û¡£"
+			txt = "åœ¨ç‰¹å®šå…‰æºä¸Šç”Ÿæˆäººé€ çš„å…‰æ–‘æ•ˆæœã€‚"
 		Case "gamma"
-			txt = "¡°Ù¤ÂíÖµ½ÃÕı¡±ÓÃÓÚÔÚÓÎÏ·ÏÔÊ¾¹ı°µ»ò¹ıÁÁÊ±½ÃÕıÖÁÊÊºÏµÄÁÁ¶È£¬ÒÔ±ãÓëÏÔÊ¾Æ÷Ù¤ÂíÖµÆ½ºâ¡£"
-			txt = txt + "½«Ù¤ÂíÖµÉèÖÃµÄ¹ı¸ß»ò¹ıµÍ¿ÉÄÜ»á¶ªÊ§»­ÃæÏ¸½Ú¡£"
+			txt = "â€œä¼½é©¬å€¼çŸ«æ­£â€ç”¨äºåœ¨æ¸¸æˆæ˜¾ç¤ºè¿‡æš—æˆ–è¿‡äº®æ—¶çŸ«æ­£è‡³é€‚åˆçš„äº®åº¦ï¼Œä»¥ä¾¿ä¸æ˜¾ç¤ºå™¨ä¼½é©¬å€¼å¹³è¡¡ã€‚"
+			txt = txt + "å°†ä¼½é©¬å€¼è®¾ç½®çš„è¿‡é«˜æˆ–è¿‡ä½å¯èƒ½ä¼šä¸¢å¤±ç”»é¢ç»†èŠ‚ã€‚"
 			R = 255
 			G = 255
 			B = 255
-			txt2 = "µ±Ç°Öµ: "+Int(value*100)+"% £¨Ä¬ÈÏ100%£©"
+			txt2 = "å½“å‰å€¼: "+Int(value*100)+"% ï¼ˆé»˜è®¤100%ï¼‰"
 		Case "texquality"
-			txt = "¡°ÎÆÀíÏ¸½Ú²ã´Î¡±»áÓ°ÏìÎÆÀíµÄÏ¸½Ú³Ì¶È¡£Èç¹ûÎÆÀíÉÁË¸»ò¹ıÓÚÄ£ºı£¬Çë¸ü¸Ä´ËÑ¡Ïî¡£"
+			txt = "â€œçº¹ç†ç»†èŠ‚å±‚æ¬¡â€ä¼šå½±å“çº¹ç†çš„ç»†èŠ‚ç¨‹åº¦ã€‚å¦‚æœçº¹ç†é—ªçƒæˆ–è¿‡äºæ¨¡ç³Šï¼Œè¯·æ›´æ”¹æ­¤é€‰é¡¹ã€‚"
 		Case "particleamount"
-			txt = "ÉèÖÃÃ¿¿Ì¶ÈÔÊĞíäÖÈ¾µÄÁ£×ÓÊıÁ¿¡£"
+			txt = "è®¾ç½®æ¯åˆ»åº¦å…è®¸æ¸²æŸ“çš„ç²’å­æ•°é‡ã€‚"
 			Select value
 				Case 0
 					R = 255
-					txt2 = "Ö»äÖÈ¾ÑÌÎíÁ£×Ó"
+					txt2 = "åªæ¸²æŸ“çƒŸé›¾ç²’å­"
 				Case 1
 					R = 255
 					G = 255
-					txt2 = "Ã¿¿Ì¶È½öäÖÈ¾ÉÙÊıÁ£×Ó"
+					txt2 = "æ¯åˆ»åº¦ä»…æ¸²æŸ“å°‘æ•°ç²’å­"
 				Case 2
 					G = 255
-					txt2 = "äÖÈ¾ËùÓĞÁ£×Ó"
+					txt2 = "æ¸²æŸ“æ‰€æœ‰ç²’å­"
 			End Select
 		Case "vram"
-			txt = "½«ÎÆÀí´¢´æÔÚVideo-RAM£¨Ó°ÏñËæ»ú½Ó´ï¼ÇÒäÆ÷£©ÖĞ»áÈÃÎÆÀíµÄ¼ÓÔØËÙ¶È¸ü¿ì£¬µ«Ò²»á¶ÔÎÆÀíÖÊÁ¿Ôì³É¸ºÃæÓ°Ïì¡£"
-			txt2 = "¸ÃÑ¡ÏîÎŞ·¨ÔÚÓÎÏ·ÖĞĞŞ¸Ä¡£"
+			txt = "å°†çº¹ç†å‚¨å­˜åœ¨Video-RAMï¼ˆå½±åƒéšæœºæ¥è¾¾è®°å¿†å™¨ï¼‰ä¸­ä¼šè®©çº¹ç†çš„åŠ è½½é€Ÿåº¦æ›´å¿«ï¼Œä½†ä¹Ÿä¼šå¯¹çº¹ç†è´¨é‡é€ æˆè´Ÿé¢å½±å“ã€‚"
+			txt2 = "è¯¥é€‰é¡¹æ— æ³•åœ¨æ¸¸æˆä¸­ä¿®æ”¹ã€‚"
 			R = 255
 			;[End Block]
-	    ;ÒôÆµÉèÖÃ
+	    ;éŸ³é¢‘è®¾ç½®
 			;[Block]
 		Case "musicvol"
-			txt = "µ÷Õû±³¾°ÒôÀÖµÄÒôÁ¿£¬½«¿ØÖÆ¸ËÍêÈ«»®Ïò×ó²à½ûÓÃËùÓĞ±³¾°ÒôÀÖ¡£"
+			txt = "è°ƒæ•´èƒŒæ™¯éŸ³ä¹çš„éŸ³é‡ï¼Œå°†æ§åˆ¶æ†å®Œå…¨åˆ’å‘å·¦ä¾§ç¦ç”¨æ‰€æœ‰èƒŒæ™¯éŸ³ä¹ã€‚"
 			R = 255
 			G = 255
 			B = 255
-			txt2 = "µ±Ç°Öµ£º "+Int(value*100)+"% £¨Ä¬ÈÏ50%£©"
+			txt2 = "å½“å‰å€¼ï¼š "+Int(value*100)+"% ï¼ˆé»˜è®¤50%ï¼‰"
 		Case "soundvol"
-			txt = "µ÷ÕûÒôĞ§ÒôÁ¿,½«¿ØÖÆ¸ËÍêÈ«»®Ïò×ó²à½ûÓÃËùÓĞÉùÒô¡£"
+			txt = "è°ƒæ•´éŸ³æ•ˆéŸ³é‡,å°†æ§åˆ¶æ†å®Œå…¨åˆ’å‘å·¦ä¾§ç¦ç”¨æ‰€æœ‰å£°éŸ³ã€‚"
 			R = 255
 			G = 255
 			B = 255
-			txt2 = "µ±Ç°Öµ£º "+Int(value*100)+"% £¨Ä¬ÈÏ100%£©"
+			txt2 = "å½“å‰å€¼ï¼š "+Int(value*100)+"% ï¼ˆé»˜è®¤100%ï¼‰"
 		Case "sfxautorelease"
-			txt = "¡°×Ô¶¯ÊÍ·ÅÒôÆµ¡±½«»á×Ô¶¯´ÓÄÚ´æÖĞÊÍ·ÅÎåÃëºóÎ´Ê¹ÓÃµÄÉùÒô£¬ÒÔ·ÀÖ¹ÄÚ´æ·ÖÅäÎÊÌâ¡£"
+			txt = "â€œè‡ªåŠ¨é‡Šæ”¾éŸ³é¢‘â€å°†ä¼šè‡ªåŠ¨ä»å†…å­˜ä¸­é‡Šæ”¾äº”ç§’åæœªä½¿ç”¨çš„å£°éŸ³ï¼Œä»¥é˜²æ­¢å†…å­˜åˆ†é…é—®é¢˜ã€‚"
 			R = 255
-			txt2 = "¸ÃÑ¡ÏîÎŞ·¨ÔÚÓÎÏ·ÖĞĞŞ¸Ä¡£"
+			txt2 = "è¯¥é€‰é¡¹æ— æ³•åœ¨æ¸¸æˆä¸­ä¿®æ”¹ã€‚"
 		Case "usertrack"
-			txt = "ÆôÓÃÔÚ¶Ô½²»úÒ»ÆµµÀ²¥·Å×Ô¶¨ÇúÄ¿µÄ¹¦ÄÜ£¬ÕâĞ©ÇúÄ¿´Ó¡°SFX\Radio\UserTracks\¡±Ä¿Â¼ÖĞ¼ÓÔØ¡£"
-			txt = txt + "Ê¹ÓÃ¶Ô½²»úÊ±°´1ÒÔ²¥·Å×Ô¶¨ÇúÄ¿¡£"
+			txt = "å¯ç”¨åœ¨å¯¹è®²æœºä¸€é¢‘é“æ’­æ”¾è‡ªå®šæ›²ç›®çš„åŠŸèƒ½ï¼Œè¿™äº›æ›²ç›®ä»â€œSFX\Radio\UserTracks\â€ç›®å½•ä¸­åŠ è½½ã€‚"
+			txt = txt + "ä½¿ç”¨å¯¹è®²æœºæ—¶æŒ‰1ä»¥æ’­æ”¾è‡ªå®šæ›²ç›®ã€‚"
 			R = 255
-			txt2 = "¸ÃÑ¡ÏîÎŞ·¨ÔÚÓÎÏ·ÖĞĞŞ¸Ä¡£"
+			txt2 = "è¯¥é€‰é¡¹æ— æ³•åœ¨æ¸¸æˆä¸­ä¿®æ”¹ã€‚"
 		Case "usertrackmode"
-			txt = "ÉèÖÃ×Ô¶¨ÆµµÀÖĞÇúÄ¿µÄ²¥·ÅÄ£Ê½¡£¡°ÖØ¸´¡±½«»á°´ÎÄ¼şÃûÊ××ÖÄ¸Ë³Ğò²¥·Å£¬¡°Ëæ»ú¡±½«»áËæ»úÑ¡ÔñÏÂÒ»Ê×ÇúÄ¿¡£"
+			txt = "è®¾ç½®è‡ªå®šé¢‘é“ä¸­æ›²ç›®çš„æ’­æ”¾æ¨¡å¼ã€‚â€œé‡å¤â€å°†ä¼šæŒ‰æ–‡ä»¶åé¦–å­—æ¯é¡ºåºæ’­æ”¾ï¼Œâ€œéšæœºâ€å°†ä¼šéšæœºé€‰æ‹©ä¸‹ä¸€é¦–æ›²ç›®ã€‚"
 			R = 255
 			G = 255
-			txt2 = "Çë×¢Òâ£¬Ëæ»úÄ£Ê½²»»á×èÖ¹²¥·ÅÒÑ²¥·Å¹ıµÄÇúÄ¿¡£"
+			txt2 = "è¯·æ³¨æ„ï¼Œéšæœºæ¨¡å¼ä¸ä¼šé˜»æ­¢æ’­æ”¾å·²æ’­æ”¾è¿‡çš„æ›²ç›®ã€‚"
 		Case "usertrackscan"
-			txt = "ÖØĞÂ¼ì²éÂ·¾¶ÄÚÊÇ·ñÓĞÉ¾³ı»òÌí¼ÓµÄÒôÀÖÎÄ¼ş¡£"
+			txt = "é‡æ–°æ£€æŸ¥è·¯å¾„å†…æ˜¯å¦æœ‰åˆ é™¤æˆ–æ·»åŠ çš„éŸ³ä¹æ–‡ä»¶ã€‚"
 			;[End Block]
-		;¿ØÖÆÉèÖÃ
+		;æ§åˆ¶è®¾ç½®
 			;[Block]
 		Case "mousesensitivity"
-			txt = "ÉèÖÃÊó±êÖ¸ÕëµÄËÙ¶È¡£"
+			txt = "è®¾ç½®é¼ æ ‡æŒ‡é’ˆçš„é€Ÿåº¦ã€‚"
 			R = 255
 			G = 255
 			B = 255
-			txt2 = "µ±Ç°Öµ£º "+Int((0.5+value)*100)+"% £¨Ä¬ÈÏ50%£©"
+			txt2 = "å½“å‰å€¼ï¼š "+Int((0.5+value)*100)+"% ï¼ˆé»˜è®¤50%ï¼‰"
 		Case "mouseinvert"
-			txt = "·´×ªÊó±êYÖá,ÎŞĞè¸ü¶à½âÊÍ¡£"
+			txt = "åè½¬é¼ æ ‡Yè½´,æ— éœ€æ›´å¤šè§£é‡Šã€‚"
 		Case "mousesmoothing"
-			txt = "µ÷ÕûÊó±êÖ¸ÕëÒÆ¶¯µÄÆ½»¬¶È¡£"
+			txt = "è°ƒæ•´é¼ æ ‡æŒ‡é’ˆç§»åŠ¨çš„å¹³æ»‘åº¦ã€‚"
 			R = 255
 			G = 255
 			B = 255
-			txt2 = "µ±Ç°Öµ£º "+Int(value*100)+"% £¨Ä¬ÈÏ100%£©"
+			txt2 = "å½“å‰å€¼ï¼š "+Int(value*100)+"% ï¼ˆé»˜è®¤100%ï¼‰"
 		Case "controls"
-			txt = "ÉèÖÃÓÎÏ·ÖĞµÄ¼üÎ»¡£"
+			txt = "è®¾ç½®æ¸¸æˆä¸­çš„é”®ä½ã€‚"
 			;[End Block]
-		;¸ß¼¶ÉèÖÃ
+		;é«˜çº§è®¾ç½®
 			;[Block]
 		Case "hud"
-			txt = "ÏÔÊ¾Õ£ÑÛÌõºÍÄÍÁ¦Ìõ¡£"
+			txt = "æ˜¾ç¤ºçœ¨çœ¼æ¡å’Œè€åŠ›æ¡ã€‚"
 		Case "consoleenable"
-			txt = "ÔÊĞí´ò¿ª¿ØÖÆÌ¨,ÆôÓÃºó°´" + KeyName(KEY_CONSOLE) + "ÏÔÊ¾¿ØÖÆÌ¨¡£"
+			txt = "å…è®¸æ‰“å¼€æ§åˆ¶å°,å¯ç”¨åæŒ‰" + KeyName(KEY_CONSOLE) + "æ˜¾ç¤ºæ§åˆ¶å°ã€‚"
 		Case "consoleerror"
-			txt = "ÔÚ³öÏÖ´íÎóÊ±µ¯³ö¿ØÖÆÌ¨²¢ÏÔÊ¾´íÎó¡£"
+			txt = "åœ¨å‡ºç°é”™è¯¯æ—¶å¼¹å‡ºæ§åˆ¶å°å¹¶æ˜¾ç¤ºé”™è¯¯ã€‚"
 		Case "achpopup"
-			txt = "ÔÚ»ñµÃ³É¾ÍÊ±µ¯³öÆøÅİÌáÊ¾¡£"
+			txt = "åœ¨è·å¾—æˆå°±æ—¶å¼¹å‡ºæ°”æ³¡æç¤ºã€‚"
 		Case "showfps"
-			txt = "ÔÚ×óÉÏ½ÇÏÔÊ¾Ã¿ÃëµÄÖ¡Êı¡£"
+			txt = "åœ¨å·¦ä¸Šè§’æ˜¾ç¤ºæ¯ç§’çš„å¸§æ•°ã€‚"
 		Case "framelimit"
-			txt = "½«ÓÎÏ·Ö¡Êı×î¸ßÏŞÖÆÎªËùÉèµÄÖµ¡£"
+			txt = "å°†æ¸¸æˆå¸§æ•°æœ€é«˜é™åˆ¶ä¸ºæ‰€è®¾çš„å€¼ã€‚"
 			If value > 0 And value < 60
 				R = 255
 				G = 255
-				txt2 = "Í¨³£ÍÆ¼ö60FPS¼°¸ü¸ß¡£Èç¹ûÄã×¢Òâµ½ÉèÖÃºó³öÏÖ¹ı¶È¿¨¶Ù,Çë³¢ÊÔ½µµÍÊıÖµÊ¹Ö¡ËÙÂÊ¸ü¼ÓÒ»ÖÂ¡£"
+				txt2 = "é€šå¸¸æ¨è60FPSåŠæ›´é«˜ã€‚å¦‚æœä½ æ³¨æ„åˆ°è®¾ç½®åå‡ºç°è¿‡åº¦å¡é¡¿,è¯·å°è¯•é™ä½æ•°å€¼ä½¿å¸§é€Ÿç‡æ›´åŠ ä¸€è‡´ã€‚"
 			EndIf
 		Case "subtitle"
-			txt = "ÔÚÓÎÏ·ÖĞÏÔÊ¾ÈËÎïËµ»°µÄÄÚÈİ,×ÖÄ»µÄÎ»ÖÃÓëÓÎÏ·Ô­±¾µÄÌáÊ¾µÄÎ»ÖÃ²»Í¬¡£"
+			txt = "åœ¨æ¸¸æˆä¸­æ˜¾ç¤ºäººç‰©è¯´è¯çš„å†…å®¹,å­—å¹•çš„ä½ç½®ä¸æ¸¸æˆåŸæœ¬çš„æç¤ºçš„ä½ç½®ä¸åŒã€‚"
 			;[End Block]
 	End Select
 	
@@ -2091,23 +2091,23 @@ Function DrawMapCreatorTooltip(x%,y%,width%,height%,mapname$)
 		CloseFile f%
 	Else
 		txt[0] = Left(mapname$,Len(mapname$)-6)
-		author$ = "[Î´Öª]"
-		descr$ = "[ÎŞÃèÊö]"
+		author$ = "[æœªçŸ¥]"
+		descr$ = "[æ— æè¿°]"
 		ramount% = 0
 		hasForest% = False
 		hasMT% = False
 	EndIf
-	txt[1] = "×÷Õß: "+author$
-	txt[2] = "ÃèÊö: "+descr$
+	txt[1] = "ä½œè€…: "+author$
+	txt[2] = "æè¿°: "+descr$
 	If hasForest Then
-		txt[4] = "×Ô¶¨É­ÁÖ£º ÊÇ"
+		txt[4] = "è‡ªå®šæ£®æ—ï¼š æ˜¯"
 	Else
-		txt[4] = "×Ô¶¨É­ÁÖ£º ·ñ"
+		txt[4] = "è‡ªå®šæ£®æ—ï¼š å¦"
 	EndIf
 	If hasMT Then
-		txt[5] = "×Ô¶¨Î¬ĞŞÍ¨µÀ£º ÊÇ"
+		txt[5] = "è‡ªå®šç»´ä¿®é€šé“ï¼š æ˜¯"
 	Else
-		txt[5] = "×Ô¶¨Î¬ĞŞÍ¨µÀ£º ·ñ"
+		txt[5] = "è‡ªå®šç»´ä¿®é€šé“ï¼š å¦"
 	EndIf
 	
 	lines% = GetLineAmount(txt[2],fw,fh)

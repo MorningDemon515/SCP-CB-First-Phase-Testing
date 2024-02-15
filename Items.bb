@@ -58,7 +58,7 @@ Function CreateItemTemplate.ItemTemplates(name$, tempname$, objpath$, invimgpath
 				Exit
 			EndIf
 		Next
-		If texture=0 Then texture=LoadTexture_Strict(texturepath,texflags%) : it\texpath = texturepath; : DebugÈÕÖ¾texturepath
+		If texture=0 Then texture=LoadTexture_Strict(texturepath,texflags%) : it\texpath = texturepath; : Debugæ—¥å¿—texturepath
 		EntityTexture it\obj, texture
 		it\tex = texture
 	EndIf  
@@ -115,151 +115,151 @@ End Function
 Function InitItemTemplates()
 	Local it.ItemTemplates,it2.ItemTemplates
 	
-	it = CreateItemTemplate("Ò»Ğ©SCP-420-J", "420", "GFX\items\420.x", "GFX\items\INV420.jpg", "", 0.0005)
+	it = CreateItemTemplate("ä¸€äº›SCP-420-J", "420", "GFX\items\420.x", "GFX\items\INV420.jpg", "", 0.0005)
 	it\sound = 2
 	
-	CreateItemTemplate("Ò»¼¶Ô¿³×¿¨", "key1",  "GFX\items\keycard.x", "GFX\items\INVkey1.jpg", "", 0.0004,"GFX\items\keycard1.jpg")
-	CreateItemTemplate("¶ş¼¶Ô¿³×¿¨", "key2",  "GFX\items\keycard.x", "GFX\items\INVkey2.jpg", "", 0.0004,"GFX\items\keycard2.jpg")
-	CreateItemTemplate("Èı¼¶Ô¿³×¿¨", "key3",  "GFX\items\keycard.x", "GFX\items\INVkey3.jpg", "", 0.0004,"GFX\items\keycard3.jpg")
-	CreateItemTemplate("ËÄ¼¶Ô¿³×¿¨", "key4",  "GFX\items\keycard.x", "GFX\items\INVkey4.jpg", "", 0.0004,"GFX\items\keycard4.jpg")
-	CreateItemTemplate("Îå¼¶Ô¿³×¿¨", "key5", "GFX\items\keycard.x", "GFX\items\INVkey5.jpg", "", 0.0004,"GFX\items\keycard5.jpg")
-	CreateItemTemplate("ÆË¿ËÅÆ", "misc", "GFX\items\keycard.x", "GFX\items\INVcard.jpg", "", 0.0004,"GFX\items\card.jpg")
-	CreateItemTemplate("ÍòÊÂ´ïĞÅÓÃ¿¨", "misc", "GFX\items\keycard.x", "GFX\items\INVmastercard.jpg", "", 0.0004,"GFX\items\mastercard.jpg")
-	CreateItemTemplate("ÍòÄÜÔ¿³×¿¨", "key6", "GFX\items\keycard.x", "GFX\items\INVkeyomni.jpg", "", 0.0004,"GFX\items\keycardomni.jpg")
+	CreateItemTemplate("ä¸€çº§é’¥åŒ™å¡", "key1",  "GFX\items\keycard.x", "GFX\items\INVkey1.jpg", "", 0.0004,"GFX\items\keycard1.jpg")
+	CreateItemTemplate("äºŒçº§é’¥åŒ™å¡", "key2",  "GFX\items\keycard.x", "GFX\items\INVkey2.jpg", "", 0.0004,"GFX\items\keycard2.jpg")
+	CreateItemTemplate("ä¸‰çº§é’¥åŒ™å¡", "key3",  "GFX\items\keycard.x", "GFX\items\INVkey3.jpg", "", 0.0004,"GFX\items\keycard3.jpg")
+	CreateItemTemplate("å››çº§é’¥åŒ™å¡", "key4",  "GFX\items\keycard.x", "GFX\items\INVkey4.jpg", "", 0.0004,"GFX\items\keycard4.jpg")
+	CreateItemTemplate("äº”çº§é’¥åŒ™å¡", "key5", "GFX\items\keycard.x", "GFX\items\INVkey5.jpg", "", 0.0004,"GFX\items\keycard5.jpg")
+	CreateItemTemplate("æ‰‘å…‹ç‰Œ", "misc", "GFX\items\keycard.x", "GFX\items\INVcard.jpg", "", 0.0004,"GFX\items\card.jpg")
+	CreateItemTemplate("ä¸‡äº‹è¾¾ä¿¡ç”¨å¡", "misc", "GFX\items\keycard.x", "GFX\items\INVmastercard.jpg", "", 0.0004,"GFX\items\mastercard.jpg")
+	CreateItemTemplate("ä¸‡èƒ½é’¥åŒ™å¡", "key6", "GFX\items\keycard.x", "GFX\items\INVkeyomni.jpg", "", 0.0004,"GFX\items\keycardomni.jpg")
 	
 	it = CreateItemTemplate("SCP-860", "scp860", "GFX\items\key.b3d", "GFX\items\INVkey.jpg", "", 0.001)
 	it\sound = 3
 	
-	it = CreateItemTemplate("SCP-079ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc079.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-895ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc895.jpg", 0.003) : it\sound = 0 
-	it = CreateItemTemplate("SCP-860ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc860.jpg", 0.003) : it\sound = 0 	
-	it = CreateItemTemplate("SCP-860-1ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc8601.jpg", 0.003) : it\sound = 0 	
-	it = CreateItemTemplate("SCP-093»ØÊÕ×ÊÁÏ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc093rm.jpg", 0.003) : it\sound = 0 	
-	it = CreateItemTemplate("SCP-106ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc106.jpg", 0.003) : it\sound = 0	
-	it = CreateItemTemplate("Allok²©Ê¿µÄ±ãÌõ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc106_2.jpg", 0.0025) : it\sound = 0
-	it = CreateItemTemplate("ÕÙ»ØĞ­ÒéRP-106-N", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docRP.jpg", 0.0025) : it\sound = 0
-	it = CreateItemTemplate("SCP-682ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc682.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-173ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc173.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-372ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc372.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-049ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc049.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-096ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc096.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-008ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc008.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-012ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc012.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-500ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc500.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-714ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc714.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-513ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc513.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-035ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc035.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-035¸½¼ş", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc035ad.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-939ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc939.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-966ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc966.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-970ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc970.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-1048ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1048.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-1123ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1123.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-1162ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1162.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("SCP-1499ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1499.png", 0.003) : it\sound = 0
-	it = CreateItemTemplate("ÊÂ¹Ê±¨¸æSCP-1048-A", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1048a.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-079æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc079.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-895æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc895.jpg", 0.003) : it\sound = 0 
+	it = CreateItemTemplate("SCP-860æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc860.jpg", 0.003) : it\sound = 0 	
+	it = CreateItemTemplate("SCP-860-1æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc8601.jpg", 0.003) : it\sound = 0 	
+	it = CreateItemTemplate("SCP-093å›æ”¶èµ„æ–™", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc093rm.jpg", 0.003) : it\sound = 0 	
+	it = CreateItemTemplate("SCP-106æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc106.jpg", 0.003) : it\sound = 0	
+	it = CreateItemTemplate("Allokåšå£«çš„ä¾¿æ¡", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc106_2.jpg", 0.0025) : it\sound = 0
+	it = CreateItemTemplate("å¬å›åè®®RP-106-N", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docRP.jpg", 0.0025) : it\sound = 0
+	it = CreateItemTemplate("SCP-682æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc682.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-173æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc173.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-372æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc372.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-049æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc049.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-096æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc096.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-008æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc008.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-012æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc012.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-500æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc500.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-714æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc714.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-513æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc513.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-035æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc035.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-035é™„ä»¶", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc035ad.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-939æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc939.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-966æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc966.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-970æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc970.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-1048æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1048.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-1123æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1123.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-1162æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1162.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-1499æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1499.png", 0.003) : it\sound = 0
+	it = CreateItemTemplate("äº‹æ•…æŠ¥å‘ŠSCP-1048-A", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1048a.jpg", 0.003) : it\sound = 0
 	
-	it = CreateItemTemplate("»æ»­", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1048.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("ç»˜ç”»", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1048.jpg", 0.003) : it\sound = 0
 	
-	it = CreateItemTemplate("´«µ¥", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\leaflet.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0
+	it = CreateItemTemplate("ä¼ å•", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\leaflet.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0
 	
-	it = CreateItemTemplate("L²©Ê¿µÄ±Ê¼Ç", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docL1.jpg", 0.0025, "GFX\items\notetexture.jpg") : it\sound = 0
-	it = CreateItemTemplate("L²©Ê¿ µÄ±Ê¼Ç", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docL2.jpg", 0.0025, "GFX\items\notetexture.jpg") : it\sound = 0
-	it = CreateItemTemplate("Õ´ÑªµÄ±Ê¼Ç", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docL3.jpg", 0.0025, "GFX\items\notetexture.jpg") : it\sound = 0
-	it = CreateItemTemplate("ÉÕ½¹µÄL²©Ê¿µÄ±Ê¼Ç", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\docL4.jpg", 0.0025, "GFX\items\BurntNoteTexture.jpg") : it\sound = 0
-	it = CreateItemTemplate("ÉÕ½¹µÄL²©Ê¿ µÄ±Ê¼Ç", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\docL5.jpg", 0.0025, "GFX\items\BurntNoteTexture.jpg") : it\sound = 0
-	it = CreateItemTemplate("ÉÕ½¹µÄ±Ê¼Ç", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\docL6.jpg", 0.0025, "GFX\items\BurntNoteTexture.jpg") : it\sound = 0
+	it = CreateItemTemplate("Låšå£«çš„ç¬”è®°", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docL1.jpg", 0.0025, "GFX\items\notetexture.jpg") : it\sound = 0
+	it = CreateItemTemplate("Låšå£« çš„ç¬”è®°", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docL2.jpg", 0.0025, "GFX\items\notetexture.jpg") : it\sound = 0
+	it = CreateItemTemplate("æ²¾è¡€çš„ç¬”è®°", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docL3.jpg", 0.0025, "GFX\items\notetexture.jpg") : it\sound = 0
+	it = CreateItemTemplate("çƒ§ç„¦çš„Låšå£«çš„ç¬”è®°", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\docL4.jpg", 0.0025, "GFX\items\BurntNoteTexture.jpg") : it\sound = 0
+	it = CreateItemTemplate("çƒ§ç„¦çš„Låšå£« çš„ç¬”è®°", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\docL5.jpg", 0.0025, "GFX\items\BurntNoteTexture.jpg") : it\sound = 0
+	it = CreateItemTemplate("çƒ§ç„¦çš„ç¬”è®°", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\docL6.jpg", 0.0025, "GFX\items\BurntNoteTexture.jpg") : it\sound = 0
 	
-	it = CreateItemTemplate("Ò»Ò³ÈÕ¼Ç", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docGonzales.jpg", 0.0025) : it\sound = 0
+	it = CreateItemTemplate("ä¸€é¡µæ—¥è®°", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docGonzales.jpg", 0.0025) : it\sound = 0
 	
 	
-	it = CreateItemTemplate("ÈÕÖ¾#1", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f4.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0
-	it = CreateItemTemplate("ÈÕÖ¾#2", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f5.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0
-	it = CreateItemTemplate("ÈÕÖ¾#3", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f6.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0
+	it = CreateItemTemplate("æ—¥å¿—#1", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f4.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0
+	it = CreateItemTemplate("æ—¥å¿—#2", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f5.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0
+	it = CreateItemTemplate("æ—¥å¿—#3", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\f6.jpg", 0.004, "GFX\items\f4.jpg") : it\sound = 0
 	
-	it = CreateItemTemplate("Ææ¹ÖµÄ±Ê¼Ç", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docStrange.jpg", 0.0025, "GFX\items\notetexture.jpg") : it\sound = 0
+	it = CreateItemTemplate("å¥‡æ€ªçš„ç¬”è®°", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docStrange.jpg", 0.0025, "GFX\items\notetexture.jpg") : it\sound = 0
 	
-	it = CreateItemTemplate("ºËÉè±¸ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docNDP.jpg", 0.003) : it\sound = 0	
-	it = CreateItemTemplate("D¼¶ÈËÔ±ÅàÑµ´«µ¥", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docORI.jpg", 0.003) : it\sound = 0	
+	it = CreateItemTemplate("æ ¸è®¾å¤‡æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docNDP.jpg", 0.003) : it\sound = 0	
+	it = CreateItemTemplate("Dçº§äººå‘˜åŸ¹è®­ä¼ å•", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docORI.jpg", 0.003) : it\sound = 0	
 	
-	it = CreateItemTemplate("DanielµÄ±ãÌõ", "paper", "GFX\items\note.x", "GFX\items\INVnote2.jpg", "GFX\items\docdan.jpg", 0.0025) : it\sound = 0
+	it = CreateItemTemplate("Danielçš„ä¾¿æ¡", "paper", "GFX\items\note.x", "GFX\items\INVnote2.jpg", "GFX\items\docdan.jpg", 0.0025) : it\sound = 0
 	
-	it = CreateItemTemplate("ÉÕ½¹µÄÎÄ¼ş", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\bn.jpg", 0.003, "GFX\items\BurntNoteTexture.jpg")
+	it = CreateItemTemplate("çƒ§ç„¦çš„æ–‡ä»¶", "paper", "GFX\items\paper.x", "GFX\items\INVbn.jpg", "GFX\items\bn.jpg", 0.003, "GFX\items\BurntNoteTexture.jpg")
 	it\img = BurntNote : it\sound = 0
 	
-	it = CreateItemTemplate("ÄÑÒÔÀí½âµÄ±Ê¼Ç", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\sn.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0	
+	it = CreateItemTemplate("éš¾ä»¥ç†è§£çš„ç¬”è®°", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\sn.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0	
 	
-	it = CreateItemTemplate("»ú¶¯ÌØÇ²¶ÓÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docMTF.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("°²±£µÈ¼¶ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docSC.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("ÏîÄ¿µÈ¼¶ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docOBJC.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docRAND3.jpg", 0.003) : it\sound = 0 
-	it = CreateItemTemplate("¸½¼ş£º 5/14²âÊÔÈÕÖ¾", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND2.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0 
-	it = CreateItemTemplate("Í¨Öª", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND1.jpg", 0.003, "GFX\items\notetexture.jpg") :it\sound = 0 	
-	it = CreateItemTemplate("ÊÂ¹Ê±¨¸æSCP-106-0204", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docIR106.jpg", 0.003) : it\sound = 0 
+	it = CreateItemTemplate("æœºåŠ¨ç‰¹é£é˜Ÿæ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docMTF.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("å®‰ä¿ç­‰çº§æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docSC.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("é¡¹ç›®ç­‰çº§æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docOBJC.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docRAND3.jpg", 0.003) : it\sound = 0 
+	it = CreateItemTemplate("é™„ä»¶ï¼š 5/14æµ‹è¯•æ—¥å¿—", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND2.jpg", 0.003, "GFX\items\notetexture.jpg") : it\sound = 0 
+	it = CreateItemTemplate("é€šçŸ¥", "paper", "GFX\items\paper.x", "GFX\items\INVnote.jpg", "GFX\items\docRAND1.jpg", 0.003, "GFX\items\notetexture.jpg") :it\sound = 0 	
+	it = CreateItemTemplate("äº‹æ•…æŠ¥å‘ŠSCP-106-0204", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docIR106.jpg", 0.003) : it\sound = 0 
 	
-	it = CreateItemTemplate("·Àµ¯±³ĞÄ", "vest", "GFX\items\vest.x", "GFX\items\INVvest.jpg", "", 0.02,"GFX\items\Vest.png") : it\sound = 2
-	it = CreateItemTemplate("ÖØĞÍ·Àµ¯±³ĞÄ", "finevest", "GFX\items\vest.x", "GFX\items\INVvest.jpg", "", 0.022,"GFX\items\Vest.png")
+	it = CreateItemTemplate("é˜²å¼¹èƒŒå¿ƒ", "vest", "GFX\items\vest.x", "GFX\items\INVvest.jpg", "", 0.02,"GFX\items\Vest.png") : it\sound = 2
+	it = CreateItemTemplate("é‡å‹é˜²å¼¹èƒŒå¿ƒ", "finevest", "GFX\items\vest.x", "GFX\items\INVvest.jpg", "", 0.022,"GFX\items\Vest.png")
 	it\sound = 2
-	it = CreateItemTemplate("±¿ÖØµÄ·Àµ¯±³ĞÄ", "veryfinevest", "GFX\items\vest.x", "GFX\items\INVvest.jpg", "", 0.025,"GFX\items\Vest.png")
-	it\sound = 2
-	
-	it = CreateItemTemplate("·À»¤·ş", "hazmatsuit", "GFX\items\hazmat.b3d", "GFX\items\INVhazmat.jpg", "", 0.013)
-	it\sound = 2
-	it = CreateItemTemplate("·À»¤·ş", "hazmatsuit2", "GFX\items\hazmat.b3d", "GFX\items\INVhazmat.jpg", "", 0.013)
-	it\sound = 2
-	it = CreateItemTemplate("ÖØĞÍ·À»¤·ş", "hazmatsuit3", "GFX\items\hazmat.b3d", "GFX\items\INVhazmat.jpg", "", 0.013)
+	it = CreateItemTemplate("ç¬¨é‡çš„é˜²å¼¹èƒŒå¿ƒ", "veryfinevest", "GFX\items\vest.x", "GFX\items\INVvest.jpg", "", 0.025,"GFX\items\Vest.png")
 	it\sound = 2
 	
-	it = CreateItemTemplate("±­×Ó", "±­×Ó", "GFX\items\cup.x", "GFX\items\INVcup.jpg", "", 0.04) : it\sound = 2 ;Ãû×ÖºÍIDÒ»Ñù£¬ÎÒ·Ö²»Çå³şÄÄ¸öÊÇÃû×ÖÄÄ¸öÊÇID
+	it = CreateItemTemplate("é˜²æŠ¤æœ", "hazmatsuit", "GFX\items\hazmat.b3d", "GFX\items\INVhazmat.jpg", "", 0.013)
+	it\sound = 2
+	it = CreateItemTemplate("é˜²æŠ¤æœ", "hazmatsuit2", "GFX\items\hazmat.b3d", "GFX\items\INVhazmat.jpg", "", 0.013)
+	it\sound = 2
+	it = CreateItemTemplate("é‡å‹é˜²æŠ¤æœ", "hazmatsuit3", "GFX\items\hazmat.b3d", "GFX\items\INVhazmat.jpg", "", 0.013)
+	it\sound = 2
 	
-	it = CreateItemTemplate("¿Õ±­×Ó", "emptycup", "GFX\items\cup.x", "GFX\items\INVcup.jpg", "", 0.04) : it\sound = 2	
+	it = CreateItemTemplate("æ¯å­", "æ¯å­", "GFX\items\cup.x", "GFX\items\INVcup.jpg", "", 0.04) : it\sound = 2 ;åå­—å’ŒIDä¸€æ ·ï¼Œæˆ‘åˆ†ä¸æ¸…æ¥šå“ªä¸ªæ˜¯åå­—å“ªä¸ªæ˜¯ID
+	
+	it = CreateItemTemplate("ç©ºæ¯å­", "emptycup", "GFX\items\cup.x", "GFX\items\INVcup.jpg", "", 0.04) : it\sound = 2	
 	
 	it = CreateItemTemplate("SCP-500-01", "scp500", "GFX\items\pill.b3d", "GFX\items\INVpill.jpg", "", 0.0001) : it\sound = 2
 	EntityColor it\obj,255,0,0
 	
-	it = CreateItemTemplate("¼±¾ÈÏä", "firstaid", "GFX\items\firstaid.x", "GFX\items\INVfirstaid.jpg", "", 0.05)
-	it = CreateItemTemplate("Ğ¡ĞÍ¼±¾ÈÏä", "finefirstaid", "GFX\items\firstaid.x", "GFX\items\INVfirstaid.jpg", "", 0.03)
-	it = CreateItemTemplate("À¶É«¼±¾ÈÏä", "firstaid2", "GFX\items\firstaid.x", "GFX\items\INVfirstaid2.jpg", "", 0.03, "GFX\items\firstaidkit2.jpg")
-	it = CreateItemTemplate("Ææ¹ÖµÄÆ¿×Ó", "veryfinefirstaid", "GFX\items\eyedrops.b3d", "GFX\items\INVbottle.jpg", "", 0.002, "GFX\items\bottle.jpg")	
+	it = CreateItemTemplate("æ€¥æ•‘ç®±", "firstaid", "GFX\items\firstaid.x", "GFX\items\INVfirstaid.jpg", "", 0.05)
+	it = CreateItemTemplate("å°å‹æ€¥æ•‘ç®±", "finefirstaid", "GFX\items\firstaid.x", "GFX\items\INVfirstaid.jpg", "", 0.03)
+	it = CreateItemTemplate("è“è‰²æ€¥æ•‘ç®±", "firstaid2", "GFX\items\firstaid.x", "GFX\items\INVfirstaid2.jpg", "", 0.03, "GFX\items\firstaidkit2.jpg")
+	it = CreateItemTemplate("å¥‡æ€ªçš„ç“¶å­", "veryfinefirstaid", "GFX\items\eyedrops.b3d", "GFX\items\INVbottle.jpg", "", 0.002, "GFX\items\bottle.jpg")	
 	
-	it = CreateItemTemplate("·À¶¾Ãæ¾ß", "gasmask", "GFX\items\gasmask.b3d", "GFX\items\INVgasmask.jpg", "", 0.02) : it\sound = 2
-	it = CreateItemTemplate("·À¶¾Ãæ¾ß", "supergasmask", "GFX\items\gasmask.b3d", "GFX\items\INVgasmask.jpg", "", 0.021) : it\sound = 2
-	it = CreateItemTemplate("ÖØĞÍ·À¶¾Ãæ¾ß", "gasmask3", "GFX\items\gasmask.b3d", "GFX\items\INVgasmask.jpg", "", 0.021) : it\sound = 2
+	it = CreateItemTemplate("é˜²æ¯’é¢å…·", "gasmask", "GFX\items\gasmask.b3d", "GFX\items\INVgasmask.jpg", "", 0.02) : it\sound = 2
+	it = CreateItemTemplate("é˜²æ¯’é¢å…·", "supergasmask", "GFX\items\gasmask.b3d", "GFX\items\INVgasmask.jpg", "", 0.021) : it\sound = 2
+	it = CreateItemTemplate("é‡å‹é˜²æ¯’é¢å…·", "gasmask3", "GFX\items\gasmask.b3d", "GFX\items\INVgasmask.jpg", "", 0.021) : it\sound = 2
 	
-	it = CreateItemTemplate("Ç§Ö½º×", "misc", "GFX\items\origami.b3d", "GFX\items\INVorigami.jpg", "", 0.003) : it\sound = 0
+	it = CreateItemTemplate("åƒçº¸é¹¤", "misc", "GFX\items\origami.b3d", "GFX\items\INVorigami.jpg", "", 0.003) : it\sound = 0
 	
-	CreateItemTemplate("µç×ÓÔª¼ş", "misc", "GFX\items\electronics.x", "GFX\items\INVelectronics.jpg", "", 0.0011)
+	CreateItemTemplate("ç”µå­å…ƒä»¶", "misc", "GFX\items\electronics.x", "GFX\items\INVelectronics.jpg", "", 0.0011)
 	
-	it = CreateItemTemplate("½ğÊô°å", "scp148", "GFX\items\metalpanel.x", "GFX\items\INVmetalpanel.jpg", "", RoomScale) : it\sound = 2
-	it = CreateItemTemplate("ĞÄÁéÕÚ¶ÏºÏ½ğ¶§", "scp148ingot", "GFX\items\scp148.x", "GFX\items\INVscp148.jpg", "", RoomScale) : it\sound = 2
+	it = CreateItemTemplate("é‡‘å±æ¿", "scp148", "GFX\items\metalpanel.x", "GFX\items\INVmetalpanel.jpg", "", RoomScale) : it\sound = 2
+	it = CreateItemTemplate("å¿ƒçµé®æ–­åˆé‡‘é”­", "scp148ingot", "GFX\items\scp148.x", "GFX\items\INVscp148.jpg", "", RoomScale) : it\sound = 2
 	
-	CreateItemTemplate("S-NAV 300µ¼º½ÒÇ", "nav", "GFX\items\navigator.x", "GFX\items\INVnavigator.jpg", "GFX\items\navigator.png", 0.0008)
+	CreateItemTemplate("S-NAV 300å¯¼èˆªä»ª", "nav", "GFX\items\navigator.x", "GFX\items\INVnavigator.jpg", "GFX\items\navigator.png", 0.0008)
 	CreateItemTemplate("S-NAV Navigator", "nav", "GFX\items\navigator.x", "GFX\items\INVnavigator.jpg", "GFX\items\navigator.png", 0.0008)
-	CreateItemTemplate("S-NAVÖÕ¼«µ¼º½ÒÇ", "nav", "GFX\items\navigator.x", "GFX\items\INVnavigator.jpg", "GFX\items\navigator.png", 0.0008)
-	CreateItemTemplate("S-NAV 310µ¼º½ÒÇ", "nav", "GFX\items\navigator.x", "GFX\items\INVnavigator.jpg", "GFX\items\navigator.png", 0.0008)
+	CreateItemTemplate("S-NAVç»ˆæå¯¼èˆªä»ª", "nav", "GFX\items\navigator.x", "GFX\items\INVnavigator.jpg", "GFX\items\navigator.png", 0.0008)
+	CreateItemTemplate("S-NAV 310å¯¼èˆªä»ª", "nav", "GFX\items\navigator.x", "GFX\items\INVnavigator.jpg", "GFX\items\navigator.png", 0.0008)
 	
-	CreateItemTemplate("¶Ô½²»ú", "radio", "GFX\items\radio.x", "GFX\items\INVradio.jpg", "GFX\items\radioHUD.png", 1.0);0.0010)
-	CreateItemTemplate("¶Ô½²»ú", "fineradio", "GFX\items\radio.x", "GFX\items\INVradio.jpg", "GFX\items\radioHUD.png", 1.0)
-	CreateItemTemplate("¶Ô½²»ú", "veryfineradio", "GFX\items\radio.x", "GFX\items\INVradio.jpg", "GFX\items\radioHUD.png", 1.0)
-	CreateItemTemplate("¶Ô½²»ú", "18vradio", "GFX\items\radio.x", "GFX\items\INVradio.jpg", "GFX\items\radioHUD.png", 1.02)
+	CreateItemTemplate("å¯¹è®²æœº", "radio", "GFX\items\radio.x", "GFX\items\INVradio.jpg", "GFX\items\radioHUD.png", 1.0);0.0010)
+	CreateItemTemplate("å¯¹è®²æœº", "fineradio", "GFX\items\radio.x", "GFX\items\INVradio.jpg", "GFX\items\radioHUD.png", 1.0)
+	CreateItemTemplate("å¯¹è®²æœº", "veryfineradio", "GFX\items\radio.x", "GFX\items\INVradio.jpg", "GFX\items\radioHUD.png", 1.0)
+	CreateItemTemplate("å¯¹è®²æœº", "18vradio", "GFX\items\radio.x", "GFX\items\INVradio.jpg", "GFX\items\radioHUD.png", 1.02)
 	
-	it = CreateItemTemplate("ÏãÑÌ", "cigarette", "GFX\items\420.x", "GFX\items\INV420.jpg", "", 0.0004) : it\sound = 2
+	it = CreateItemTemplate("é¦™çƒŸ", "cigarette", "GFX\items\420.x", "GFX\items\INV420.jpg", "", 0.0004) : it\sound = 2
 	
-	it = CreateItemTemplate("ÑÌ¾í", "420s", "GFX\items\420.x", "GFX\items\INV420.jpg", "", 0.0004) : it\sound = 2
+	it = CreateItemTemplate("çƒŸå·", "420s", "GFX\items\420.x", "GFX\items\INV420.jpg", "", 0.0004) : it\sound = 2
 	
-	it = CreateItemTemplate("ÄÑÎÅµÄÑÌ¾í", "420s", "GFX\items\420.x", "GFX\items\INV420.jpg", "", 0.0004) : it\sound = 2
+	it = CreateItemTemplate("éš¾é—»çš„çƒŸå·", "420s", "GFX\items\420.x", "GFX\items\INV420.jpg", "", 0.0004) : it\sound = 2
 	
-	it = CreateItemTemplate("¶ÏÊÖ", "hand", "GFX\items\severedhand.b3d", "GFX\items\INVhand.jpg", "", 0.04) : it\sound = 2
-	it = CreateItemTemplate("ºÚÉ«¶ÏÊÖ", "hand2", "GFX\items\severedhand.b3d", "GFX\items\INVhand2.jpg", "", 0.04, "GFX\items\shand2.png") : it\sound = 2
+	it = CreateItemTemplate("æ–­æ‰‹", "hand", "GFX\items\severedhand.b3d", "GFX\items\INVhand.jpg", "", 0.04) : it\sound = 2
+	it = CreateItemTemplate("é»‘è‰²æ–­æ‰‹", "hand2", "GFX\items\severedhand.b3d", "GFX\items\INVhand2.jpg", "", 0.04, "GFX\items\shand2.png") : it\sound = 2
 	
-	CreateItemTemplate("9Vµç³Ø", "bat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery9v.jpg", "", 0.008)
-	CreateItemTemplate("18Vµç³Ø", "18vbat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery18v.jpg", "", 0.01, "GFX\items\Battery\Battery 18V.jpg")
-	CreateItemTemplate("Ææ¹ÖµÄµç³Ø", "killbat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery22900.jpg", "", 0.01,"GFX\items\Battery\Strange Battery.jpg")
+	CreateItemTemplate("9Vç”µæ± ", "bat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery9v.jpg", "", 0.008)
+	CreateItemTemplate("18Vç”µæ± ", "18vbat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery18v.jpg", "", 0.01, "GFX\items\Battery\Battery 18V.jpg")
+	CreateItemTemplate("å¥‡æ€ªçš„ç”µæ± ", "killbat", "GFX\items\Battery\Battery.x", "GFX\items\Battery\INVbattery22900.jpg", "", 0.01,"GFX\items\Battery\Strange Battery.jpg")
 	
-	CreateItemTemplate("ÑÛÒ©Ë®", "fineeyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg")
-	CreateItemTemplate("ÑÛÒ©Ë®", "supereyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg")
-	CreateItemTemplate("ReVisionÑÛÒ©Ë®", "eyedrops","GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg")
-	CreateItemTemplate("RedVisionÑÛÒ©Ë®", "eyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedropsred.jpg", "", 0.0012,"GFX\items\eyedropsred.jpg")
+	CreateItemTemplate("çœ¼è¯æ°´", "fineeyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg")
+	CreateItemTemplate("çœ¼è¯æ°´", "supereyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg")
+	CreateItemTemplate("ReVisionçœ¼è¯æ°´", "eyedrops","GFX\items\eyedrops.b3d", "GFX\items\INVeyedrops.jpg", "", 0.0012, "GFX\items\eyedrops.jpg")
+	CreateItemTemplate("RedVisionçœ¼è¯æ°´", "eyedrops", "GFX\items\eyedrops.b3d", "GFX\items\INVeyedropsred.jpg", "", 0.0012,"GFX\items\eyedropsred.jpg")
 	
 	it = CreateItemTemplate("SCP-714", "scp714", "GFX\items\scp714.b3d", "GFX\items\INV714.jpg", "", 0.3)
 	it\sound = 3
@@ -272,48 +272,48 @@ Function InitItemTemplates()
 	
 	;BoH items
 	
-	it = CreateItemTemplate("ÎÄ¼ş¼Ğ", "clipboard", "GFX\items\clipboard.b3d", "GFX\items\INVclipboard.jpg", "", 0.003, "", "GFX\items\INVclipboard2.jpg", 1)
+	it = CreateItemTemplate("æ–‡ä»¶å¤¹", "clipboard", "GFX\items\clipboard.b3d", "GFX\items\INVclipboard.jpg", "", 0.003, "", "GFX\items\INVclipboard2.jpg", 1)
 	
 	it = CreateItemTemplate("SCP-1123", "1123", "GFX\items\HGIB_Skull1.b3d", "GFX\items\inv1123.jpg", "", 0.015) : it\sound = 2
 	
-	;it = CreateItemTemplate("SCP-1074ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1074.jpg", 0.003) : it\sound = 0
+	;it = CreateItemTemplate("SCP-1074æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc1074.jpg", 0.003) : it\sound = 0
 	;it = CreateItemTemplate("SCP-1074 Containment Notice", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc_arce.jpg", 0.003) : it\sound = 0
 	
-	it = CreateItemTemplate("Ò¹ÊÓÒÇ", "supernv", "GFX\items\NVG.b3d", "GFX\items\INVsupernightvision.jpg", "", 0.02) : it\sound = 2
-	it = CreateItemTemplate("Ò¹ÊÓÒÇ", "nvgoggles", "GFX\items\NVG.b3d", "GFX\items\INVnightvision.jpg", "", 0.02) : it\sound = 2
-	it = CreateItemTemplate("Ò¹ÊÓÒÇ", "finenvgoggles", "GFX\items\NVG.b3d", "GFX\items\INVveryfinenightvision.jpg", "", 0.02) : it\sound = 2
+	it = CreateItemTemplate("å¤œè§†ä»ª", "supernv", "GFX\items\NVG.b3d", "GFX\items\INVsupernightvision.jpg", "", 0.02) : it\sound = 2
+	it = CreateItemTemplate("å¤œè§†ä»ª", "nvgoggles", "GFX\items\NVG.b3d", "GFX\items\INVnightvision.jpg", "", 0.02) : it\sound = 2
+	it = CreateItemTemplate("å¤œè§†ä»ª", "finenvgoggles", "GFX\items\NVG.b3d", "GFX\items\INVveryfinenightvision.jpg", "", 0.02) : it\sound = 2
 	
-	it = CreateItemTemplate("ÕëÍ²", "syringe", "GFX\items\Syringe\syringe.b3d", "GFX\items\Syringe\inv.png", "", 0.005) : it\sound = 2
-	it = CreateItemTemplate("ÕëÍ²", "finesyringe", "GFX\items\Syringe\syringe.b3d", "GFX\items\Syringe\inv.png", "", 0.005) : it\sound = 2
-	it = CreateItemTemplate("ÕëÍ²", "veryfinesyringe", "GFX\items\Syringe\syringe.b3d", "GFX\items\Syringe\inv.png", "", 0.005) : it\sound = 2
+	it = CreateItemTemplate("é’ˆç­’", "syringe", "GFX\items\Syringe\syringe.b3d", "GFX\items\Syringe\inv.png", "", 0.005) : it\sound = 2
+	it = CreateItemTemplate("é’ˆç­’", "finesyringe", "GFX\items\Syringe\syringe.b3d", "GFX\items\Syringe\inv.png", "", 0.005) : it\sound = 2
+	it = CreateItemTemplate("é’ˆç­’", "veryfinesyringe", "GFX\items\Syringe\syringe.b3d", "GFX\items\Syringe\inv.png", "", 0.005) : it\sound = 2
 	
 	;.........
 	
-	;SCP:CB 1.3µÄĞÂÎïÆ· ¡ª¡ª¿ª·¢ÕßENDSHN
+	;SCP:CB 1.3çš„æ–°ç‰©å“ â€”â€”å¼€å‘è€…ENDSHN
 	it = CreateItemTemplate("SCP-1499","scp1499","GFX\items\SCP-1499.b3d","GFX\items\INVscp1499.jpg", "", 0.023) : it\sound = 2
 	it = CreateItemTemplate("SCP-1499","super1499","GFX\items\SCP-1499.b3d","GFX\items\INVscp1499.jpg", "", 0.023) : it\sound = 2
-	CreateItemTemplate("°¬Ã×ÀöÂŞË¹µÄÉí·İÖ¤", "badge", "GFX\items\badge.x", "GFX\items\INVbadge.jpg", "GFX\items\badge1.jpg", 0.0001, "GFX\items\badge1_tex.jpg")
-	it = CreateItemTemplate("¶ªÊ§µÄÔ¿³×", "key", "GFX\items\key.b3d", "GFX\items\INV1162_1.jpg", "", 0.001, "GFX\items\key2.png","",0,1+2+8) : it\sound = 3
-	it = CreateItemTemplate("´¦·£ÌıÖ¤»á¼ÇÂ¼DH-S-4137-17092", "oldpaper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\dh.jpg", 0.003) : it\sound = 0
-	it = CreateItemTemplate("Ó²±Ò", "coin", "GFX\items\key.b3d", "GFX\items\INVcoin.jpg", "", 0.0005, "GFX\items\coin.png","",0,1+2+8) : it\sound = 3
-	it = CreateItemTemplate("µçÓ°Æ±", "ticket", "GFX\items\key.b3d", "GFX\items\INVticket.jpg", "GFX\items\ticket.png", 0.002, "GFX\items\tickettexture.png","",0,1+2+8) : it\sound = 0
-	CreateItemTemplate("ÆÆ¾ÉµÄÉí·İÖ¤", "badge", "GFX\items\badge.x", "GFX\items\INVoldbadge.jpg", "GFX\items\badge2.png", 0.0001, "GFX\items\badge2_tex.png","",0,1+2+8)
+	CreateItemTemplate("è‰¾ç±³ä¸½ç½—æ–¯çš„èº«ä»½è¯", "badge", "GFX\items\badge.x", "GFX\items\INVbadge.jpg", "GFX\items\badge1.jpg", 0.0001, "GFX\items\badge1_tex.jpg")
+	it = CreateItemTemplate("ä¸¢å¤±çš„é’¥åŒ™", "key", "GFX\items\key.b3d", "GFX\items\INV1162_1.jpg", "", 0.001, "GFX\items\key2.png","",0,1+2+8) : it\sound = 3
+	it = CreateItemTemplate("å¤„ç½šå¬è¯ä¼šè®°å½•DH-S-4137-17092", "oldpaper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\dh.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("ç¡¬å¸", "coin", "GFX\items\key.b3d", "GFX\items\INVcoin.jpg", "", 0.0005, "GFX\items\coin.png","",0,1+2+8) : it\sound = 3
+	it = CreateItemTemplate("ç”µå½±ç¥¨", "ticket", "GFX\items\key.b3d", "GFX\items\INVticket.jpg", "GFX\items\ticket.png", 0.002, "GFX\items\tickettexture.png","",0,1+2+8) : it\sound = 0
+	CreateItemTemplate("ç ´æ—§çš„èº«ä»½è¯", "badge", "GFX\items\badge.x", "GFX\items\INVoldbadge.jpg", "GFX\items\badge2.png", 0.0001, "GFX\items\badge2_tex.png","",0,1+2+8)
 	
-	it = CreateItemTemplate("Ó²±Ò","25ct", "GFX\items\key.b3d", "GFX\items\INVcoin.jpg", "", 0.0005, "GFX\items\coin.png","",0,1+2+8) : it\sound = 3
-	it = CreateItemTemplate("Ç®°ü","wallet", "GFX\items\wallet.b3d", "GFX\items\INVwallet.jpg", "", 0.0005,"","",1) : it\sound = 2
+	it = CreateItemTemplate("ç¡¬å¸","25ct", "GFX\items\key.b3d", "GFX\items\INVcoin.jpg", "", 0.0005, "GFX\items\coin.png","",0,1+2+8) : it\sound = 3
+	it = CreateItemTemplate("é’±åŒ…","wallet", "GFX\items\wallet.b3d", "GFX\items\INVwallet.jpg", "", 0.0005,"","",1) : it\sound = 2
 	
 	CreateItemTemplate("SCP-427","scp427","GFX\items\427.b3d","GFX\items\INVscp427.jpg", "", 0.001)
-	it = CreateItemTemplate("Éı¼¶Ò©Íè", "scp500death", "GFX\items\pill.b3d", "GFX\items\INVpill.jpg", "", 0.0001) : it\sound = 2
+	it = CreateItemTemplate("å‡çº§è¯ä¸¸", "scp500death", "GFX\items\pill.b3d", "GFX\items\INVpill.jpg", "", 0.0001) : it\sound = 2
 	EntityColor it\obj,255,0,0
-	it = CreateItemTemplate("Ò©Íè", "pill", "GFX\items\pill.b3d", "GFX\items\INVpillwhite.jpg", "", 0.0001) : it\sound = 2
+	it = CreateItemTemplate("è¯ä¸¸", "pill", "GFX\items\pill.b3d", "GFX\items\INVpillwhite.jpg", "", 0.0001) : it\sound = 2
 	EntityColor it\obj,255,255,255
 	
-	it = CreateItemTemplate("±ãÀûÌù", "paper", "GFX\items\note.x", "GFX\items\INVnote2.jpg", "GFX\items\note682.jpg", 0.0025) : it\sound = 0
-	it = CreateItemTemplate("Ä£¿é»¯ÉèÊ©ÏîÄ¿ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docMSP.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("ä¾¿åˆ©è´´", "paper", "GFX\items\note.x", "GFX\items\INVnote2.jpg", "GFX\items\note682.jpg", 0.0025) : it\sound = 0
+	it = CreateItemTemplate("æ¨¡å—åŒ–è®¾æ–½é¡¹ç›®æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docMSP.jpg", 0.003) : it\sound = 0
 	
-	it = CreateItemTemplate("ÑĞ¾¿²¿ÃÅ-02Éè¼Æ·½°¸", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docmap.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("ç ”ç©¶éƒ¨é—¨-02è®¾è®¡æ–¹æ¡ˆ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\docmap.jpg", 0.003) : it\sound = 0
 	
-	it = CreateItemTemplate("SCP-427ÎÄµµ", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc427.jpg", 0.003) : it\sound = 0
+	it = CreateItemTemplate("SCP-427æ–‡æ¡£", "paper", "GFX\items\paper.x", "GFX\items\INVpaper.jpg", "GFX\items\doc427.jpg", 0.003) : it\sound = 0
 	
 	For it = Each ItemTemplates
 		If (it\tex<>0) Then
@@ -382,7 +382,7 @@ Function CreateItem.Items(name$, tempname$, x#, y#, z#, r%=0,g%=0,b%=0,a#=1.0,in
 	
 	i\WontColl = False
 	
-	If i\itemtemplate = Null Then DebugLog("ÎïÆ·Ä£°åÎ´ÕÒµ½("+name+", "+tempname+", "+imgpath+")") ;´ÓÏÔÊ¾Ãû³ÆºÍID¸ÄÎªÏÔÊ¾Ãû³Æ¡¢IDºÍÌùÍ¼Â·¾¶
+	If i\itemtemplate = Null Then DebugLog("ç‰©å“æ¨¡æ¿æœªæ‰¾åˆ°("+name+", "+tempname+", "+imgpath+")") ;ä»æ˜¾ç¤ºåç§°å’ŒIDæ”¹ä¸ºæ˜¾ç¤ºåç§°ã€IDå’Œè´´å›¾è·¯å¾„
 	
 	ResetEntity i\collider		
 	PositionEntity(i\collider, x, y, z, True)
@@ -390,7 +390,7 @@ Function CreateItem.Items(name$, tempname$, x#, y#, z#, r%=0,g%=0,b%=0,a#=1.0,in
 	i\dist = EntityDistance(Collider, i\collider)
 	i\DropSpeed = 0.0
 	
-	If tempname = "±­×Ó" Then
+	If tempname = "æ¯å­" Then
 		i\r=r
 		i\g=g
 		i\b=b
@@ -602,7 +602,7 @@ Function PickItem(item.Items)
 	Next
 	
 	If WearingHazmat > 0 Then
-		Msg = "Äã²»ÄÜÔÚ´©×Å·À»¤·şÊ±¼ñÆğÎïÆ·"
+		Msg = "ä½ ä¸èƒ½åœ¨ç©¿ç€é˜²æŠ¤æœæ—¶æ¡èµ·ç‰©å“"
 		MsgTimer = 70*5
 		Return
 	EndIf
@@ -618,10 +618,10 @@ Function PickItem(item.Items)
 								ShowEntity Light
 								LightFlash = 7
 								PlaySound_Strict(LoadTempSound("SFX\SCP\1123\Touch.ogg"))		
-								DeathMSG = "¶ÔÏóD-9341ÔÚÊÔÍ¼Ï®»÷Ò»Ãû¾ÅÎ²ºü³ÉÔ±ºó±»»÷±Ğ¡£"
-								DeathMSG = DeathMSG + "¼à¿ØÂ¼ÏñÏÔÊ¾£¬¶ÔÏóÔÚ´óÔ¼9·ÖÖÓÇ°ÔÚÏÖ³¡ÅÇ»²£¬ÓÃÖĞÎÄ¸ßº°¡°ÏûÃğËÄº¦¡±¡£"
-								DeathMSG = DeathMSG + "SCP-1123ÔÚ[ÒÑ±à¼­]µÄ¸½½üÕÒµ½£¬Ö¤Ã÷¶ÔÏóÓëËü·¢ÉúÁËÖ«Ìå½Ó´¥¡£"
-								DeathMSG = DeathMSG + "Ä¿Ç°ÉĞÎ´ÖªSCP-1123ÊÇÈçºÎ´ÓÊÕÈİÊÒÀë¿ªµÄ¡£"
+								DeathMSG = "å¯¹è±¡D-9341åœ¨è¯•å›¾è¢­å‡»ä¸€åä¹å°¾ç‹æˆå‘˜åè¢«å‡»æ¯™ã€‚"
+								DeathMSG = DeathMSG + "ç›‘æ§å½•åƒæ˜¾ç¤ºï¼Œå¯¹è±¡åœ¨å¤§çº¦9åˆ†é’Ÿå‰åœ¨ç°åœºå¾˜å¾Šï¼Œç”¨ä¸­æ–‡é«˜å–Šâ€œæ¶ˆç­å››å®³â€ã€‚"
+								DeathMSG = DeathMSG + "SCP-1123åœ¨[å·²ç¼–è¾‘]çš„é™„è¿‘æ‰¾åˆ°ï¼Œè¯æ˜å¯¹è±¡ä¸å®ƒå‘ç”Ÿäº†è‚¢ä½“æ¥è§¦ã€‚"
+								DeathMSG = DeathMSG + "ç›®å‰å°šæœªçŸ¥SCP-1123æ˜¯å¦‚ä½•ä»æ”¶å®¹å®¤ç¦»å¼€çš„ã€‚"
 								Kill()
 							EndIf
 							For e.Events = Each Events
@@ -643,8 +643,8 @@ Function PickItem(item.Items)
 						ShowEntity Light
 						LightFlash = 1.0
 						PlaySound_Strict(IntroSFX(11))
-						DeathMSG = "¶ÔÏóD-9341µÄÊ¬ÌåÔÚSCP-914µÄÊä³ö¸ô¼äÕÒµ½£¬ÅÔ±ßËÆºõÊÇÒ»¸öÆÕÍ¨µÄ¾Å·üµç³Ø¡£"
-						DeathMSG = DeathMSG + "¶ÔÏóÑÏÖØÉÕÉË£¬±»ÈÏÎªÊÇµç³ØÒıÆğµÄ´¥µç¶øËÀÍö¡£µç³ØÒÑ±»´¢´æÆğÀ´ÒÔ¹©½øÒ»²½ÑĞ¾¿¡£"
+						DeathMSG = "å¯¹è±¡D-9341çš„å°¸ä½“åœ¨SCP-914çš„è¾“å‡ºéš”é—´æ‰¾åˆ°ï¼Œæ—è¾¹ä¼¼ä¹æ˜¯ä¸€ä¸ªæ™®é€šçš„ä¹ä¼ç”µæ± ã€‚"
+						DeathMSG = DeathMSG + "å¯¹è±¡ä¸¥é‡çƒ§ä¼¤ï¼Œè¢«è®¤ä¸ºæ˜¯ç”µæ± å¼•èµ·çš„è§¦ç”µè€Œæ­»äº¡ã€‚ç”µæ± å·²è¢«å‚¨å­˜èµ·æ¥ä»¥ä¾›è¿›ä¸€æ­¥ç ”ç©¶ã€‚"
 						Kill()
 					Case "scp148"
 						GiveAchievement(Achv148)	
@@ -655,13 +655,13 @@ Function PickItem(item.Items)
 					Case "key6"
 						GiveAchievement(AchvOmni)
 					Case "veryfinevest"
-						Msg = "·Àµ¯ÒÂÌ«ÖØÁË"
+						Msg = "é˜²å¼¹è¡£å¤ªé‡äº†"
 						MsgTimer = 70*6
 						Exit
 					Case "firstaid", "finefirstaid", "veryfinefirstaid", "firstaid2"
 						item\state = 0
 					Case "navigator", "nav"
-						If item\itemtemplate\name = "S-NAVÖÕ¼«µ¼º½ÒÇ" Then GiveAchievement(AchvSNAV)
+						If item\itemtemplate\name = "S-NAVç»ˆæå¯¼èˆªä»ª" Then GiveAchievement(AchvSNAV)
 					Case "hazmatsuit", "hazmatsuit2", "hazmatsuit3"
 						canpickitem = True
 						For z% = 0 To MaxItemAmount - 1
@@ -677,11 +677,11 @@ Function PickItem(item.Items)
 						Next
 						
 						If canpickitem=False Then
-							Msg = "Äã²»ÄÜ´©×ÅÁ½¼ş·À»¤·ş"
+							Msg = "ä½ ä¸èƒ½ç©¿ç€ä¸¤ä»¶é˜²æŠ¤æœ"
 							MsgTimer = 70 * 5
 							Return
 						ElseIf canpickitem=2 Then
-							Msg = "Äã²»ÄÜÔÚ´©×Å·Àµ¯ÒÂÊ±´©ÉÏ·À»¤·ş"
+							Msg = "ä½ ä¸èƒ½åœ¨ç©¿ç€é˜²å¼¹è¡£æ—¶ç©¿ä¸Šé˜²æŠ¤æœ"
 							MsgTimer = 70 * 5
 							Return
 						Else
@@ -703,11 +703,11 @@ Function PickItem(item.Items)
 						Next
 						
 						If canpickitem=False Then
-							Msg = "Äã²»ÄÜ´©×ÅÁ½¼ş·Àµ¯ÒÂ"
+							Msg = "ä½ ä¸èƒ½ç©¿ç€ä¸¤ä»¶é˜²å¼¹è¡£"
 							MsgTimer = 70 * 5
 							Return
 						ElseIf canpickitem=2 Then
-							Msg = "Äã²»ÄÜÔÚ´©×Å·À»¤·şÊ±´©ÉÏ·Àµ¯ÒÂ"
+							Msg = "ä½ ä¸èƒ½åœ¨ç©¿ç€é˜²æŠ¤æœæ—¶ç©¿ä¸Šé˜²å¼¹è¡£"
 							MsgTimer = 70 * 5
 							Return
 						Else
@@ -737,7 +737,7 @@ End Function
 
 Function DropItem(item.Items,playdropsound%=True)
 	If WearingHazmat > 0 Then
-		Msg = "Äã²»ÄÜÔÚ´©×Å·À»¤·şÊ±¶ªÏÂÎïÆ·"
+		Msg = "ä½ ä¸èƒ½åœ¨ç©¿ç€é˜²æŠ¤æœæ—¶ä¸¢ä¸‹ç‰©å“"
 		MsgTimer = 70*5
 		Return
 	EndIf

@@ -596,7 +596,7 @@ Function LoadGame(file$)
 		Next
 	Next
 	
-	If ReadInt(f) <> 113 Then RuntimeError("ÎŞ·¨¼ÓÔØÓÎÏ·£¬´æµµÎÄ¼şÒÑËğ»µ£¨´íÎó2.5£©")
+	If ReadInt(f) <> 113 Then RuntimeError("æ— æ³•åŠ è½½æ¸¸æˆï¼Œå­˜æ¡£æ–‡ä»¶å·²æŸåï¼ˆé”™è¯¯2.5ï¼‰")
 	
 	temp = ReadInt(f)
 	For i = 1 To temp
@@ -638,7 +638,7 @@ Function LoadGame(file$)
 		ForceSetNPCID(n, ReadInt(f))
 		n\TargetID = ReadInt(f)
 		
-		DebugLog("ÕıÔÚ¼ÓÔØNPC " +n\NVName+ " (ID "+n\ID+")")
+		DebugLog("æ­£åœ¨åŠ è½½NPC " +n\NVName+ " (ID "+n\ID+")")
 		
 		n\EnemyX = ReadFloat(f)
 		n\EnemyY = ReadFloat(f)
@@ -702,7 +702,7 @@ Function LoadGame(file$)
 		MTFroomState[i]=ReadInt(f)
 	Next
 	
-	If ReadInt(f) <> 632 Then RuntimeError("ÎŞ·¨¼ÓÔØÓÎÏ·£¬´æµµÎÄ¼şÒÑËğ»µ£¨´íÎó1£©")
+	If ReadInt(f) <> 632 Then RuntimeError("æ— æ³•åŠ è½½æ¸¸æˆï¼Œå­˜æ¡£æ–‡ä»¶å·²æŸåï¼ˆé”™è¯¯1ï¼‰")
 	
 	room2gw_brokendoor = ReadInt(f)
 	room2gw_x = ReadFloat(f)
@@ -835,7 +835,7 @@ Function LoadGame(file$)
 		EndIf
 	Next
 	
-	If ReadInt(f) <> 954 Then RuntimeError("ÎŞ·¨¼ÓÔØÓÎÏ·£¬´æµµÎÄ¼şÒÑËğ»µ£¨´íÎó2£©")
+	If ReadInt(f) <> 954 Then RuntimeError("æ— æ³•åŠ è½½æ¸¸æˆï¼Œå­˜æ¡£æ–‡ä»¶å·²æŸåï¼ˆé”™è¯¯2ï¼‰")
 	
 	Local spacing# = 8.0
 	Local zone%,shouldSpawnDoor%
@@ -969,7 +969,7 @@ Function LoadGame(file$)
 	
 	InitWayPoints()
 	
-	If ReadInt(f) <> 1845 Then RuntimeError("ÎŞ·¨¼ÓÔØÓÎÏ·£¬´æµµÎÄ¼şÒÑËğ»µ£¨´íÎó3£©")
+	If ReadInt(f) <> 1845 Then RuntimeError("æ— æ³•åŠ è½½æ¸¸æˆï¼Œå­˜æ¡£æ–‡ä»¶å·²æŸåï¼ˆé”™è¯¯3ï¼‰")
 	
 	Local d.Decals
 	For d.Decals = Each Decals
@@ -1069,7 +1069,7 @@ Function LoadGame(file$)
 		Local Name$ = ReadString(f)
 		
 		If tempName = "50ct" Then
-			ittName = "Ó²±Ò"
+			ittName = "ç¡¬å¸"
 			tempName = "25ct"
 		EndIf
 		
@@ -1169,7 +1169,7 @@ Function LoadGame(file$)
 	
 	If ReadInt(f)<>994
 		UsedConsole = True
-		DebugLog "Ê¹ÓÃÁË¿ØÖÆÌ¨"
+		DebugLog "ä½¿ç”¨äº†æ§åˆ¶å°"
 	EndIf
 	
 	CameraFogFar = ReadFloat(f)
@@ -1429,7 +1429,7 @@ Function LoadGameQuick(file$)
 		Next
 	Next
 	
-	If ReadInt(f) <> 113 Then RuntimeError("ÎŞ·¨¼ÓÔØÓÎÏ·£¬´æµµÎÄ¼şÒÑËğ»µ£¨´íÎó2.5£©")
+	If ReadInt(f) <> 113 Then RuntimeError("æ— æ³•åŠ è½½æ¸¸æˆï¼Œå­˜æ¡£æ–‡ä»¶å·²æŸåï¼ˆé”™è¯¯2.5ï¼‰")
 	
 	For n.NPCs = Each NPCs
 		RemoveNPC(n)
@@ -1537,7 +1537,7 @@ Function LoadGameQuick(file$)
 		MTFroomState[i]=ReadInt(f)
 	Next
 	
-	If ReadInt(f) <> 632 Then RuntimeError("ÎŞ·¨¼ÓÔØÓÎÏ·£¬´æµµÎÄ¼şÒÑËğ»µ£¨´íÎó1£©")
+	If ReadInt(f) <> 632 Then RuntimeError("æ— æ³•åŠ è½½æ¸¸æˆï¼Œå­˜æ¡£æ–‡ä»¶å·²æŸåï¼ˆé”™è¯¯1ï¼‰")
 	
 	room2gw_brokendoor = ReadInt(f)
 	room2gw_x = ReadFloat(f)
@@ -1651,7 +1651,7 @@ Function LoadGameQuick(file$)
 	
 	;InitWayPoints()
 	
-	If ReadInt(f) <> 954 Then RuntimeError("ÎŞ·¨¼ÓÔØÓÎÏ·£¬´æµµÎÄ¼ş¿ÉÄÜÒÑËğ»µ£¨´íÎó2£©")
+	If ReadInt(f) <> 954 Then RuntimeError("æ— æ³•åŠ è½½æ¸¸æˆï¼Œå­˜æ¡£æ–‡ä»¶å¯èƒ½å·²æŸåï¼ˆé”™è¯¯2ï¼‰")
 	
 	temp = ReadInt (f)
 	
@@ -1700,7 +1700,7 @@ Function LoadGameQuick(file$)
 		Next		
 	Next
 	
-	If ReadInt(f) <> 1845 Then RuntimeError("ÎŞ·¨¼ÓÔØÓÎÏ·£¬´æµµÎÄ¼şÒÑËğ»µ£¨´íÎó3£©")
+	If ReadInt(f) <> 1845 Then RuntimeError("æ— æ³•åŠ è½½æ¸¸æˆï¼Œå­˜æ¡£æ–‡ä»¶å·²æŸåï¼ˆé”™è¯¯3ï¼‰")
 	
 	Local d.Decals
 	For d.Decals = Each Decals
@@ -1785,7 +1785,7 @@ Function LoadGameQuick(file$)
 		Local Name$ = ReadString(f)
 		
 		If tempName = "50ct" Then
-			ittName = "Ó²±Ò"
+			ittName = "ç¡¬å¸"
 			tempName = "25ct"
 		EndIf
 		
@@ -1883,7 +1883,7 @@ Function LoadGameQuick(file$)
 	
 	If ReadInt(f)<>994
 		UsedConsole = True
-		DebugLog "Ê¹ÓÃÁË¿ØÖÆÌ¨"
+		DebugLog "ä½¿ç”¨äº†æ§åˆ¶å°"
 	EndIf
 	
 	If 0 Then 
@@ -1997,7 +1997,7 @@ End Function
 Function LoadSaveGames()
 	CatchErrors("Uncaught (LoadSaveGames)")
 	SaveGameAmount = 0
-	If FileType(SavePath)=1 Then RuntimeError "ÎŞ·¨´´½¨ÎÄ¼ş¼Ğ "+Chr(34)+SavePath+Chr(34)
+	If FileType(SavePath)=1 Then RuntimeError "æ— æ³•åˆ›å»ºæ–‡ä»¶å¤¹ "+Chr(34)+SavePath+Chr(34)
 	If FileType(SavePath)=0 Then CreateDir(SavePath)
 	myDir=ReadDir(SavePath) 
 	Repeat 
@@ -2106,7 +2106,7 @@ Function LoadSavedMaps()
 						SavedMapsAuthor$(i) = ReadLine(f)
 						CloseFile f
 					Else
-						SavedMapsAuthor$(i) = "[Î´Öª]"
+						SavedMapsAuthor$(i) = "[æœªçŸ¥]"
 					EndIf
 					i=i+1
 				EndIf
